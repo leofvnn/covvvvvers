@@ -2989,3 +2989,19 @@ kbd {
 .cover-type:hover {
   text-decoration-thickness: 2px;
 }
+
+/* Light and dark switch in the phone menu */
+
+.menu-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.menu-theme > span {
+  font-size: 1.125rem;
+}

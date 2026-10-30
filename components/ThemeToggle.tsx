@@ -12,11 +12,17 @@ const OPTIONS: { value: Theme; label: string }[] = [
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("system");
 
+  // Every toggle on the page (menu and footer) stays in step.
   useEffect(() => {
-    try {
-      const t = localStorage.getItem("theme");
-      if (t === "light" || t === "dark") setTheme(t);
-    } catch {}
+    const read = () => {
+      try {
+        const t = localStorage.getItem("theme");
+        setTheme(t === "light" || t === "dark" ? t : "system");
+      } catch {}
+    };
+    read();
+    window.addEventListener("themechange", read);
+    return () => window.removeEventListener("themechange", read);
   }, []);
 
   const choose = (t: Theme) => {
@@ -27,6 +33,7 @@ export default function ThemeToggle() {
     } catch {}
     if (t === "system") delete document.documentElement.dataset.theme;
     else document.documentElement.dataset.theme = t;
+    window.dispatchEvent(new Event("themechange"));
   };
 
   return (

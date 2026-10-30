@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { shuffle } from "@/lib/shuffle";
 import AccountLink from "./AccountLink";
+import ThemeToggle from "./ThemeToggle";
 
 const MORE = [
   { href: "/colors", label: "Colours" },
@@ -94,6 +95,10 @@ export default function SiteHeader() {
             </Link>
           ))}
           <AccountLink />
+        </div>
+        <div className="menu-theme">
+          <span>Appearance</span>
+          <ThemeToggle />
         </div>
       </nav>
     </header>
