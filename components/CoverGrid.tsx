@@ -5,12 +5,13 @@ import { getBrowserClient } from "@/lib/supabase/client";
 import type { CoverCard as Card } from "@/lib/types";
 import CoverCard from "./CoverCard";
 
-type Sort = "newest" | "oldest" | "az" | "saved";
+type Sort = "newest" | "added" | "oldest" | "az" | "saved";
 type Filters = { type: string; decade: string; country: string; q: string; sort: Sort };
 const EMPTY: Filters = { type: "", decade: "", country: "", q: "", sort: "newest" };
 
 const SORTS: { value: Sort; label: string }[] = [
-  { value: "newest", label: "Newest first" },
+  { value: "newest", label: "Newest releases" },
+  { value: "added", label: "Latest added" },
   { value: "oldest", label: "Oldest first" },
   { value: "az", label: "A to Z" },
   { value: "saved", label: "Most saved" },
@@ -87,6 +88,12 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
           (c.text?.includes(q) ?? false)),
     );
     if (f.sort === "oldest") return [...list].reverse();
+    // Covers added together keep release order among themselves.
+    if (f.sort === "added")
+      return list
+        .map((c, i) => ({ c, i }))
+        .sort((a, b) => (b.c.added ?? "").localeCompare(a.c.added ?? "") || a.i - b.i)
+        .map((x) => x.c);
     if (f.sort === "az") return [...list].sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
     if (f.sort === "saved" && saves) return [...list].sort((a, b) => (saves.get(b.id) ?? 0) - (saves.get(a.id) ?? 0));
     return list;

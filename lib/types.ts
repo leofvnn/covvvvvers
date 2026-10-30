@@ -41,6 +41,8 @@ export type Cover = {
   youtube_url: string | null;
   featured: boolean;
   status?: string;
+  /** When the cover joined the collection. */
+  created_at?: string;
   creators: Creator[];
   /** Colour group of the main colour, for browsing by colour. */
   family: string | null;
@@ -52,6 +54,7 @@ export type CoverCard = Pick<
   "id" | "slug" | "title" | "artist" | "release_year" | "decade" | "country" | "image_url" | "color" | "type" | "family"
 > & {
   creatorNames: string[];
+  added?: string;
   /** Lower-case essay text, only sent where search needs it. */
   text?: string;
 };

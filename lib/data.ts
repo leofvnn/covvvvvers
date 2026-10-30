@@ -90,6 +90,7 @@ export const toCard = (c: Cover, opts: { withText?: boolean } = {}): CoverCard =
   type: c.type,
   family: c.family,
   creatorNames: c.creators.map((x) => x.name),
+  added: c.created_at,
   ...(opts.withText ? { text: plainText(c.description_html).toLowerCase() } : {}),
 });
 
