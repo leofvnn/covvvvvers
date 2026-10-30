@@ -2801,3 +2801,19 @@ kbd {
 .breadcrumbs [aria-current="page"] {
   color: var(--ink);
 }
+
+/* Phones: the cover art and its colour block keep the normal page margins. */
+@media (max-width: 799px) {
+  .cover-page {
+    padding: 20px var(--gutter) 64px;
+  }
+  .cover-body {
+    padding: 0;
+  }
+  .feature-link {
+    padding: 20px var(--gutter) 36px;
+  }
+  .feature-text {
+    padding: 0;
+  }
+}

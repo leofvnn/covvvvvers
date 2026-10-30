@@ -1490,7 +1490,8 @@
    "spotify_url": "https://open.spotify.com/album/2tU04u3hxtziB4sOVJKak3",
    "apple_music_url": "https://music.apple.com/us/album/god-does-like-ugly/1812517697",
    "youtube_url": "https://www.youtube.com/results?search_query=JID+God+Does+Like+Ugly+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T20:00:00+00:00"
   },
   {
    "id": "7af8e8ce-e629-4ddd-87b9-67eaee6116d4",
@@ -1517,7 +1518,8 @@
    "spotify_url": "https://open.spotify.com/album/17ScNnJ0lSWajodZaRpHdQ",
    "apple_music_url": "https://music.apple.com/us/album/let-god-sort-em-out/1816313639",
    "youtube_url": "https://www.youtube.com/results?search_query=Clipse+Let+God+Sort+Em+Out+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T08:00:00+00:00"
   },
   {
    "id": "013d5ca7-7741-423b-9f6c-7d2e5b0d3e4f",
@@ -1544,7 +1546,8 @@
    "spotify_url": "https://open.spotify.com/album/0U28P0QVB1QRxpqp5IHOlH",
    "apple_music_url": "https://music.apple.com/us/album/chromakopia/1776500452",
    "youtube_url": "https://www.youtube.com/results?search_query=Tyler%2C+the+Creator+CHROMAKOPIA+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T23:00:00+00:00"
   },
   {
    "id": "fc83a4d2-0515-4666-b5ea-34db47363f80",
@@ -1571,7 +1574,8 @@
    "spotify_url": "https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW",
    "apple_music_url": "https://music.apple.com/us/album/gnx/1781270319",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+GNX+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T08:00:00+00:00"
   },
   {
    "id": "193f38f6-2ca6-43c0-88f7-b46e280c64c6",
@@ -1598,7 +1602,8 @@
    "spotify_url": "https://open.spotify.com/album/4czdORdCWP9umpbhFXK2fW",
    "apple_music_url": "https://music.apple.com/us/album/for-all-the-dogs/1710685602",
    "youtube_url": "https://www.youtube.com/results?search_query=Drake+For+All+the+Dogs+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T08:00:00+00:00"
   },
   {
    "id": "5423826e-c3b8-4437-a44f-eef6a68a293b",
@@ -1625,7 +1630,8 @@
    "spotify_url": "https://open.spotify.com/album/4ir7AIjfrMVHTxZhnfzhWl",
    "apple_music_url": "https://music.apple.com/it/album/la-divina-commedia/1689797901",
    "youtube_url": "https://www.youtube.com/results?search_query=Tedua+La+Divina+Commedia+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T17:00:00+00:00"
   },
   {
    "id": "8b2fe929-d438-40a3-9339-193547156bc9",
@@ -1652,7 +1658,8 @@
    "spotify_url": "https://open.spotify.com/album/376vzaVcBQAbefjO1t7vu5",
    "apple_music_url": "https://music.apple.com/za/album/mass-country/1664064205",
    "youtube_url": "https://www.youtube.com/results?search_query=AKA+Mass+Country+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T08:00:00+00:00"
   },
   {
    "id": "ba68ad1b-5f84-4ef0-9559-6ee1d30bda44",
@@ -1679,7 +1686,8 @@
    "spotify_url": "https://open.spotify.com/album/18NOKLkZETa4sWwLMIm0UZ",
    "apple_music_url": "https://music.apple.com/us/album/utopia/1699712635",
    "youtube_url": "https://www.youtube.com/results?search_query=Travis+Scott+UTOPIA+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T17:00:00+00:00"
   },
   {
    "id": "c8d36404-13c1-4a65-90c2-c6a60b51dd90",
@@ -1706,7 +1714,8 @@
    "spotify_url": "https://open.spotify.com/album/79ONNoS4M9tfIA1mYLBYVX",
    "apple_music_url": "https://music.apple.com/us/album/mr-morale-the-big-steppers/1623854804",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+Mr.+Morale+and+the+Big+Steppers+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T05:00:00+00:00"
   },
   {
    "id": "5bb108d4-7216-482a-87fe-3b09744cfe15",
@@ -1733,7 +1742,8 @@
    "spotify_url": "https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9",
    "apple_music_url": "https://music.apple.com/us/album/call-me-if-you-get-lost/1573484415",
    "youtube_url": "https://www.youtube.com/results?search_query=Tyler,+the+Creator+Call+Me+If+You+Get+Lost+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T23:00:00+00:00"
   },
   {
    "id": "7872e0e6-8b44-4b5d-a7e6-b9635c62d101",
@@ -1760,7 +1770,8 @@
    "spotify_url": "https://open.spotify.com/album/2o2GBOfy2GG9oKYZgfZkur",
    "apple_music_url": "https://music.apple.com/us/album/civilisation/1788304818",
    "youtube_url": "https://www.youtube.com/results?search_query=Orelsan+Civilisation+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T11:00:00+00:00"
   },
   {
    "id": "9795e8b3-b5df-4e53-8a77-272dc3e31681",
@@ -1787,7 +1798,8 @@
    "spotify_url": "https://open.spotify.com/album/7DvK67C21i6go7olhjvLgT",
    "apple_music_url": "https://music.apple.com/us/album/flop/1587171881",
    "youtube_url": "https://www.youtube.com/results?search_query=Salmo+Flop+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T05:00:00+00:00"
   },
   {
    "id": "c23ae502-f18b-42d4-ae58-7da4925f21b1",
@@ -1814,7 +1826,8 @@
    "spotify_url": "https://open.spotify.com/album/3NjTHK6FovpR3rHceaT5FE",
    "apple_music_url": "https://music.apple.com/br/album/hist%C3%B3rias-da-minha-%C3%A1rea/1502146741",
    "youtube_url": "https://www.youtube.com/results?search_query=Djonga+Histórias+da+Minha+Área+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T08:00:00+00:00"
   },
   {
    "id": "27b58720-0925-4142-97fc-a7d0a9c0f104",
@@ -1841,7 +1854,8 @@
    "spotify_url": "https://open.spotify.com/album/6nfJMRoIjyRwk3ZTHNm0PY",
    "apple_music_url": "https://music.apple.com/us/album/pray-for-paris/1506521703",
    "youtube_url": "https://www.youtube.com/results?search_query=Westside+Gunn+Pray+for+Paris+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T17:00:00+00:00"
   },
   {
    "id": "346ed847-6919-42ae-b8e2-7d379f905081",
@@ -1868,7 +1882,8 @@
    "spotify_url": "https://open.spotify.com/album/2QRedhP5RmKJiJ1i8VgDGR",
    "apple_music_url": "https://music.apple.com/us/album/whole-lotta-red/1546163603",
    "youtube_url": "https://www.youtube.com/results?search_query=Playboi+Carti+Whole+Lotta+Red+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T05:00:00+00:00"
   },
   {
    "id": "a28f9e93-75db-4382-afc1-7bc1eb665774",
@@ -1895,7 +1910,8 @@
    "spotify_url": "https://open.spotify.com/album/22ltKhPdKZ4IuFrna73xPG",
    "apple_music_url": "https://music.apple.com/us/album/amarelo/1484562276",
    "youtube_url": "https://www.youtube.com/results?search_query=Emicida+AmarElo+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T11:00:00+00:00"
   },
   {
    "id": "42038f4d-781e-4877-adce-21ea8a71fd9a",
@@ -1922,7 +1938,8 @@
    "spotify_url": "https://open.spotify.com/album/5zi7WsKlIiUXv09tbGLKsE",
    "apple_music_url": "https://music.apple.com/us/album/igor/1463409338",
    "youtube_url": "https://www.youtube.com/results?search_query=Tyler%2C+the+Creator+IGOR+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T23:00:00+00:00"
   },
   {
    "id": "b6494978-a5fd-4374-9766-11cd7d0ede3e",
@@ -1949,7 +1966,8 @@
    "spotify_url": "https://open.spotify.com/album/5eLZYtCXkFIsOmpVc7vrI2",
    "apple_music_url": "https://music.apple.com/fr/album/les-%C3%A9toiles-vagabondes-expansion/1468503258",
    "youtube_url": "https://www.youtube.com/results?search_query=Nekfeu+Les+Étoiles+vagabondes+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T11:00:00+00:00"
   },
   {
    "id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
@@ -1976,7 +1994,8 @@
    "spotify_url": "https://open.spotify.com/album/5Ki4YFQrUx7hCcQx1LJUQb",
    "apple_music_url": "https://music.apple.com/us/album/nothing-great-about-britain/1457181800",
    "youtube_url": "https://www.youtube.com/results?search_query=slowthai+Nothing+Great+About+Britain+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T20:00:00+00:00"
   },
   {
    "id": "7a1b21a7-1883-42ba-9211-c0f2fad705f6",
@@ -2003,7 +2022,8 @@
    "spotify_url": "https://open.spotify.com/album/4GrFuXwRmEBJec22p58fsD",
    "apple_music_url": "https://music.apple.com/us/album/psychodrama/1839406091",
    "youtube_url": "https://www.youtube.com/results?search_query=Dave+PSYCHODRAMA+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T05:00:00+00:00"
   },
   {
    "id": "075091e0-3d68-4460-82bb-07afa00b7038",
@@ -2030,7 +2050,8 @@
    "spotify_url": "https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I",
    "apple_music_url": "https://music.apple.com/us/album/astroworld/1421241217",
    "youtube_url": "https://www.youtube.com/results?search_query=Travis+Scott+ASTROWORLD+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T17:00:00+00:00"
   },
   {
    "id": "48b19049-9c2e-4638-b3b9-f1e5c48fcba8",
@@ -2057,7 +2078,8 @@
    "spotify_url": "https://open.spotify.com/album/07bIdDDe3I3hhWpxU6tuBp",
    "apple_music_url": "https://music.apple.com/us/album/daytona/1388853738",
    "youtube_url": "https://www.youtube.com/results?search_query=Pusha+T+DAYTONA+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T05:00:00+00:00"
   },
   {
    "id": "20a2d36f-3d9a-4f1a-bfb1-e91956bb2f77",
@@ -2084,7 +2106,8 @@
    "spotify_url": "https://open.spotify.com/album/7dAm8ShwJLFm9SaJ6Yc58O",
    "apple_music_url": "https://music.apple.com/us/album/die-lit/1381553184",
    "youtube_url": "https://www.youtube.com/results?search_query=Playboi+Carti+Die+Lit+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T05:00:00+00:00"
   },
   {
    "id": "fda721f8-6334-4984-9283-e71ae5eedd69",
@@ -2111,7 +2134,8 @@
    "spotify_url": "https://open.spotify.com/album/4W2IL1NXpcbsYmGdAjeJGg",
    "apple_music_url": "https://music.apple.com/br/album/gigantes/1439659556",
    "youtube_url": "https://www.youtube.com/results?search_query=BK'+Gigantes+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T11:00:00+00:00"
   },
   {
    "id": "dfef6a04-fda7-428a-b3ff-ddb04e1598ce",
@@ -2138,7 +2162,8 @@
    "spotify_url": "https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV",
    "apple_music_url": "https://music.apple.com/us/album/kids-see-ghosts/1396710872",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+Kid+Cudi+Kids+See+Ghosts+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T14:00:00+00:00"
   },
   {
    "id": "6e140fe7-4b33-4dd1-9bd4-7df6eaeb6233",
@@ -2165,7 +2190,8 @@
    "spotify_url": "https://open.spotify.com/album/5YXyBqtxW2APQNBCscATw0",
    "apple_music_url": "https://music.apple.com/it/album/rockstar/1440909949",
    "youtube_url": "https://www.youtube.com/results?search_query=Sfera+Ebbasta+Rockstar+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T14:00:00+00:00"
   },
   {
    "id": "4ecab9f9-afb1-4181-9230-60a8c45bfbcb",
@@ -2192,7 +2218,8 @@
    "spotify_url": "https://open.spotify.com/album/2Upg5l79vSVNVS9v8vDqUa",
    "apple_music_url": "https://music.apple.com/us/album/touch-my-blood/1391157689",
    "youtube_url": "https://www.youtube.com/results?search_query=AKA+Touch+My+Blood+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T23:00:00+00:00"
   },
   {
    "id": "550509f0-025e-447e-87ba-ee75911e6f60",
@@ -2219,7 +2246,8 @@
    "spotify_url": "https://open.spotify.com/album/5EBGCvO6upi3GNknMVe9x9",
    "apple_music_url": "https://music.apple.com/us/album/ye/1441460375",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+ye+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T05:00:00+00:00"
   },
   {
    "id": "50c8540c-2503-4e54-9520-f5f2df5ba01c",
@@ -2246,7 +2274,8 @@
    "spotify_url": "https://open.spotify.com/album/4JTOxuvM2jcSqAvEZtZsOO",
    "apple_music_url": "https://music.apple.com/us/album/culture/1615495955",
    "youtube_url": "https://www.youtube.com/results?search_query=Migos+Culture+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T05:00:00+00:00"
   },
   {
    "id": "9cd849db-b8d8-404b-b48b-2f1fcbb3528f",
@@ -2273,7 +2302,8 @@
    "spotify_url": "https://open.spotify.com/album/4eLPsYPBmXABThSJ821sqY",
    "apple_music_url": "https://music.apple.com/us/album/damn/1440881047",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+DAMN.+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T05:00:00+00:00"
   },
   {
    "id": "525a3fd3-f312-4ba9-838a-93b0018b7a62",
@@ -2300,7 +2330,8 @@
    "spotify_url": "https://open.spotify.com/album/3hwnyNkxe0IVqZhQfn9xmc",
    "apple_music_url": "https://music.apple.com/us/album/everybody/1440896552",
    "youtube_url": "https://www.youtube.com/results?search_query=Logic+Everybody+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T17:00:00+00:00"
   },
   {
    "id": "500588b1-183d-42dd-851c-1080de7221d6",
@@ -2327,7 +2358,8 @@
    "spotify_url": "https://open.spotify.com/album/2nkto6YNI4rUYTLqEwWJ3o",
    "apple_music_url": "https://music.apple.com/us/album/flower-boy/1254572564",
    "youtube_url": "https://www.youtube.com/results?search_query=Tyler,+the+Creator+Flower+Boy+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T02:00:00+00:00"
   },
   {
    "id": "0d57a6be-0e04-40d5-9f36-eae2c5434ec5",
@@ -2354,7 +2386,8 @@
    "spotify_url": "https://open.spotify.com/album/5fkFWJ9LZizXE4yPenNGuy",
    "apple_music_url": "https://music.apple.com/us/album/gang-signs-prayer/1673768631",
    "youtube_url": "https://www.youtube.com/results?search_query=Stormzy+Gang+Signs+%26+Prayer+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T11:00:00+00:00"
   },
   {
    "id": "ac15f1af-12c8-473b-985f-150f958f1a7d",
@@ -2381,7 +2414,8 @@
    "spotify_url": "https://open.spotify.com/album/3A1vnUJDPz0xYMful9pO4I",
    "apple_music_url": "https://music.apple.com/us/album/atrocity-exhibition/1142690534",
    "youtube_url": "https://www.youtube.com/results?search_query=Danny+Brown+Atrocity+Exhibition+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T11:00:00+00:00"
   },
   {
    "id": "cddd29ff-6659-46da-9c0c-a196ab94b6ff",
@@ -2408,7 +2442,8 @@
    "spotify_url": "https://open.spotify.com/album/71QyofYesSsRMwFOTafnhB",
    "apple_music_url": "https://music.apple.com/us/album/coloring-book/1113239004",
    "youtube_url": "https://www.youtube.com/results?search_query=Chance+the+Rapper+Coloring+Book+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T11:00:00+00:00"
   },
   {
    "id": "5436ad51-e6b3-488c-a68a-000cf94bb15c",
@@ -2435,7 +2470,8 @@
    "spotify_url": "https://open.spotify.com/album/5GFHFEASZeJF0gyWuDDjGE",
    "apple_music_url": "https://music.apple.com/fr/album/dans-la-l%C3%A9gende/1663880916",
    "youtube_url": "https://www.youtube.com/results?search_query=PNL+Dans+la+l%C3%A9gende+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T23:00:00+00:00"
   },
   {
    "id": "64d04c4a-aa0e-47c0-bd95-854a1490563a",
@@ -2462,7 +2498,8 @@
    "spotify_url": "https://open.spotify.com/album/7M28Ejbd7r4lT46KhpRwhj",
    "apple_music_url": "https://music.apple.com/us/album/hitler-wears-hermes-4/1169799145",
    "youtube_url": "https://www.youtube.com/results?search_query=Westside+Gunn+Hitler+Wears+Hermes+4+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T02:00:00+00:00"
   },
   {
    "id": "3884bc1a-1dd8-44b1-976a-54a1f60031f1",
@@ -2489,7 +2526,8 @@
    "spotify_url": "https://open.spotify.com/album/7EpUpNUkkEGnaCvkcn1j4H",
    "apple_music_url": "https://music.apple.com/us/album/jeffery/1146718343",
    "youtube_url": "https://www.youtube.com/results?search_query=Young+Thug+JEFFERY+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T17:00:00+00:00"
   },
   {
    "id": "2d67f2a6-cf84-42b9-8660-33ae067da252",
@@ -2516,7 +2554,8 @@
    "spotify_url": "https://open.spotify.com/album/6s4vWWWxNrGcKhrOFYRZzk",
    "apple_music_url": "https://music.apple.com/us/album/konnichiwa/1168936007",
    "youtube_url": "https://www.youtube.com/results?search_query=Skepta+Konnichiwa+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T17:00:00+00:00"
   },
   {
    "id": "31638b80-019d-4871-bda9-ecd5d900b43d",
@@ -2543,7 +2582,8 @@
    "spotify_url": "https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1",
    "apple_music_url": "https://music.apple.com/us/album/the-life-of-pablo/1443063578",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+The+Life+of+Pablo+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T14:00:00+00:00"
   },
   {
    "id": "b512ca05-8e6e-4db0-a912-a33cec23698d",
@@ -2570,7 +2610,8 @@
    "spotify_url": "https://open.spotify.com/album/0kL3TYRsSXnu0iJvFO3rud",
    "apple_music_url": "https://music.apple.com/us/album/untitled-unmastered/1440844834",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+untitled+unmastered.+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T11:00:00+00:00"
   },
   {
    "id": "7c69f9c1-bd19-42dc-8190-4c4efd353fcf",
@@ -2597,7 +2638,8 @@
    "spotify_url": "https://open.spotify.com/album/7EBmwHYrrAlw2BH8bjzKS6",
    "apple_music_url": "https://music.apple.com/de/album/vibe/1824481570",
    "youtube_url": "https://www.youtube.com/results?search_query=Fler+Vibe+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T05:00:00+00:00"
   },
   {
    "id": "7b05350d-c0f5-4091-8bcc-6886b6b159b8",
@@ -2624,7 +2666,8 @@
    "spotify_url": "https://open.spotify.com/album/40GMAhriYJRO1rsY4YdrZb",
    "apple_music_url": "https://music.apple.com/us/album/views/1440841363",
    "youtube_url": "https://www.youtube.com/results?search_query=Drake+Views+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T23:00:00+00:00"
   },
   {
    "id": "f4db7414-50e4-4817-8dcc-907961d15d4b",
@@ -2651,7 +2694,8 @@
    "spotify_url": "https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I",
    "apple_music_url": "https://music.apple.com/us/album/if-youre-reading-this-its-too-late/1440839718",
    "youtube_url": "https://www.youtube.com/results?search_query=Drake+If+You're+Reading+This+It's+Too+Late+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T20:00:00+00:00"
   },
   {
    "id": "df7724ee-e539-4516-a746-f44a0362e4e2",
@@ -2678,7 +2722,8 @@
    "spotify_url": "https://open.spotify.com/album/4PWBTB6NYSKQwfo79I3prg",
    "apple_music_url": "https://music.apple.com/us/album/rodeo/1456176981",
    "youtube_url": "https://www.youtube.com/results?search_query=Travis+Scott+Rodeo+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T17:00:00+00:00"
   },
   {
    "id": "e32350c7-7aa0-4943-a1af-e79df50043c7",
@@ -2705,7 +2750,8 @@
    "spotify_url": "https://open.spotify.com/album/7F58zK8t8whSFjX5X09d28",
    "apple_music_url": "https://music.apple.com/us/album/tetsuo-youth/948344511",
    "youtube_url": "https://www.youtube.com/results?search_query=Lupe+Fiasco+Tetsuo+and+Youth+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T05:00:00+00:00"
   },
   {
    "id": "00a6b596-8929-4ed1-9222-5d20c85ed7db",
@@ -2733,7 +2779,8 @@
    "spotify_url": "https://open.spotify.com/album/7ycBtnsMtyVbbwTfJwRjSP",
    "apple_music_url": "https://music.apple.com/us/album/to-pimp-a-butterfly/1440828886",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+To+Pimp+a+Butterfly+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T17:00:00+00:00"
   },
   {
    "id": "16ced337-6988-44e3-bc1f-2c887f85770f",
@@ -2760,7 +2807,8 @@
    "spotify_url": "https://open.spotify.com/album/0UMMIkurRUmkruZ3KGBLtG",
    "apple_music_url": "https://music.apple.com/us/album/2014-forest-hills-drive/1600766204",
    "youtube_url": "https://www.youtube.com/results?search_query=J.+Cole+2014+Forest+Hills+Drive+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T11:00:00+00:00"
   },
   {
    "id": "b67a66c5-0e57-4b14-92f6-1f71f039013a",
@@ -2787,7 +2835,8 @@
    "spotify_url": "https://open.spotify.com/album/5xnpDQuOSNPG5IuyqnEqVS",
    "apple_music_url": "https://music.apple.com/br/album/convoque-seu-buda/1690463415",
    "youtube_url": "https://www.youtube.com/results?search_query=Criolo+Convoque+Seu+Buda+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T14:00:00+00:00"
   },
   {
    "id": "7bc0fdb6-fe20-42be-9831-86879b6e3a98",
@@ -2814,7 +2863,8 @@
    "spotify_url": "https://open.spotify.com/album/1D2Rs9qcENebbiDR5wk88T",
    "apple_music_url": "https://music.apple.com/fr/album/les-yeux-plus-gros-que-le-monde/1057641068",
    "youtube_url": "https://www.youtube.com/results?search_query=Black+M+Les+Yeux+plus+gros+que+le+monde+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T08:00:00+00:00"
   },
   {
    "id": "83cb1fe5-4fdd-4c81-a54c-4e1df7efd1da",
@@ -2841,7 +2891,8 @@
    "spotify_url": "https://open.spotify.com/album/6PhUHgMnUCSCgrjfc2lDF0",
    "apple_music_url": "https://music.apple.com/us/album/pi%C3%B1ata/1705349861",
    "youtube_url": "https://www.youtube.com/results?search_query=Freddie+Gibbs+%26+Madlib+Pi%C3%B1ata+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T02:00:00+00:00"
   },
   {
    "id": "b89a26a5-a992-40a0-bb27-15ab44eba0f2",
@@ -2868,7 +2919,8 @@
    "spotify_url": "https://open.spotify.com/album/6WBUyDe1Xy8QRwF6wzhJsY",
    "apple_music_url": "https://music.apple.com/us/album/run-the-jewels-2/1862913140",
    "youtube_url": "https://www.youtube.com/results?search_query=Run+the+Jewels+Run+the+Jewels+2+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-07T23:00:00+00:00"
   },
   {
    "id": "8b9410a1-4b10-4461-9f71-22c5db2bee7f",
@@ -2895,7 +2947,8 @@
    "spotify_url": "https://open.spotify.com/album/73vP5dotg2gtDXVl1VoLYU",
    "apple_music_url": "https://music.apple.com/us/album/confundindo-s%C3%A1bios/703960320",
    "youtube_url": "https://www.youtube.com/results?search_query=Rashid+Confundindo+Sábios+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T23:00:00+00:00"
   },
   {
    "id": "d6e9b374-7ffd-4d0a-a565-2b3ea9a53b96",
@@ -2922,7 +2975,8 @@
    "spotify_url": "https://open.spotify.com/album/5vRfIDOPJHy3W2wHWbzLlE",
    "apple_music_url": "https://music.apple.com/us/album/doris/669700847",
    "youtube_url": "https://www.youtube.com/results?search_query=Earl+Sweatshirt+Doris+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T05:00:00+00:00"
   },
   {
    "id": "af9cb3cf-9a19-43d0-bda9-71222c804ff8",
@@ -2949,7 +3003,8 @@
    "spotify_url": "https://open.spotify.com/album/0IoiCReUTgS8veAp98cHIA",
    "apple_music_url": "https://music.apple.com/us/album/my-name-is-my-name/1440822381",
    "youtube_url": "https://www.youtube.com/results?search_query=Pusha+T+My+Name+Is+My+Name+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T05:00:00+00:00"
   },
   {
    "id": "170a50e0-54d1-4513-bccc-0d4d1ed5e05a",
@@ -2976,7 +3031,8 @@
    "spotify_url": "https://open.spotify.com/album/3PAv4PLPv9V68fstzIqhyb",
    "apple_music_url": "https://music.apple.com/us/album/nothing-was-the-same-deluxe/1440829462",
    "youtube_url": "https://www.youtube.com/results?search_query=Drake+Nothing+Was+the+Same+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T20:00:00+00:00"
   },
   {
    "id": "a39be2e3-3381-4d01-93b2-4c336149eea0",
@@ -3003,7 +3059,8 @@
    "spotify_url": "https://open.spotify.com/album/2u07QZy2B5vzr0s5pBbKga",
    "apple_music_url": "https://music.apple.com/nz/album/unknown-death-2002/1616529900",
    "youtube_url": "https://www.youtube.com/results?search_query=Yung+Lean+Unknown+Death+2002+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T11:00:00+00:00"
   },
   {
    "id": "a3503580-c4d7-466c-bc08-877236331a67",
@@ -3030,7 +3087,8 @@
    "spotify_url": "https://open.spotify.com/album/7D2NdGvBHIavgLhmcwhluK",
    "apple_music_url": "https://music.apple.com/us/album/yeezus/1440873068",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+Yeezus+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T08:00:00+00:00"
   },
   {
    "id": "5c11edf1-adb4-457d-9b5f-1d1e60952939",
@@ -3057,7 +3115,8 @@
    "spotify_url": "https://open.spotify.com/album/108j4R9oEcFUaVRzE8RZKI",
    "apple_music_url": "https://music.apple.com/us/album/finally-rich/1440853396",
    "youtube_url": "https://www.youtube.com/results?search_query=Chief+Keef+Finally+Rich+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T23:00:00+00:00"
   },
   {
    "id": "7fc74d01-073a-4c47-b8b5-c509409c6e79",
@@ -3084,7 +3143,8 @@
    "spotify_url": "https://open.spotify.com/album/6PBZN8cbwkqm1ERj2BGXJ1",
    "apple_music_url": "https://music.apple.com/us/album/good-kid-m-a-a-d-city/1471263898",
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+good+kid,+m.A.A.d+city+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T08:00:00+00:00"
   },
   {
    "id": "576f378c-2822-41c1-af3d-a85f77be866a",
@@ -3111,7 +3171,8 @@
    "spotify_url": "https://open.spotify.com/album/1PQDjdBpHPikAodJqjzm6a",
    "apple_music_url": "https://music.apple.com/us/album/the-money-store/515449028",
    "youtube_url": "https://www.youtube.com/results?search_query=Death+Grips+The+Money+Store+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T17:00:00+00:00"
   },
   {
    "id": "f2d34092-de22-4b4b-b081-fa7f61d38cec",
@@ -3138,7 +3199,8 @@
    "spotify_url": "https://open.spotify.com/album/4l6EPpP9hjQrLb8qNB9eC5",
    "apple_music_url": "https://music.apple.com/us/album/live-love-a%24ap/1591647717",
    "youtube_url": "https://www.youtube.com/results?search_query=A%24AP+Rocky+LIVE.LOVE.A%24AP+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T11:00:00+00:00"
   },
   {
    "id": "6d21d545-68b0-4025-b0cd-f885f919518c",
@@ -3165,7 +3227,8 @@
    "spotify_url": "https://open.spotify.com/album/6X1x82kppWZmDzlXXK3y3q",
    "apple_music_url": "https://music.apple.com/us/album/take-care-deluxe-version/1440642493",
    "youtube_url": "https://www.youtube.com/results?search_query=Drake+Take+Care+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T14:00:00+00:00"
   },
   {
    "id": "a7a2eeac-d9ba-4959-b49a-d1d35d2c6873",
@@ -3192,7 +3255,8 @@
    "spotify_url": "https://open.spotify.com/album/0OcMap99vLEeGkBCfCwRwS",
    "apple_music_url": "https://music.apple.com/us/album/watch-the-throne/1440848092",
    "youtube_url": "https://www.youtube.com/results?search_query=Jay-Z+and+Kanye+West+Watch+the+Throne+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T20:00:00+00:00"
   },
   {
    "id": "edf23b58-2664-457f-817d-7b5c0f9074db",
@@ -3220,7 +3284,8 @@
    "spotify_url": "https://open.spotify.com/album/20r762YmB5HeofjMCiPMLv",
    "apple_music_url": "https://music.apple.com/us/album/my-beautiful-dark-twisted-fantasy/1440742903",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+My+Beautiful+Dark+Twisted+Fantasy+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T02:00:00+00:00"
   },
   {
    "id": "15d6cc28-8f0b-4b7c-89de-7a4714151f9b",
@@ -3247,7 +3312,8 @@
    "spotify_url": "https://open.spotify.com/album/47y3PbX8oIDCkYAFylCJz0",
    "apple_music_url": "https://music.apple.com/us/album/man-on-the-moon-the-end-of-day/1440744775",
    "youtube_url": "https://www.youtube.com/results?search_query=Kid+Cudi+Man+on+the+Moon%3A+The+End+of+Day+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T14:00:00+00:00"
   },
   {
    "id": "baaf0efc-37b0-4907-a272-4b4469fe29d7",
@@ -3274,7 +3340,8 @@
    "spotify_url": "https://open.spotify.com/album/3WFTGIO6E3Xh4paEOBY9OU",
    "apple_music_url": "https://music.apple.com/us/album/808s-heartbreak/1441410287",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+808s+%26+Heartbreak+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T05:00:00+00:00"
   },
   {
    "id": "e7d09a82-4c55-4283-8052-61d475f99039",
@@ -3301,7 +3368,8 @@
    "spotify_url": "https://open.spotify.com/album/1Do3y8IAcbYOToYQJnGwSO",
    "apple_music_url": "https://music.apple.com/us/album/tha-carter-iii/1440737099",
    "youtube_url": "https://www.youtube.com/results?search_query=Lil+Wayne+Tha+Carter+III+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T14:00:00+00:00"
   },
   {
    "id": "0746700c-d9e1-414a-ba75-0414a5703dd3",
@@ -3328,7 +3396,8 @@
    "spotify_url": "https://open.spotify.com/album/5dMmFu9NCxSjDk3ekggogc",
    "apple_music_url": "https://music.apple.com/us/album/nas/1443258592",
    "youtube_url": "https://www.youtube.com/results?search_query=Nas+Untitled+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T08:00:00+00:00"
   },
   {
    "id": "5a01f708-9049-4880-8444-4ecee149793e",
@@ -3355,7 +3424,8 @@
    "spotify_url": "https://open.spotify.com/album/4SZko61aMnmgvNhfhgTuD3",
    "apple_music_url": "https://music.apple.com/us/album/graduation/1451901307",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+Graduation+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T23:00:00+00:00"
   },
   {
    "id": "0c216bf5-f1ea-4d89-acad-2632bfc0029a",
@@ -3382,7 +3452,8 @@
    "spotify_url": "https://open.spotify.com/album/5fMlysqhFE0itGn4KezMBW",
    "apple_music_url": "https://music.apple.com/us/album/donuts/108233171",
    "youtube_url": "https://www.youtube.com/results?search_query=J+Dilla+Donuts+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T17:00:00+00:00"
   },
   {
    "id": "5e335902-9f55-403b-896d-6745982538e8",
@@ -3409,7 +3480,8 @@
    "spotify_url": "https://open.spotify.com/album/5DEorR03yrZwQHhfem7KV2",
    "apple_music_url": "https://music.apple.com/fr/album/ouest-side/1442232307",
    "youtube_url": "https://www.youtube.com/results?search_query=Booba+Ouest+Side+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T20:00:00+00:00"
   },
   {
    "id": "860477fa-b79d-40db-b72e-a67e60ecabd9",
@@ -3436,7 +3508,8 @@
    "spotify_url": "https://open.spotify.com/album/0Ds6i3h0F9RcYIKAD5Olum",
    "apple_music_url": "https://music.apple.com/us/album/late-registration/1440668749",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+Late+Registration+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T17:00:00+00:00"
   },
   {
    "id": "ae6fa632-a61b-4c49-98d5-653d0f2ca77c",
@@ -3463,7 +3536,8 @@
    "spotify_url": "https://open.spotify.com/album/1RJDe9Eo8473Kg4pdUVGDM",
    "apple_music_url": "https://music.apple.com/us/album/modal-soul/1078914477",
    "youtube_url": "https://www.youtube.com/results?search_query=Nujabes+Modal+Soul+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T17:00:00+00:00"
   },
   {
    "id": "d2468756-0905-4020-a9bb-5d215215ba70",
@@ -3490,7 +3564,8 @@
    "spotify_url": "https://open.spotify.com/album/3t7jR4CHdzu4zLLcpQW3Yr",
    "apple_music_url": "https://music.apple.com/us/album/peines-de-maures-arc-en-ciel-pour-daltoniens/963222169",
    "youtube_url": "https://www.youtube.com/results?search_query=La+Caution+Peines+de+Maures+Arc-en-ciel+pour+daltoniens+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T20:00:00+00:00"
   },
   {
    "id": "8635ecd6-77e7-410d-ad05-796113274ce2",
@@ -3517,7 +3592,8 @@
    "spotify_url": "https://open.spotify.com/album/5qyUw6x9fjZPoQHUwuDu39",
    "apple_music_url": "https://music.apple.com/us/album/tha-carter-ii/1443918957",
    "youtube_url": "https://www.youtube.com/results?search_query=Lil+Wayne+Tha+Carter+II+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T23:00:00+00:00"
   },
   {
    "id": "50858662-ac41-4a4c-9c85-5f0a851e671c",
@@ -3544,7 +3620,8 @@
    "spotify_url": "https://open.spotify.com/album/5J9RW8lwdU6dIU2vdfbI7s",
    "apple_music_url": "https://music.apple.com/us/album/babylon-by-gus-vol-1-o-ano-do-macaco/977460213",
    "youtube_url": "https://www.youtube.com/results?search_query=Black+Alien+Babylon+by+Gus,+Vol.+1+O+Ano+do+Macaco+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T02:00:00+00:00"
   },
   {
    "id": "f35a8f5d-c652-4648-b175-6ab9d661c1cf",
@@ -3571,7 +3648,8 @@
    "spotify_url": "https://open.spotify.com/album/5Cp07JiZnqruQBNZb88OCf",
    "apple_music_url": "https://music.apple.com/fr/album/la-fiert%C3%A9-des-n%C3%B4tres/693103816",
    "youtube_url": "https://www.youtube.com/results?search_query=Rohff+La+Fierté+des+nôtres+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T02:00:00+00:00"
   },
   {
    "id": "7989f8b3-05bb-4d9b-919a-9a9ce2e051e7",
@@ -3599,7 +3677,8 @@
    "spotify_url": "https://open.spotify.com/album/19bQiwEKhXUBJWY6oV3KZk",
    "apple_music_url": "https://music.apple.com/us/album/madvillainy/887699504",
    "youtube_url": "https://www.youtube.com/results?search_query=Madvillain+Madvillainy+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T11:00:00+00:00"
   },
   {
    "id": "29a896c1-ee77-48a9-8496-5d8022d4c29d",
@@ -3626,7 +3705,8 @@
    "spotify_url": "https://open.spotify.com/album/1UcS2nqUhxrZjrBZ3tHk2N",
    "apple_music_url": "https://music.apple.com/us/album/mm-food/1516750770",
    "youtube_url": "https://www.youtube.com/results?search_query=MF+DOOM+MM..FOOD+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T05:00:00+00:00"
   },
   {
    "id": "0b6f3de2-2b91-47b4-87ab-5f3dfffadc29",
@@ -3653,7 +3733,8 @@
    "spotify_url": "https://open.spotify.com/album/4Uv86qWpGTxf7fU7lG5X6F",
    "apple_music_url": "https://music.apple.com/us/album/the-college-dropout/1412872568",
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+The+College+Dropout+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T02:00:00+00:00"
   },
   {
    "id": "46ccf126-b15b-4aaf-84da-7d73af87ce91",
@@ -3680,7 +3761,8 @@
    "spotify_url": "https://open.spotify.com/album/16m3S8uDo5ZNLEekcnOSxf",
    "apple_music_url": "https://music.apple.com/us/album/boy-in-da-corner/465625689",
    "youtube_url": "https://www.youtube.com/results?search_query=Dizzee+Rascal+Boy+in+da+Corner+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T05:00:00+00:00"
   },
   {
    "id": "16dda0a1-787d-4fee-910e-e7cea34f98b0",
@@ -3707,7 +3789,8 @@
    "spotify_url": "https://open.spotify.com/album/5G5rgQHzdQnw32SI0WjIo5",
    "apple_music_url": "https://music.apple.com/us/album/get-rich-or-die-tryin-bonus-track-version/1440841450",
    "youtube_url": "https://www.youtube.com/results?search_query=50+Cent+Get+Rich+or+Die+Tryin'+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T17:00:00+00:00"
   },
   {
    "id": "44dde968-a969-4f27-a68a-fb47cb549439",
@@ -3734,7 +3817,8 @@
    "spotify_url": "https://open.spotify.com/album/4FWvo9oS4gRgHtAwDwUjiO",
    "apple_music_url": "https://music.apple.com/us/album/the-black-album/1440785433",
    "youtube_url": "https://www.youtube.com/results?search_query=Jay-Z+The+Black+Album+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T23:00:00+00:00"
   },
   {
    "id": "aa7449f4-10bb-49cc-87c1-2599a6542463",
@@ -3761,7 +3845,8 @@
    "spotify_url": "https://open.spotify.com/album/3I16wXzIVlaeb8ulHTxCXd",
    "apple_music_url": "https://music.apple.com/us/album/trap-muzik/1258990795",
    "youtube_url": "https://www.youtube.com/results?search_query=T.I.+Trap+Muzik+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T23:00:00+00:00"
   },
   {
    "id": "c4af288b-3aad-421b-9381-ee9708376a4d",
@@ -3788,7 +3873,8 @@
    "spotify_url": "https://open.spotify.com/album/1jEoprw8f8UDwGF7gLLeCJ",
    "apple_music_url": "https://music.apple.com/de/album/vom-bordstein-bis-zur-skyline-re-release/1605974970",
    "youtube_url": "https://www.youtube.com/results?search_query=Bushido+Vom+Bordstein+bis+zur+Skyline+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T17:00:00+00:00"
   },
   {
    "id": "23d91644-bff0-47c8-8549-ff4c64da13e5",
@@ -3815,7 +3901,8 @@
    "spotify_url": "https://open.spotify.com/album/1Q83nQO2QG81TVa10hW7LX",
    "apple_music_url": "https://music.apple.com/us/album/lord-willin/389140434",
    "youtube_url": "https://www.youtube.com/results?search_query=Clipse+Lord+Willin%27+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T20:00:00+00:00"
   },
   {
    "id": "82d915e8-68c6-466f-9e3d-7d1482f42bb7",
@@ -3842,7 +3929,8 @@
    "spotify_url": "https://open.spotify.com/album/0hkZGxfsFypXbjq15hM6U9",
    "apple_music_url": "https://music.apple.com/gb/album/original-pirate-material/63836809",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Streets+Original+Pirate+Material+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T05:00:00+00:00"
   },
   {
    "id": "2045ecb1-649e-47b1-892a-f82d11953840",
@@ -3869,7 +3957,8 @@
    "spotify_url": "https://open.spotify.com/album/74HkRQNxwELlh9Ckv5716T",
    "apple_music_url": "https://music.apple.com/us/album/party-music/1485046528",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Coup+Party+Music+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T02:00:00+00:00"
   },
   {
    "id": "4164fbf7-047e-499c-a232-b46ac349e7fd",
@@ -3896,7 +3985,8 @@
    "spotify_url": "https://open.spotify.com/album/54I5tDCMjnNVWSENHg8EDH",
    "apple_music_url": "https://music.apple.com/us/album/the-blueprint/1440935272",
    "youtube_url": "https://www.youtube.com/results?search_query=Jay-Z+The+Blueprint+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T02:00:00+00:00"
   },
   {
    "id": "1f156856-4d2f-4eb3-abe1-87f4dbcb457c",
@@ -3923,7 +4013,8 @@
    "spotify_url": "https://open.spotify.com/album/4fcXf7no3MntdfUr4HKbIc",
    "apple_music_url": "https://music.apple.com/us/album/the-cold-vein-deluxe-edition/1660711417",
    "youtube_url": "https://www.youtube.com/results?search_query=Cannibal+Ox+The+Cold+Vein+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T20:00:00+00:00"
   },
   {
    "id": "6445e2ed-0132-498d-a228-4d29cccfd167",
@@ -3950,7 +4041,8 @@
    "spotify_url": "https://open.spotify.com/album/2c1HbILCmMdS1LigScTWc8",
    "apple_music_url": "https://music.apple.com/us/album/black-bastards-deluxe-edition/1681144037",
    "youtube_url": "https://www.youtube.com/results?search_query=KMD+Black+Bastards+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T11:00:00+00:00"
   },
   {
    "id": "37f193fa-0070-448d-bcf8-db455a8b1d1a",
@@ -3977,7 +4069,8 @@
    "spotify_url": "https://open.spotify.com/album/7gXuElmegVReY7imkb5bf8",
    "apple_music_url": "https://music.apple.com/us/album/lets-get-free/219077856",
    "youtube_url": "https://www.youtube.com/results?search_query=dead+prez+Let's+Get+Free+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T08:00:00+00:00"
   },
   {
    "id": "d55a9642-0991-4983-91aa-834995cd2297",
@@ -4004,7 +4097,8 @@
    "spotify_url": "https://open.spotify.com/album/0ZSwTSaR9VUe3uYsXNQgub",
    "apple_music_url": "https://music.apple.com/us/album/like-water-for-chocolate/1854231673",
    "youtube_url": "https://www.youtube.com/results?search_query=Common+Like+Water+for+Chocolate+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T08:00:00+00:00"
   },
   {
    "id": "3c2fdad8-8803-46dc-8078-3be2219204a4",
@@ -4031,7 +4125,8 @@
    "spotify_url": "https://open.spotify.com/album/6NoGigzafbVAzRZpDTNhL2",
    "apple_music_url": "https://music.apple.com/br/album/prov%C3%A9rbios-13/1150938161",
    "youtube_url": "https://www.youtube.com/results?search_query=509-E+Provérbios+13+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T02:00:00+00:00"
   },
   {
    "id": "257985ab-c04d-4342-aaaf-91dcaee32d93",
@@ -4058,7 +4153,8 @@
    "spotify_url": "https://open.spotify.com/album/2tm3Ht61kqqRZtIYsBjxEj",
    "apple_music_url": "https://music.apple.com/us/album/stankonia-deluxe-version/1536616104",
    "youtube_url": "https://www.youtube.com/results?search_query=OutKast+Stankonia+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T05:00:00+00:00"
   },
   {
    "id": "d2ab2df3-2f8d-42b4-948c-7d1c3d2486e8",
@@ -4085,7 +4181,8 @@
    "spotify_url": "https://open.spotify.com/album/6t7956yu5zYf5A829XRiHC",
    "apple_music_url": "https://music.apple.com/us/album/the-marshall-mathers-lp/1440866782",
    "youtube_url": "https://www.youtube.com/results?search_query=Eminem+The+Marshall+Mathers+LP+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T11:00:00+00:00"
   },
   {
    "id": "2cbe0b32-f615-426a-9b77-1228e47aefed",
@@ -4112,7 +4209,8 @@
    "spotify_url": "https://open.spotify.com/album/7q2B4M5EiBkqrlsNW8lB7N",
    "apple_music_url": "https://music.apple.com/us/album/2001/1440782221",
    "youtube_url": "https://www.youtube.com/results?search_query=Dr.+Dre+2001+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T14:00:00+00:00"
   },
   {
    "id": "406f68d6-afd9-4df6-b307-f499dce3222b",
@@ -4139,7 +4237,8 @@
    "spotify_url": "https://open.spotify.com/album/3zXdL8n7OMWKY156NgUZ4m",
    "apple_music_url": "https://music.apple.com/es/album/a-lo-cubano/726238957",
    "youtube_url": "https://www.youtube.com/results?search_query=Orishas+A+lo+cubano+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T20:00:00+00:00"
   },
   {
    "id": "3bf46c1e-9200-4730-b077-9170985cbaea",
@@ -4166,7 +4265,8 @@
    "spotify_url": "https://open.spotify.com/album/5gK2l2LgWY0BA4p9uy27z6",
    "apple_music_url": "https://music.apple.com/us/album/black-on-both-sides/1444213589",
    "youtube_url": "https://www.youtube.com/results?search_query=Mos+Def+Black+on+Both+Sides+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T08:00:00+00:00"
   },
   {
    "id": "b1a98f5b-711e-46a9-a039-f4a519bed459",
@@ -4193,7 +4293,8 @@
    "spotify_url": "https://open.spotify.com/album/4UhEjfIRx4tE1XRY21vwNa",
    "apple_music_url": "https://music.apple.com/us/album/i-am/216999742",
    "youtube_url": "https://www.youtube.com/results?search_query=Nas+I+Am...+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T02:00:00+00:00"
   },
   {
    "id": "6c126930-1b1f-4d1b-bb64-63528546e35b",
@@ -4220,7 +4321,8 @@
    "spotify_url": "https://open.spotify.com/album/5bjUbZPVTEQcb6W3LquX1E",
    "apple_music_url": "https://music.apple.com/us/album/operation-doomsday-complete/1654811465",
    "youtube_url": "https://www.youtube.com/results?search_query=MF+DOOM+Operation+Doomsday+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T20:00:00+00:00"
   },
   {
    "id": "0b4e4ac9-7a3b-40f0-9e3b-58a461254297",
@@ -4247,7 +4349,8 @@
    "spotify_url": "https://open.spotify.com/album/0vE6mttRTBXRe9rKghyr1l",
    "apple_music_url": "https://music.apple.com/us/album/the-slim-shady-lp/1440871441",
    "youtube_url": "https://www.youtube.com/results?search_query=Eminem+The+Slim+Shady+LP+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T08:00:00+00:00"
   },
   {
    "id": "3e88100b-31ef-462c-b193-9c22bd042aa6",
@@ -4274,7 +4377,8 @@
    "spotify_url": "https://open.spotify.com/album/0qbl8aNaCUOvX8HGsZYLfh",
    "apple_music_url": "https://music.apple.com/us/album/things-fall-apart/1440632803",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Roots+Things+Fall+Apart+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T02:00:00+00:00"
   },
   {
    "id": "31b0c0eb-baeb-4d3e-93e7-f0fe9537ef9b",
@@ -4301,7 +4405,8 @@
    "spotify_url": "https://open.spotify.com/album/4qhfUXCkyFaY6CO9Ksy7rs",
    "apple_music_url": "https://music.apple.com/us/album/400-degreez/1440644146",
    "youtube_url": "https://www.youtube.com/results?search_query=Juvenile+400+Degreez+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T02:00:00+00:00"
   },
   {
    "id": "04840819-869f-4d32-bf11-a86fe8323557",
@@ -4328,7 +4433,8 @@
    "spotify_url": "https://open.spotify.com/album/5ceB3rxgXqIRpsOvVzTG28",
    "apple_music_url": "https://music.apple.com/us/album/aquemini/266365274",
    "youtube_url": "https://www.youtube.com/results?search_query=OutKast+Aquemini+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T23:00:00+00:00"
   },
   {
    "id": "6b27a6af-bd51-4d91-ae21-382f89be1920",
@@ -4355,7 +4461,8 @@
    "spotify_url": "https://open.spotify.com/album/3IIHk2ZLXKWuVAjCbQ9g4Y",
    "apple_music_url": "https://music.apple.com/us/album/capital-punishment/253530902",
    "youtube_url": "https://www.youtube.com/results?search_query=Big+Punisher+Capital+Punishment+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T23:00:00+00:00"
   },
   {
    "id": "268b28e5-6a66-463c-b685-3197af5bce64",
@@ -4382,7 +4489,8 @@
    "spotify_url": "https://open.spotify.com/album/3dNsHWAS8t7AiAqj9ofG5T",
    "apple_music_url": "https://music.apple.com/us/album/flesh-of-my-flesh-blood-of-my-blood/1440822279",
    "youtube_url": "https://www.youtube.com/results?search_query=DMX+Flesh+of+My+Flesh,+Blood+of+My+Blood+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T20:00:00+00:00"
   },
   {
    "id": "3fab853f-b142-41b9-a699-49b70118d760",
@@ -4409,7 +4517,8 @@
    "spotify_url": "https://open.spotify.com/album/2xvsjf4z8QTDrGOGrhOqPb",
    "apple_music_url": "https://music.apple.com/fr/album/le-combat-continue/1536181840",
    "youtube_url": "https://www.youtube.com/results?search_query=Ideal+J+Le+Combat+continue+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T02:00:00+00:00"
   },
   {
    "id": "1f6c4d71-de91-4825-bb75-14ab128700ab",
@@ -4436,7 +4545,8 @@
    "spotify_url": "https://open.spotify.com/album/5f6Nz2v1DESbpu1NerEql2",
    "apple_music_url": "https://music.apple.com/us/album/moment-of-truth/723351765",
    "youtube_url": "https://www.youtube.com/results?search_query=Gang+Starr+Moment+of+Truth+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T02:00:00+00:00"
   },
   {
    "id": "b0c6decb-25e1-40ac-99f6-f002337ce98d",
@@ -4463,7 +4573,8 @@
    "spotify_url": "https://open.spotify.com/album/1fkGVz3LWxjax7F0Mrj3f5",
    "apple_music_url": "https://music.apple.com/us/album/money-power-respect/80979079",
    "youtube_url": "https://www.youtube.com/results?search_query=The+LOX+Money%2C+Power+%26+Respect+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T20:00:00+00:00"
   },
   {
    "id": "9710ef71-8e43-4433-a45c-2613412a767c",
@@ -4490,7 +4601,8 @@
    "spotify_url": "https://open.spotify.com/album/6GRzmk9UGL7odxprOPop1Q",
    "apple_music_url": "https://music.apple.com/us/album/mos-def-talib-kweli-are-black-star/1440799801",
    "youtube_url": "https://www.youtube.com/results?search_query=Black+Star+Mos+Def+%26+Talib+Kweli+Are+Black+Star+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T08:00:00+00:00"
   },
   {
    "id": "b36972bd-7b09-4bcb-a3b8-f168d5b107e2",
@@ -4517,7 +4629,8 @@
    "spotify_url": "https://open.spotify.com/album/2cvWktSYxIVVWxBrzGZsym",
    "apple_music_url": "https://music.apple.com/us/album/rza-as-bobby-digital/305562423",
    "youtube_url": "https://www.youtube.com/results?search_query=RZA+as+Bobby+Digital+in+Stereo+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T20:00:00+00:00"
   },
   {
    "id": "4c0fd6b1-0a91-4023-bd87-847b571e3a9c",
@@ -4544,7 +4657,8 @@
    "spotify_url": "https://open.spotify.com/album/1BZoqf8Zje5nGdwZhOjAtD",
    "apple_music_url": "https://music.apple.com/us/album/the-miseducation-of-lauryn-hill/1276760743",
    "youtube_url": "https://www.youtube.com/results?search_query=Lauryn+Hill+The+Miseducation+of+Lauryn+Hill+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T14:00:00+00:00"
   },
   {
    "id": "614e3aa0-b859-4f19-bb50-171caacf0462",
@@ -4571,7 +4685,8 @@
    "spotify_url": "https://open.spotify.com/album/3j1xCJdBMCl6wYQXurz2tb",
    "apple_music_url": "https://music.apple.com/us/album/vol-2-hard-knock-life/1440914180",
    "youtube_url": "https://www.youtube.com/results?search_query=Jay-Z+Vol.+2...+Hard+Knock+Life+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T14:00:00+00:00"
   },
   {
    "id": "2bcf20e0-5675-4f05-974a-51b6d34455d9",
@@ -4598,7 +4713,8 @@
    "spotify_url": "https://open.spotify.com/album/699xAzNxlXxgmkycTEqktC",
    "apple_music_url": "https://music.apple.com/us/album/ghetto-d/721278963",
    "youtube_url": "https://www.youtube.com/results?search_query=Master+P+Ghetto+D+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T05:00:00+00:00"
   },
   {
    "id": "34e632d5-1b44-4f34-b70a-624f40afeef0",
@@ -4625,7 +4741,8 @@
    "spotify_url": "https://open.spotify.com/album/2SPdngVJBI9rG3omxvp7yj",
    "apple_music_url": "https://music.apple.com/fr/album/l%C3%A9cole-du-micro-dargent/698793153",
    "youtube_url": "https://www.youtube.com/results?search_query=IAM+L%27%C3%89cole+du+micro+d%27argent+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-07T20:00:00+00:00"
   },
   {
    "id": "5ee93fe0-8a54-4c5f-a567-06b6178dd1fe",
@@ -4652,7 +4769,8 @@
    "spotify_url": "https://open.spotify.com/album/4oVdpzxBJM1KrBm9cjyye7",
    "apple_music_url": "https://music.apple.com/us/album/life-after-death-2014-remaster/906888433",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Notorious+B.I.G.+Life+After+Death+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T11:00:00+00:00"
   },
   {
    "id": "3bae9e4b-9d3e-4ece-a004-9d6e8d4165b3",
@@ -4679,7 +4797,8 @@
    "spotify_url": "https://open.spotify.com/album/1UzrzuOmZfBgXyS3pgKD10",
    "apple_music_url": "https://music.apple.com/br/album/sobrevivendo-no-inferno/1198315004",
    "youtube_url": "https://www.youtube.com/results?search_query=Racionais+MC's+Sobrevivendo+no+Inferno+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T23:00:00+00:00"
   },
   {
    "id": "6a51353d-8e9b-48b2-8920-4d2bac0d3df0",
@@ -4706,7 +4825,8 @@
    "spotify_url": "https://open.spotify.com/album/6UkdyvPElK6JDkyeRClbI2",
    "apple_music_url": "https://music.apple.com/us/album/supa-dupa-fly/302943429",
    "youtube_url": "https://www.youtube.com/results?search_query=Missy+Elliott+Supa+Dupa+Fly+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T14:00:00+00:00"
   },
   {
    "id": "7cee8a57-4c63-4724-afb5-1f3650e30f7e",
@@ -4733,7 +4853,8 @@
    "spotify_url": "https://open.spotify.com/album/4r3TaXjF2b1qwCpxjIpW43",
    "apple_music_url": "https://music.apple.com/us/album/wu-tang-forever/268503472",
    "youtube_url": "https://www.youtube.com/results?search_query=Wu-Tang+Clan+Wu-Tang+Forever+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T08:00:00+00:00"
   },
   {
    "id": "7325a2ab-9abe-4793-aac4-3b6280e1a8fb",
@@ -4760,7 +4881,8 @@
    "spotify_url": "https://open.spotify.com/album/78iX7tMceN0FsnmabAtlOC",
    "apple_music_url": "https://music.apple.com/us/album/all-eyez-on-me/1588480719",
    "youtube_url": "https://www.youtube.com/results?search_query=2Pac+All+Eyez+on+Me+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T08:00:00+00:00"
   },
   {
    "id": "a8bbb76a-3c9c-4df6-9636-008b3c920012",
@@ -4787,7 +4909,8 @@
    "spotify_url": "https://open.spotify.com/album/1IaBCF26OjgYwUCEPaIyC0",
    "apple_music_url": "https://music.apple.com/us/album/atliens/263570527",
    "youtube_url": "https://www.youtube.com/results?search_query=OutKast+ATLiens+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T14:00:00+00:00"
   },
   {
    "id": "649f8344-add0-4642-b774-cf799b8af5f8",
@@ -4814,7 +4937,8 @@
    "spotify_url": "https://open.spotify.com/album/39xHAZmTUSQJyXt6ebpjKT",
    "apple_music_url": "https://music.apple.com/us/album/hard-core/321976585",
    "youtube_url": "https://www.youtube.com/results?search_query=Lil'+Kim+Hard+Core+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T02:00:00+00:00"
   },
   {
    "id": "44ce6679-008f-483e-96be-b0c2a97e6c0d",
@@ -4841,7 +4965,8 @@
    "spotify_url": "https://open.spotify.com/album/78Fgb88MY0ECc4GVMejqTg",
    "apple_music_url": "https://music.apple.com/us/album/it-was-written/211507540",
    "youtube_url": "https://www.youtube.com/results?search_query=Nas+It+Was+Written+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T02:00:00+00:00"
   },
   {
    "id": "7c53aec2-1947-4369-9076-9fae201cb777",
@@ -4868,7 +4993,8 @@
    "spotify_url": "https://open.spotify.com/album/12Fkvf2oi1B6yjDwkMrUog",
    "apple_music_url": "https://music.apple.com/us/album/mucho-barato/1595217247",
    "youtube_url": "https://www.youtube.com/results?search_query=Control+Machete+Mucho+Barato+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-22T08:00:00+00:00"
   },
   {
    "id": "eb35f10e-cb54-4559-ac32-f58831418115",
@@ -4895,7 +5021,8 @@
    "spotify_url": "https://open.spotify.com/album/3YPK0bNOuayhmSrs0sIIBR",
    "apple_music_url": "https://music.apple.com/us/album/reasonable-doubt/1475940563",
    "youtube_url": "https://www.youtube.com/results?search_query=Jay-Z+Reasonable+Doubt+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T17:00:00+00:00"
   },
   {
    "id": "36ff6362-f7f0-41fc-b526-916bce93764d",
@@ -4922,7 +5049,8 @@
    "spotify_url": "https://open.spotify.com/album/4jTPQq9PSlKMOm1yLx2ATN",
    "apple_music_url": "https://music.apple.com/us/album/ridin-dirty/268522887",
    "youtube_url": "https://www.youtube.com/results?search_query=UGK+Ridin%27+Dirty+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T20:00:00+00:00"
   },
   {
    "id": "d4095a57-8c76-4f16-84f5-607eb81e4639",
@@ -4949,7 +5077,8 @@
    "spotify_url": "https://open.spotify.com/album/2gWrUaBkh1uQARjbjvUGNp",
    "apple_music_url": "https://music.apple.com/us/album/the-don-killuminati-the-7-day-theory/1588164338",
    "youtube_url": "https://www.youtube.com/results?search_query=Makaveli+The+Don+Killuminati:+The+7+Day+Theory+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T14:00:00+00:00"
   },
   {
    "id": "82399e52-5256-4b71-a04c-9fd53387150b",
@@ -4976,7 +5105,8 @@
    "spotify_url": "https://open.spotify.com/album/4z6F5s3RVaOsekuaegbLfD",
    "apple_music_url": "https://music.apple.com/us/album/the-score/1054461239",
    "youtube_url": "https://www.youtube.com/results?search_query=Fugees+The+Score+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T20:00:00+00:00"
   },
   {
    "id": "88561a6c-8dfa-49c8-960c-99e0b08a91a3",
@@ -5003,7 +5133,8 @@
    "spotify_url": "https://open.spotify.com/album/4sypiS7IyD5hcjIeDMfAmy",
    "apple_music_url": "https://music.apple.com/us/album/e-1999-eternal/1168166996",
    "youtube_url": "https://www.youtube.com/results?search_query=Bone+Thugs-n-Harmony+E.+1999+Eternal+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T23:00:00+00:00"
   },
   {
    "id": "2e65841c-d288-47df-8031-271643c7e76a",
@@ -5030,7 +5161,8 @@
    "spotify_url": "https://open.spotify.com/album/3k8xoyOXkGgZxUKgpmxz4P",
    "apple_music_url": "https://music.apple.com/us/album/liquid-swords/1440835438",
    "youtube_url": "https://www.youtube.com/results?search_query=GZA+Liquid+Swords+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T20:00:00+00:00"
   },
   {
    "id": "4c0a9791-6f3e-44e2-855d-c448ab3d6c97",
@@ -5057,7 +5189,8 @@
    "spotify_url": "https://open.spotify.com/album/3OrucS4sHv6Bl9GS4rafEk",
    "apple_music_url": "https://music.apple.com/us/album/me-against-the-world/1440509542",
    "youtube_url": "https://www.youtube.com/results?search_query=2Pac+Me+Against+the+World+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T02:00:00+00:00"
   },
   {
    "id": "058d93c4-8634-479b-a1b0-71dbde37f4b7",
@@ -5084,7 +5217,8 @@
    "spotify_url": "https://open.spotify.com/album/0UkKpqa0G6CpgFIpsiIgsX",
    "apple_music_url": "https://music.apple.com/us/album/mystic-stylez/332165657",
    "youtube_url": "https://www.youtube.com/results?search_query=Three+6+Mafia+Mystic+Stylez+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-13T14:00:00+00:00"
   },
   {
    "id": "12f0eed6-8895-45a1-94ec-e4beda38eaf6",
@@ -5111,7 +5245,8 @@
    "spotify_url": "https://open.spotify.com/album/7btiyhWzUfzxN3ijSiBpC8",
    "apple_music_url": "https://music.apple.com/us/album/only-built-4-cuban-linx/258634938",
    "youtube_url": "https://www.youtube.com/results?search_query=Raekwon+Only+Built+4+Cuban+Linx...+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T14:00:00+00:00"
   },
   {
    "id": "8a9c1406-ad13-46a1-96ed-27076384bc5f",
@@ -5138,7 +5273,8 @@
    "spotify_url": "https://open.spotify.com/album/5xPygvHXQKEgpTt1Pm8Jbk",
    "apple_music_url": "https://music.apple.com/fr/album/paris-sous-les-bombes/273708033",
    "youtube_url": "https://www.youtube.com/results?search_query=Supr%C3%AAme+NTM+Paris+sous+les+bombes+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T14:00:00+00:00"
   },
   {
    "id": "7efb228a-9104-45cd-8894-cf666c5b44e9",
@@ -5165,7 +5301,8 @@
    "spotify_url": "https://open.spotify.com/album/4tI4WJdTN5MzDMRMl2i7VR",
    "apple_music_url": "https://music.apple.com/us/album/return-to-the-36-chambers/332667010",
    "youtube_url": "https://www.youtube.com/results?search_query=Ol'+Dirty+Bastard+Return+to+the+36+Chambers:+The+Dirty+Version+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T08:00:00+00:00"
   },
   {
    "id": "2343ac24-2b73-4f70-ba3e-d22f2896ddb8",
@@ -5192,7 +5329,8 @@
    "spotify_url": "https://open.spotify.com/album/1cCAb1vN8uUsdfEylVmTLs",
    "apple_music_url": "https://music.apple.com/us/album/the-infamous/255342338",
    "youtube_url": "https://www.youtube.com/results?search_query=Mobb+Deep+The+Infamous+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T20:00:00+00:00"
   },
   {
    "id": "ad13eeb5-71ec-449c-8492-5b81379ff97a",
@@ -5219,7 +5357,8 @@
    "spotify_url": "https://open.spotify.com/album/3kEtdS2pH6hKcMU9Wioob1",
    "apple_music_url": "https://music.apple.com/us/album/illmatic/662324135",
    "youtube_url": "https://www.youtube.com/results?search_query=Nas+Illmatic+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T08:00:00+00:00"
   },
   {
    "id": "056d6488-5e92-4223-bce3-c2a65032e12c",
@@ -5246,7 +5385,8 @@
    "spotify_url": "https://open.spotify.com/album/5vzC8CgZMeaBubitu2rK6m",
    "apple_music_url": "https://music.apple.com/us/album/ready-to-die-the-remaster/204669326",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Notorious+B.I.G.+Ready+to+Die+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-15T14:00:00+00:00"
   },
   {
    "id": "97d3bea9-bd72-4f9f-8175-6e4567499dee",
@@ -5273,7 +5413,8 @@
    "spotify_url": "https://open.spotify.com/album/0JKjuvDUPrnlblAZyB1Aje",
    "apple_music_url": "https://music.apple.com/us/album/resurrection/267707382",
    "youtube_url": "https://www.youtube.com/results?search_query=Common+Resurrection+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T08:00:00+00:00"
   },
   {
    "id": "c5f3608b-4f7b-40e9-be76-ecaed7a76133",
@@ -5300,7 +5441,8 @@
    "spotify_url": "https://open.spotify.com/album/3l5AwLKqQ42VJbc5lTuP8G",
    "apple_music_url": "https://music.apple.com/us/album/southernplayalisticadillacmuzik/266365233",
    "youtube_url": "https://www.youtube.com/results?search_query=OutKast+Southernplayalisticadillacmuzik+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T20:00:00+00:00"
   },
   {
    "id": "1c78fc41-daf2-4352-a637-70ff86cc85f2",
@@ -5327,7 +5469,8 @@
    "spotify_url": "https://open.spotify.com/album/6o5xjudCBr9hAdESwKtOZQ",
    "apple_music_url": "https://music.apple.com/us/album/the-diary/1812986267",
    "youtube_url": "https://www.youtube.com/results?search_query=Scarface+The+Diary+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T20:00:00+00:00"
   },
   {
    "id": "c5172e2c-1a46-4006-ac05-7ec43280b1ae",
@@ -5354,7 +5497,8 @@
    "spotify_url": "https://open.spotify.com/album/7aSjaEi3OQ2aZemcJDhMb1",
    "apple_music_url": "https://music.apple.com/us/album/93-til-infinity/369570847",
    "youtube_url": "https://www.youtube.com/results?search_query=Souls+of+Mischief+93+%27til+Infinity+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T17:00:00+00:00"
   },
   {
    "id": "f879e2ae-333c-4ac3-85c2-d6821ea6d436",
@@ -5381,7 +5525,8 @@
    "spotify_url": "https://open.spotify.com/album/5IFOummNcGXY3qCBWRchqP",
    "apple_music_url": "https://music.apple.com/us/album/doggystyle/1676306182",
    "youtube_url": "https://www.youtube.com/results?search_query=Snoop+Doggy+Dogg+Doggystyle+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T17:00:00+00:00"
   },
   {
    "id": "619faef2-5318-41b4-b2ce-cbde69874c87",
@@ -5409,7 +5554,8 @@
    "spotify_url": "https://open.spotify.com/album/6acGx168JViE5LLFR1rGRE",
    "apple_music_url": "https://music.apple.com/us/album/enter-the-wu-tang-36-chambers/1746566237",
    "youtube_url": "https://www.youtube.com/results?search_query=Wu-Tang+Clan+Enter+the+Wu-Tang+(36+Chambers)+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T11:00:00+00:00"
   },
   {
    "id": "ca31170f-4ba5-40f4-be49-74693bc67f6c",
@@ -5436,7 +5582,8 @@
    "spotify_url": "https://open.spotify.com/album/4v5x3Oo3UjQ9YmF3hRAip5",
    "apple_music_url": "https://music.apple.com/us/album/midnight-marauders/265670545",
    "youtube_url": "https://www.youtube.com/results?search_query=A+Tribe+Called+Quest+Midnight+Marauders+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T02:00:00+00:00"
   },
   {
    "id": "99997d0e-e13f-4518-baff-60c8d1976fa2",
@@ -5463,7 +5610,8 @@
    "spotify_url": "https://open.spotify.com/album/5snUbps5KleLIP0cVI72lP",
    "apple_music_url": "https://music.apple.com/us/album/reachin-a-new-refutation-of-time-and-space/725211790",
    "youtube_url": "https://www.youtube.com/results?search_query=Digable+Planets+Reachin%27+%28A+New+Refutation+of+Time+and+Space%29+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T14:00:00+00:00"
   },
   {
    "id": "45618351-243c-42df-9534-f46b9a9c0058",
@@ -5490,7 +5638,8 @@
    "spotify_url": "https://open.spotify.com/album/64ub4SfdC8wvPjdUXw8QY9",
    "apple_music_url": "https://music.apple.com/us/album/return-of-the-boom-bap/267251596",
    "youtube_url": "https://www.youtube.com/results?search_query=KRS-One+Return+of+the+Boom+Bap+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T20:00:00+00:00"
   },
   {
    "id": "6e137c2c-ed2b-491b-b5f4-d92fe4c39032",
@@ -5517,7 +5666,8 @@
    "spotify_url": "https://open.spotify.com/album/0cXrT5A2aHEQEG0f1ZBS05",
    "apple_music_url": "https://music.apple.com/us/album/check-your-head/724690226",
    "youtube_url": "https://www.youtube.com/results?search_query=Beastie+Boys+Check+Your+Head+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T11:00:00+00:00"
   },
   {
    "id": "6d92bfd2-ed62-4b96-9233-8b38a5290e59",
@@ -5544,7 +5694,8 @@
    "spotify_url": "https://open.spotify.com/album/2AgTKAULjbHpqqtyI53hdp",
    "apple_music_url": "https://music.apple.com/us/album/mecca-and-the-soul-brother/217508870",
    "youtube_url": "https://www.youtube.com/results?search_query=Pete+Rock+%26+CL+Smooth+Mecca+and+the+Soul+Brother+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T11:00:00+00:00"
   },
   {
    "id": "cb541fd4-feb5-47b8-8d09-b02b4104fdc5",
@@ -5571,7 +5722,8 @@
    "spotify_url": "https://open.spotify.com/album/2V5rhszUpCudPcb01zevOt",
    "apple_music_url": "https://music.apple.com/us/album/the-chronic/1668460963",
    "youtube_url": "https://www.youtube.com/results?search_query=Dr.+Dre+The+Chronic+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-08T14:00:00+00:00"
   },
   {
    "id": "719b2f0a-0e55-4093-815e-a1694840acc7",
@@ -5598,7 +5750,8 @@
    "spotify_url": "https://open.spotify.com/album/54tcacygP8sbOOtQZrVVC6",
    "apple_music_url": "https://music.apple.com/us/album/vier-gewinnt/267706467",
    "youtube_url": "https://www.youtube.com/results?search_query=Die+Fantastischen+Vier+Vier+gewinnt+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-09T05:00:00+00:00"
   },
   {
    "id": "6edeaa0c-45dc-4144-8eb8-9662ebe03526",
@@ -5625,7 +5778,8 @@
    "spotify_url": "https://open.spotify.com/album/4tQSV1ZGpwlo3dBiTRuKvM",
    "apple_music_url": "https://music.apple.com/us/album/cypress-hill/192754650",
    "youtube_url": "https://www.youtube.com/results?search_query=Cypress+Hill+Cypress+Hill+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T14:00:00+00:00"
   },
   {
    "id": "1bfa75f0-8af4-49d3-9bda-a94ec1b436d0",
@@ -5652,7 +5806,8 @@
    "spotify_url": "https://open.spotify.com/album/0VoorTgcwMRROTmmZlxPSG",
    "apple_music_url": "https://music.apple.com/us/album/death-certificate/1590072758",
    "youtube_url": "https://www.youtube.com/results?search_query=Ice+Cube+Death+Certificate+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T17:00:00+00:00"
   },
   {
    "id": "5eefb465-fbcd-416a-902f-4185f3c146f8",
@@ -5679,7 +5834,8 @@
    "spotify_url": "https://open.spotify.com/album/5hM61fBUA5OIMJUUuMrzyH",
    "apple_music_url": "https://music.apple.com/fr/album/qui-s%C3%A8me-le-vent-r%C3%A9colte-le-tempo/1572971729",
    "youtube_url": "https://www.youtube.com/results?search_query=MC+Solaar+Qui+s%C3%A8me+le+vent+r%C3%A9colte+le+tempo+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-23T23:00:00+00:00"
   },
   {
    "id": "2f9a0495-ecc6-4ec6-9fc4-1f8d6ce88873",
@@ -5707,7 +5863,8 @@
    "spotify_url": "https://open.spotify.com/album/1p12OAWwudgMqfMzjMvl2a",
    "apple_music_url": "https://music.apple.com/us/album/the-low-end-theory/278911460",
    "youtube_url": "https://www.youtube.com/results?search_query=A+Tribe+Called+Quest+The+Low+End+Theory+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-19T08:00:00+00:00"
   },
   {
    "id": "731192ac-3c11-45b6-9bb2-05ec3e121dfa",
@@ -5734,7 +5891,8 @@
    "spotify_url": "https://open.spotify.com/album/2MJEvcUvsLPjsvVgqn8xa4",
    "apple_music_url": "https://music.apple.com/us/album/we-cant-be-stopped/1813058345",
    "youtube_url": "https://www.youtube.com/results?search_query=Geto+Boys+We+Can%27t+Be+Stopped+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T17:00:00+00:00"
   },
   {
    "id": "d579956f-1835-4965-878e-f444d4ab2069",
@@ -5761,7 +5919,8 @@
    "spotify_url": "https://open.spotify.com/album/0aFNb4RDk2hmKKLa0bzXNz",
    "apple_music_url": "https://music.apple.com/us/album/fear-of-a-black-planet/1440837282",
    "youtube_url": "https://www.youtube.com/results?search_query=Public+Enemy+Fear+of+a+Black+Planet+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-20T02:00:00+00:00"
   },
   {
    "id": "54fdc581-cc40-4853-9f3d-ec5a9e7a1f15",
@@ -5788,7 +5947,8 @@
    "spotify_url": "https://open.spotify.com/album/7p7kcsrdoJ8DKQIMouujcb",
    "apple_music_url": "https://music.apple.com/us/album/mama-said-knock-you-out/1443811286",
    "youtube_url": "https://www.youtube.com/results?search_query=LL+Cool+J+Mama+Said+Knock+You+Out+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T08:00:00+00:00"
   },
   {
    "id": "dc132969-985d-48e9-98d9-fcfc0dd31b80",
@@ -5815,7 +5975,8 @@
    "spotify_url": "https://open.spotify.com/album/4Qt1ZvWZ3DoKDimDMesZd5",
    "apple_music_url": "https://music.apple.com/us/album/peoples-instinctive-travels-and-the-paths-of/1806751228",
    "youtube_url": "https://www.youtube.com/results?search_query=A+Tribe+Called+Quest+People%27s+Instinctive+Travels+and+the+Paths+of+Rhythm+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-10T02:00:00+00:00"
   },
   {
    "id": "ea60c187-60f6-44a5-9613-46ec71065550",
@@ -5843,7 +6004,8 @@
    "spotify_url": "https://open.spotify.com/album/34LxHI9x14qXUOS8AWRrYD",
    "apple_music_url": "https://music.apple.com/us/album/3-feet-high-and-rising/1657705063",
    "youtube_url": "https://www.youtube.com/results?search_query=De+La+Soul+3+Feet+High+and+Rising+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-14T23:00:00+00:00"
   },
   {
    "id": "fe432930-e67e-46bf-8056-99f0188cc1ef",
@@ -5870,7 +6032,8 @@
    "spotify_url": "https://open.spotify.com/album/4DfmPm17Nz6a60BlEpGGKU",
    "apple_music_url": "https://music.apple.com/us/album/pauls-boutique/723654366",
    "youtube_url": "https://www.youtube.com/results?search_query=Beastie+Boys+Paul's+Boutique+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-12T14:00:00+00:00"
   },
   {
    "id": "cbdd9ed1-71c6-4dbe-b333-84567c654e98",
@@ -5897,7 +6060,8 @@
    "spotify_url": "https://open.spotify.com/album/0Y7qkJVZ06tS2GUCDptzyW",
    "apple_music_url": "https://music.apple.com/us/album/straight-outta-compton/1440816032",
    "youtube_url": "https://www.youtube.com/results?search_query=N.W.A+Straight+Outta+Compton+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-24T02:00:00+00:00"
   },
   {
    "id": "e6aab9f1-861f-42ab-8d11-aeebc24b9fb9",
@@ -5924,7 +6088,8 @@
    "spotify_url": "https://open.spotify.com/album/7JKJGhEcQPmEVhULUZZKKE",
    "apple_music_url": "https://music.apple.com/us/album/critical-beatdown/307597231",
    "youtube_url": "https://www.youtube.com/results?search_query=Ultramagnetic+MCs+Critical+Beatdown+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-18T11:00:00+00:00"
   },
   {
    "id": "1051f209-64ba-4850-8f59-d02177b7a377",
@@ -5951,7 +6116,8 @@
    "spotify_url": "https://open.spotify.com/album/1Rj1daFzMlYzLv7lJl14hz",
    "apple_music_url": "https://music.apple.com/us/album/it-takes-a-nation-of-millions-to-hold-us-back/1440837788",
    "youtube_url": "https://www.youtube.com/results?search_query=Public+Enemy+It+Takes+a+Nation+of+Millions+to+Hold+Us+Back+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T17:00:00+00:00"
   },
   {
    "id": "c140066e-7369-4ec0-bf68-8eedca4c3c6b",
@@ -5978,7 +6144,8 @@
    "spotify_url": "https://open.spotify.com/album/5STvD2F7IQ51f4Cd2y5r3z",
    "apple_music_url": "https://music.apple.com/us/album/long-live-the-kane/442164816",
    "youtube_url": "https://www.youtube.com/results?search_query=Big+Daddy+Kane+Long+Live+the+Kane+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-27T14:00:00+00:00"
   },
   {
    "id": "30576fbc-ce98-49c7-929b-19552e4e5aad",
@@ -6005,7 +6172,8 @@
    "spotify_url": "https://open.spotify.com/album/2KaB2rHtdBvocspgjm1bnN",
    "apple_music_url": "https://music.apple.com/us/album/power/268496485",
    "youtube_url": "https://www.youtube.com/results?search_query=Ice-T+Power+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-26T23:00:00+00:00"
   },
   {
    "id": "bffaa905-59b0-4828-83d1-cd0615954f5e",
@@ -6032,7 +6200,8 @@
    "spotify_url": "https://open.spotify.com/album/6hXUK907sBWQaH6x71ycwi",
    "apple_music_url": "https://music.apple.com/us/album/strictly-business/721248274",
    "youtube_url": "https://www.youtube.com/results?search_query=EPMD+Strictly+Business+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-29T11:00:00+00:00"
   },
   {
    "id": "4e068c41-6276-4c17-9f5d-d062b7566cfb",
@@ -6059,7 +6228,8 @@
    "spotify_url": "https://open.spotify.com/album/71mmTJdWvpkzQNmVfFbRdN",
    "apple_music_url": "https://music.apple.com/us/album/the-great-adventures-of-slick-rick/1440834648",
    "youtube_url": "https://www.youtube.com/results?search_query=Slick+Rick+The+Great+Adventures+of+Slick+Rick+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-16T23:00:00+00:00"
   },
   {
    "id": "e5558eac-bec9-4b65-ba58-45e4699025e3",
@@ -6086,7 +6256,8 @@
    "spotify_url": "https://open.spotify.com/album/5GSidytcItIkYvD0GVQ68m",
    "apple_music_url": "https://music.apple.com/us/album/paid-in-full/1440841577",
    "youtube_url": "https://www.youtube.com/results?search_query=Eric+B.+and+Rakim+Paid+in+Full+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T23:00:00+00:00"
   },
   {
    "id": "7934a72a-5c6e-463a-b816-e32107fa00c7",
@@ -6113,7 +6284,8 @@
    "spotify_url": "https://open.spotify.com/album/11oR0ZuqB3ucZwb5TGbZxb",
    "apple_music_url": "https://music.apple.com/us/album/licensed-to-ill/1440912031",
    "youtube_url": "https://www.youtube.com/results?search_query=Beastie+Boys+Licensed+to+Ill+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T05:00:00+00:00"
   },
   {
    "id": "5f58ffac-8372-42f0-96a1-0c48b27bcdf7",
@@ -6140,7 +6312,8 @@
    "spotify_url": "https://open.spotify.com/album/7AFsTiojVaB2I58oZ1tMRg",
    "apple_music_url": "https://music.apple.com/us/album/raising-hell/254344779",
    "youtube_url": "https://www.youtube.com/results?search_query=Run-DMC+Raising+Hell+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-21T11:00:00+00:00"
   },
   {
    "id": "86a9ad88-943d-4449-9814-a2952a5957da",
@@ -6167,7 +6340,8 @@
    "spotify_url": "https://open.spotify.com/album/3BKvVQ3g673SWAgY4ef9z9",
    "apple_music_url": "https://music.apple.com/us/album/radio/1443530975",
    "youtube_url": "https://www.youtube.com/results?search_query=LL+Cool+J+Radio+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-17T20:00:00+00:00"
   },
   {
    "id": "43d47870-d6f9-4bfc-9eb5-15cac5d3ea13",
@@ -6194,7 +6368,8 @@
    "spotify_url": "https://open.spotify.com/album/05n0d2kfwGPhKpTonLHRpY",
    "apple_music_url": "https://music.apple.com/us/album/run-d-m-c/256097651",
    "youtube_url": "https://www.youtube.com/results?search_query=Run-DMC+Run-D.M.C.+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-25T05:00:00+00:00"
   },
   {
    "id": "e9a9cef8-f239-4fe5-b951-6c45d888ba57",
@@ -6221,7 +6396,8 @@
    "spotify_url": "https://open.spotify.com/album/4dEczweFPXeLMMVD1zIdi7",
    "apple_music_url": "https://music.apple.com/us/album/the-message/59389719",
    "youtube_url": "https://www.youtube.com/results?search_query=Grandmaster+Flash+and+the+Furious+Five+The+Message+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-28T11:00:00+00:00"
   },
   {
    "id": "8c35e8ab-89cf-433e-8ffe-2e0ee439e9d2",
@@ -6248,7 +6424,8 @@
    "spotify_url": "https://open.spotify.com/album/1cbO3L6JK5M6LxaVMUrUBC",
    "apple_music_url": "https://music.apple.com/us/album/sugarhill-gang/549037069",
    "youtube_url": "https://www.youtube.com/results?search_query=The+Sugarhill+Gang+Sugarhill+Gang+full+album",
-   "featured": false
+   "featured": false,
+   "created_at": "2026-10-11T17:00:00+00:00"
   }
  ],
  "cover_creators": [
