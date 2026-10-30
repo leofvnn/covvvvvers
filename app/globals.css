@@ -3201,3 +3201,15 @@ html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
 .essay > div + div {
   margin-top: 1em;
 }
+
+/* Appearance and Grid switches in the menu share one size, so they line up. */
+.menu-theme .theme-toggle {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  width: 210px;
+}
+
+.menu-theme .theme-toggle button {
+  padding: 0 8px;
+}

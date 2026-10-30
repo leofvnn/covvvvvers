@@ -101,7 +101,7 @@ export default function SiteHeader() {
               <ThemeToggle />
             </div>
             <div className="menu-theme sub">
-              <span>Album cards</span>
+              <span>Grid</span>
               <GridToggle />
             </div>
           </nav>

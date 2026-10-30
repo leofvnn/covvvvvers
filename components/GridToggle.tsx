@@ -31,7 +31,7 @@ export default function GridToggle() {
   };
 
   return (
-    <div className="theme-toggle" role="radiogroup" aria-label="Card size">
+    <div className="theme-toggle" role="radiogroup" aria-label="Grid size">
       {(["large", "small"] as Size[]).map((s) => (
         <button key={s} type="button" role="radio" aria-checked={size === s} onClick={() => choose(s)}>
           {s === "large" ? "Larger" : "Smaller"}
