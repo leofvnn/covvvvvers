@@ -26,7 +26,7 @@ export default function NavTransitions() {
     const onClick = (e: MouseEvent) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = (e.target as HTMLElement).closest("a");
-      // SVG links (the map) and anything unusual navigate normally.
+      // SVG links and anything unusual navigate normally.
       if (!(a instanceof HTMLAnchorElement) || a.hasAttribute("data-cover-link") || a.target || a.hasAttribute("download")) return;
       const url = new URL(a.href, window.location.href);
       if (url.origin !== window.location.origin || SKIP.test(url.pathname)) return;

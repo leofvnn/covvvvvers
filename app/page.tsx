@@ -15,7 +15,8 @@ export default async function Home() {
   const doors = [
     { href: "/covers", label: "Covers", note: `All ${covers.length}, newest first` },
     { href: "/types", label: "Cover types", note: `${types.filter((t) => t.count).length} ways a cover gets made` },
-    { href: "/explore", label: "Explore", note: "Colours, timeline, map and the quiz" },
+    { href: "/colors", label: "Colours", note: "Browse by the colour of the sleeve" },
+    { href: "/timeline", label: "Timeline", note: "Year by year, from the 1980s to now" },
   ];
 
   return (
@@ -53,7 +54,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <nav className="doors" aria-label="Explore">
+      <nav className="doors" aria-label="Browse">
         {doors.map((d) => (
           <Link key={d.href} href={d.href}>
             <span className="door-label">{d.label}</span>

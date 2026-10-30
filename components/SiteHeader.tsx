@@ -7,11 +7,12 @@ import { shuffle } from "@/lib/shuffle";
 import AccountLink from "./AccountLink";
 
 const MORE = [
-  { href: "/explore", label: "Explore" },
   { href: "/colors", label: "Colours" },
   { href: "/timeline", label: "Timeline" },
-  { href: "/map", label: "Map" },
   { href: "/quiz", label: "Quiz" },
+];
+
+const CONTRIBUTE = [
   { href: "/submit", label: "Submit a cover" },
   { href: "/feedback", label: "Feedback" },
 ];
@@ -54,9 +55,6 @@ export default function SiteHeader() {
           <Link href="/types" aria-current={current("/types")}>
             Types
           </Link>
-          <Link href="/explore" aria-current={current("/explore")}>
-            Explore
-          </Link>
           <button type="button" className="shuffle" onClick={() => shuffle(router)} title="Random cover (R)">
             <ShuffleIcon />
             Shuffle
@@ -84,6 +82,13 @@ export default function SiteHeader() {
         </div>
         <div className="menu-more">
           {MORE.map((l) => (
+            <Link key={l.href} href={l.href} aria-current={current(l.href)}>
+              {l.label}
+            </Link>
+          ))}
+        </div>
+        <div className="menu-more">
+          {CONTRIBUTE.map((l) => (
             <Link key={l.href} href={l.href} aria-current={current(l.href)}>
               {l.label}
             </Link>

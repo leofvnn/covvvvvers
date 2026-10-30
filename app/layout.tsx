@@ -56,7 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav aria-label="Footer">
             <Link href="/covers">Covers</Link>
             <Link href="/types">Cover types</Link>
-            <Link href="/explore">Explore</Link>
+            <Link href="/colors">Colours</Link>
+            <Link href="/timeline">Timeline</Link>
             <Link href="/quiz">Quiz</Link>
             <Link href="/submit">Submit a cover</Link>
             <Link href="/feedback">Feedback</Link>
