@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FavoriteButton from "@/components/FavoriteButton";
@@ -51,6 +51,14 @@ function linkCredits(text: string, creators: Creator[]) {
   );
 }
 
+const pageColor = (hex: string | null) => (hex && /^#[0-9a-f]{6}$/i.test(hex) ? hex : "#ffffff");
+
+/** Tints the phone's browser bar with the cover's colour. */
+export async function generateViewport({ params }: Params): Promise<Viewport> {
+  const found = await getCover((await params).slug);
+  return { themeColor: pageColor(found?.cover.color ?? null) };
+}
+
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const found = await getCover((await params).slug);
   if (!found) return {};
@@ -69,7 +77,7 @@ export default async function CoverPage({ params }: Params) {
   const found = await getCover((await params).slug);
   if (!found) notFound();
   const { cover, newer, older } = found;
-  const bg = cover.color ?? "#ffffff";
+  const bg = pageColor(cover.color);
   const ink = inkFor(bg);
 
   const facts: [string, React.ReactNode][] = [
@@ -90,6 +98,8 @@ export default async function CoverPage({ params }: Params) {
       className="cover-page"
       style={{ "--bg": bg, "--ink": ink } as React.CSSProperties}
     >
+      {/* Hands the cover's colour to the header and footer while this page is open. */}
+      <style>{`:root{--page-bg:${bg};--page-ink:${ink}}`}</style>
       <div className="cover-art">
         <img
           src={fullImage(cover.image_url, 1400)}

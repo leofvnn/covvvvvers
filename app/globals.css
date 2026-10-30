@@ -35,7 +35,7 @@ html.menu-open body {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--page-bg, var(--paper));
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1rem;
@@ -103,13 +103,14 @@ h3 {
 
 /* Header */
 
+/* Header, footer and menu take the page colour when a page sets one (cover pages do). */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: var(--paper);
-  color: var(--ink);
-  border-bottom: 1px solid var(--line);
+  background: var(--page-bg, var(--paper));
+  color: var(--page-ink, var(--ink));
+  border-bottom: 1px solid color-mix(in srgb, currentColor 11%, transparent);
 }
 
 .header-bar {
@@ -176,7 +177,7 @@ h3 {
     flex-direction: column;
     gap: 4px;
     padding: 24px var(--gutter);
-    background: var(--paper);
+    background: var(--page-bg, var(--paper));
     overflow-y: auto;
   }
   .menu-sheet a {
@@ -199,13 +200,14 @@ h3 {
   gap: 16px;
   margin-top: 96px;
   padding: 40px var(--gutter) 56px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid color-mix(in srgb, var(--page-ink, var(--ink)) 11%, transparent);
+  background: var(--page-bg, var(--paper));
   font-size: 0.875rem;
-  color: var(--muted);
+  color: color-mix(in srgb, var(--page-ink, var(--ink)) 62%, transparent);
 }
 
 .footer-mark {
-  color: var(--ink);
+  color: var(--page-ink, var(--ink));
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
@@ -224,7 +226,7 @@ h3 {
 }
 
 .site-footer nav a {
-  color: var(--ink);
+  color: var(--page-ink, var(--ink));
   text-decoration: none;
 }
 
