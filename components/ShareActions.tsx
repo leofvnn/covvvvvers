@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-/** Share the cover page, or download a ready-to-post image for Instagram. */
+/** Share the cover page. */
 export default function ShareActions({ title, artist, slug }: { title: string; artist: string; slug: string }) {
   const [copied, setCopied] = useState(false);
 
@@ -30,9 +30,6 @@ export default function ShareActions({ title, artist, slug }: { title: string; a
       <button type="button" className="text-button" onClick={share}>
         {copied ? "Link copied" : "Share"}
       </button>
-      <a className="text-button" href={`/covers/${slug}/story`} download={`${slug}-covvvvvers.png`}>
-        Download for Instagram
-      </a>
     </div>
   );
 }

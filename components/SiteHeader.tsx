@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { shuffle } from "@/lib/shuffle";
 import AccountLink from "./AccountLink";
+import GridToggle from "./GridToggle";
 import ThemeToggle from "./ThemeToggle";
 
 const MORE = [
@@ -30,6 +31,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const wrap = useRef<HTMLDivElement>(null);
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -37,8 +39,16 @@ export default function SiteHeader() {
     document.documentElement.classList.toggle("menu-open", open);
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    // On desktop the menu floats, so a click outside it closes it.
+    const onDown = (e: PointerEvent) => {
+      if (!wrap.current?.contains(e.target as Node)) setOpen(false);
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("pointerdown", onDown);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onDown);
+    };
   }, [open]);
 
   const current = (href: string) => (pathname === href || pathname.startsWith(href + "/") ? "page" : undefined);
@@ -49,58 +59,54 @@ export default function SiteHeader() {
         <Link href="/" className="wordmark">
           Covvvvvers
         </Link>
-        <nav className="nav-inline" aria-label="Main">
-          <Link href="/covers" aria-current={current("/covers")}>
-            Covers
-          </Link>
-          <Link href="/types" aria-current={current("/types")}>
-            Types
-          </Link>
-          <button type="button" className="shuffle" onClick={() => shuffle(router)} title="Random cover (R)">
+        <div className="header-actions" ref={wrap}>
+          <button type="button" className="shuffle" onClick={() => shuffle(router)} title="Random cover (R)" aria-label="Random cover">
             <ShuffleIcon />
-            Shuffle
-          </button>
-          <AccountLink />
-        </nav>
-        <div className="header-mobile">
-          <button type="button" className="shuffle icon-only" onClick={() => shuffle(router)} aria-label="Random cover">
-            <ShuffleIcon />
+            <span className="shuffle-label">Shuffle</span>
           </button>
           <button type="button" className="menu-button" aria-expanded={open} aria-controls="menu" onClick={() => setOpen(!open)}>
-            {open ? "Close" : "Menu"}
+            <span className="burger" aria-hidden="true">
+              <span />
+              <span />
+            </span>
+            <span className="menu-label">{open ? "Close" : "Menu"}</span>
           </button>
+          <nav id="menu" className="menu-sheet" aria-label="Main" hidden={!open}>
+            <div className="menu-main">
+              <Link href="/">Home</Link>
+              <Link href="/covers" aria-current={current("/covers")}>
+                Covers
+              </Link>
+              <Link href="/types" aria-current={current("/types")}>
+                Types
+              </Link>
+            </div>
+            <div className="menu-more">
+              {MORE.map((l) => (
+                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <div className="menu-more">
+              {CONTRIBUTE.map((l) => (
+                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
+                  {l.label}
+                </Link>
+              ))}
+              <AccountLink />
+            </div>
+            <div className="menu-theme">
+              <span>Appearance</span>
+              <ThemeToggle />
+            </div>
+            <div className="menu-theme sub">
+              <span>Album cards</span>
+              <GridToggle />
+            </div>
+          </nav>
         </div>
       </div>
-      <nav id="menu" className="menu-sheet" aria-label="Main" hidden={!open}>
-        <div className="menu-main">
-          <Link href="/">Home</Link>
-          <Link href="/covers" aria-current={current("/covers")}>
-            Covers
-          </Link>
-          <Link href="/types" aria-current={current("/types")}>
-            Types
-          </Link>
-        </div>
-        <div className="menu-more">
-          {MORE.map((l) => (
-            <Link key={l.href} href={l.href} aria-current={current(l.href)}>
-              {l.label}
-            </Link>
-          ))}
-        </div>
-        <div className="menu-more">
-          {CONTRIBUTE.map((l) => (
-            <Link key={l.href} href={l.href} aria-current={current(l.href)}>
-              {l.label}
-            </Link>
-          ))}
-          <AccountLink />
-        </div>
-        <div className="menu-theme">
-          <span>Appearance</span>
-          <ThemeToggle />
-        </div>
-      </nav>
     </header>
   );
 }

@@ -77,9 +77,7 @@ export default async function CoverPage({ params }: Params) {
     ["Artist", cover.artist],
     ["Released", cover.release_year],
     ["Label", cover.label],
-    ["Country", cover.country],
     ["Cover type", cover.type && <Link href={`/types/${cover.type.slug}`}>{cover.type.title}</Link>],
-    ["Style", cover.subgenres.join(", ")],
   ];
 
   return (

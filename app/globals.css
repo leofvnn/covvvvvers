@@ -3005,3 +3005,199 @@ kbd {
 .menu-theme > span {
   font-size: 1.125rem;
 }
+
+/* Header: a hamburger on every screen. Full-screen menu on phones, a floating panel on desktop. */
+
+.nav-inline {
+  display: none;
+}
+
+.header-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-actions .shuffle {
+  min-height: 44px;
+  padding: 0 10px;
+}
+
+.menu-button {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 4px 0 10px;
+}
+
+.burger {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 220ms var(--ease), top 220ms var(--ease);
+}
+
+.burger span:first-child {
+  top: 0;
+}
+
+.burger span:last-child {
+  top: 10px;
+}
+
+.menu-button[aria-expanded="true"] .burger span:first-child {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] .burger span:last-child {
+  top: 5px;
+  transform: rotate(-45deg);
+}
+
+.menu-theme.sub {
+  margin-top: 14px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+@media (max-width: 599px) {
+  .shuffle-label,
+  .menu-label {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  html.menu-open body {
+    overflow: auto;
+  }
+  .menu-sheet:not([hidden]) {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    max-height: calc(100vh - var(--header) - 24px);
+    overflow-y: auto;
+    padding: 22px 24px 24px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 30px 70px -25px rgba(0, 0, 0, 0.4);
+    animation: menu-in 180ms var(--ease);
+  }
+  .menu-main,
+  .menu-more {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-sheet a {
+    text-decoration: none;
+  }
+  .menu-sheet .menu-main a {
+    padding: 4px 0;
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.05;
+    font-variation-settings: "wdth" 66;
+  }
+  .menu-sheet a:hover,
+  .menu-sheet a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  .menu-more {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .menu-sheet .menu-more a {
+    padding: 6px 0;
+    font-size: 1rem;
+  }
+  .menu-theme {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .menu-theme > span {
+    font-size: 1rem;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* Smaller album cards, chosen in the menu */
+
+html[data-grid="small"] .cover-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 12px;
+}
+
+@media (min-width: 560px) {
+  html[data-grid="small"] .cover-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  html[data-grid="small"] .cover-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 30px 14px;
+  }
+}
+
+@media (min-width: 1100px) {
+  html[data-grid="small"] .cover-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1500px) {
+  html[data-grid="small"] .cover-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+html[data-grid="small"] .card-title {
+  font-size: 0.9375rem;
+}
+
+html[data-grid="small"] .card-meta {
+  font-size: 0.75rem;
+}
+
+html[data-grid="small"] .card-sleeve {
+  margin-bottom: 8px;
+}
+
+/* The home page's recent row keeps whole rows in both sizes. */
+html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
+  display: initial;
+}
+
+/* Keep paragraph spacing when the story has no pull quote between its first and second paragraphs. */
+.essay > div + div {
+  margin-top: 1em;
+}
