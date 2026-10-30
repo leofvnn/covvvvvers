@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: { unoptimized: true },
+  // The quiz became the Games section.
+  async redirects() {
+    return [{ source: "/quiz", destination: "/games", permanent: true }];
+  },
   // The share images read these font files at runtime.
   outputFileTracingIncludes: {
     "/**": ["./assets/fonts/**"],

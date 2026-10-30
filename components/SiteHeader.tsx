@@ -9,7 +9,7 @@ import AccountLink from "./AccountLink";
 const MORE = [
   { href: "/colors", label: "Colours" },
   { href: "/timeline", label: "Timeline" },
-  { href: "/quiz", label: "Quiz" },
+  { href: "/games", label: "Games" },
 ];
 
 const CONTRIBUTE = [

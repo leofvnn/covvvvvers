@@ -137,7 +137,6 @@ h3 {
   z-index: 30;
   background: var(--page-bg, var(--paper));
   color: var(--page-ink, var(--ink));
-  border-bottom: 1px solid color-mix(in srgb, currentColor 11%, transparent);
 }
 
 .header-bar {
@@ -2679,5 +2678,290 @@ kbd {
   }
   .feature-text {
     padding: 0;
+  }
+}
+
+/* Cover type beside the artist on cover pages */
+
+.cover-artist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.type-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 2px 12px;
+  border: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.type-tag:hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+/* Games */
+
+.games-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 36px 20px;
+}
+
+.game-card {
+  display: grid;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.game-art {
+  display: block;
+  aspect-ratio: 1;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.game-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms var(--ease);
+}
+
+.game-card:hover .game-art img {
+  transform: scale(1.04);
+}
+
+.game-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  font-variation-settings: "wdth" 66;
+}
+
+.game-card:hover .game-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.game-blurb {
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.year-guess {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.year-album {
+  display: grid;
+}
+
+.year-album strong {
+  font-size: 1.25rem;
+}
+
+.year-album span {
+  color: var(--muted);
+}
+
+.year-value {
+  font-size: clamp(3.5rem, 10vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1;
+  font-variation-settings: "wdth" 62;
+  font-variant-numeric: tabular-nums;
+}
+
+.year-guess input[type="range"] {
+  min-height: 0;
+  padding: 0;
+  background: none;
+  accent-color: var(--ink);
+}
+
+.year-ends {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.year-guess .button {
+  justify-self: start;
+}
+
+.quiz-frame.blurred img {
+  filter: blur(14px) saturate(1.1);
+  transform: scale(1.1);
+  transition: filter 500ms var(--ease), transform 500ms var(--ease);
+}
+
+.quiz-frame.blurred img[data-revealed] {
+  filter: none;
+  transform: none;
+}
+
+.blank-title {
+  display: grid;
+  gap: 4px;
+}
+
+.blank-line {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  font-variation-settings: "wdth" 72;
+}
+
+.blank-slot {
+  display: inline-block;
+  min-width: 3ch;
+  border-bottom: 3px solid currentColor;
+}
+
+.blank-slot[data-state="right"] {
+  color: #1f8a46;
+}
+
+.blank-slot[data-state="wrong"] {
+  color: var(--error);
+}
+
+.blank-artist {
+  color: var(--muted);
+}
+
+.first-pair {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.first-pair button {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 0 0 10px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.first-art {
+  display: block;
+  aspect-ratio: 1;
+  margin-bottom: 8px;
+  overflow: hidden;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 200ms;
+}
+
+.first-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.first-pair button:hover:not(:disabled) .first-art {
+  outline-color: var(--line);
+}
+
+.first-pair button[data-state="right"] .first-art {
+  outline-color: #1f8a46;
+}
+
+.first-pair button[data-state="wrong"] .first-art {
+  outline-color: var(--error);
+}
+
+.first-pair button span:last-child {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 800px) {
+  .quiz-blank .blank-title,
+  .quiz-year .year-guess {
+    grid-area: options;
+  }
+  .quiz-blank .quiz-options {
+    grid-area: feedback;
+    grid-template-columns: 1fr 1fr;
+  }
+  .quiz-blank .quiz-feedback {
+    grid-area: next;
+  }
+  .quiz-blank {
+    grid-template-areas:
+      "top top"
+      "frame options"
+      "frame feedback"
+      "frame next"
+      "frame next2";
+  }
+  .quiz-blank .quiz-next {
+    grid-area: next2;
+  }
+  .quiz-year .quiz-feedback {
+    grid-area: feedback;
+  }
+  .quiz-first {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    max-width: 900px;
+  }
+}
+
+/* Full-screen cover tilts with the phone */
+
+.lightbox-tilt {
+  position: relative;
+  display: grid;
+  place-items: center;
+  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  will-change: transform;
+}
+
+.lightbox-glare {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.28), transparent 55%);
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 400ms;
+  pointer-events: none;
+}
+
+.lightbox-tilt[data-motion] .lightbox-glare {
+  opacity: 1;
+}
+
+@media (min-width: 800px) {
+  .quiz-blank {
+    grid-template-rows: auto auto auto auto 1fr;
+  }
+  .quiz-first > * {
+    grid-area: auto;
+  }
+  .quiz-first .quiz-top {
+    max-width: none;
   }
 }

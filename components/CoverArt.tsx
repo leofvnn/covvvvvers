@@ -45,7 +45,11 @@ export default function CoverArt({ src, zoomSrc, alt, width, height }: {
         className="art-frame"
         onPointerMove={onMove}
         onPointerLeave={onLeave}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          // iPhones ask for motion access, and only from a tap, so ask here before opening.
+          askForMotion();
+          setOpen(true);
+        }}
         aria-label={`Zoom into the cover of ${alt}`}
       >
         <img src={src} alt={alt} width={width} height={height} style={{ viewTransitionName: "cover-art" }} fetchPriority="high" />
@@ -62,18 +66,73 @@ export default function CoverArt({ src, zoomSrc, alt, width, height }: {
   );
 }
 
+type MotionPermission = { requestPermission?: () => Promise<"granted" | "denied"> };
+
+function askForMotion() {
+  const D = (typeof window !== "undefined" ? window.DeviceOrientationEvent : undefined) as unknown as MotionPermission | undefined;
+  if (D?.requestPermission) D.requestPermission().catch(() => {});
+}
+
+/**
+ * On phones, tilts the full-screen cover as the phone moves, with a light that slides across it.
+ * Starts from however the phone is held when the cover opens.
+ */
+function useMotionTilt(target: React.RefObject<HTMLDivElement | null>, enabled: boolean) {
+  useEffect(() => {
+    const el = target.current;
+    if (!el || !enabled) return;
+    if (!window.matchMedia("(pointer: coarse)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let base: { b: number; g: number } | null = null;
+    let goal = { x: 0, y: 0 };
+    let now = { x: 0, y: 0 };
+    let frame = 0;
+    const clamp = (v: number, m: number) => Math.max(-m, Math.min(m, v));
+    const tick = () => {
+      // Ease toward the phone's position so small jitters don't shake the cover.
+      now = { x: now.x + (goal.x - now.x) * 0.15, y: now.y + (goal.y - now.y) * 0.15 };
+      el.style.setProperty("--tx", `${now.x.toFixed(2)}deg`);
+      el.style.setProperty("--ty", `${now.y.toFixed(2)}deg`);
+      el.style.setProperty("--gx", `${(50 + now.y * 4).toFixed(1)}%`);
+      el.style.setProperty("--gy", `${(50 - now.x * 4).toFixed(1)}%`);
+      frame = requestAnimationFrame(tick);
+    };
+    const onTilt = (e: DeviceOrientationEvent) => {
+      if (e.beta === null || e.gamma === null) return;
+      if (!base) {
+        base = { b: e.beta, g: e.gamma };
+        el.dataset.motion = "on";
+      }
+      goal = { x: clamp(-(e.beta - base.b) * 0.7, 14), y: clamp((e.gamma - base.g) * 0.7, 14) };
+    };
+    window.addEventListener("deviceorientation", onTilt);
+    frame = requestAnimationFrame(tick);
+    return () => {
+      window.removeEventListener("deviceorientation", onTilt);
+      cancelAnimationFrame(frame);
+      el.style.setProperty("--tx", "0deg");
+      el.style.setProperty("--ty", "0deg");
+      delete el.dataset.motion;
+    };
+  }, [target, enabled]);
+}
+
 function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [view, setView] = useState({ scale: 1, x: 0, y: 0 });
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const pinch = useRef<{ dist: number; scale: number } | null>(null);
   const pan = useRef<{ x: number; y: number; vx: number; vy: number } | null>(null);
+  const tilt = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     dialog.current?.showModal();
     document.documentElement.classList.add("menu-open");
     return () => document.documentElement.classList.remove("menu-open");
   }, []);
+
+  // The phone tilt rests while you're zoomed in, so panning stays steady.
+  useMotionTilt(tilt, view.scale === 1);
 
   const clamp = (s: number) => Math.min(6, Math.max(1, s));
   const zoomTo = (scale: number) => setView((v) => (clamp(scale) === 1 ? { scale: 1, x: 0, y: 0 } : { ...v, scale: clamp(scale) }));
@@ -112,12 +171,15 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
           if (pointers.current.size === 0) pan.current = null;
         }}
       >
-        <img
-          src={src}
-          alt={alt}
-          draggable={false}
-          style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }}
-        />
+        <div ref={tilt} className="lightbox-tilt">
+          <img
+            src={src}
+            alt={alt}
+            draggable={false}
+            style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }}
+          />
+          <span className="lightbox-glare" aria-hidden="true" />
+        </div>
       </div>
       <div className="lightbox-bar">
         <button type="button" onClick={() => zoomTo(view.scale / 1.5)} aria-label="Zoom out" disabled={view.scale <= 1}>
