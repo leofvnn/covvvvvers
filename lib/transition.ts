@@ -6,7 +6,7 @@ type Router = ReturnType<typeof useRouter>;
 
 let pending: (() => void) | null = null;
 
-/** Called by <TransitionDone> once the new page has rendered. */
+/** Called by <NavTransitions> once the new page has rendered. */
 export function finishTransition() {
   if (!pending) return;
   const done = pending;
@@ -27,7 +27,13 @@ export function navigateWithTransition(router: Router, href: string, art?: HTMLE
     router.push(href);
     return;
   }
-  if (art) art.style.viewTransitionName = "cover-art";
+  if (art) {
+    // Only one element per page may carry the name, so hand it to the clicked art.
+    document.querySelectorAll<HTMLElement>("[data-art], .cover-art img").forEach((el) => {
+      if (el !== art) el.style.viewTransitionName = "";
+    });
+    art.style.viewTransitionName = "cover-art";
+  }
   const t = doc.startViewTransition(
     () =>
       new Promise<void>((resolve) => {

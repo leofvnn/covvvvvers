@@ -8,8 +8,9 @@ const WIX = "static.wixstatic.com/media/";
 const BUCKET = "/storage/v1/object/public/covers/";
 
 const isWix = (url: string) => url.includes(WIX);
-const isBucket = (url: string) => url.includes(BUCKET) && url.endsWith(".jpg");
-const thumbOf = (url: string) => url.replace(/\.jpg$/, "-600.jpg");
+const isBucket = (url: string) => url.includes(BUCKET) && /\.jpg(\?.*)?$/.test(url);
+// Keeps any ?v= version on the end, so a replaced image is fetched fresh.
+const thumbOf = (url: string) => url.replace(/\.jpg(\?.*)?$/, "-600.jpg$1");
 
 export function squareImage(url: string, size: number) {
   if (isWix(url)) return `${url}/v1/fill/w_${size},h_${size},al_c,q_85,enc_auto/cover.jpg`;

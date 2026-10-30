@@ -37,7 +37,7 @@ export default async function CreatorPage({ params }: Params) {
           {creator.role ?? "Creator"}, {covers.length} {covers.length === 1 ? "cover" : "covers"}
         </p>
       </header>
-      <CoverGrid covers={covers.map(toCard)} />
+      <CoverGrid covers={covers.map((c) => toCard(c))} />
     </>
   );
 }

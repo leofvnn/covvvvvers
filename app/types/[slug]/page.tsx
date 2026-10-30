@@ -34,7 +34,7 @@ export default async function TypePage({ params }: Params) {
           {covers.length} {covers.length === 1 ? "cover" : "covers"}
         </p>
       </header>
-      <CoverGrid covers={covers.map(toCard)} emptyText="No covers of this type yet." />
+      <CoverGrid covers={covers.map((c) => toCard(c))} emptyText="No covers of this type yet." />
     </>
   );
 }

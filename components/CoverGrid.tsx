@@ -1,16 +1,24 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { squareImage, squareSrcSet } from "@/lib/img";
-import type { CoverCard } from "@/lib/types";
-import CoverLink from "./CoverLink";
+import { getBrowserClient } from "@/lib/supabase/client";
+import type { CoverCard as Card } from "@/lib/types";
+import CoverCard from "./CoverCard";
 
-type Filters = { type: string; decade: string; country: string; q: string };
-const EMPTY: Filters = { type: "", decade: "", country: "", q: "" };
+type Sort = "newest" | "oldest" | "az" | "saved";
+type Filters = { type: string; decade: string; country: string; q: string; sort: Sort };
+const EMPTY: Filters = { type: "", decade: "", country: "", q: "", sort: "newest" };
+
+const SORTS: { value: Sort; label: string }[] = [
+  { value: "newest", label: "Newest first" },
+  { value: "oldest", label: "Oldest first" },
+  { value: "az", label: "A to Z" },
+  { value: "saved", label: "Most saved" },
+];
 
 type Props = {
-  covers: CoverCard[];
-  /** Show search and the type, decade and country filters. */
+  covers: Card[];
+  /** Show search, sorting and the type, decade and country filters. */
   filters?: boolean;
   types?: { slug: string; title: string }[];
   emptyText?: string;
@@ -18,25 +26,46 @@ type Props = {
   eager?: number;
 };
 
-const SIZES = [360, 480, 600, 720];
-
 export default function CoverGrid({ covers, filters = false, types = [], emptyText, eager = 8 }: Props) {
   const [f, setF] = useState<Filters>(EMPTY);
+  const [saves, setSaves] = useState<Map<string, number> | null>(null);
   const sheet = useRef<HTMLDialogElement>(null);
+  const search = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!filters) return;
     const p = new URLSearchParams(window.location.search);
-    setF({ type: p.get("type") ?? "", decade: p.get("decade") ?? "", country: p.get("country") ?? "", q: p.get("q") ?? "" });
+    const sort = p.get("sort") as Sort | null;
+    setF({
+      type: p.get("type") ?? "",
+      decade: p.get("decade") ?? "",
+      country: p.get("country") ?? "",
+      q: p.get("q") ?? "",
+      sort: sort && SORTS.some((s) => s.value === sort) ? sort : "newest",
+    });
+    if (p.get("focus") === "search") search.current?.focus();
   }, [filters]);
 
   useEffect(() => {
     if (!filters) return;
     const p = new URLSearchParams();
-    (Object.entries(f) as [keyof Filters, string][]).forEach(([k, v]) => v && p.set(k, v));
+    (Object.entries(f) as [keyof Filters, string][]).forEach(([k, v]) => v && !(k === "sort" && v === "newest") && p.set(k, v));
     const qs = p.toString();
     window.history.replaceState(window.history.state, "", qs ? `?${qs}` : window.location.pathname);
   }, [f, filters]);
+
+  // Save counts load only when someone sorts by them.
+  useEffect(() => {
+    if (f.sort !== "saved" || saves) return;
+    const db = getBrowserClient();
+    if (!db) {
+      setSaves(new Map());
+      return;
+    }
+    db.rpc("cover_save_counts").then(({ data }) => {
+      setSaves(new Map(((data ?? []) as { cover_id: string; saves: number }[]).map((r) => [r.cover_id, r.saves])));
+    });
+  }, [f.sort, saves]);
 
   const decades = useMemo(() => [...new Set(covers.map((c) => c.decade))].sort().reverse(), [covers]);
   const countries = useMemo(
@@ -46,7 +75,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
 
   const shown = useMemo(() => {
     const q = f.q.trim().toLowerCase();
-    return covers.filter(
+    const list = covers.filter(
       (c) =>
         (!f.type || c.type?.slug === f.type) &&
         (!f.decade || c.decade === f.decade) &&
@@ -54,9 +83,25 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
         (!q ||
           c.title.toLowerCase().includes(q) ||
           c.artist.toLowerCase().includes(q) ||
-          c.creatorNames.some((n) => n.toLowerCase().includes(q))),
+          c.creatorNames.some((n) => n.toLowerCase().includes(q)) ||
+          (c.text?.includes(q) ?? false)),
     );
-  }, [covers, f]);
+    if (f.sort === "oldest") return [...list].reverse();
+    if (f.sort === "az") return [...list].sort((a, b) => a.title.localeCompare(b.title, "en", { sensitivity: "base" }));
+    if (f.sort === "saved" && saves) return [...list].sort((a, b) => (saves.get(b.id) ?? 0) - (saves.get(a.id) ?? 0));
+    return list;
+  }, [covers, f, saves]);
+
+  // When the match is inside the essay, say so under the title.
+  const essayHit = (c: Card) => {
+    const q = f.q.trim().toLowerCase();
+    if (!q || !c.text) return undefined;
+    const inTitle =
+      c.title.toLowerCase().includes(q) ||
+      c.artist.toLowerCase().includes(q) ||
+      c.creatorNames.some((n) => n.toLowerCase().includes(q));
+    return inTitle ? undefined : `${c.artist}, ${c.release_year}. Mentioned in the story`;
+  };
 
   const activeCount = [f.type, f.decade, f.country].filter(Boolean).length;
   const set = (k: keyof Filters) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
@@ -64,6 +109,16 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
 
   const selects = (
     <>
+      <label className="field">
+        <span>Sort</span>
+        <select value={f.sort} onChange={set("sort")}>
+          {SORTS.map((s) => (
+            <option key={s.value} value={s.value}>
+              {s.label}
+            </option>
+          ))}
+        </select>
+      </label>
       <label className="field">
         <span>Cover type</span>
         <select value={f.type} onChange={set("type")}>
@@ -102,8 +157,14 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
         <div className="filter-bar">
           <form className="filter-row" role="search" onSubmit={(e) => e.preventDefault()}>
             <label className="field search">
-              <span className="visually-hidden">Search covers</span>
-              <input type="search" value={f.q} placeholder="Search covers" onChange={set("q")} />
+              <span className="visually-hidden">Search covers and their stories</span>
+              <input
+                ref={search}
+                type="search"
+                value={f.q}
+                placeholder="Search covers and stories"
+                onChange={set("q")}
+              />
             </label>
             <div className="filter-selects">{selects}</div>
             <button type="button" className="filter-open" onClick={() => sheet.current?.showModal()}>
@@ -112,7 +173,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
             <p className="filter-count" aria-live="polite">
               {shown.length} {shown.length === 1 ? "cover" : "covers"}
               {(activeCount > 0 || f.q) && (
-                <button type="button" className="text-button" onClick={() => setF(EMPTY)}>
+                <button type="button" className="text-button" onClick={() => setF({ ...EMPTY, sort: f.sort })}>
                   Clear
                 </button>
               )}
@@ -127,9 +188,9 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
           >
             <div className="sheet-inner">
               <div className="sheet-head">
-                <h2 id="sheet-title">Filter</h2>
+                <h2 id="sheet-title">Filter and sort</h2>
                 {activeCount > 0 && (
-                  <button type="button" className="text-button" onClick={() => setF({ ...EMPTY, q: f.q })}>
+                  <button type="button" className="text-button" onClick={() => setF({ ...EMPTY, q: f.q, sort: f.sort })}>
                     Clear filters
                   </button>
                 )}
@@ -144,29 +205,12 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
       )}
 
       {shown.length === 0 ? (
-        <p className="empty">{emptyText ?? "No covers match. Clear a filter to see more."}</p>
+        <p className="empty">{emptyText ?? "No covers match. Clear a filter or try another word."}</p>
       ) : (
         <ul className="cover-grid">
           {shown.map((c, i) => (
             <li key={c.id}>
-              <CoverLink href={`/covers/${c.slug}`} className="card">
-                <span className="card-art" data-art style={{ backgroundColor: c.color ?? "#eee" }}>
-                  <img
-                    src={squareImage(c.image_url, 600)}
-                    srcSet={squareSrcSet(c.image_url, SIZES)}
-                    sizes="(min-width: 1500px) 19vw, (min-width: 1100px) 24vw, (min-width: 800px) 32vw, (min-width: 560px) 48vw, 92vw"
-                    alt=""
-                    loading={i < eager ? "eager" : "lazy"}
-                    decoding="async"
-                    width={600}
-                    height={600}
-                  />
-                </span>
-                <span className="card-title">{c.title}</span>
-                <span className="card-meta">
-                  {c.artist}, {c.release_year}
-                </span>
-              </CoverLink>
+              <CoverCard c={c} eager={i < eager} meta={essayHit(c)} />
             </li>
           ))}
         </ul>

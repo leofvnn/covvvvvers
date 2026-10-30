@@ -31,6 +31,7 @@ export type Cover = {
   subgenres: string[];
   credits_text: string | null;
   description_html: string | null;
+  pull_quote?: string | null;
   color: string | null;
   accent_color: string | null;
   image_url: string;
@@ -41,11 +42,27 @@ export type Cover = {
   apple_music_url: string | null;
   youtube_url: string | null;
   featured: boolean;
+  status?: string;
   creators: Creator[];
+  /** Colour group of the main colour, for browsing by colour. */
+  family: string | null;
 };
 
-/** The light version the wall and filters need. */
+/** The light version the grid, filters and search need. */
 export type CoverCard = Pick<
   Cover,
-  "id" | "slug" | "title" | "artist" | "release_year" | "decade" | "country" | "image_url" | "color" | "type"
-> & { creatorNames: string[] };
+  "id" | "slug" | "title" | "artist" | "release_year" | "decade" | "country" | "image_url" | "color" | "type" | "family"
+> & {
+  creatorNames: string[];
+  /** Lower-case essay text, only sent where search needs it. */
+  text?: string;
+};
+
+export type Collection = {
+  id: string;
+  slug: string;
+  title: string;
+  description: string | null;
+  sort_order: number;
+  coverIds: string[];
+};

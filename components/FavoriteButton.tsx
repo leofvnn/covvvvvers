@@ -60,6 +60,8 @@ export default function FavoriteButton({ coverId, slug }: { coverId: string; slu
     if (!db || !userId) return;
     const next = !saved;
     setSaved(next);
+    // A short tap on phones that support it.
+    if (next) navigator.vibrate?.(12);
     setBusy(true);
     setError("");
     const res = next

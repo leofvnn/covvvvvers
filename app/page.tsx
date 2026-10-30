@@ -49,7 +49,7 @@ export default async function Home() {
           <Link href="/covers">See all covers</Link>
         </div>
         <div className="recent">
-          <CoverGrid covers={recent.map(toCard)} eager={4} />
+          <CoverGrid covers={recent.map((c) => toCard(c))} eager={4} />
         </div>
       </section>
 

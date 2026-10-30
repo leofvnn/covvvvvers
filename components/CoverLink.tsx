@@ -22,6 +22,7 @@ export default function CoverLink({
       ref={ref}
       href={href}
       className={className}
+      data-cover-link
       onClick={(e) => {
         if (!isPlainClick(e)) return;
         e.preventDefault();

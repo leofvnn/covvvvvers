@@ -14,10 +14,10 @@ export default async function CoversPage() {
     <>
       <header className="page-head">
         <h1>Covers</h1>
-        <p>Every cover in the collection, newest first.</p>
+        <p>Every cover in the collection. Search finds words inside the stories too.</p>
       </header>
       <CoverGrid
-        covers={covers.map(toCard)}
+        covers={covers.map((c) => toCard(c, { withText: true }))}
         filters
         types={types.filter((t) => t.count).map((t) => ({ slug: t.slug, title: t.title }))}
       />

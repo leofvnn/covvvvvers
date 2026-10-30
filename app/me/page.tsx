@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import CoverGrid from "@/components/CoverGrid";
+import ListCards from "@/components/ListCards";
+import NewListForm from "@/components/NewListForm";
+import ProfileSettings from "@/components/ProfileSettings";
 import { getCovers, toCard } from "@/lib/data";
+import { loadLists } from "@/lib/lists";
 import { getServerClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
@@ -22,15 +26,18 @@ export default async function MePage() {
   } = await db.auth.getUser();
   if (!user) redirect("/login?next=/me");
 
-  const [favs, subs, profile, covers] = await Promise.all([
+  const [favs, subs, profile, covers, lists] = await Promise.all([
     db.from("favorites").select("cover_id, created_at").eq("user_id", user.id).order("created_at", { ascending: false }),
     db.from("submissions").select("*").eq("user_id", user.id).order("created_at", { ascending: false }),
-    db.from("profiles").select("display_name, is_admin").eq("id", user.id).maybeSingle(),
+    db.from("profiles").select("*").eq("id", user.id).maybeSingle(),
     getCovers(),
+    loadLists(db, { userId: user.id }),
   ]);
 
   const byId = new Map(covers.map((c) => [c.id, c]));
   const saved = (favs.data ?? []).map((f) => byId.get(f.cover_id)).filter(Boolean) as typeof covers;
+  const listCards = lists.map((l) => ({ ...l, covers: l.coverIds.map((id) => byId.get(id)!).filter(Boolean) }));
+  const p = profile.data ?? {};
 
   return (
     <>
@@ -38,9 +45,14 @@ export default async function MePage() {
         <h1>Your covers</h1>
         <p>Signed in as {user.email}.</p>
         <div className="intro-actions">
-          {profile.data?.is_admin && (
-            <Link className="button" href="/admin">
-              Review submissions
+          {p.is_admin && (
+            <Link className="button solid" href="/admin">
+              Admin
+            </Link>
+          )}
+          {p.is_public && p.username && (
+            <Link className="button" href={`/u/${p.username}`}>
+              Your public profile
             </Link>
           )}
           <Link className="button" href="/submit">
@@ -58,7 +70,19 @@ export default async function MePage() {
         <h2 id="saved-h" className="section-title">
           Saved
         </h2>
-        <CoverGrid covers={saved.map(toCard)} emptyText="Nothing saved yet. Open any cover and tap Save." />
+        <CoverGrid covers={saved.map((c) => toCard(c))} emptyText="Nothing saved yet. Open any cover and tap Save." />
+      </section>
+
+      <section aria-labelledby="lists-h" id="lists">
+        <h2 id="lists-h" className="section-title">
+          Your lists
+        </h2>
+        <NewListForm userId={user.id} />
+        {listCards.length > 0 ? (
+          <ListCards lists={listCards} showPrivacy />
+        ) : (
+          <p className="empty">Lists are your own collections, like Best 90s covers. Share them with a link.</p>
+        )}
       </section>
 
       <section aria-labelledby="subs-h" className="subs">
@@ -69,8 +93,10 @@ export default async function MePage() {
           <ul className="sub-list">
             {subs.data.map((s) => (
               <li key={s.id}>
-                <strong>{s.album_title}</strong> by {s.artist}
-                {s.release_year ? `, ${s.release_year}` : ""}
+                <span>
+                  <strong>{s.album_title}</strong> by {s.artist}
+                  {s.release_year ? `, ${s.release_year}` : ""}
+                </span>
                 <span className={`status status-${s.status}`}>{STATUS[s.status]}</span>
               </li>
             ))}
@@ -80,6 +106,19 @@ export default async function MePage() {
             You haven't suggested any albums yet. <Link href="/submit">Submit a cover</Link> you think belongs here.
           </p>
         )}
+      </section>
+
+      <section aria-labelledby="profile-h" className="profile-settings">
+        <h2 id="profile-h" className="section-title">
+          Profile
+        </h2>
+        <ProfileSettings
+          userId={user.id}
+          displayName={p.display_name ?? ""}
+          username={p.username ?? ""}
+          bio={p.bio ?? ""}
+          isPublic={Boolean(p.is_public)}
+        />
       </section>
     </>
   );
