@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { getServerClient } from "@/lib/supabase/server";
 import { reviewSubmission } from "./actions";
+import MoveImages from "./MoveImages";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Review submissions", robots: { index: false } };
+export const metadata: Metadata = { title: "Admin", robots: { index: false } };
 
 type Sub = {
   id: string;
@@ -86,9 +87,20 @@ export default async function AdminPage() {
     ["Rejected", subs.filter((s) => s.status === "rejected")],
   ];
 
+  const [{ count: coversOnWix }, { data: typesOnWix }] = await Promise.all([
+    db.from("covers").select("id", { count: "exact", head: true }).like("image_url", "%static.wixstatic.com%"),
+    db.from("cover_types").select("id").like("hero_image", "%static.wixstatic.com%"),
+  ]);
+  const onWix = (coversOnWix ?? 0) + (typesOnWix?.length ?? 0);
+
   return (
     <section className="panel wide">
-      <h1>Review submissions</h1>
+      <h1>Admin</h1>
+      <section className="review-group">
+        <h2>Cover images</h2>
+        <MoveImages remaining={onWix} />
+      </section>
+      <h2 className="admin-h">Review submissions</h2>
       <p>Approved albums are your list of covers to research and add to the collection.</p>
       {groups.map(([title, list]) => (
         <section key={title} className="review-group">

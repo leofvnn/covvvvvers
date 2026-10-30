@@ -13,7 +13,8 @@ Admins review submissions at `/admin`.
 1. Create a project at [supabase.com](https://supabase.com). The free plan is enough.
 2. Open **SQL Editor**, paste the contents of `supabase/schema.sql`, and run it.
 3. Open a new query, paste the contents of `supabase/seed.sql`, and run it. This loads all 177 covers, 224 creators and 13 cover types.
-4. Go to **Project Settings > API** (or **API Keys**) and copy the **Project URL** and the **anon / publishable key**.
+4. Open another query, paste the contents of `supabase/storage.sql`, and run it. This creates the public `covers` bucket for the cover art.
+5. Go to **Project Settings > API** (or **API Keys**) and copy the **Project URL** and the **anon / publishable key**.
 
 ### 2. Deploy on Vercel
 
@@ -43,6 +44,10 @@ where id = (select id from auth.users where email = 'you@example.com');
 
 Your account page now has a **Review submissions** button.
 
+### 5. Move the cover art into Supabase
+
+Open `/admin` on the live site and press **Move images to Supabase**. It copies every cover from Wix into the `covers` bucket (a 600px square for the grid and a version up to 2000px for cover pages) and updates the database. Keep the page open until it says all images are stored.
+
 ### Optional: Sign in with Google
 
 Turn on the Google provider in **Supabase > Authentication > Providers** (it needs a Google Cloud OAuth client), then add `NEXT_PUBLIC_ENABLE_GOOGLE=true` in Vercel and redeploy.
@@ -51,12 +56,12 @@ Turn on the Google provider in **Supabase > Authentication > Providers** (it nee
 
 - **Pages are static and refresh every hour.** Edits made in Supabase appear on the site within an hour, or right away if you redeploy.
 - **Without Supabase keys** the site still runs from `data/collection.json`, with accounts switched off. That is handy for previews.
-- **Cover images** are served from the Wix media CDN, which resizes them on the fly. They keep working without a paid Wix plan.
+- **Cover images** live in the Supabase `covers` bucket as `<slug>.jpg` and `<slug>-600.jpg`. Covers that haven't been moved yet still load from Wix.
 - **Security**: row level security means anyone can read the collection, members can only see and change their own favorites and submissions, and only admins can edit covers or review submissions. Nobody can make themselves admin from the site.
 
 ## Adding a cover
 
-Add a row to `covers` in the Supabase **Table Editor** (slug, title, artist, year, decade, image URL and the essay as `<p>` paragraphs), then link its creators in `cover_creators`.
+Upload the art to the `covers` bucket as `<slug>.jpg` plus a 600px square `<slug>-600.jpg`, then add a row to `covers` in the **Table Editor** with the public URL of `<slug>.jpg` as `image_url`, the details, and the essay as `<p>` paragraphs. Link its creators in `cover_creators`.
 
 ## Run it locally
 

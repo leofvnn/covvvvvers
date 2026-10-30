@@ -25,5 +25,5 @@ export async function middleware(request: NextRequest) {
 
 // Only the account pages need a fresh session on the server.
 export const config = {
-  matcher: ["/me/:path*", "/submit/:path*", "/admin/:path*", "/auth/:path*"],
+  matcher: ["/me/:path*", "/submit/:path*", "/admin/:path*", "/auth/:path*", "/api/:path*"],
 };

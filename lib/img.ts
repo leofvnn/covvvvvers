@@ -1,25 +1,42 @@
 /**
- * Cover art is served from the Wix media CDN, which resizes on the fly.
- * Any other image address is used as it is.
+ * Cover art lives in the Supabase "covers" bucket as two files per cover:
+ *   covers/<slug>.jpg      up to 2000px, for cover pages
+ *   covers/<slug>-600.jpg  600px square, for the wall and lists
+ * Covers not yet moved are still served from the Wix media CDN, which resizes on the fly.
  */
+const WIX = "static.wixstatic.com/media/";
+const BUCKET = "/storage/v1/object/public/covers/";
+
+const isWix = (url: string) => url.includes(WIX);
+const isBucket = (url: string) => url.includes(BUCKET) && url.endsWith(".jpg");
+const thumbOf = (url: string) => url.replace(/\.jpg$/, "-600.jpg");
+
 export function squareImage(url: string, size: number) {
-  if (url.includes("static.wixstatic.com/media/")) {
-    return `${url}/v1/fill/w_${size},h_${size},al_c,q_85,enc_auto/cover.jpg`;
-  }
+  if (isWix(url)) return `${url}/v1/fill/w_${size},h_${size},al_c,q_85,enc_auto/cover.jpg`;
+  if (isBucket(url)) return size <= 720 ? thumbOf(url) : url;
   return url;
 }
 
 export function fullImage(url: string, size: number) {
-  if (url.includes("static.wixstatic.com/media/")) {
-    return `${url}/v1/fit/w_${size},h_${size},q_90,enc_auto/cover.jpg`;
-  }
+  if (isWix(url)) return `${url}/v1/fit/w_${size},h_${size},q_90,enc_auto/cover.jpg`;
   return url;
 }
 
 export function squareSrcSet(url: string, sizes: number[]) {
-  if (!url.includes("static.wixstatic.com/media/")) return undefined;
-  return sizes.map((s) => `${squareImage(url, s)} ${s}w`).join(", ");
+  if (isWix(url)) return sizes.map((s) => `${squareImage(url, s)} ${s}w`).join(", ");
+  if (isBucket(url)) return `${thumbOf(url)} 600w, ${url} 2000w`;
+  return undefined;
 }
+
+/** Wix addresses for downloading a cover when moving it into the bucket. */
+export function wixDownloads(url: string) {
+  return {
+    full: `${url}/v1/fit/w_2000,h_2000,q_90/cover.jpg`,
+    thumb: `${url}/v1/fill/w_600,h_600,al_c,q_85/cover.jpg`,
+  };
+}
+
+export { isWix };
 
 /** Picks black or white text for a background colour. */
 export function inkFor(hex: string | null | undefined) {
