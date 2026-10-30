@@ -107,14 +107,13 @@ export default async function CoverPage({ params }: Params) {
           <header className="cover-head">
             <h1 className="cover-title">{cover.title}</h1>
             <p className="cover-artist">
-              <span>
-                {cover.artist}, {cover.release_year}
-              </span>
+              <span>{cover.artist}</span>
               {cover.type && (
-                <Link className="type-tag" href={`/types/${cover.type.slug}`}>
+                <Link className="cover-type" href={`/types/${cover.type.slug}`}>
                   {cover.type.title}
                 </Link>
               )}
+              <span>{cover.release_year}</span>
             </p>
           </header>
 

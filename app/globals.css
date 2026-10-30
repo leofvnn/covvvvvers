@@ -2965,3 +2965,27 @@ kbd {
     max-width: none;
   }
 }
+
+/* Artist · Type · Year on cover pages */
+
+.cover-artist {
+  gap: 0;
+}
+
+.cover-artist > * + *::before {
+  content: "\00B7";
+  display: inline-block;
+  margin: 0 0.5em;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.cover-type {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.cover-type:hover {
+  text-decoration-thickness: 2px;
+}
