@@ -3,7 +3,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { squareImage } from "@/lib/img";
 import { TAGS, type Era, type HistoryRecord, type Moment, type Tag } from "@/lib/history";
+import type { Person } from "@/lib/people";
 import CoverLink from "./CoverLink";
+import PersonModal from "./PersonModal";
 
 export type CoverMini = { slug: string; title: string; artist: string; year: number; image: string };
 type RecordView = HistoryRecord & { cover: CoverMini | null };
@@ -13,7 +15,18 @@ export type EraView = Omit<Era, "moments"> & {
   ink: string;
   posterCover: CoverMini | null;
   covers: number;
+  contributors: (Person & { id: string })[];
   moments: MomentView[];
+};
+
+const KIND: Record<HistoryRecord["kind"], string> = {
+  album: "Album",
+  song: "Song",
+  mixtape: "Mixtape",
+  film: "Film",
+  gear: "Gear",
+  label: "Label",
+  show: "TV and web",
 };
 
 const FIRST = 1973;
@@ -61,7 +74,7 @@ function CountUp({ value, prefix = "", suffix = "" }: { value: number; prefix?: 
 }
 
 function RecordChip({ r }: { r: RecordView }) {
-  const kind = r.kind === "album" ? "Album" : r.kind === "song" ? "Song" : r.kind === "mixtape" ? "Mixtape" : "Film";
+  const kind = KIND[r.kind];
   if (r.cover) {
     return (
       <li>
@@ -79,17 +92,40 @@ function RecordChip({ r }: { r: RecordView }) {
       </li>
     );
   }
-  return (
-    <li>
-      <span className="h-record">
-        <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
-        <span className="h-record-text">
-          <strong>{r.title}</strong>
-          <span>
-            {kind} · {r.artist} · {r.year}
-          </span>
+  const inner = (
+    <>
+      <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
+      <span className="h-record-text">
+        <strong>{r.title}</strong>
+        <span>
+          {kind} · {r.artist} · {r.year}
         </span>
       </span>
+    </>
+  );
+  // Music that isn't in the collection opens a search on Spotify.
+  if (r.kind === "song" || r.kind === "album" || r.kind === "mixtape") {
+    const q = encodeURIComponent(`${r.title} ${r.artist.split(/ feat\. | & | and /)[0]}`);
+    return (
+      <li>
+        <a
+          className="h-record is-listen"
+          href={`https://open.spotify.com/search/${q}`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Listen to ${r.title} by ${r.artist} on Spotify`}
+        >
+          {inner}
+          <span className="h-listen" aria-hidden="true">
+            ▶
+          </span>
+        </a>
+      </li>
+    );
+  }
+  return (
+    <li>
+      <span className="h-record">{inner}</span>
     </li>
   );
 }
@@ -100,9 +136,11 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   const [year, setYear] = useState(NOW);
   const [progress, setProgress] = useState(0);
   const [flash, setFlash] = useState<string | null>(null);
+  const [person, setPerson] = useState<{ era: string; index: number } | null>(null);
   const root = useRef<HTMLDivElement>(null);
 
   const total = useMemo(() => eras.reduce((n, e) => n + e.moments.length, 0), [eras]);
+  const people = useMemo(() => new Set(eras.flatMap((e) => e.contributors.map((p) => p.id))).size, [eras]);
   const shown = (m: MomentView) => filter === "all" || m.tags.includes(filter);
   const count = useMemo(() => eras.reduce((n, e) => n + e.moments.filter(shown).length, 0), [eras, filter]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -207,8 +245,8 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
           <span className="h-hero-now">{year}</span>
         </h1>
         <p className="h-hero-lede">
-          How a back-to-school party in a Bronx rec room grew into the biggest music in the world. {total} moments, the records that
-          shaped each one, and the covers from the collection that came out of it.
+          How a back-to-school party in a Bronx rec room grew into the biggest music in the world. {total} moments, the records,
+          machines and labels behind them, and {people} people who made it happen.
         </p>
         <div className="h-hero-actions">
           <button type="button" className="button solid" onClick={() => go(eras[0].id)}>
@@ -292,10 +330,14 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                   </CoverLink>
                 )}
                 <div className="h-era-artists">
-                  <span>Who shaped it</span>
+                  <span>Contributions</span>
                   <ul>
-                    {era.artists.map((a) => (
-                      <li key={a}>{a}</li>
+                    {era.contributors.map((p, index) => (
+                      <li key={p.id}>
+                        <button type="button" onClick={() => setPerson({ era: era.id, index })} aria-haspopup="dialog">
+                          {p.name}
+                        </button>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -345,6 +387,21 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
           );
         })}
       </div>
+
+      {person && (() => {
+        const era = eras.find((e) => e.id === person.era)!;
+        const list = era.contributors;
+        return (
+          <PersonModal
+            person={list[person.index]}
+            era={era}
+            position={`${person.index + 1} of ${list.length}`}
+            onPrev={() => setPerson({ era: era.id, index: (person.index - 1 + list.length) % list.length })}
+            onNext={() => setPerson({ era: era.id, index: (person.index + 1) % list.length })}
+            onClose={() => setPerson(null)}
+          />
+        );
+      })()}
 
       <footer className="h-sources">
         <h2>Sources</h2>
