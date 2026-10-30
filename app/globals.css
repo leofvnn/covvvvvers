@@ -825,14 +825,6 @@ select {
   margin-top: 1em;
 }
 
-.player {
-  display: block;
-  width: 100%;
-  margin-top: 40px;
-  border: 0;
-  border-radius: 12px;
-}
-
 .facts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -129,16 +129,6 @@ export default async function CoverPage({ params }: Params) {
           <div className="essay" dangerouslySetInnerHTML={{ __html: cover.description_html }} />
         )}
 
-        {cover.spotify_album_id && (
-          <iframe
-            className="player"
-            title={`Listen to ${cover.title} on Spotify`}
-            src={`https://open.spotify.com/embed/album/${cover.spotify_album_id}`}
-            height={352}
-            loading="lazy"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          />
-        )}
 
         <dl className="facts">
           {facts

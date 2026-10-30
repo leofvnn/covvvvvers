@@ -27,7 +27,7 @@ export default function SwipeNav({ newer, older }: { newer: string | null; older
 
     const onStart = (e: TouchEvent) => {
       const target = e.target as HTMLElement;
-      // Leave sideways scrolling inside the player and form fields alone.
+      // Leave sideways scrolling inside embeds and form fields alone.
       tracking = e.touches.length === 1 && !target.closest("iframe, input, select, textarea");
       x0 = e.touches[0].clientX;
       y0 = e.touches[0].clientY;
