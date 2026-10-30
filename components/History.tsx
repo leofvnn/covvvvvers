@@ -4,11 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { squareImage } from "@/lib/img";
 import { TAGS, type Era, type HistoryRecord, type Moment, type Tag } from "@/lib/history";
 import type { Person } from "@/lib/people";
+import { PHOTOS, commonsImage } from "@/lib/photos";
 import CoverLink from "./CoverLink";
 import PersonModal from "./PersonModal";
 
-export type CoverMini = { slug: string; title: string; artist: string; year: number; image: string };
-type RecordView = HistoryRecord & { cover: CoverMini | null };
+export type CoverMini = { slug: string; title: string; artist: string; year: number; image: string; spotify?: string | null };
+type RecordView = HistoryRecord & { cover: CoverMini | null; spotify: string | null };
 type MomentView = Omit<Moment, "records"> & { records: RecordView[] };
 export type EraView = Omit<Era, "moments"> & {
   bg: string;
@@ -73,12 +74,31 @@ function CountUp({ value, prefix = "", suffix = "" }: { value: number; prefix?: 
   );
 }
 
-function RecordChip({ r }: { r: RecordView }) {
+function PlayIcon({ on }: { on: boolean }) {
+  return (
+    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+      {on ? <path d="M1.5 4.5h2l3-2.5v8l-3-2.5h-2zM8.5 3.8a3 3 0 0 1 0 4.4M9.8 2.4a5 5 0 0 1 0 7.2" fill="currentColor" stroke="currentColor" strokeWidth="1" /> : <path d="M3 1.5v9l7.5-4.5z" fill="currentColor" />}
+    </svg>
+  );
+}
+
+function RecordChip({ r, playing, onPlay }: { r: RecordView; playing: boolean; onPlay: () => void }) {
   const kind = KIND[r.kind];
+  const play = r.spotify && (
+    <button
+      type="button"
+      className={`h-play${playing ? " is-on" : ""}`}
+      onClick={onPlay}
+      aria-pressed={playing}
+      aria-label={`${playing ? "In the player:" : "Load into the player:"} ${r.title} by ${r.artist}`}
+    >
+      <PlayIcon on={playing} />
+    </button>
+  );
   if (r.cover) {
     return (
-      <li>
-        <CoverLink href={`/covers/${r.cover.slug}`} className="h-record has-cover">
+      <li className={`h-record has-cover${playing ? " is-playing" : ""}`}>
+        <CoverLink href={`/covers/${r.cover.slug}`} className="h-record-link">
           <span className="h-record-art" data-art>
             <img src={squareImage(r.cover.image, 160)} alt="" width={80} height={80} loading="lazy" />
           </span>
@@ -89,11 +109,12 @@ function RecordChip({ r }: { r: RecordView }) {
             </span>
           </span>
         </CoverLink>
+        {play}
       </li>
     );
   }
-  const inner = (
-    <>
+  return (
+    <li className={`h-record${r.spotify ? " is-playable" : ""}${playing ? " is-playing" : ""}`}>
       <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
       <span className="h-record-text">
         <strong>{r.title}</strong>
@@ -101,32 +122,42 @@ function RecordChip({ r }: { r: RecordView }) {
           {kind} · {r.artist} · {r.year}
         </span>
       </span>
-    </>
-  );
-  // Music that isn't in the collection opens a search on Spotify.
-  if (r.kind === "song" || r.kind === "album" || r.kind === "mixtape") {
-    const q = encodeURIComponent(`${r.title} ${r.artist.split(/ feat\. | & | and /)[0]}`);
-    return (
-      <li>
-        <a
-          className="h-record is-listen"
-          href={`https://open.spotify.com/search/${q}`}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`Listen to ${r.title} by ${r.artist} on Spotify`}
-        >
-          {inner}
-          <span className="h-listen" aria-hidden="true">
-            ▶
-          </span>
-        </a>
-      </li>
-    );
-  }
-  return (
-    <li>
-      <span className="h-record">{inner}</span>
+      {play}
     </li>
+  );
+}
+
+/** One Spotify player per moment; the record chips choose what it plays. */
+function Player({ uri, title }: { uri: string; title: string }) {
+  const tall = uri.startsWith("album/") || uri.startsWith("playlist/");
+  return (
+    <div className={`h-player${tall ? " is-tall" : ""}`}>
+      <iframe
+        key={uri}
+        title={`Spotify player: ${title}`}
+        src={`https://open.spotify.com/embed/${uri}?utm_source=generator`}
+        width="100%"
+        height={tall ? 352 : 152}
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      />
+    </div>
+  );
+}
+
+function Records({ records }: { records: RecordView[] }) {
+  const first = records.find((r) => r.spotify);
+  const [uri, setUri] = useState(first?.spotify ?? null);
+  const current = records.find((r) => r.spotify === uri);
+  return (
+    <>
+      {uri && <Player uri={uri} title={current ? `${current.title} by ${current.artist}` : "Now playing"} />}
+      <ul className="h-records" aria-label="Records">
+        {records.map((r) => (
+          <RecordChip key={r.title + r.artist + r.kind} r={r} playing={!!r.spotify && r.spotify === uri} onPlay={() => setUri(r.spotify)} />
+        ))}
+      </ul>
+    </>
   );
 }
 
@@ -335,6 +366,13 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                     {era.contributors.map((p, index) => (
                       <li key={p.id}>
                         <button type="button" onClick={() => setPerson({ era: era.id, index })} aria-haspopup="dialog">
+                          <span className="h-avatar" aria-hidden="true">
+                            {PHOTOS[p.id] ? (
+                              <img src={commonsImage(PHOTOS[p.id].file, 96)} alt="" width={28} height={28} loading="lazy" />
+                            ) : (
+                              p.name.replace(/^The /, "")[0]
+                            )}
+                          </span>
                           {p.name}
                         </button>
                       </li>
@@ -366,13 +404,7 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                           <span className="h-stat-label">{m.stat.label}</span>
                         </p>
                       )}
-                      {m.records.length > 0 && (
-                        <ul className="h-records" aria-label="Records">
-                          {m.records.map((r) => (
-                            <RecordChip key={r.title + r.artist} r={r} />
-                          ))}
-                        </ul>
-                      )}
+                      {m.records.length > 0 && <Records records={m.records} />}
                     </div>
                   </li>
                 ))}

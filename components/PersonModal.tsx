@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Person } from "@/lib/people";
+import { PHOTOS, commonsImage, commonsPage } from "@/lib/photos";
 
 type Summary = { image: string | null; url: string; description: string | null };
 const cache = new Map<string, Promise<Summary>>();
@@ -84,7 +85,8 @@ export default function PersonModal({
     return () => window.removeEventListener("keydown", onKey);
   }, [onNext, onPrev]);
 
-  const photo = info?.image && !broken ? info.image : null;
+  const own = PHOTOS[person.id];
+  const photo = broken ? null : own ? commonsImage(own.file, 800) : (info?.image ?? null);
 
   return (
     <dialog
@@ -132,7 +134,14 @@ export default function PersonModal({
             <a href={info?.url ?? `https://en.wikipedia.org/wiki/${person.wiki}`} target="_blank" rel="noreferrer">
               Read more on Wikipedia
             </a>
-            {photo && <span> · Photo from Wikimedia Commons</span>}
+            {photo && (
+              <>
+                {" · "}
+                <a href={own ? commonsPage(own.file) : (info?.url ?? "#")} target="_blank" rel="noreferrer">
+                  Photo{own?.note ? `: ${own.note}` : ""}, Wikimedia Commons
+                </a>
+              </>
+            )}
           </p>
         </div>
       </div>

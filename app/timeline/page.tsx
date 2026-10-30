@@ -4,6 +4,7 @@ import { getCovers } from "@/lib/data";
 import { ERAS, SOURCES } from "@/lib/history";
 import { inkFor } from "@/lib/img";
 import { PEOPLE } from "@/lib/people";
+import { SPOTIFY } from "@/lib/spotify";
 
 export const revalidate = 3600;
 export const metadata: Metadata = {
@@ -24,7 +25,14 @@ const norm = (s: string) =>
 export default async function TimelinePage() {
   const covers = await getCovers();
   const bySlug = new Map(covers.map((c) => [c.slug, c]));
-  const mini = (c: (typeof covers)[number]): CoverMini => ({ slug: c.slug, title: c.title, artist: c.artist, year: c.release_year, image: c.image_url });
+  const mini = (c: (typeof covers)[number]): CoverMini => ({
+    slug: c.slug,
+    title: c.title,
+    artist: c.artist,
+    year: c.release_year,
+    image: c.image_url,
+    spotify: c.spotify_album_id,
+  });
 
   // Match a landmark album to a cover in the collection by title and artist.
   const byTitle = new Map<string, typeof covers>();
@@ -55,10 +63,11 @@ export default async function TimelinePage() {
       contributors: era.people.filter((id) => PEOPLE[id]).map((id) => ({ id, ...PEOPLE[id] })),
       moments: era.moments.map((m) => ({
         ...m,
-        records: (m.records ?? []).map((r) => ({
-          ...r,
-          cover: r.kind === "album" || r.kind === "mixtape" ? findCover(r.title, r.artist) : null,
-        })),
+        records: (m.records ?? []).map((r) => {
+          const cover = r.kind === "album" || r.kind === "mixtape" ? findCover(r.title, r.artist) : null;
+          const spotify = SPOTIFY[`${r.title}|${r.artist}`] ?? (cover?.spotify ? `album/${cover.spotify}` : null);
+          return { ...r, cover, spotify };
+        }),
       })),
     };
   });

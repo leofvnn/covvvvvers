@@ -2122,28 +2122,94 @@ kbd {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.h-record.is-listen {
-  position: relative;
-  padding-right: 34px;
+.h-record.has-cover {
+  padding: 0;
 }
 
-.h-record.is-listen:hover {
-  border-color: var(--ink);
-  transform: translateY(-2px);
+.h-record-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  padding: 6px 14px 6px 6px;
+  color: inherit;
+  text-decoration: none;
 }
 
-.h-listen {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  translate: 0 -50%;
-  font-size: 0.625rem;
-  color: var(--muted);
-  transition: color 0.2s var(--ease);
-}
-
-.h-record.is-listen:hover .h-listen {
+.h-play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  min-height: 0;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
   color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.h-record.has-cover .h-play {
+  margin-right: 10px;
+}
+
+.h-play:hover,
+.h-play.is-on {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.h-record.is-playing {
+  border-color: var(--ink);
+}
+
+.h-player {
+  margin: 20px 0 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--soft);
+  min-height: 152px;
+}
+
+.h-player.is-tall {
+  min-height: 352px;
+}
+
+.h-player iframe {
+  display: block;
+  border: 0;
+}
+
+.h-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin: -2px 8px -2px -8px;
+  vertical-align: middle;
+  border-radius: 50%;
+  overflow: hidden;
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.h-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.h-era-artists button {
+  display: inline-flex;
+  align-items: center;
 }
 
 .h-record-icon.gear,
@@ -2245,7 +2311,7 @@ kbd {
   }
   .h-card > .h-records {
     grid-column: 2;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 6;
     align-self: start;
     flex-direction: column;
     margin-top: 0;
