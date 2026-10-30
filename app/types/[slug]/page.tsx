@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import CoverWall from "@/components/CoverWall";
+import CoverGrid from "@/components/CoverGrid";
 import { getType, getTypes, toCard } from "@/lib/data";
 
 export const revalidate = 3600;
@@ -23,14 +24,17 @@ export default async function TypePage({ params }: Params) {
   const { type, covers } = found;
   return (
     <>
-      <section className="intro">
+      <header className="page-head">
+        <p className="crumb">
+          <Link href="/types">Cover types</Link>
+        </p>
         <h1>{type.title}</h1>
         {type.description && <p>{type.description}</p>}
-        <p className="intro-meta">
+        <p className="page-count">
           {covers.length} {covers.length === 1 ? "cover" : "covers"}
         </p>
-      </section>
-      <CoverWall covers={covers.map(toCard)} emptyText="No covers of this type yet." />
+      </header>
+      <CoverGrid covers={covers.map(toCard)} emptyText="No covers of this type yet." />
     </>
   );
 }

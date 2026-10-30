@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import CoverWall from "@/components/CoverWall";
+import CoverGrid from "@/components/CoverGrid";
 import { getCovers, toCard } from "@/lib/data";
 import { getServerClient } from "@/lib/supabase/server";
 
@@ -34,7 +34,7 @@ export default async function MePage() {
 
   return (
     <>
-      <section className="intro">
+      <header className="page-head">
         <h1>Your covers</h1>
         <p>Signed in as {user.email}.</p>
         <div className="intro-actions">
@@ -52,17 +52,13 @@ export default async function MePage() {
             </button>
           </form>
         </div>
-      </section>
+      </header>
 
       <section aria-labelledby="saved-h">
         <h2 id="saved-h" className="section-title">
           Saved
         </h2>
-        <CoverWall
-          covers={saved.map(toCard)}
-          years={false}
-          emptyText="Nothing saved yet. Open any cover and choose Save to your covers."
-        />
+        <CoverGrid covers={saved.map(toCard)} emptyText="Nothing saved yet. Open any cover and tap Save." />
       </section>
 
       <section aria-labelledby="subs-h" className="subs">

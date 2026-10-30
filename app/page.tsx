@@ -1,25 +1,66 @@
-import CoverWall from "@/components/CoverWall";
-import { getCovers, getTypes, toCard } from "@/lib/data";
+import Link from "next/link";
+import CoverGrid from "@/components/CoverGrid";
+import CoverLink from "@/components/CoverLink";
+import { firstSentence, getCovers, getCreators, getFeatured, getTypes, toCard } from "@/lib/data";
+import { fullImage, inkFor } from "@/lib/img";
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const [covers, types] = await Promise.all([getCovers(), getTypes()]);
-  const first = covers[covers.length - 1]?.release_year;
-  const countries = new Set(covers.map((c) => c.country).filter(Boolean)).size;
+  const [featured, covers, types, creators] = await Promise.all([getFeatured(), getCovers(), getTypes(), getCreators()]);
+  const bg = featured.color ?? "#111111";
+  const ink = inkFor(bg);
+  const recent = covers.filter((c) => c.id !== featured.id).slice(0, 12);
+
+  const doors = [
+    { href: "/covers", label: "Covers", note: `All ${covers.length}, newest first` },
+    { href: "/types", label: "Cover types", note: `${types.filter((t) => t.count).length} ways a cover gets made` },
+    { href: "/creators", label: "Creators", note: `${creators.length} photographers, painters and designers` },
+  ];
 
   return (
     <>
-      <section className="intro">
-        <h1>
-          {covers.length} rap album covers, {first} to now
-        </h1>
-        <p>
-          The photographs, paintings and designs that gave rap records their faces, from {countries} countries. Each
-          one comes with the story of how it was made and who made it.
-        </p>
+      <section className="feature" style={{ "--bg": bg, "--ink": ink } as React.CSSProperties}>
+        <CoverLink href={`/covers/${featured.slug}`} className="feature-link">
+          <span className="feature-art" data-art>
+            <img
+              src={fullImage(featured.image_url, 1400)}
+              alt={`${featured.title} by ${featured.artist}, album cover`}
+              width={1400}
+              height={1400}
+              fetchPriority="high"
+            />
+          </span>
+          <span className="feature-text">
+            <span className="feature-label">Cover of the week</span>
+            <span className="feature-title">{featured.title}</span>
+            <span className="feature-artist">
+              {featured.artist}, {featured.release_year}
+            </span>
+            <span className="feature-story">{firstSentence(featured.description_html)}</span>
+            <span className="feature-more">Read the story</span>
+          </span>
+        </CoverLink>
       </section>
-      <CoverWall covers={covers.map(toCard)} filters types={types.map((t) => ({ slug: t.slug, title: t.title }))} />
+
+      <section className="home-section" aria-labelledby="recent-h">
+        <div className="section-head">
+          <h2 id="recent-h">Recent albums</h2>
+          <Link href="/covers">See all covers</Link>
+        </div>
+        <div className="recent">
+          <CoverGrid covers={recent.map(toCard)} eager={4} />
+        </div>
+      </section>
+
+      <nav className="doors" aria-label="Explore">
+        {doors.map((d) => (
+          <Link key={d.href} href={d.href}>
+            <span className="door-label">{d.label}</span>
+            <span className="door-note">{d.note}</span>
+          </Link>
+        ))}
+      </nav>
     </>
   );
 }

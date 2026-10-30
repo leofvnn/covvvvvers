@@ -4,6 +4,20 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getBrowserClient } from "@/lib/supabase/client";
 
+function Heart({ filled }: { filled: boolean }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"
+        fill={filled ? "currentColor" : "none"}
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function FavoriteButton({ coverId, slug }: { coverId: string; slug: string }) {
   const [userId, setUserId] = useState<string | null | undefined>(undefined);
   const [saved, setSaved] = useState(false);
@@ -30,12 +44,13 @@ export default function FavoriteButton({ coverId, slug }: { coverId: string; slu
     });
   }, [coverId]);
 
-  if (userId === undefined) return <span className="fav-placeholder" />;
+  if (userId === undefined) return <span className="save-placeholder" />;
 
   if (userId === null) {
     return (
-      <Link className="button" href={`/login?next=/covers/${slug}`}>
-        Sign in to save this cover
+      <Link className="save" href={`/login?next=/covers/${slug}`}>
+        <Heart filled={false} />
+        Save
       </Link>
     );
   }
@@ -43,23 +58,25 @@ export default function FavoriteButton({ coverId, slug }: { coverId: string; slu
   async function toggle() {
     const db = getBrowserClient();
     if (!db || !userId) return;
+    const next = !saved;
+    setSaved(next);
     setBusy(true);
     setError("");
-    const res = saved
-      ? await db.from("favorites").delete().eq("user_id", userId).eq("cover_id", coverId)
-      : await db.from("favorites").insert({ user_id: userId, cover_id: coverId });
+    const res = next
+      ? await db.from("favorites").insert({ user_id: userId, cover_id: coverId })
+      : await db.from("favorites").delete().eq("user_id", userId).eq("cover_id", coverId);
     setBusy(false);
     if (res.error) {
-      setError("The change didn't save. Check your connection and try again.");
-      return;
+      setSaved(!next);
+      setError("That didn't save. Check your connection and try again.");
     }
-    setSaved(!saved);
   }
 
   return (
     <>
-      <button type="button" className="button" aria-pressed={saved} onClick={toggle} disabled={busy}>
-        {saved ? "Saved to your covers" : "Save to your covers"}
+      <button type="button" className="save" aria-pressed={saved} onClick={toggle} disabled={busy}>
+        <Heart filled={saved} />
+        {saved ? "Saved" : "Save"}
       </button>
       {error && (
         <p className="form-error" role="alert">

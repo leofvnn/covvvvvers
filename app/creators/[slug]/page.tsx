@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import CoverWall from "@/components/CoverWall";
+import CoverGrid from "@/components/CoverGrid";
 import { getCreator, getCreators, toCard } from "@/lib/data";
 
 export const revalidate = 3600;
@@ -27,13 +28,16 @@ export default async function CreatorPage({ params }: Params) {
   const { creator, covers } = found;
   return (
     <>
-      <section className="intro">
-        <h1>{creator.name}</h1>
-        <p>
-          {creator.role ?? "Creator"}, {covers.length} {covers.length === 1 ? "cover" : "covers"} in the collection
+      <header className="page-head">
+        <p className="crumb">
+          <Link href="/creators">Creators</Link>
         </p>
-      </section>
-      <CoverWall covers={covers.map(toCard)} />
+        <h1>{creator.name}</h1>
+        <p className="page-count">
+          {creator.role ?? "Creator"}, {covers.length} {covers.length === 1 ? "cover" : "covers"}
+        </p>
+      </header>
+      <CoverGrid covers={covers.map(toCard)} />
     </>
   );
 }

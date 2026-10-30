@@ -1,4 +1,4 @@
-# Album Coverz
+# Covvvvvers
 
 Rap album covers from every era, with the story behind each one and the people who made it.
 Built with Next.js, hosted on Vercel, with accounts and the database on Supabase.

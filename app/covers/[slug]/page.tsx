@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FavoriteButton from "@/components/FavoriteButton";
+import SwipeNav from "@/components/SwipeNav";
 import { getCover, getCovers } from "@/lib/data";
 import { fullImage, inkFor, squareImage } from "@/lib/img";
 import type { Creator } from "@/lib/types";
@@ -72,7 +73,6 @@ export default async function CoverPage({ params }: Params) {
   const ink = inkFor(bg);
 
   const facts: [string, React.ReactNode][] = [
-    ["Released", cover.release_year],
     ["Label", cover.label],
     ["Country", cover.country],
     ["Cover type", cover.type && <Link href={`/types/${cover.type.slug}`}>{cover.type.title}</Link>],
@@ -88,7 +88,7 @@ export default async function CoverPage({ params }: Params) {
   return (
     <article
       className="cover-page"
-      style={{ "--bg": bg, "--ink": ink, "--accent": cover.accent_color ?? ink } as React.CSSProperties}
+      style={{ "--bg": bg, "--ink": ink } as React.CSSProperties}
     >
       <div className="cover-art">
         <img
@@ -96,27 +96,20 @@ export default async function CoverPage({ params }: Params) {
           alt={`${cover.title} by ${cover.artist}, album cover`}
           width={cover.image_width ?? 1400}
           height={cover.image_height ?? 1400}
+          style={{ viewTransitionName: "cover-art" }}
+          fetchPriority="high"
         />
       </div>
 
       <div className="cover-body">
-        <header>
-          <p className="cover-artist">{cover.artist}</p>
+        <header className="cover-head">
           <h1 className="cover-title">{cover.title}</h1>
+          <p className="cover-artist">
+            {cover.artist}, {cover.release_year}
+          </p>
         </header>
 
         {cover.credits_text && <p className="cover-credits">{linkCredits(cover.credits_text, cover.creators)}</p>}
-
-        <dl className="facts">
-          {facts
-            .filter(([, v]) => v)
-            .map(([k, v]) => (
-              <div key={k}>
-                <dt>{k}</dt>
-                <dd>{v}</dd>
-              </div>
-            ))}
-        </dl>
 
         <div className="cover-actions">
           <FavoriteButton coverId={cover.id} slug={cover.slug} />
@@ -137,25 +130,37 @@ export default async function CoverPage({ params }: Params) {
           />
         )}
 
-        {listen.length > 0 && (
-          <p className="listen">
-            Listen on{" "}
-            {listen.map(([name, url], i) => (
-              <span key={name}>
-                {i > 0 && (i === listen.length - 1 ? " or " : ", ")}
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  {name}
-                </a>
-              </span>
+        <dl className="facts">
+          {facts
+            .filter(([, v]) => v)
+            .map(([k, v]) => (
+              <div key={k}>
+                <dt>{k}</dt>
+                <dd>{v}</dd>
+              </div>
             ))}
-          </p>
-        )}
+          {listen.length > 0 && (
+            <div>
+              <dt>Listen</dt>
+              <dd>
+                {listen.map(([name, url], i) => (
+                  <span key={name}>
+                    {i > 0 && ", "}
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {name}
+                    </a>
+                  </span>
+                ))}
+              </dd>
+            </div>
+          )}
+        </dl>
 
         <nav className="cover-nav" aria-label="More covers">
           {newer ? (
             <Link href={`/covers/${newer.slug}`} rel="prev">
               <span>Newer</span>
-              {newer.title}, {newer.release_year}
+              {newer.title}
             </Link>
           ) : (
             <span />
@@ -163,11 +168,13 @@ export default async function CoverPage({ params }: Params) {
           {older && (
             <Link href={`/covers/${older.slug}`} rel="next">
               <span>Older</span>
-              {older.title}, {older.release_year}
+              {older.title}
             </Link>
           )}
         </nav>
+        <p className="swipe-hint">Swipe left or right for the next cover.</p>
       </div>
+      <SwipeNav newer={newer ? `/covers/${newer.slug}` : null} older={older ? `/covers/${older.slug}` : null} />
     </article>
   );
 }

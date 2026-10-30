@@ -100,6 +100,34 @@ export async function getCover(slug: string) {
   return { cover: covers[i], newer: covers[i - 1] ?? null, older: covers[i + 1] ?? null };
 }
 
+/** The cover of the week: a different high-resolution cover every Monday, the same for everyone that week. */
+export async function getFeatured() {
+  const covers = await getCovers();
+  const flagged = covers.filter((c) => c.featured);
+  const pool = flagged.length
+    ? flagged
+    : covers.filter((c) => (c.image_width ?? 0) >= 1200 && c.description_html && c.creators.length);
+  const list = pool.length ? pool : covers;
+  const week = Math.floor((Date.now() / 86400000 + 3) / 7);
+  return list[(week * 37) % list.length];
+}
+
+/** The opening of a cover's essay as plain text: whole sentences, at least about 120 characters. */
+export function firstSentence(html: string | null, max = 240) {
+  const text = (html ?? "")
+    .replace(/<\/p>[\s\S]*$/, "")
+    .replace(/<[^>]+>/g, "")
+    .trim();
+  const sentences = text.match(/[^.!?]+[.!?]+["')]*(\s+|$)/g) ?? [text];
+  let out = "";
+  for (const s of sentences) {
+    if (out.length >= 120 || (out && (out + s).length > max)) break;
+    out += s;
+  }
+  out = out.trim() || text;
+  return out.length > max ? out.slice(0, max).replace(/\s\S*$/, "") + "..." : out;
+}
+
 export async function getTypes() {
   return (await assemble()).types;
 }

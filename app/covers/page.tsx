@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CoverWall from "@/components/CoverWall";
+import CoverGrid from "@/components/CoverGrid";
 import { getCovers, getTypes, toCard } from "@/lib/data";
 
 export const revalidate = 3600;
@@ -12,15 +12,14 @@ export default async function CoversPage() {
   const [covers, types] = await Promise.all([getCovers(), getTypes()]);
   return (
     <>
-      <section className="intro">
+      <header className="page-head">
         <h1>Covers</h1>
-        <p>Every cover in the collection, newest first. Open one for its story and credits.</p>
-      </section>
-      <CoverWall
+        <p>Every cover in the collection, newest first.</p>
+      </header>
+      <CoverGrid
         covers={covers.map(toCard)}
         filters
-        variant="grid"
-        types={types.map((t) => ({ slug: t.slug, title: t.title }))}
+        types={types.filter((t) => t.count).map((t) => ({ slug: t.slug, title: t.title }))}
       />
     </>
   );
