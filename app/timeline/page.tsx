@@ -1,29 +1,41 @@
 import type { Metadata } from "next";
-import Timeline from "@/components/Timeline";
-import { getCovers, toCard } from "@/lib/data";
+import History, { type CoverMini, type EraView } from "@/components/History";
+import { getCovers } from "@/lib/data";
+import { ERAS, SOURCES } from "@/lib/history";
+import { inkFor } from "@/lib/img";
 
 export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Timeline",
-  description: "Rap album covers year by year, from the 1980s to now.",
+  description: "How hip-hop grew from a Bronx rec room in 1973 into the biggest music in the world: the moments, records and artists that shaped it.",
 };
+
+const pageColor = (hex: string | null) => (hex && /^#[0-9a-f]{6}$/i.test(hex) ? hex : "#111111");
 
 export default async function TimelinePage() {
   const covers = await getCovers();
-  // Oldest on the left, so the line reads forward in time.
-  const years = new Map<number, ReturnType<typeof toCard>[]>();
-  for (const c of [...covers].reverse()) {
-    const list = years.get(c.release_year) ?? [];
-    list.push(toCard(c));
-    years.set(c.release_year, list);
-  }
-  return (
-    <>
-      <header className="page-head">
-        <h1>Timeline</h1>
-        <p>Drag, scroll or swipe sideways to travel from the first covers to the newest.</p>
-      </header>
-      <Timeline years={[...years.entries()].map(([year, list]) => ({ year, covers: list }))} />
-    </>
-  );
+  const bySlug = new Map(covers.map((c) => [c.slug, c]));
+  const mini = (slug: string): CoverMini | null => {
+    const c = bySlug.get(slug);
+    return c ? { slug: c.slug, title: c.title, artist: c.artist, year: c.release_year, image: c.image_url } : null;
+  };
+
+  const eras: EraView[] = ERAS.map((era) => {
+    const poster = bySlug.get(era.poster);
+    const bg = pageColor(poster?.color ?? null);
+    const inEra = covers.filter((c) => c.release_year >= era.from && c.release_year <= era.to);
+    return {
+      ...era,
+      bg,
+      ink: inkFor(bg),
+      posterCover: mini(era.poster),
+      covers: inEra.length,
+      moments: era.moments.map((m) => ({
+        ...m,
+        records: (m.records ?? []).map((r) => ({ ...r, cover: r.slug ? mini(r.slug) : null })),
+      })),
+    };
+  });
+
+  return <History eras={eras} sources={SOURCES} />;
 }

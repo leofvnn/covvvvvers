@@ -1691,126 +1691,574 @@ kbd {
 }
 
 /* ------------------------------------------------------------------ */
-/* Timeline                                                            */
+/* Timeline: the story of hip-hop                                      */
 
-.timeline {
-  border-top: 1px solid var(--line);
+.h-hero {
+  display: grid;
+  gap: 18px;
+  padding: clamp(40px, 8vw, 104px) var(--gutter) clamp(32px, 5vw, 56px);
 }
 
-.timeline-track {
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  padding: 28px var(--gutter) 24px;
-  scroll-snap-type: x proximity;
-  scrollbar-width: thin;
-  cursor: grab;
-  user-select: none;
-}
-
-.timeline-track:active {
-  cursor: grabbing;
-}
-
-.timeline-year {
-  flex: none;
-  scroll-snap-align: start;
-}
-
-.timeline-year h2 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  margin-bottom: 14px;
-  font-variation-settings: "wdth" 62;
-}
-
-.timeline-year ul {
-  list-style: none;
+.h-kicker,
+.h-era-num {
   margin: 0;
-  padding: 0;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 16px 14px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.timeline-cover {
-  display: grid;
-  gap: 2px;
-  width: 160px;
-  text-decoration: none;
+.h-kicker {
+  color: var(--muted);
 }
 
-.timeline-art {
+.h-hero-year {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.25em;
+  margin: 0;
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 800;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  font-variation-settings: "wdth" 62;
+  font-variant-numeric: tabular-nums;
+}
+
+.h-hero-arrow {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.h-hero-lede {
+  max-width: 58ch;
+  margin: 6px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.45;
+}
+
+.h-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* The rail stays under the header while you read. */
+.h-rail-wrap {
+  position: sticky;
+  top: var(--header);
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.h-progress {
+  height: 3px;
+  background: var(--line);
+}
+
+.h-progress span {
   display: block;
-  width: 160px;
-  height: 160px;
-  margin-bottom: 8px;
-  overflow: hidden;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: left;
+  transition: transform 0.15s linear;
 }
 
-.timeline-art img {
+.h-rail,
+.h-filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px var(--gutter);
+  scrollbar-width: none;
+}
+
+.h-rail::-webkit-scrollbar,
+.h-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.h-filters {
+  align-items: center;
+  padding-top: 0;
+}
+
+.h-rail button,
+.h-filters button {
+  flex: none;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.h-rail button:hover,
+.h-filters button:hover {
+  border-color: var(--ink);
+}
+
+.h-rail button[aria-current="true"] {
+  background: var(--era-bg);
+  color: var(--era-ink);
+  border-color: var(--era-bg);
+}
+
+.h-filters button {
+  min-height: 30px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.h-filters button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.h-filter-count {
+  flex: none;
+  margin-left: auto;
+  padding-left: 12px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* Eras */
+
+.h-era {
+  scroll-margin-top: calc(var(--header) + 96px);
+}
+
+.h-era-band {
+  display: grid;
+  gap: 28px;
+  overflow: clip;
+  padding: clamp(40px, 7vw, 88px) var(--gutter);
+  background: var(--era-bg);
+  color: var(--era-ink);
+}
+
+.h-era-band h2 {
+  margin: 10px 0 18px;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  font-variation-settings: "wdth" 70;
+}
+
+.h-era-intro {
+  max-width: 60ch;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.h-era-sound {
+  max-width: 60ch;
+  margin: 22px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  font-size: 0.9375rem;
+}
+
+.h-era-sound span,
+.h-era-artists > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.h-era-poster {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  color: inherit;
+  text-decoration: none;
+  width: min(100%, 420px);
+  padding: 8px;
+}
+
+.h-era-poster-art {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.55);
+  transform: rotate(-2deg);
+  transition: transform 0.5s var(--ease);
+}
+
+.h-era-poster:hover .h-era-poster-art {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.h-era-poster-art img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.timeline-title {
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.2;
+.h-era-poster-cap {
+  font-size: 0.8125rem;
+  opacity: 0.8;
 }
 
-.timeline-artist {
-  font-size: 0.8125rem;
+.h-era-artists ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h-era-artists li {
+  padding: 4px 12px;
+  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 900px) {
+  .h-era-band {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+    column-gap: clamp(40px, 6vw, 96px);
+  }
+  .h-era-poster {
+    grid-row: span 2;
+  }
+}
+
+/* Moments */
+
+.h-moments {
+  position: relative;
+  margin: 0;
+  padding: clamp(32px, 5vw, 64px) var(--gutter) 8px;
+  list-style: none;
+}
+
+.h-moment {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  padding: 0 0 clamp(36px, 5vw, 56px) 28px;
+  scroll-margin-top: calc(var(--header) + 110px);
+}
+
+/* The line runs down the left of every moment. */
+.h-moment::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+
+.h-dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--era-bg);
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px var(--ink);
+}
+
+.h-when {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+}
+
+.h-card h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.h-card > p {
+  max-width: 64ch;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.h-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.h-tags button {
+  min-height: 0;
+  padding: 2px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.h-tags button:hover {
+  color: var(--ink);
+}
+
+.h-card > p.h-stat {
+  font-family: var(--sans);
+}
+
+.h-stat {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 18px 0 0;
+  padding: 12px 18px;
+  background: var(--era-bg);
+  color: var(--era-ink);
+}
+
+.h-stat-value {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+  font-variation-settings: "wdth" 70;
+  font-variant-numeric: tabular-nums;
+}
+
+.h-stat-label {
+  font-size: 0.875rem;
+}
+
+.h-records {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h-record {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  min-height: 56px;
+  padding: 6px 14px 6px 6px;
+  border: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.h-record.has-cover:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.h-record-art {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+}
+
+.h-record-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h-record-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--era-bg) 0 18%, var(--paper) 19% 23%, #161616 24% 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.h-record-icon.film {
+  border-radius: 4px;
+  background: repeating-linear-gradient(90deg, #161616 0 8px, var(--era-bg) 8px 10px);
+}
+
+.h-record-text {
+  display: grid;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.h-record-text strong {
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+.h-record-text span {
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
-.timeline-cover:hover .timeline-title {
-  text-decoration: underline;
+.h-empty {
+  padding: 0 0 32px;
+  color: var(--muted);
 }
 
-.timeline-scrub {
-  position: sticky;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px var(--gutter) max(12px, env(safe-area-inset-bottom));
-  background: var(--paper);
+.h-era-more {
+  margin: 0;
+  padding: 0 var(--gutter) clamp(40px, 6vw, 72px);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+@media (min-width: 760px) {
+  .h-moment {
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 32px;
+    padding-left: 0;
+  }
+  .h-moment::before {
+    left: 175px;
+  }
+  .h-dot {
+    left: 170px;
+  }
+  .h-when {
+    padding-right: 20px;
+    text-align: right;
+    font-size: 1.125rem;
+  }
+  .h-card {
+    padding-left: 32px;
+  }
+}
+
+/* On wide screens the records sit beside the story. */
+@media (min-width: 1200px) {
+  .h-card {
+    display: grid;
+    grid-template-columns: minmax(0, 64ch) minmax(240px, 1fr);
+    column-gap: 56px;
+    align-content: start;
+  }
+  .h-card > * {
+    grid-column: 1;
+  }
+  .h-card > .h-records {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    align-self: start;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .h-card > .h-stat {
+    justify-self: start;
+  }
+}
+
+/* Moments and eras rise into place. */
+@media (prefers-reduced-motion: no-preference) {
+  .h-moment .h-card,
+  .h-moment .h-when {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  }
+  .h-moment .h-when {
+    transition-delay: 0.05s;
+  }
+  .h-moment.is-in .h-card,
+  .h-moment.is-in .h-when {
+    opacity: 1;
+    transform: none;
+  }
+  .h-era-band .h-era-poster-art {
+    transform: rotate(-8deg) translateY(30px);
+    opacity: 0;
+    transition: transform 0.9s var(--ease), opacity 0.9s var(--ease);
+  }
+  .h-era-band.is-in .h-era-poster-art {
+    transform: rotate(-2deg);
+    opacity: 1;
+  }
+  .h-era-band.is-in .h-era-poster:hover .h-era-poster-art {
+    transform: rotate(0deg) scale(1.02);
+  }
+  .h-moment.is-flash .h-card {
+    animation: h-flash 2.4s var(--ease);
+  }
+}
+
+@keyframes h-flash {
+  0%,
+  60% {
+    box-shadow: 0 0 0 10px var(--era-bg);
+    background: color-mix(in srgb, var(--era-bg) 12%, var(--paper));
+  }
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .h-moment.is-flash .h-card {
+    outline: 3px solid var(--ink);
+    outline-offset: 8px;
+  }
+}
+
+.h-sources {
+  padding: clamp(40px, 6vw, 72px) var(--gutter);
   border-top: 1px solid var(--line);
 }
 
-.timeline-current {
-  font-size: 1.75rem;
-  font-weight: 800;
-  font-variation-settings: "wdth" 62;
-  min-width: 3.2ch;
+.h-sources h2 {
+  font-size: 1.5rem;
 }
 
-.timeline-scrub input[type="range"] {
-  flex: 1;
-  min-height: 0;
-  padding: 0;
-  background: none;
-  accent-color: var(--ink);
-}
-
-.timeline-ends {
-  font-size: 0.875rem;
+.h-sources p {
   color: var(--muted);
-  white-space: nowrap;
+  margin: 6px 0 16px;
 }
 
-@media (max-width: 599px) {
-  .timeline-cover,
-  .timeline-art {
-    width: 128px;
-  }
-  .timeline-art {
-    height: 128px;
-  }
-  .timeline-ends {
-    display: none;
-  }
+.h-sources ul {
+  columns: 2 320px;
+  column-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.h-sources li {
+  break-inside: avoid;
+  padding: 4px 0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -2580,11 +3028,6 @@ kbd {
 
 /* Fixes after review */
 
-.timeline-track {
-  position: relative;
-}
-
-.timeline-title,
 .card-title,
 .collection-title {
   overflow-wrap: anywhere;
@@ -2626,10 +3069,6 @@ kbd {
     grid-template-areas: none;
     max-width: 560px;
   }
-}
-
-.timeline-track {
-  scroll-padding-inline: var(--gutter);
 }
 
 /* Breadcrumbs */

@@ -16,7 +16,7 @@ export default async function Home() {
     { href: "/covers", label: "Covers", note: `All ${covers.length}, newest first` },
     { href: "/types", label: "Cover types", note: `${types.filter((t) => t.count).length} ways a cover gets made` },
     { href: "/colors", label: "Colours", note: "Browse by the colour of the sleeve" },
-    { href: "/timeline", label: "Timeline", note: "Year by year, from the 1980s to now" },
+    { href: "/timeline", label: "Timeline", note: "The story of hip-hop, 1973 to now" },
   ];
 
   return (
