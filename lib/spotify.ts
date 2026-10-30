@@ -1,5 +1,5 @@
 /**
- * Spotify IDs for landmark songs that are not in the collection, checked by search.
+ * Spotify IDs for the exact landmark songs named in the story, checked by search. Tracks only, no playlists.
  * Albums in the collection use their own Spotify album IDs.
  * Keys are "title|artist" as written in lib/history.ts.
  */
@@ -17,7 +17,6 @@ export const SPOTIFY: Record<string, string> = {
   "The Bridge|MC Shan": "track/7pb9gOx7XsGQwpZlU5p6LF",
   "O.P.P.|Naughty by Nature": "track/1k28sDTLOz942qa3wEtMQE",
   "Nuthin' but a 'G' Thang|Dr. Dre feat. Snoop Doggy Dogg": "track/2eBjbrAXdb5WETSm6RNZ6X",
-  "3 'n the Mornin' (Part Two)|DJ Screw": "playlist/5Yyf8wCVNNXJJJ5SMdSjyy",
   "Gangsta's Paradise|Coolio feat. L.V.": "track/1DIXPcTDzTj8ZMHt3PDt8p",
   "Still Tippin'|Mike Jones feat. Slim Thug & Paul Wall": "track/59rtiYOPgMEDf3yPEfU2la",
   "Versace|Migos": "track/6xhblLundMJAiG9jF7nlxs",

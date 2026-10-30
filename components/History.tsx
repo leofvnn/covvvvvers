@@ -129,7 +129,7 @@ function RecordChip({ r, playing, onPlay }: { r: RecordView; playing: boolean; o
 
 /** One Spotify player per moment; the record chips choose what it plays. */
 function Player({ uri, title }: { uri: string; title: string }) {
-  const tall = uri.startsWith("album/") || uri.startsWith("playlist/");
+  const tall = uri.startsWith("album/");
   return (
     <div className={`h-player${tall ? " is-tall" : ""}`}>
       <iframe

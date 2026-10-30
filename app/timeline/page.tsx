@@ -65,7 +65,9 @@ export default async function TimelinePage() {
         ...m,
         records: (m.records ?? []).map((r) => {
           const cover = r.kind === "album" || r.kind === "mixtape" ? findCover(r.title, r.artist) : null;
-          const spotify = SPOTIFY[`${r.title}|${r.artist}`] ?? (cover?.spotify ? `album/${cover.spotify}` : null);
+          // Only the exact song or album named in the story, never a playlist.
+          const id = SPOTIFY[`${r.title}|${r.artist}`] ?? (cover?.spotify ? `album/${cover.spotify}` : null);
+          const spotify = id && /^(track|album)\//.test(id) ? id : null;
           return { ...r, cover, spotify };
         }),
       })),
