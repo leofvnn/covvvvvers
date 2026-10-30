@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { shuffle } from "@/lib/shuffle";
 import AccountLink from "./AccountLink";
-
-type TypeLink = { slug: string; title: string; count: number };
 
 const MORE = [
   { href: "/explore", label: "Explore" },
@@ -26,38 +24,20 @@ function ShuffleIcon() {
   );
 }
 
-export default function SiteHeader({ types }: { types: TypeLink[] }) {
+export default function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [typesOpen, setTypesOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const typesRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setOpen(false);
-    setTypesOpen(false);
-  }, [pathname]);
+  useEffect(() => setOpen(false), [pathname]);
 
   useEffect(() => {
     document.documentElement.classList.toggle("menu-open", open);
-    if (!open && !typesOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setOpen(false);
-        setTypesOpen(false);
-      }
-    };
-    // Close the types list when clicking anywhere else.
-    const onDown = (e: PointerEvent) => {
-      if (typesOpen && !typesRef.current?.contains(e.target as Node)) setTypesOpen(false);
-    };
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     window.addEventListener("keydown", onKey);
-    window.addEventListener("pointerdown", onDown);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      window.removeEventListener("pointerdown", onDown);
-    };
-  }, [open, typesOpen]);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const current = (href: string) => (pathname === href || pathname.startsWith(href + "/") ? "page" : undefined);
 
@@ -71,38 +51,9 @@ export default function SiteHeader({ types }: { types: TypeLink[] }) {
           <Link href="/covers" aria-current={current("/covers")}>
             Covers
           </Link>
-          <div className="types-menu" ref={typesRef}>
-            <button
-              type="button"
-              className="types-toggle"
-              aria-expanded={typesOpen}
-              aria-controls="types-panel"
-              aria-current={current("/types")}
-              onClick={() => setTypesOpen(!typesOpen)}
-            >
-              Types
-              <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-                <path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-            </button>
-            {typesOpen && (
-              <div id="types-panel" className="types-panel">
-                <ul>
-                  {types.map((t) => (
-                    <li key={t.slug}>
-                      <Link href={`/types/${t.slug}`} aria-current={current(`/types/${t.slug}`)}>
-                        <span>{t.title}</span>
-                        <span className="types-count">{t.count}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/types" className="types-all">
-                  All cover types
-                </Link>
-              </div>
-            )}
-          </div>
+          <Link href="/types" aria-current={current("/types")}>
+            Types
+          </Link>
           <Link href="/explore" aria-current={current("/explore")}>
             Explore
           </Link>
@@ -127,19 +78,10 @@ export default function SiteHeader({ types }: { types: TypeLink[] }) {
           <Link href="/covers" aria-current={current("/covers")}>
             Covers
           </Link>
-          <Link href="/types" aria-current={pathname === "/types" ? "page" : undefined}>
+          <Link href="/types" aria-current={current("/types")}>
             Types
           </Link>
         </div>
-        <ul className="menu-types">
-          {types.map((t) => (
-            <li key={t.slug}>
-              <Link href={`/types/${t.slug}`} aria-current={current(`/types/${t.slug}`)}>
-                {t.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
         <div className="menu-more">
           {MORE.map((l) => (
             <Link key={l.href} href={l.href} aria-current={current(l.href)}>
