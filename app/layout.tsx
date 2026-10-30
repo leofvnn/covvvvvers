@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Album Coverz
           </Link>
           <nav aria-label="Main">
+            <Link href="/covers">Covers</Link>
             <Link href="/types">Cover types</Link>
             <Link href="/creators">Creators</Link>
             <Link href="/submit">Submit a cover</Link>

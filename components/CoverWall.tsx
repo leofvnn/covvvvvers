@@ -13,6 +13,8 @@ type Props = {
   /** Mark each new release year with a year tile. */
   years?: boolean;
   emptyText?: string;
+  /** "wall" packs sleeves edge to edge; "grid" spaces them out with the title underneath. */
+  variant?: "wall" | "grid";
 };
 
 const SIZES = [240, 360, 480, 720];
@@ -23,7 +25,14 @@ function readParams() {
   return { type: p.get("type") ?? "", decade: p.get("decade") ?? "", country: p.get("country") ?? "", q: p.get("q") ?? "" };
 }
 
-export default function CoverWall({ covers, filters = false, types = [], years = true, emptyText }: Props) {
+export default function CoverWall({
+  covers,
+  filters = false,
+  types = [],
+  years = true,
+  emptyText,
+  variant = "wall",
+}: Props) {
   const [f, setF] = useState({ type: "", decade: "", country: "", q: "" });
 
   useEffect(() => {
@@ -116,6 +125,31 @@ export default function CoverWall({ covers, filters = false, types = [], years =
 
       {shown.length === 0 ? (
         <p className="empty">{emptyText ?? "No covers match these filters. Clear one to see more."}</p>
+      ) : variant === "grid" ? (
+        <ul className="cover-grid">
+          {shown.map((c, i) => (
+            <li key={c.id}>
+              <Link href={`/covers/${c.slug}`} className="grid-card">
+                <span className="grid-art" style={{ backgroundColor: c.color ?? "#ddd" }}>
+                  <img
+                    src={squareImage(c.image_url, 600)}
+                    srcSet={squareSrcSet(c.image_url, SIZES)}
+                    sizes="(min-width: 1500px) 20vw, (min-width: 1100px) 25vw, (min-width: 800px) 33vw, (min-width: 560px) 50vw, 100vw"
+                    alt=""
+                    loading={i < 8 ? "eager" : "lazy"}
+                    decoding="async"
+                    width={600}
+                    height={600}
+                  />
+                </span>
+                <span className="grid-title">{c.title}</span>
+                <span className="grid-meta">
+                  {[c.artist, c.type?.title, c.release_year].filter(Boolean).join(" · ")}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       ) : (
         <ul className="wall">
           {shown.map((c, i) => (
