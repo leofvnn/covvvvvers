@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import CoverGrid from "@/components/CoverGrid";
 import { getType, getTypes, toCard } from "@/lib/data";
 
@@ -25,9 +25,14 @@ export default async function TypePage({ params }: Params) {
   return (
     <>
       <header className="page-head">
-        <p className="crumb">
-          <Link href="/types">Cover types</Link>
-        </p>
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Covers", href: "/covers" },
+            { label: "Types", href: "/types" },
+            { label: type.title },
+          ]}
+        />
         <h1>{type.title}</h1>
         {type.description && <p>{type.description}</p>}
         <p className="page-count">
