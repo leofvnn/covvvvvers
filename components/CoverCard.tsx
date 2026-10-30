@@ -8,7 +8,12 @@ import CoverLink from "./CoverLink";
 const SIZES = [360, 480, 600, 720];
 
 /** One cover in a grid: the sleeve, with a record that slides out on hover, then the title. */
-export default function CoverCard({ c, eager, meta }: { c: Card; eager?: boolean; meta?: string }) {
+/** "Artist · Type · Year", leaving out the type on pages that already group by it. */
+export function cardMeta(c: Card, showType = true) {
+  return [c.artist, showType ? c.type?.title : null, c.release_year].filter(Boolean).join(" · ");
+}
+
+export default function CoverCard({ c, eager, meta, showType = true }: { c: Card; eager?: boolean; meta?: string; showType?: boolean }) {
   const [loaded, setLoaded] = useState(false);
   return (
     <CoverLink href={`/covers/${c.slug}`} className="card">
@@ -34,7 +39,7 @@ export default function CoverCard({ c, eager, meta }: { c: Card; eager?: boolean
         </span>
       </span>
       <span className="card-title">{c.title}</span>
-      <span className="card-meta">{meta ?? `${c.artist}, ${c.release_year}`}</span>
+      <span className="card-meta">{meta ?? cardMeta(c, showType)}</span>
     </CoverLink>
   );
 }

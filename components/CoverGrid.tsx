@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { getBrowserClient } from "@/lib/supabase/client";
 import type { CoverCard as Card } from "@/lib/types";
-import CoverCard from "./CoverCard";
+import CoverCard, { cardMeta } from "./CoverCard";
 
 type Sort = "newest" | "added" | "oldest" | "az" | "saved";
 type Filters = { type: string; decade: string; country: string; q: string; sort: Sort };
@@ -25,9 +25,11 @@ type Props = {
   emptyText?: string;
   /** Eager-load this many images; the rest load as you scroll. */
   eager?: number;
+  /** Show each cover's type under its title. Pages for a single type turn it off. */
+  showType?: boolean;
 };
 
-export default function CoverGrid({ covers, filters = false, types = [], emptyText, eager = 8 }: Props) {
+export default function CoverGrid({ covers, filters = false, types = [], emptyText, eager = 8, showType = true }: Props) {
   const [f, setF] = useState<Filters>(EMPTY);
   const [saves, setSaves] = useState<Map<string, number> | null>(null);
   const sheet = useRef<HTMLDialogElement>(null);
@@ -107,7 +109,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
       c.title.toLowerCase().includes(q) ||
       c.artist.toLowerCase().includes(q) ||
       c.creatorNames.some((n) => n.toLowerCase().includes(q));
-    return inTitle ? undefined : `${c.artist}, ${c.release_year}. Mentioned in the story`;
+    return inTitle ? undefined : `${cardMeta(c, showType)}. Mentioned in the story`;
   };
 
   const activeCount = [f.type, f.decade, f.country].filter(Boolean).length;
@@ -217,7 +219,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
         <ul className="cover-grid">
           {shown.map((c, i) => (
             <li key={c.id}>
-              <CoverCard c={c} eager={i < eager} meta={essayHit(c)} />
+              <CoverCard c={c} eager={i < eager} meta={essayHit(c)} showType={showType} />
             </li>
           ))}
         </ul>
