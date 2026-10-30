@@ -9,20 +9,18 @@ export const metadata: Metadata = { title: "Admin", robots: { index: false } };
 export default async function AdminHome() {
   const { db } = await requireAdmin("/admin");
   const count = async (q: PromiseLike<{ count: number | null }>) => (await q).count ?? 0;
-  const [published, drafts, pending, feedback, subscribers, collections, coversOnWix, typesOnWix] = await Promise.all([
+  const [published, drafts, pending, feedback, subscribers, coversOnWix, typesOnWix] = await Promise.all([
     count(db.from("covers").select("id", { count: "exact", head: true }).eq("status", "published")),
     count(db.from("covers").select("id", { count: "exact", head: true }).eq("status", "draft")),
     count(db.from("submissions").select("id", { count: "exact", head: true }).eq("status", "pending")),
     count(db.from("feedback").select("id", { count: "exact", head: true }).eq("status", "new")),
     count(db.from("subscribers").select("id", { count: "exact", head: true }).is("unsubscribed_at", null)),
-    count(db.from("collections").select("id", { count: "exact", head: true })),
     count(db.from("covers").select("id", { count: "exact", head: true }).like("image_url", "%static.wixstatic.com%")),
     count(db.from("cover_types").select("id", { count: "exact", head: true }).like("hero_image", "%static.wixstatic.com%")),
   ]);
 
   const tiles = [
     { href: "/admin/covers", label: "Covers", note: `${published} live${drafts ? `, ${drafts} drafts` : ""}` },
-    { href: "/admin/collections", label: "Collections", note: `${collections} collections` },
     { href: "/admin/submissions", label: "Submissions", note: pending ? `${pending} waiting for review` : "Nothing waiting" },
     { href: "/admin/feedback", label: "Feedback", note: feedback ? `${feedback} new` : "Nothing new" },
   ];

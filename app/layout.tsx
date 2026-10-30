@@ -9,6 +9,7 @@ import NavTransitions from "@/components/NavTransitions";
 import NewsletterForm from "@/components/NewsletterForm";
 import SiteHeader from "@/components/SiteHeader";
 import ThemeToggle from "@/components/ThemeToggle";
+import { getTypes } from "@/lib/data";
 import { themeScript } from "@/lib/theme";
 import { SITE_URL } from "@/lib/supabase/config";
 import "./globals.css";
@@ -28,7 +29,8 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const types = (await getTypes()).filter((t) => t.count > 0).map((t) => ({ slug: t.slug, title: t.title, count: t.count }));
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -38,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#main">
           Skip to content
         </a>
-        <SiteHeader />
+        <SiteHeader types={types} />
         <main id="main">{children}</main>
         <footer className="site-footer">
           <div className="footer-top">
@@ -55,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <nav aria-label="Footer">
             <Link href="/covers">Covers</Link>
-            <Link href="/collections">Collections</Link>
+            <Link href="/types">Cover types</Link>
             <Link href="/explore">Explore</Link>
             <Link href="/quiz">Quiz</Link>
             <Link href="/submit">Submit a cover</Link>

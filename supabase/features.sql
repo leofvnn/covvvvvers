@@ -14,65 +14,21 @@ alter table public.covers add column if not exists updated_at timestamptz not nu
 drop policy if exists "read covers" on public.covers;
 create policy "read covers" on public.covers for select using (status = 'published' or public.is_admin());
 
--- Curated collections -------------------------------------------------------
+-- Collections were removed from the site; clear them if an earlier version created them.
+drop table if exists public.collection_covers;
+drop table if exists public.collections;
 
-create table if not exists public.collections (
-  id uuid primary key default gen_random_uuid(),
-  slug text unique not null,
-  title text not null,
-  description text,
-  sort_order int not null default 99,
-  created_at timestamptz not null default now()
-);
-
-create table if not exists public.collection_covers (
-  collection_id uuid not null references public.collections (id) on delete cascade,
-  cover_id uuid not null references public.covers (id) on delete cascade,
-  position int not null default 0,
-  primary key (collection_id, cover_id)
-);
-
-alter table public.collections enable row level security;
-alter table public.collection_covers enable row level security;
-
-drop policy if exists "read collections" on public.collections;
-create policy "read collections" on public.collections for select using (true);
-drop policy if exists "admin collections" on public.collections;
-create policy "admin collections" on public.collections for all using (public.is_admin()) with check (public.is_admin());
-
-drop policy if exists "read collection covers" on public.collection_covers;
-create policy "read collection covers" on public.collection_covers for select using (true);
-drop policy if exists "admin collection covers" on public.collection_covers;
-create policy "admin collection covers" on public.collection_covers for all using (public.is_admin()) with check (public.is_admin());
-
--- Public profiles -----------------------------------------------------------
-
-alter table public.profiles add column if not exists username text;
-alter table public.profiles add column if not exists bio text;
-alter table public.profiles add column if not exists is_public boolean not null default false;
-create unique index if not exists profiles_username_key on public.profiles (lower(username));
-alter table public.profiles drop constraint if exists profiles_username_format;
-alter table public.profiles add constraint profiles_username_format
-  check (username is null or username ~ '^[a-z0-9_]{3,24}$');
-alter table public.profiles drop constraint if exists profiles_bio_length;
-alter table public.profiles add constraint profiles_bio_length check (bio is null or char_length(bio) <= 280);
-
-drop policy if exists "read own profile" on public.profiles;
+-- Profiles and saved covers are private to each member (an earlier version had public profiles).
 drop policy if exists "read profiles" on public.profiles;
-create policy "read profiles" on public.profiles for select
-  using (id = auth.uid() or is_public or public.is_admin());
+drop policy if exists "read own profile" on public.profiles;
+create policy "read own profile" on public.profiles for select using (id = auth.uid() or public.is_admin());
 
--- Saved covers show on public profiles.
+-- Saved covers are private to each member.
 drop policy if exists "own favorites" on public.favorites;
 drop policy if exists "read favorites" on public.favorites;
 drop policy if exists "add favorites" on public.favorites;
 drop policy if exists "remove favorites" on public.favorites;
-create policy "read favorites" on public.favorites for select using (
-  user_id = auth.uid()
-  or exists (select 1 from public.profiles p where p.id = favorites.user_id and p.is_public)
-);
-create policy "add favorites" on public.favorites for insert with check (user_id = auth.uid());
-create policy "remove favorites" on public.favorites for delete using (user_id = auth.uid());
+create policy "own favorites" on public.favorites for all using (user_id = auth.uid()) with check (user_id = auth.uid());
 
 -- Member lists --------------------------------------------------------------
 
@@ -211,43 +167,3 @@ grant execute on function public.subscribe(text) to anon, authenticated;
 grant execute on function public.unsubscribe(uuid) to anon, authenticated;
 grant execute on function public.cover_rating(uuid) to anon, authenticated;
 grant execute on function public.cover_save_counts() to anon, authenticated;
-
--- Starter collections, built from the existing data ---------------------------
-
-insert into public.collections (slug, title, description, sort_order) values
-  ('around-the-world', 'Around the world', 'Rap covers from outside the United States, from Paris to São Paulo to Johannesburg.', 1),
-  ('the-golden-era', 'The golden era', 'Covers from 1986 to 1996, when rap''s visual language was being invented.', 2),
-  ('repeat-collaborators', 'Repeat collaborators', 'Covers by photographers, painters and designers who appear more than once in the collection.', 3),
-  ('hand-made', 'Made by hand', 'Painted, drawn and collaged covers.', 4)
-on conflict (slug) do nothing;
-
-insert into public.collection_covers (collection_id, cover_id, position)
-select (select id from public.collections where slug = 'around-the-world'), c.id,
-       row_number() over (order by c.release_year desc, c.title)
-from public.covers c where c.country is not null and c.country <> 'United States'
-on conflict do nothing;
-
-insert into public.collection_covers (collection_id, cover_id, position)
-select (select id from public.collections where slug = 'the-golden-era'), c.id,
-       row_number() over (order by c.release_year desc, c.title)
-from public.covers c where c.release_year between 1986 and 1996
-on conflict do nothing;
-
-insert into public.collection_covers (collection_id, cover_id, position)
-select (select id from public.collections where slug = 'repeat-collaborators'), c.id,
-       row_number() over (order by c.release_year desc, c.title)
-from public.covers c
-where exists (
-  select 1 from public.cover_creators cc
-  where cc.cover_id = c.id
-    and (select count(*) from public.cover_creators x where x.creator_id = cc.creator_id) > 1
-)
-on conflict do nothing;
-
-insert into public.collection_covers (collection_id, cover_id, position)
-select (select id from public.collections where slug = 'hand-made'), c.id,
-       row_number() over (order by c.release_year desc, c.title)
-from public.covers c
-join public.cover_types t on t.id = c.cover_type_id
-where t.slug in ('painting', 'illustration', 'collage')
-on conflict do nothing;

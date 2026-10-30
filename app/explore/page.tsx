@@ -1,32 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getCollections, getCovers, getCreators, getTypes } from "@/lib/data";
+import { getCovers, getTypes } from "@/lib/data";
 import { squareImage } from "@/lib/img";
 
 export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Explore",
-  description: "Every way into the collection: by colour, year, country, cover type, creator and more.",
+  description: "Every way into the collection: by colour, year, country and cover type, plus the quiz.",
 };
 
 export default async function ExplorePage() {
-  const [covers, types, creators, collections] = await Promise.all([
-    getCovers(),
-    getTypes(),
-    getCreators(),
-    getCollections(),
-  ]);
+  const [covers, types] = await Promise.all([getCovers(), getTypes()]);
   const countries = new Set(covers.map((c) => c.country).filter(Boolean)).size;
   const first = covers[covers.length - 1]?.release_year;
   const pick = (i: number) => covers[(i * 29) % covers.length];
 
   const ways = [
-    { href: "/collections", label: "Collections", note: `${collections.length} hand-picked sets`, cover: collections[0]?.covers[0] ?? pick(1) },
     { href: "/colors", label: "Colours", note: "Browse by the colour of the sleeve", cover: pick(2) },
     { href: "/timeline", label: "Timeline", note: `${first} to now, year by year`, cover: pick(3) },
     { href: "/map", label: "Map", note: `Covers from ${countries} countries`, cover: pick(4) },
     { href: "/types", label: "Cover types", note: `${types.filter((t) => t.count).length} ways a cover gets made`, cover: pick(5) },
-    { href: "/creators", label: "Creators", note: `${creators.length} photographers, painters and designers`, cover: pick(6) },
     { href: "/quiz", label: "Quiz", note: "Name the album from a piece of its cover", cover: pick(7) },
   ];
 

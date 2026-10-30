@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 import CoverGrid from "@/components/CoverGrid";
 import ListCards from "@/components/ListCards";
 import NewListForm from "@/components/NewListForm";
-import ProfileSettings from "@/components/ProfileSettings";
 import { getCovers, toCard } from "@/lib/data";
 import { loadLists } from "@/lib/lists";
 import { getServerClient } from "@/lib/supabase/server";
@@ -48,11 +47,6 @@ export default async function MePage() {
           {p.is_admin && (
             <Link className="button solid" href="/admin">
               Admin
-            </Link>
-          )}
-          {p.is_public && p.username && (
-            <Link className="button" href={`/u/${p.username}`}>
-              Your public profile
             </Link>
           )}
           <Link className="button" href="/submit">
@@ -108,18 +102,6 @@ export default async function MePage() {
         )}
       </section>
 
-      <section aria-labelledby="profile-h" className="profile-settings">
-        <h2 id="profile-h" className="section-title">
-          Profile
-        </h2>
-        <ProfileSettings
-          userId={user.id}
-          displayName={p.display_name ?? ""}
-          username={p.username ?? ""}
-          bio={p.bio ?? ""}
-          isPublic={Boolean(p.is_public)}
-        />
-      </section>
     </>
   );
 }

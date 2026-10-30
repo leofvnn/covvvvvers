@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import CoverGrid from "@/components/CoverGrid";
 import ListOwnerTools from "@/components/ListOwnerTools";
@@ -18,7 +17,7 @@ async function load(id: string) {
   if (!list) return null;
   const [{ data: items }, { data: owner }, { data: auth }] = await Promise.all([
     db.from("list_items").select("cover_id, added_at").eq("list_id", id).order("added_at", { ascending: false }),
-    db.from("profiles").select("display_name, username, is_public").eq("id", list.user_id).maybeSingle(),
+    db.from("profiles").select("display_name").eq("id", list.user_id).maybeSingle(),
     db.auth.getUser(),
   ]);
   return { list, items: items ?? [], owner, isOwner: auth.user?.id === list.user_id };
@@ -37,11 +36,7 @@ export default async function ListPage({ params }: Params) {
   const covers = await getCovers();
   const byId = new Map(covers.map((c) => [c.id, c]));
   const shown = items.map((i) => byId.get(i.cover_id)).filter(Boolean) as typeof covers;
-  const by = owner?.is_public && owner.username ? (
-    <Link href={`/u/${owner.username}`}>{owner.display_name || owner.username}</Link>
-  ) : (
-    owner?.display_name || "a member"
-  );
+  const by = owner?.display_name || "a member";
 
   return (
     <>

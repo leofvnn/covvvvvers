@@ -34,7 +34,7 @@ export async function reviewSubmission(form: FormData) {
 
 type Db = Awaited<ReturnType<typeof adminClient>>;
 
-async function uniqueSlug(db: Db, table: "covers" | "creators" | "collections", base: string, exceptId?: string) {
+async function uniqueSlug(db: Db, table: "covers" | "creators", base: string, exceptId?: string) {
   let slug = slugify(base);
   for (let n = 2; n < 50; n++) {
     let q = db.from(table).select("id").eq("slug", slug);
@@ -202,59 +202,6 @@ export async function deleteCover(form: FormData) {
   await db.from("covers").delete().eq("id", id);
   revalidatePath("/", "layout");
   redirect("/admin/covers");
-}
-
-/* Collections ------------------------------------------------------------- */
-
-export async function newCollection(form: FormData) {
-  const db = await adminClient();
-  const title = String(form.get("title") ?? "").trim().slice(0, 100) || "Untitled collection";
-  const slug = await uniqueSlug(db, "collections", title);
-  const { data, error } = await db.from("collections").insert({ slug, title }).select("id").single();
-  if (error || !data) throw new Error(error?.message ?? "The collection wasn't created.");
-  redirect(`/admin/collections/${data.id}`);
-}
-
-export async function saveCollection(input: {
-  id: string;
-  title: string;
-  description: string;
-  sort_order: number;
-  coverIds: string[];
-}): Promise<SaveResult> {
-  try {
-    const db = await adminClient();
-    if (!input.title.trim()) return { ok: false, message: "Give the collection a name." };
-    const slug = await uniqueSlug(db, "collections", input.title, input.id);
-    const { error } = await db
-      .from("collections")
-      .update({
-        slug,
-        title: input.title.trim().slice(0, 100),
-        description: input.description.trim().slice(0, 600) || null,
-        sort_order: Number(input.sort_order) || 99,
-      })
-      .eq("id", input.id);
-    if (error) return { ok: false, message: error.message };
-    await db.from("collection_covers").delete().eq("collection_id", input.id);
-    if (input.coverIds.length) {
-      const { error: iErr } = await db
-        .from("collection_covers")
-        .insert(input.coverIds.map((cover_id, position) => ({ collection_id: input.id, cover_id, position })));
-      if (iErr) return { ok: false, message: iErr.message };
-    }
-    revalidatePath("/", "layout");
-    return { ok: true, slug, message: "Collection saved." };
-  } catch (e) {
-    return { ok: false, message: (e as Error).message };
-  }
-}
-
-export async function deleteCollection(form: FormData) {
-  const db = await adminClient();
-  await db.from("collections").delete().eq("id", String(form.get("id") ?? ""));
-  revalidatePath("/", "layout");
-  redirect("/admin/collections");
 }
 
 /* Feedback ---------------------------------------------------------------- */

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getCovers, getTypes } from "@/lib/data";
+import { getTypesWithCovers } from "@/lib/data";
 import { squareImage } from "@/lib/img";
 
 export const revalidate = 3600;
@@ -10,30 +10,40 @@ export const metadata: Metadata = {
 };
 
 export default async function TypesPage() {
-  const [types, covers] = await Promise.all([getTypes(), getCovers()]);
-  const list = types.filter((t) => t.count > 0);
+  const types = await getTypesWithCovers();
   return (
     <>
       <header className="page-head">
         <h1>Cover types</h1>
         <p>The collection grouped by how each cover was made.</p>
       </header>
-      <ul className="index-list">
-        {list.map((t) => {
-          const img = t.hero_image ?? covers.find((c) => c.type?.slug === t.slug)?.image_url;
-          return (
-            <li key={t.slug}>
-              <Link href={`/types/${t.slug}`}>
-                {img && <img src={squareImage(img, 240)} alt="" width={120} height={120} loading="lazy" />}
-                <span className="index-text">
-                  <span className="index-name">{t.title}</span>
-                  {t.description && <span className="index-desc">{t.description}</span>}
+      <ul className="collection-list">
+        {types.map((t) => (
+          <li key={t.slug}>
+            <Link href={`/types/${t.slug}`} className="collection-card">
+              <span className="collection-stack" aria-hidden="true">
+                {t.covers.map((c, i) => (
+                  <img
+                    key={c.id}
+                    src={squareImage(c.image_url, 360)}
+                    alt=""
+                    width={180}
+                    height={180}
+                    loading="lazy"
+                    style={{ "--i": i, backgroundColor: c.color ?? undefined } as React.CSSProperties}
+                  />
+                ))}
+              </span>
+              <span className="collection-text">
+                <span className="collection-title">{t.title}</span>
+                {t.description && <span className="collection-desc">{t.description}</span>}
+                <span className="collection-count">
+                  {t.count} {t.count === 1 ? "cover" : "covers"}
                 </span>
-                <span className="index-count">{t.count}</span>
-              </Link>
-            </li>
-          );
-        })}
+              </span>
+            </Link>
+          </li>
+        ))}
       </ul>
     </>
   );

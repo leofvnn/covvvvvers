@@ -13,7 +13,6 @@ import SwipeNav from "@/components/SwipeNav";
 import { getCover, getCovers, getRelated, toCard } from "@/lib/data";
 import { fullImage, inkFor, squareImage } from "@/lib/img";
 import { pickPullQuote, readingMinutes } from "@/lib/text";
-import type { Creator } from "@/lib/types";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -26,37 +25,6 @@ type Params = { params: Promise<{ slug: string }> };
 
 function plain(html: string | null) {
   return (html ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-}
-
-/** Turns each creator's name inside the credit line into a link to their page. */
-function linkCredits(text: string, creators: Creator[]) {
-  const names = [...creators].sort((a, b) => b.name.length - a.name.length);
-  if (!names.length) return text;
-  const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp(`(${names.map((c) => escape(c.name)).join("|")})`, "g");
-  const linked = new Set<string>();
-  const parts = text.split(re).map((part, i) => {
-    const c = names.find((x) => x.name === part);
-    if (!c) return part;
-    linked.add(c.id);
-    return (
-      <Link key={i} href={`/creators/${c.slug}`}>
-        {part}
-      </Link>
-    );
-  });
-  const rest = creators.filter((c) => !linked.has(c.id));
-  return (
-    <>
-      {parts}
-      {rest.map((c) => (
-        <span key={c.id}>
-          {", "}
-          <Link href={`/creators/${c.slug}`}>{c.name}</Link>
-        </span>
-      ))}
-    </>
-  );
 }
 
 const pageColor = (hex: string | null) => (hex && /^#[0-9a-f]{6}$/i.test(hex) ? hex : "#ffffff");
@@ -143,7 +111,7 @@ export default async function CoverPage({ params }: Params) {
             </p>
           </header>
 
-          {cover.credits_text && <p className="cover-credits">{linkCredits(cover.credits_text, cover.creators)}</p>}
+          {cover.credits_text && <p className="cover-credits">{cover.credits_text}</p>}
 
           <div className="cover-actions">
             <FavoriteButton coverId={cover.id} slug={cover.slug} />
@@ -175,9 +143,7 @@ export default async function CoverPage({ params }: Params) {
                 {cover.creators.map((c) => (
                   <div key={c.id}>
                     <dt>{c.role ?? "Cover"}</dt>
-                    <dd>
-                      <Link href={`/creators/${c.slug}`}>{c.name}</Link>
-                    </dd>
+                    <dd>{c.name}</dd>
                   </div>
                 ))}
               </dl>

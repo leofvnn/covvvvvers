@@ -1718,8 +1718,9 @@ kbd {
   box-shadow: none;
 }
 
+/* A small fan on hover that stays inside the card's own space. */
 .collection-card:hover .collection-stack img {
-  transform: translateY(calc(var(--i, 0) * 4%)) translateX(calc(var(--i, 0) * 6%)) rotate(calc((var(--i, 0) - 1.5) * 3deg));
+  transform: translateY(calc(var(--i, 0) * 4%)) translateX(calc(var(--i, 0) * 1.5%)) rotate(calc((var(--i, 0) - 1.5) * 2.6deg));
 }
 
 .collection-text {
@@ -2766,4 +2767,93 @@ kbd {
 
 .timeline-track {
   scroll-padding-inline: var(--gutter);
+}
+
+/* Types in the menu */
+
+.types-menu {
+  position: relative;
+}
+
+.types-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.types-toggle:hover,
+.types-toggle[aria-current="page"] {
+  text-decoration: underline;
+}
+
+.types-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.types-panel {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: -16px;
+  z-index: 40;
+  width: 280px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.35);
+}
+
+.types-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.types-panel a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+
+.types-panel a:hover,
+.types-panel a[aria-current="page"] {
+  background: var(--soft);
+}
+
+.types-count {
+  color: var(--muted);
+}
+
+.types-panel .types-all {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+}
+
+.menu-types {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0 0 0 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 16px;
+}
+
+.menu-sheet .menu-types a {
+  display: block;
+  padding: 6px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-variation-settings: "wdth" 100;
 }

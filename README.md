@@ -3,9 +3,9 @@
 Rap album covers from every era, with the story behind each one and the people who made it.
 Built with Next.js, hosted on Vercel, with accounts and the database on Supabase.
 
-Visitors browse by colour, year, country, cover type, creator and hand-picked collections, zoom into covers, and play the quiz.
-Members sign in with an email link to save and rate covers, make shareable lists, keep a public profile, and submit albums.
-Admins add and edit covers, curate collections and read feedback at `/admin`.
+Visitors browse by cover type, colour, year and country, zoom into covers, and play the quiz.
+Members sign in with an email link to save and rate covers, make shareable lists, and submit albums.
+Admins add and edit covers, review submissions and read feedback at `/admin`.
 
 ## Launch it
 
@@ -15,7 +15,7 @@ Admins add and edit covers, curate collections and read feedback at `/admin`.
 2. Open **SQL Editor**, paste the contents of `supabase/schema.sql`, and run it.
 3. Open a new query, paste the contents of `supabase/seed.sql`, and run it. This loads all 177 covers, 224 creators and 13 cover types.
 4. Open another query, paste the contents of `supabase/storage.sql`, and run it. This creates the public `covers` bucket for the cover art.
-5. Open another query, paste the contents of `supabase/features.sql`, and run it. This adds drafts, collections, member lists, ratings, public profiles, feedback and the weekly email. It is safe to run again.
+5. Open another query, paste the contents of `supabase/features.sql`, and run it. This adds drafts, member lists, ratings, feedback and the weekly email. It is safe to run again.
 6. Go to **Project Settings > API** (or **API Keys**) and copy the **Project URL** and the **anon / publishable key**.
 
 ### 2. Deploy on Vercel
@@ -85,8 +85,6 @@ Open **Admin > Covers** and start a new cover, or approve a submission with **Ap
 2. Fill in the details, the people who made the cover, and the story in paragraphs separated by a blank line.
 3. **Save draft** keeps it hidden. **Publish** puts it live within a minute.
 
-Collections are edited the same way under **Admin > Collections**: name them, then search for covers to add and put them in order.
-
 ## Run it locally
 
 ```bash
@@ -106,7 +104,6 @@ npm run dev
 | `profiles` | One per account, with the admin switch |
 | `favorites` | Covers each member saved |
 | `submissions` | Albums members suggested, with their review status |
-| `collections`, `collection_covers` | Hand-picked sets and the covers in them |
 | `lists`, `list_items` | Members' own lists |
 | `ratings` | Members' 1 to 5 ratings of the cover art |
 | `feedback` | Messages from the Feedback page |

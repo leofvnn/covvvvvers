@@ -4,7 +4,7 @@ import local from "@/data/collection.json";
 import { familyOf } from "./color";
 import { SUPABASE_ANON_KEY, SUPABASE_URL, supabaseEnabled } from "./supabase/config";
 import { plainText } from "./text";
-import type { Collection, Cover, CoverCard, CoverType, Creator, CreatorWithCount } from "./types";
+import type { Cover, CoverCard, CoverType, Creator } from "./types";
 
 export { firstSentence } from "./text";
 
@@ -14,8 +14,6 @@ type Raw = {
   creators: Creator[];
   covers: RawCover[];
   cover_creators: { cover_id: string; creator_id: string }[];
-  collections: Omit<Collection, "coverIds">[];
-  collection_covers: { collection_id: string; cover_id: string; position: number }[];
 };
 
 const byTimeline = (a: Cover, b: Cover) =>
@@ -24,18 +22,15 @@ const byTimeline = (a: Cover, b: Cover) =>
 /** Loads the whole published collection once per render. It is small enough to keep in memory. */
 const loadCollection = cache(async (): Promise<Raw> => {
   if (!supabaseEnabled) {
-    const l = local as unknown as Omit<Raw, "collections" | "collection_covers">;
-    return { ...l, collections: [], collection_covers: [] };
+    return local as unknown as Raw;
   }
 
   const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: false } });
-  const [types, creators, covers, links, collections, collectionCovers] = await Promise.all([
+  const [types, creators, covers, links] = await Promise.all([
     db.from("cover_types").select("*"),
     db.from("creators").select("*"),
     db.from("covers").select("*"),
     db.from("cover_creators").select("*"),
-    db.from("collections").select("*"),
-    db.from("collection_covers").select("*"),
   ]);
   const err = types.error || creators.error || covers.error || links.error;
   if (err) throw new Error("Could not load the collection from Supabase: " + err.message);
@@ -45,9 +40,6 @@ const loadCollection = cache(async (): Promise<Raw> => {
     // Drafts and covers without art stay off the public site.
     covers: (covers.data as RawCover[]).filter((c) => (c.status ?? "published") === "published" && c.image_url),
     cover_creators: links.data,
-    // Collections arrive with the feature update; until then the site builds starter ones itself.
-    collections: collections.error ? [] : collections.data,
-    collection_covers: collectionCovers.error ? [] : collectionCovers.data,
   } as Raw;
 });
 
@@ -82,68 +74,8 @@ const assemble = cache(async () => {
     .map((t) => ({ ...t, count: typeCounts.get(t.slug) ?? 0 }))
     .sort((a, b) => a.sort_order - b.sort_order || a.title.localeCompare(b.title));
 
-  const creatorCounts = new Map<string, number>();
-  for (const c of covers) for (const cr of c.creators) creatorCounts.set(cr.id, (creatorCounts.get(cr.id) ?? 0) + 1);
-  const creators: CreatorWithCount[] = raw.creators
-    .map((c) => ({ ...c, count: creatorCounts.get(c.id) ?? 0 }))
-    .filter((c) => c.count > 0)
-    .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
-
-  const published = new Set(covers.map((c) => c.id));
-  let collections: Collection[];
-  if (raw.collections.length) {
-    collections = raw.collections.map((col) => ({
-      ...col,
-      coverIds: raw.collection_covers
-        .filter((cc) => cc.collection_id === col.id && published.has(cc.cover_id))
-        .sort((a, b) => a.position - b.position)
-        .map((cc) => cc.cover_id),
-    }));
-  } else {
-    collections = starterCollections(covers, creatorCounts);
-  }
-  collections = collections.filter((c) => c.coverIds.length).sort((a, b) => a.sort_order - b.sort_order);
-
-  return { covers, types, creators, collections };
+  return { covers, types };
 });
-
-/** The same starter collections features.sql creates, for previews without the database. */
-function starterCollections(covers: Cover[], creatorCounts: Map<string, number>): Collection[] {
-  const make = (slug: string, title: string, description: string, sort_order: number, test: (c: Cover) => boolean) => ({
-    id: slug,
-    slug,
-    title,
-    description,
-    sort_order,
-    coverIds: covers.filter(test).map((c) => c.id),
-  });
-  return [
-    make(
-      "around-the-world",
-      "Around the world",
-      "Rap covers from outside the United States, from Paris to São Paulo to Johannesburg.",
-      1,
-      (c) => Boolean(c.country && c.country !== "United States"),
-    ),
-    make(
-      "the-golden-era",
-      "The golden era",
-      "Covers from 1986 to 1996, when rap's visual language was being invented.",
-      2,
-      (c) => c.release_year >= 1986 && c.release_year <= 1996,
-    ),
-    make(
-      "repeat-collaborators",
-      "Repeat collaborators",
-      "Covers by photographers, painters and designers who appear more than once in the collection.",
-      3,
-      (c) => c.creators.some((cr) => (creatorCounts.get(cr.id) ?? 0) > 1),
-    ),
-    make("hand-made", "Made by hand", "Painted, drawn and collaged covers.", 4, (c) =>
-      ["painting", "illustration", "collage"].includes(c.type?.slug ?? ""),
-    ),
-  ];
-}
 
 export const toCard = (c: Cover, opts: { withText?: boolean } = {}): CoverCard => ({
   id: c.id,
@@ -215,23 +147,11 @@ export async function getType(slug: string) {
   return { type, covers: covers.filter((c) => c.type?.slug === slug) };
 }
 
-export async function getCreators() {
-  return (await assemble()).creators;
-}
 
-export async function getCreator(slug: string) {
-  const { creators, covers } = await assemble();
-  const creator = creators.find((c) => c.slug === slug);
-  if (!creator) return null;
-  return { creator, covers: covers.filter((c) => c.creators.some((x) => x.id === creator.id)) };
-}
-
-export async function getCollections() {
-  const { collections, covers } = await assemble();
-  const byId = new Map(covers.map((c) => [c.id, c]));
-  return collections.map((col) => ({ ...col, covers: col.coverIds.map((id) => byId.get(id)!).filter(Boolean) }));
-}
-
-export async function getCollection(slug: string) {
-  return (await getCollections()).find((c) => c.slug === slug) ?? null;
+/** Every cover type that has covers, with its newest covers for the preview stack. */
+export async function getTypesWithCovers(preview = 4) {
+  const { types, covers } = await assemble();
+  return types
+    .filter((t) => t.count > 0)
+    .map((t) => ({ ...t, covers: covers.filter((c) => c.type?.slug === t.slug).slice(0, preview) }));
 }

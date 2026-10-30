@@ -16,8 +16,6 @@ export type Creator = {
   role: string | null;
 };
 
-export type CreatorWithCount = Creator & { count: number };
-
 export type Cover = {
   id: string;
   slug: string;
@@ -56,13 +54,4 @@ export type CoverCard = Pick<
   creatorNames: string[];
   /** Lower-case essay text, only sent where search needs it. */
   text?: string;
-};
-
-export type Collection = {
-  id: string;
-  slug: string;
-  title: string;
-  description: string | null;
-  sort_order: number;
-  coverIds: string[];
 };

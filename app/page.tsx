@@ -1,13 +1,13 @@
 import Link from "next/link";
 import CoverGrid from "@/components/CoverGrid";
 import CoverLink from "@/components/CoverLink";
-import { firstSentence, getCovers, getCreators, getFeatured, getTypes, toCard } from "@/lib/data";
+import { firstSentence, getCovers, getFeatured, getTypes, toCard } from "@/lib/data";
 import { fullImage, inkFor } from "@/lib/img";
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const [featured, covers, types, creators] = await Promise.all([getFeatured(), getCovers(), getTypes(), getCreators()]);
+  const [featured, covers, types] = await Promise.all([getFeatured(), getCovers(), getTypes()]);
   const bg = featured.color ?? "#111111";
   const ink = inkFor(bg);
   const recent = covers.filter((c) => c.id !== featured.id).slice(0, 12);
@@ -15,7 +15,7 @@ export default async function Home() {
   const doors = [
     { href: "/covers", label: "Covers", note: `All ${covers.length}, newest first` },
     { href: "/types", label: "Cover types", note: `${types.filter((t) => t.count).length} ways a cover gets made` },
-    { href: "/creators", label: "Creators", note: `${creators.length} photographers, painters and designers` },
+    { href: "/explore", label: "Explore", note: "Colours, timeline, map and the quiz" },
   ];
 
   return (
