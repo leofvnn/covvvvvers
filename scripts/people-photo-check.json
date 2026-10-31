@@ -1045,11 +1045,13 @@
   "name": "Chief Keef",
   "wikipedia": "https://en.wikipedia.org/wiki/Chief_Keef",
   "previous": "Chief_Keef_2019.jpg",
-  "wikidata": null,
-  "wikidataImages": [],
-  "previousConfirmed": false,
-  "chosen": null,
-  "how": "no photo found"
+  "wikidata": "https://www.wikidata.org/wiki/Q127362",
+  "wikidataImages": [
+   "Chief Keef 2019 performance.jpg"
+  ],
+  "previousConfirmed": true,
+  "chosen": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
+  "how": "commons-depicts"
  },
  {
   "id": "tyler",
@@ -1189,12 +1191,10 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Central_Cee",
   "previous": "Central_Cee_(cropped).jpg",
   "wikidata": "https://www.wikidata.org/wiki/Q106078330",
-  "wikidataImages": [
-   "Central cee-5.jpg"
-  ],
+  "wikidataImages": [],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
-  "how": "wikidata-image"
+  "how": "wikipedia-photo"
  },
  {
   "id": "simz",

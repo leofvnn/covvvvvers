@@ -3291,6 +3291,13 @@
    "license": "CC BY-SA 4.0",
    "from": "commons-depicts"
   },
+  "keef": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Chief_Keef_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
+   "credit": "glenjamn3",
+   "license": "CC BY 3.0",
+   "from": "commons-depicts"
+  },
   "tyler": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Tyler_the_Creator_%2852163761341%29_%28cropped%29.jpg/960px-Tyler_the_Creator_%2852163761341%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "page": "https://commons.wikimedia.org/wiki/File:Tyler_the_Creator_(52163761341)_(cropped).jpg",
@@ -3366,7 +3373,7 @@
    "page": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
    "credit": "200izo",
    "license": "CC BY-SA 4.0",
-   "from": "wikidata-image"
+   "from": "wikipedia-photo"
   },
   "simz": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Little_Simz.jpg/960px-Little_Simz.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3640,7 +3647,6 @@
   "people": [
    "sharock",
    "shocklee",
-   "keef",
    "griselda",
    "crazylegs",
    "hypewilliams",
