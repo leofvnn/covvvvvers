@@ -11,8 +11,9 @@
   --focus: #2457ff;
   --error: #b3261e;
 
-  /* Headings in Clash Display, everything else in Helvetica. */
-  --display: "Clash Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Headings in Bowlby One, everything else in Helvetica. Bowlby has one weight, so no
+     faux bold: font-synthesis stops the browser thickening it further. */
+  --display: "Bowlby One", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: var(--sans);
 
@@ -70,6 +71,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
   overflow-x: hidden;
 }
 
@@ -105,7 +107,9 @@ h5,
 h6 {
   font-family: var(--display);
   font-weight: 800;
-  line-height: 0.98;
+  line-height: 1.05;
+  /* Bowlby is wide: long titles break rather than run off small screens. */
+  overflow-wrap: anywhere;
   letter-spacing: -0.01em;
   font-family: var(--display);
 }
