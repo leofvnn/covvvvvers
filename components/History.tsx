@@ -5,7 +5,7 @@ import { squareImage } from "@/lib/img";
 import type { Guide, KeyRecord } from "@/lib/chapters";
 import type { HistoryRecord, Moment } from "@/lib/history";
 import type { Person } from "@/lib/people";
-import type { PersonPhoto, RecordImage } from "@/lib/images";
+import type { RecordImage } from "@/lib/images";
 import CoverLink from "./CoverLink";
 import PersonModal from "./PersonModal";
 
@@ -34,7 +34,7 @@ export type EraView = {
   ink: string;
   posterCover: CoverMini | null;
   covers: number;
-  contributors: (Person & { id: string; photo: PersonPhoto | null })[];
+  contributors: (Person & { id: string })[];
   years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][]; art?: RecordImage | null })[] }[];
 };
 
@@ -260,13 +260,6 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: S
                     {era.contributors.map((p, index) => (
                       <li key={p.id}>
                         <button type="button" onClick={() => setPerson({ era: era.id, index })} aria-haspopup="dialog">
-                          <span className="h-avatar" aria-hidden="true">
-                            {p.photo ? (
-                              <img src={p.photo.src} alt="" width={28} height={28} loading="lazy" />
-                            ) : (
-                              p.name.replace(/^The /, "")[0]
-                            )}
-                          </span>
                           {p.name}
                         </button>
                       </li>

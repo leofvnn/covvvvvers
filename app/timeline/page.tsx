@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import History, { type CoverMini, type EraView, type SourceGroup } from "@/components/History";
 import { CHAPTERS } from "@/lib/chapters";
 import { getCovers } from "@/lib/data";
-import { personPhoto, recordImage } from "@/lib/images";
+import { recordImage } from "@/lib/images";
 import { MOMENTS, SOURCES, type HistoryRecord } from "@/lib/history";
 import { inkFor } from "@/lib/img";
 import { PEOPLE } from "@/lib/people";
-import { PHOTOS } from "@/lib/photos";
 import { SPOTIFY } from "@/lib/spotify";
 
 export const revalidate = 3600;
@@ -116,17 +115,16 @@ export default async function TimelinePage() {
       ink: inkFor(bg),
       posterCover: poster ? mini(poster) : null,
       covers: covers.filter((c) => c.release_year >= ch.from && c.release_year <= ch.to).length,
-      contributors: ch.people.filter((id) => PEOPLE[id]).map((id) => ({ id, ...PEOPLE[id], photo: personPhoto(id) })),
+      contributors: ch.people.filter((id) => PEOPLE[id]).map((id) => ({ id, ...PEOPLE[id] })),
       years: byYear(ch.from, ch.to, ch.moments, ch.records),
     };
   });
 
-  // Every source behind the page: the reading for the history, each person's article, each
-  // photo with its photographer and licence, and where each record's image comes from.
+  // Every source behind the page: the reading for the history, each person's article, and
+  // where each record's image comes from.
   const shownPeople = [...new Map(eras.flatMap((e) => e.contributors).map((p) => [p.id, p])).values()].sort((a, b) =>
     a.name.replace(/^The /, "").localeCompare(b.name.replace(/^The /, "")),
   );
-  const fileName = (page: string) => decodeURIComponent(page.split("/File:")[1] ?? "").replace(/_/g, " ");
   const records = [
     ...new Map(
       eras
@@ -141,20 +139,6 @@ export default async function TimelinePage() {
       title: "Notable figures",
       note: "Each profile draws on the person's Wikipedia article.",
       items: shownPeople.map((p) => ({ title: `${p.name}, Wikipedia`, url: `https://en.wikipedia.org/wiki/${p.wiki}` })),
-    },
-    {
-      title: "Photos",
-      note: "Photographer, licence and file for each photo of a notable figure.",
-      items: shownPeople
-        .filter((p) => p.photo)
-        .map((p) => {
-          const ph = p.photo!;
-          const own = PHOTOS[p.id];
-          const note = own?.note && fileName(ph.page) === own.file.replace(/_/g, " ") ? ` (${own.note})` : "";
-          const host = ph.page.includes("commons.wikimedia.org") ? "Wikimedia Commons" : "Wikipedia";
-          const by = [ph.credit, ph.license].filter(Boolean).join(", ");
-          return { title: `${p.name}${note}: ${by ? `${by}, ` : ""}via ${host}`, url: ph.page };
-        }),
     },
     {
       title: "Cover art and images",

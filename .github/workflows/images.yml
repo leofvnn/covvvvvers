@@ -1,4 +1,4 @@
-# Finds an image and its source for every timeline record, person and new cover, and
+# Finds an image and its source for every timeline record and new cover, and
 # commits lib/images.json. Runs when the list of things needing images changes, or by hand.
 name: Images
 
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "Search 'records' or 'people' again from scratch (blank: only what's new or missing)"
+        description: "'records' searches everything again from scratch (blank: only what's new or missing)"
         required: false
         default: ""
   push:
@@ -35,10 +35,9 @@ jobs:
       - run: node scripts/resolve-images.mjs
         env:
           ONLY: ${{ github.event.inputs.only }}
-          CHECK_PEOPLE: "1"
       - name: Commit lib/images.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add lib/images.json scripts/people-photo-check.json
+          git add lib/images.json
           git diff --cached --quiet || (git commit -m "Update images and their sources" && git push)
