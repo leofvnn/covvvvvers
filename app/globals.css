@@ -4329,10 +4329,11 @@ kbd {
     max-height: calc(100vh - var(--header) - 24px);
     overflow-y: auto;
     padding: 22px 24px 24px;
-    border: 1px solid var(--line);
+    border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
     border-radius: 18px;
-    background: var(--paper);
-    color: var(--ink);
+    /* The page's own colour where it has one (cover pages, the home hero), else the theme's. */
+    background: var(--page-bg, var(--paper));
+    color: var(--page-ink, var(--ink));
     box-shadow: 0 30px 70px -25px rgba(0, 0, 0, 0.4);
     animation: menu-in 180ms var(--ease);
   }
@@ -4359,7 +4360,7 @@ kbd {
   .menu-more {
     margin-top: 18px;
     padding-top: 14px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
   }
   .menu-sheet .menu-more a {
     padding: 6px 0;
@@ -4368,7 +4369,7 @@ kbd {
   .menu-theme {
     margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
   }
   .menu-theme > span {
     font-size: 1rem;
