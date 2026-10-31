@@ -3075,11 +3075,11 @@
    "from": "wikidata-image"
   },
   "premier": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/DJ_Premier.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:DJ_Premier.jpg",
-   "credit": "ItsPTK",
-   "license": "CC BY-SA 3.0",
-   "from": "commons-depicts"
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/DJ_Premier_2008.jpg/960px-DJ_Premier_2008.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:DJ_Premier_2008.jpg",
+   "credit": "alanpixx",
+   "license": "CC BY-SA 2.0",
+   "from": "wikidata-image"
   },
   "screw": {
    "src": "https://upload.wikimedia.org/wikipedia/en/7/7d/DJ_Screw.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -3373,7 +3373,7 @@
    "page": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
    "credit": "200izo",
    "license": "CC BY-SA 4.0",
-   "from": "wikipedia-photo"
+   "from": "wikidata-image"
   },
   "simz": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Little_Simz.jpg/960px-Little_Simz.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3404,11 +3404,11 @@
    "from": "wikidata-image"
   },
   "racionais": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Racionais_MC%27s.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Racionais_MC%27s.png",
-   "credit": "Christian Hartmann",
-   "license": "Public domain",
-   "from": "wikidata-image"
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Racionais_MCs_na_Virada_Cultural.jpg/960px-Racionais_MCs_na_Virada_Cultural.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Racionais_MCs_na_Virada_Cultural.jpg",
+   "credit": "Mumu Silva",
+   "license": "CC BY 2.0",
+   "from": "wikipedia-photo"
   },
   "iam": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/IAM_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_003.jpg/960px-IAM_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_003.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",

@@ -653,9 +653,9 @@
   "wikidataImages": [
    "DJ Premier 2008.jpg"
   ],
-  "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:DJ_Premier.jpg",
-  "how": "commons-depicts"
+  "previousConfirmed": false,
+  "chosen": "https://commons.wikimedia.org/wiki/File:DJ_Premier_2008.jpg",
+  "how": "wikidata-image"
  },
  {
   "id": "screw",
@@ -1191,10 +1191,12 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Central_Cee",
   "previous": "Central_Cee_(cropped).jpg",
   "wikidata": "https://www.wikidata.org/wiki/Q106078330",
-  "wikidataImages": [],
+  "wikidataImages": [
+   "Central cee-5.jpg"
+  ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
-  "how": "wikipedia-photo"
+  "how": "wikidata-image"
  },
  {
   "id": "simz",
@@ -1265,12 +1267,10 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Racionais_MC's",
   "previous": "Racionais_MCs_na_Virada_Cultural.jpg",
   "wikidata": "https://www.wikidata.org/wiki/Q3081809",
-  "wikidataImages": [
-   "Racionais MC's.png"
-  ],
+  "wikidataImages": [],
   "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Racionais_MC%27s.png",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Racionais_MCs_na_Virada_Cultural.jpg",
+  "how": "wikipedia-photo"
  },
  {
   "id": "iam",
