@@ -45,7 +45,8 @@ for path in sys.argv[1:]:
 existing = set(sys.stdin.read().split()) if not sys.stdin.isatty() else set()
 seen = set()
 for e in entries:
-    e["slug"] = slugify(e.get("slug") or e["title"])
+    # Same style as the rest of the collection: the title alone, with the artist added only if taken.
+    e["slug"] = slugify(e["title"])
     text = e.get("essay_html") or ""
     for bad, label in BANNED:
         if bad in text or bad in (e.get("credits_text") or ""):
@@ -68,6 +69,8 @@ out = [
 ]
 added = 0
 for i, e in enumerate(entries):
+    if e["slug"] in existing or e["slug"] in seen:
+        e["slug"] = slugify(e["artist"] + " " + e["title"])
     if e["slug"] in existing or e["slug"] in seen:
         continue
     seen.add(e["slug"])
