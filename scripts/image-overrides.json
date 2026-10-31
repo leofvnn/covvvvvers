@@ -9,6 +9,9 @@
   "The Bridge|MC Shan": "The Bridge (MC Shan song)"
  },
  "people": {
-  "_note": "null: no photo. A string: use that Commons file (it is still checked against Wikidata)."
+  "_note": "null: no photo. A string: use that Commons file (it is still checked against Wikidata).",
+  "glorilla": "Glorilla_in_a_2023_interview_(cropped).png",
+  "thug": "Young_Thug_-_Openair_Frauenfeld_2019_20.jpg",
+  "billywoods": null
  }
 }

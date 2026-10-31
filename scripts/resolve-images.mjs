@@ -233,6 +233,8 @@ async function person(p) {
   check.wikidataImages = p18;
 
   const take = async (file, how) => {
+    // A signature isn't a photo of someone.
+    if (/(^|[_ .-])(sig|signature|autograph)([_ .-]|$)/i.test(fileKey(file))) return null;
     const photo = await fileInfo(fileKey(file));
     if (!photo) return null;
     check.chosen = photo.page;
