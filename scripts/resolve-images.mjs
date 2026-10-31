@@ -2,14 +2,13 @@
  * Finds an image and its source for everything in scripts/image-requests.json and writes
  * lib/images.json, which the site reads. Every image is checked to load before it's kept.
  *
- *   Records (songs, albums, mixtapes, gear, labels, films, shows):
- *     1. the lead image of the record's Wikipedia article (the cover, for music)
+ *   Records (songs, albums, mixtapes, gear, labels, films, shows), sharpest source first:
+ *     1. the artwork on Apple Music (the album, or the single for songs)
  *     2. the front cover on the Cover Art Archive, found through MusicBrainz
- *     3. the artwork on Apple Music
- *   People:
- *     1. the Wikimedia Commons photo chosen in lib/photos.ts
- *     2. the lead photo of their Wikipedia article
- *   with the photographer and licence from the file's Commons page.
+ *     3. the lead image of the record's Wikipedia article (cover art there is kept small on
+ *        purpose, so it's the last choice for music; it's first for gear, labels and films)
+ *   People: photos confirmed to show them through their Wikidata item (see person()),
+ *     the largest confirmed one, at 1200px, with photographer and licence from Commons.
  *
  * Runs in GitHub Actions (.github/workflows/images.yml). Node 20+, no dependencies.
  */
@@ -81,7 +80,7 @@ const MUSIC_DESC = /album|song|single|mixtape|\bep\b|record|soundtrack|compilati
 
 /** The lead image of a named Wikipedia article (for the hand-picked overrides). */
 async function fromWikipediaPage(title) {
-  const data = await wiki({ action: "query", titles: title, redirects: "1", prop: "pageimages", piprop: "thumbnail|original", pithumbsize: "600", pilicense: "any" });
+  const data = await wiki({ action: "query", titles: title, redirects: "1", prop: "pageimages", piprop: "thumbnail|original", pithumbsize: "1200", pilicense: "any" });
   const p = data?.query?.pages?.[0];
   const img = p?.thumbnail?.source ?? p?.original?.source;
   if (img && (await loads(img))) return { src: img, full: p.original?.source ?? img, source: { name: "Wikipedia", url: wikiPage(p.title) } };
@@ -101,7 +100,7 @@ async function fromWikipedia(r) {
       gsrlimit: "8",
       prop: "pageimages|description",
       piprop: "thumbnail|original",
-      pithumbsize: "600",
+      pithumbsize: "1200",
       pilicense: "any",
     });
     const pages = (data?.query?.pages ?? []).sort((a, b) => a.index - b.index);
@@ -148,6 +147,7 @@ async function fromCoverArtArchive(r) {
         (Number((x["first-release-date"] ?? "").slice(0, 4)) || 9999) - (Number((y["first-release-date"] ?? "").slice(0, 4)) || 9999),
     );
   for (const g of groups.slice(0, 3)) {
+    // 500px is plenty for a 240px card on a sharp screen; the full image is kept for imports.
     const src = `https://coverartarchive.org/release-group/${g.id}/front-500`;
     if (await loads(src)) return { src, full: `https://coverartarchive.org/release-group/${g.id}/front`, source: { name: "Cover Art Archive", url: `https://musicbrainz.org/release-group/${g.id}` } };
   }
@@ -157,14 +157,21 @@ async function fromCoverArtArchive(r) {
 async function fromAppleMusic(r) {
   if (!MUSIC.has(r.kind)) return null;
   const artist = mainArtist(r.artist);
-  const entity = r.kind === "song" ? "song" : "album";
-  const data = await get(`https://itunes.apple.com/search?${new URLSearchParams({ term: `${r.title} ${artist}`, entity, limit: "15", country: "us" })}`);
+  // Songs are looked up as releases too, so a song gets its single's cover, not its album's.
+  const data = await get(`https://itunes.apple.com/search?${new URLSearchParams({ term: `${r.title} ${artist}`, entity: "album", limit: "25", country: "us" })}`);
   await sleep(400);
-  for (const it of data?.results ?? []) {
-    const name = entity === "song" ? it.trackName : it.collectionName;
-    if (norm(name) !== norm(r.title) || !loose(it.artistName, artist) || !it.artworkUrl100) continue;
+  const release = (name = "") => name.replace(/ - (Single|EP)$/i, "");
+  const hits = (data?.results ?? []).filter((it) => norm(release(it.collectionName)) === norm(r.title) && loose(it.artistName, artist) && it.artworkUrl100);
+  // Singles for songs, albums for albums; then the earliest release (the original, not a reissue).
+  const isSingle = (it) => / - (Single|EP)$/i.test(it.collectionName ?? "");
+  hits.sort(
+    (a, b) =>
+      Number(isSingle(b) === (r.kind === "song")) - Number(isSingle(a) === (r.kind === "song")) ||
+      (a.releaseDate ?? "").localeCompare(b.releaseDate ?? ""),
+  );
+  for (const it of hits.slice(0, 3)) {
     const src = it.artworkUrl100.replace(/\/\d+x\d+bb\./, "/600x600bb.");
-    if (await loads(src)) return { src, full: src.replace("/600x600bb.", "/2000x2000bb."), source: { name: "Apple Music", url: (entity === "song" ? it.trackViewUrl : it.collectionViewUrl)?.split("?")[0] } };
+    if (await loads(src)) return { src, full: src.replace("/600x600bb.", "/2000x2000bb."), source: { name: "Apple Music", url: it.collectionViewUrl?.split("?")[0] } };
   }
   return null;
 }
@@ -176,8 +183,8 @@ async function fileInfo(file) {
     action: "query",
     titles: `File:${file}`,
     prop: "imageinfo",
-    iiprop: "url|extmetadata",
-    iiurlwidth: "600",
+    iiprop: "url|extmetadata|size",
+    iiurlwidth: "1200",
   });
   const info = data?.query?.pages?.[0]?.imageinfo?.[0];
   if (!info) return null;
@@ -189,6 +196,7 @@ async function fileInfo(file) {
     page: info.descriptionurl,
     credit: strip(meta.Artist?.value) || null,
     license: strip(meta.LicenseShortName?.value) || null,
+    width: info.width ?? 0,
   };
 }
 
@@ -242,19 +250,37 @@ async function person(p) {
     return { ...photo, from: how };
   };
 
-  // A hand-picked photo stays if Wikidata agrees it shows them.
+  // Every photo confirmed to show them: the hand-picked one if Wikidata agrees, the images on
+  // their Wikidata item, and photos in their Commons category tagged as depicting them.
+  // The first one that's sharp (1000px wide or more) wins, else the largest.
+  const confirmed = [];
+  const consider = async (file, how) => {
+    if (confirmed.some((c) => fileKey(c.file) === fileKey(file))) return;
+    if (/(^|[_ .-])(sig|signature|autograph)([_ .-]|$)/i.test(fileKey(file))) return;
+    const photo = await fileInfo(fileKey(file));
+    if (photo) confirmed.push({ file, how, photo });
+  };
   if (p.file) {
     const same = p18.some((f) => fileKey(f) === fileKey(p.file));
     const tagged = !same && qid ? (await depicts(p.file)).includes(qid) : false;
     check.previousConfirmed = same || tagged;
-    if (same || tagged) {
-      const hit = await take(p.file, same ? "wikidata-image" : "commons-depicts");
-      if (hit) return { hit, check };
+    if (same || tagged) await consider(p.file, same ? "wikidata-image" : "commons-depicts");
+  }
+  for (const f of p18) await consider(f, "wikidata-image");
+  if (category && qid && !confirmed.some((c) => c.photo.width >= 1000)) {
+    const members = await commons({ action: "query", list: "categorymembers", cmtitle: `Category:${category}`, cmtype: "file", cmlimit: "25" });
+    for (const m of members?.query?.categorymembers ?? []) {
+      if (!/\.(jpe?g|png)$/i.test(m.title)) continue;
+      if ((await depicts(m.title)).includes(qid)) await consider(m.title, "commons-depicts");
+      if (confirmed.some((c) => c.photo.width >= 1000)) break;
     }
   }
-  for (const f of p18) {
-    const hit = await take(f, "wikidata-image");
-    if (hit) return { hit, check };
+  if (confirmed.length) {
+    const best = confirmed.find((c) => c.photo.width >= 1000) ?? [...confirmed].sort((a, b) => b.photo.width - a.photo.width)[0];
+    check.chosen = best.photo.page;
+    check.how = best.how;
+    check.width = best.photo.width;
+    return { hit: { ...best.photo, from: best.how }, check };
   }
   for (const pilicense of ["free", "any"]) {
     const data = pilicense === "any" ? page : await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageimages", piprop: "name", pilicense });
@@ -262,15 +288,6 @@ async function person(p) {
     if (!name) continue;
     const hit = await take(name, pilicense === "free" ? "wikipedia-photo" : "wikipedia-nonfree");
     if (hit) return { hit, check };
-  }
-  if (category && qid) {
-    const members = await commons({ action: "query", list: "categorymembers", cmtitle: `Category:${category}`, cmtype: "file", cmlimit: "30" });
-    for (const m of members?.query?.categorymembers ?? []) {
-      if (!/\.(jpe?g|png)$/i.test(m.title)) continue;
-      if (!(await depicts(m.title)).includes(qid)) continue;
-      const hit = await take(m.title, "commons-category");
-      if (hit) return { hit, check };
-    }
   }
   check.chosen = null;
   check.how = "no photo found";
@@ -301,7 +318,8 @@ for (const [i, r] of req.records.entries()) {
     continue;
   }
   const page = overrides.records?.[r.key];
-  const hit = (page && (await fromWikipediaPage(page))) ?? (await fromWikipedia(r)) ?? (await fromCoverArtArchive(r)) ?? (await fromAppleMusic(r));
+  const hit =
+    (await fromAppleMusic(r)) ?? (await fromCoverArtArchive(r)) ?? (page && (await fromWikipediaPage(page))) ?? (await fromWikipedia(r));
   // "cover": a collection cover whose art comes from here, so the site keeps crediting it.
   if (hit) out.records[r.key] = r.cover ? { ...hit, cover: true } : hit;
   else out.missing.records.push(r.key);
