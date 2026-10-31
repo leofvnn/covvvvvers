@@ -992,14 +992,14 @@
   "id": "thug",
   "name": "Young Thug",
   "wikipedia": "https://en.wikipedia.org/wiki/Young_Thug",
-  "previous": "Young_Thug_2018.jpg",
+  "previous": "Young_Thug_-_Openair_Frauenfeld_2019_20.jpg",
   "wikidata": "https://www.wikidata.org/wiki/Q15637814",
   "wikidataImages": [
    "Young Thug - Openair Frauenfeld 2019 20.jpg"
   ],
-  "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Young_Thug_in_2021.png",
-  "how": "wikipedia-photo"
+  "previousConfirmed": true,
+  "chosen": "https://commons.wikimedia.org/wiki/File:Young_Thug_-_Openair_Frauenfeld_2019_20.jpg",
+  "how": "wikidata-image"
  },
  {
   "id": "migos",
@@ -1045,13 +1045,11 @@
   "name": "Chief Keef",
   "wikipedia": "https://en.wikipedia.org/wiki/Chief_Keef",
   "previous": "Chief_Keef_2019.jpg",
-  "wikidata": "https://www.wikidata.org/wiki/Q127362",
-  "wikidataImages": [
-   "Chief Keef 2019 performance.jpg"
-  ],
-  "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
-  "how": "commons-depicts"
+  "wikidata": null,
+  "wikidataImages": [],
+  "previousConfirmed": false,
+  "chosen": null,
+  "how": "no photo found"
  },
  {
   "id": "tyler",
@@ -1646,12 +1644,8 @@
  {
   "id": "billywoods",
   "name": "billy woods",
-  "wikipedia": "https://en.wikipedia.org/wiki/Billy_Woods",
-  "previous": null,
-  "wikidata": "https://www.wikidata.org/wiki/Q16247049",
-  "wikidataImages": [],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Billy_Woods_sig.svg",
-  "how": "wikipedia-photo"
+  "chosen": null,
+  "how": "left blank by hand"
  },
  {
   "id": "lilbaby",
@@ -1669,13 +1663,14 @@
   "id": "glorilla",
   "name": "GloRilla",
   "wikipedia": "https://en.wikipedia.org/wiki/GloRilla",
-  "previous": null,
+  "previous": "Glorilla_in_a_2023_interview_(cropped).png",
   "wikidata": "https://www.wikidata.org/wiki/Q114132368",
   "wikidataImages": [
    "Glorilla in a 2023 interview (cropped).png"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Mariah_the_Scientist_and_GloRilla_Birthday_Bash_performance_2025._02_(cropped).png",
-  "how": "wikipedia-photo"
+  "previousConfirmed": true,
+  "chosen": "https://commons.wikimedia.org/wiki/File:Glorilla_in_a_2023_interview_(cropped).png",
+  "how": "wikidata-image"
  },
  {
   "id": "mustard",

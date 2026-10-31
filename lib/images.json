@@ -3264,11 +3264,11 @@
    "from": "wikidata-image"
   },
   "thug": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Young_Thug_in_2021.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Young_Thug_in_2021.png",
-   "credit": "MILLION DOLLAZ WORTH OF GAME",
-   "license": "CC BY 3.0",
-   "from": "wikipedia-photo"
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Young_Thug_-_Openair_Frauenfeld_2019_20.jpg/960px-Young_Thug_-_Openair_Frauenfeld_2019_20.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Young_Thug_-_Openair_Frauenfeld_2019_20.jpg",
+   "credit": "Frank Schwichtenberg",
+   "license": "CC BY-SA 4.0",
+   "from": "wikidata-image"
   },
   "migos": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Migos_Veld_festival_2017.jpg/960px-Migos_Veld_festival_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3289,13 +3289,6 @@
    "page": "https://commons.wikimedia.org/wiki/File:Travis_Scott_-_Openair_Frauenfeld_2019_08.jpg",
    "credit": "Frank Schwichtenberg",
    "license": "CC BY-SA 4.0",
-   "from": "commons-depicts"
-  },
-  "keef": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Chief_Keef_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
-   "credit": "glenjamn3",
-   "license": "CC BY 3.0",
    "from": "commons-depicts"
   },
   "tyler": {
@@ -3613,13 +3606,6 @@
    "license": "CC BY-SA 2.0",
    "from": "wikidata-image"
   },
-  "billywoods": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Billy_Woods_sig.svg/960px-Billy_Woods_sig.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Billy_Woods_sig.svg",
-   "credit": "Billy Woods",
-   "license": "Public domain",
-   "from": "wikipedia-photo"
-  },
   "lilbaby": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Lil_Baby_in_2020.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
    "page": "https://commons.wikimedia.org/wiki/File:Lil_Baby_in_2020.png",
@@ -3628,11 +3614,11 @@
    "from": "wikidata-image"
   },
   "glorilla": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mariah_the_Scientist_and_GloRilla_Birthday_Bash_performance_2025._02_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Mariah_the_Scientist_and_GloRilla_Birthday_Bash_performance_2025._02_(cropped).png",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Glorilla_in_a_2023_interview_%28cropped%29.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Glorilla_in_a_2023_interview_(cropped).png",
    "credit": "HOTSPOTATL",
    "license": "CC BY 3.0",
-   "from": "wikipedia-photo"
+   "from": "wikidata-image"
   },
   "mustard": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/DJ_Mustard_2019_by_Glenn_Francis_%28cropped%29.jpg/960px-DJ_Mustard_2019_by_Glenn_Francis_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3654,9 +3640,11 @@
   "people": [
    "sharock",
    "shocklee",
+   "keef",
    "griselda",
    "crazylegs",
-   "hypewilliams"
+   "hypewilliams",
+   "billywoods"
   ]
  }
 }
