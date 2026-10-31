@@ -251,7 +251,14 @@ for (const [i, r] of req.records.entries()) {
 }
 
 for (const [i, p] of req.people.entries()) {
-  if (keep("people", p.id)) {
+  const pick = overrides.people?.[p.id];
+  if (pick === null) {
+    out.missing.people.push(p.id);
+    console.log(`[${i + 1}/${req.people.length}] SKIPPED   ${p.name}`);
+    continue;
+  }
+  if (typeof pick === "string") p.file = pick;
+  if (keep("people", p.id) && typeof pick !== "string") {
     out.people[p.id] = prev.people[p.id];
     continue;
   }

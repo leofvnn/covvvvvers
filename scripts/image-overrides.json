@@ -7,5 +7,10 @@
   "TR-808 Rhythm Composer|Roland": "Roland TR-808",
   "MPC60|Akai and Roger Linn": "Akai MPC",
   "The Bridge|MC Shan": "The Bridge (MC Shan song)"
+ },
+ "people": {
+  "_note": "null: no photo (the search found the wrong thing). A string: use that Commons file.",
+  "griselda": null,
+  "crazylegs": null
  }
 }
