@@ -9,8 +9,9 @@
    "Kool Herc.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Kool_Herc.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:1520_Sedwick_Ave.,_Bronx,_New_York1.JPG",
+  "how": "commons-depicts",
+  "width": 2736
  },
  {
   "id": "cokelarock",
@@ -22,7 +23,8 @@
    "Coke La Rock raps.JPG"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Coke_La_Rock_raps.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2304
  },
  {
   "id": "bambaataa",
@@ -34,8 +36,9 @@
    "Afrika Bambaataa 2009 IMG 8349 (cropped).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Afrika_Bambaataa_2009_IMG_8349_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Africa_Bambaataa-02.jpg",
+  "how": "commons-depicts",
+  "width": 1097
  },
  {
   "id": "flash",
@@ -48,7 +51,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Grandmaster_Flash_-_James_Lavelle%27s_Meltdown_Festival_2014_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1186
  },
  {
   "id": "theodore",
@@ -62,7 +66,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Grand_wizzard_theodore.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1600
  },
  {
   "id": "mellemel",
@@ -75,7 +80,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Melle_Mel.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1758
  },
  {
   "id": "sharock",
@@ -97,7 +103,8 @@
    "Weekend Photo Cold Crush Brothers.JPG"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Weekend_Photo_Cold_Crush_Brothers.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1275
  },
  {
   "id": "sylvia",
@@ -109,8 +116,9 @@
    "Sylvia Robinson at at her desk in her Englewood, NJ office (1982) (cropped).jpg"
   ],
   "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Sylvia_Robinson_at_at_her_desk_in_her_Englewood,_NJ_office_(1982)_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Little_Boy_-_How_Long_Must_I_Be_Blue_-_Cash_Box_ad_1951.jpg",
+  "how": "commons-depicts",
+  "width": 1457
  },
  {
   "id": "sugarhill",
@@ -123,7 +131,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:The_Sugarhill_Gang_(52790148289).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 6120
  },
  {
   "id": "kurtisblow",
@@ -136,7 +145,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Kurtis_Blow_im_Musiktheater_Bad_(Hannover,_Germany),_2012-03-30.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2240
  },
  {
   "id": "rundmc",
@@ -149,7 +159,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Run_DMC_(cropped).png",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3072
  },
  {
   "id": "rubin",
@@ -162,7 +173,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:RickRubinSept09.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 631
  },
  {
   "id": "simmons",
@@ -175,7 +187,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Russell_Simmons_2012_Shankbone.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1759
  },
  {
   "id": "llcoolj",
@@ -187,8 +200,9 @@
    "LL COOL J.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:LL_Cool_J_2017.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:LL_COOL_J.jpg",
+  "how": "wikidata-image",
+  "width": 1387
  },
  {
   "id": "shante",
@@ -200,7 +214,8 @@
    "Roxanne Shante (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Roxanne_Shante_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2137
  },
  {
   "id": "fab5freddy",
@@ -212,7 +227,8 @@
    "Fab 5 Freddy at the 2009 Tribeca Film Festival.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Fab_5_Freddy_at_the_2009_Tribeca_Film_Festival.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1931
  },
  {
   "id": "dougefresh",
@@ -224,8 +240,9 @@
    "Doug E. Fresh at the 5th Annual Hip-Hop Summit Action Network's Action Awards.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Doug_E._Fresh.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Doug_E._Fresh_at_the_5th_Annual_Hip-Hop_Summit_Action_Network%27s_Action_Awards.jpg",
+  "how": "wikidata-image",
+  "width": 1099
  },
  {
   "id": "marleymarl",
@@ -238,7 +255,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Marlon_Williams_aka_Dj_Marley_Marl.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 907
  },
  {
   "id": "rakim",
@@ -251,7 +269,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Rakim-02-mika.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1346
  },
  {
   "id": "krsone",
@@ -264,8 +283,9 @@
    "KRS-One in 2008.jpg"
   ],
   "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:KRS-One_2002.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:KRS-One_in_2008.jpg",
+  "how": "wikidata-image",
+  "width": 2117
  },
  {
   "id": "chuckd",
@@ -279,7 +299,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Chuck_D_Public_Enemy_Way_Out_West_2013_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1078
  },
  {
   "id": "shocklee",
@@ -302,7 +323,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Big_Daddy_Kane_at_Hip_Hop_Kemp_2013_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2589
  },
  {
   "id": "slickrick",
@@ -315,7 +337,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Slick_Rick_-_The_Ruler.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1504
  },
  {
   "id": "saltnpepa",
@@ -328,7 +351,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Salt-n-Pepa_2013_(cropped).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1928
  },
  {
   "id": "mclyte",
@@ -340,7 +364,8 @@
    "MC Lyte by Gage Skidmore.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:MC_Lyte_by_Gage_Skidmore.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2367
  },
  {
   "id": "latifah",
@@ -355,7 +380,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Queen_Latifah_by_Gage_Skidmore.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3731
  },
  {
   "id": "delasoul",
@@ -368,7 +394,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:De_La_Soul_by_foto_di_matti.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2668
  },
  {
   "id": "princepaul",
@@ -380,7 +407,8 @@
    "Dj prince paul-mika.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Dj_prince_paul-mika.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1355
  },
  {
   "id": "tribe",
@@ -393,7 +421,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Tribe_2009.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1000
  },
  {
   "id": "icet",
@@ -406,8 +435,9 @@
    "Body Count feat. Ice-T - 2019214172248 2019-08-02 Wacken - 1897 - B70I1540.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Ice-T_(2).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Body_Count_feat._Ice-T_-_2019214172411_2019-08-02_Wacken_-_2311_-_AK8I3133_(cropped).jpg",
+  "how": "wikidata-image",
+  "width": 1159
  },
  {
   "id": "nwa",
@@ -430,8 +460,9 @@
    "Ice Cube September 2025.png"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Ice_Cube_2012.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Ice_Cube_(6934067684).jpg",
+  "how": "commons-depicts",
+  "width": 1000
  },
  {
   "id": "dre",
@@ -443,8 +474,9 @@
    "Dr. Dre in 2011.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Dr._Dre_2013_(cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Dr._Dre_2013-2.jpg",
+  "how": "commons-depicts",
+  "width": 2448
  },
  {
   "id": "tooshort",
@@ -457,7 +489,8 @@
    "Too Short 2023.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Tooshort_(300dpi).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2848
  },
  {
   "id": "luke",
@@ -469,7 +502,8 @@
    "Luther Campbell by David Cabrera.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Luther_Campbell_by_David_Cabrera.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1700
  },
  {
   "id": "biz",
@@ -481,8 +515,9 @@
    "Biz Markie 2018.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Biz_Markie_2018.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Biz_Markie_2016.jpg",
+  "how": "commons-depicts",
+  "width": 5456
  },
  {
   "id": "hammer",
@@ -495,7 +530,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:MC_Hammer_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 944
  },
  {
   "id": "wutang",
@@ -508,7 +544,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Wu_Tang_Clan_on_Stage.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1552
  },
  {
   "id": "rza",
@@ -521,7 +558,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:RZA_speaking_at_the_2018_San_Diego_Comic_Con_International_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2010
  },
  {
   "id": "nas",
@@ -535,7 +573,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Nas_July_2014_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1729
  },
  {
   "id": "biggie",
@@ -548,7 +587,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:The_Notorious_BIG.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1200
  },
  {
   "id": "tupac",
@@ -562,7 +602,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:2pac_edit_cropped_further.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 599
  },
  {
   "id": "snoop",
@@ -576,7 +617,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Snoop_Dogg_2019_by_Glenn_Francis.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2858
  },
  {
   "id": "outkast",
@@ -589,7 +631,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:2014227235242_2014-08-15_Rock%27n%27Heim_-_Sven_-_5D_MK_II_-_250_-_IMG_0063_mod.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 4591
  },
  {
   "id": "jayz",
@@ -602,8 +645,9 @@
    "Jay-Z @ Shawn 'Jay-Z' Carter Foundation Carnival (crop 2).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Jay-Z_concert_(cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Jay-Z_@_Shawn_%27Jay-Z%27_Carter_Foundation_Carnival_(crop_2).jpg",
+  "how": "wikidata-image",
+  "width": 1524
  },
  {
   "id": "lauryn",
@@ -616,7 +660,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Ms._Lauryn_Hill_08.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1664
  },
  {
   "id": "missy",
@@ -629,7 +674,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Missy_Elliott_2006.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1134
  },
  {
   "id": "timbaland",
@@ -642,7 +688,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Timbaland_(47903248821)_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2151
  },
  {
   "id": "premier",
@@ -653,9 +700,10 @@
   "wikidataImages": [
    "DJ Premier 2008.jpg"
   ],
-  "previousConfirmed": false,
+  "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:DJ_Premier_2008.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1909
  },
  {
   "id": "screw",
@@ -677,7 +725,8 @@
    "Bun B's show @ The Loft, Atlanta5.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Bun_B%27s_show_@_The_Loft,_Atlanta5.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3264
  },
  {
   "id": "masterp",
@@ -690,7 +739,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Master_p-02.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1103
  },
  {
   "id": "three6",
@@ -703,20 +753,19 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Three_6_Mafia.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 688
  },
  {
   "id": "eminem",
   "name": "Eminem",
   "wikipedia": "https://en.wikipedia.org/wiki/Eminem",
   "previous": "Eminem_2021_Color_Corrected.jpg",
-  "wikidata": "https://www.wikidata.org/wiki/Q5608",
-  "wikidataImages": [
-   "Eminem 2021 Color Corrected.jpg"
-  ],
-  "previousConfirmed": true,
+  "wikidata": null,
+  "wikidataImages": [],
+  "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Eminem_2021_Color_Corrected.jpg",
-  "how": "wikidata-image"
+  "how": "wikipedia-photo"
  },
  {
   "id": "doom",
@@ -729,7 +778,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:MF_Doom_-_Hultsfred_2011.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1996
  },
  {
   "id": "lilkim",
@@ -742,7 +792,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Lil%27_Kim_-_crop_2.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1164
  },
  {
   "id": "busta",
@@ -755,7 +806,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Busta_Rhymes_(52380599657)_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3863
  },
  {
   "id": "kanye",
@@ -769,7 +821,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Kanye_West_(2008).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1740
  },
  {
   "id": "neptunes",
@@ -782,7 +835,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:The_Neptunes.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 749
  },
  {
   "id": "fiftycent",
@@ -794,8 +848,9 @@
    "Curtis \"50 Cent\" Jackson visits Barksdale AFB (5) (cropped).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:50_Cent_(Cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Curtis_%2250_Cent%22_Jackson_visits_Barksdale_AFB_(5)_(cropped).jpg",
+  "how": "wikidata-image",
+  "width": 1267
  },
  {
   "id": "wayne",
@@ -808,7 +863,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Wayne_(23513397583).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 3888
  },
  {
   "id": "ti",
@@ -819,8 +875,9 @@
   "wikidataImages": [
    "T.I. 2022 Interview.png"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:T.I._2022_Interview.png",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:T.I._(Sister_Circle_Live).png",
+  "how": "commons-depicts",
+  "width": 1920
  },
  {
   "id": "liljon",
@@ -832,8 +889,9 @@
    "Lil Jon.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Jon_cropped.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Jon.jpg",
+  "how": "wikidata-image",
+  "width": 1159
  },
  {
   "id": "gucci",
@@ -846,7 +904,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Gucci_Mane_at_515_Alive_(close-up,_retouched_version).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 6000
  },
  {
   "id": "dilla",
@@ -869,7 +928,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:MadlibMarch2014Echo_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1484
  },
  {
   "id": "dizzee",
@@ -881,8 +941,9 @@
    "13-06-09 RaR Dizzee Rascal 10 (cropped).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Dizzee_Rascal_-_Square.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:13-06-09_RaR_Dizzee_Rascal_10_(cropped).jpg",
+  "how": "wikidata-image",
+  "width": 1934
  },
  {
   "id": "wiley",
@@ -894,8 +955,9 @@
    "Rapper Wiley.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Wiley_(rappeur).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Flo-dan,_Wiley_(34882237).jpg",
+  "how": "commons-depicts",
+  "width": 1544
  },
  {
   "id": "tpain",
@@ -908,7 +970,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:T-Pain_2019_by_Glenn_Francis_(cropped).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 2265
  },
  {
   "id": "soulja",
@@ -921,7 +984,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Soulja_Boy_Tell_%27Em_on_YouTube_Live.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 500
  },
  {
   "id": "cudi",
@@ -933,8 +997,9 @@
    "Global Dance Fest 2011 @ Red Rocks.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Kid_Cudi_Coachella_2014_1_(cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Global_Dance_Fest_2011_@_Red_Rocks.jpg",
+  "how": "wikidata-image",
+  "width": 2592
  },
  {
   "id": "drake",
@@ -946,8 +1011,9 @@
    "Drake July 2016.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Drake_July_2016.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Drake_Madame_Tussauds_London_Wax_Figure.jpg",
+  "how": "commons-depicts",
+  "width": 6000
  },
  {
   "id": "kendrick",
@@ -960,7 +1026,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Pulitzer2018-portraits-kendrick-lamar.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1125
  },
  {
   "id": "nicki",
@@ -972,8 +1039,9 @@
    "Nicki Minaj 2025 (3x4 cropped).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Nicki_Minaj_VMA_2018_(cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Nicki_Minaj_2025_(3x4_cropped).jpg",
+  "how": "wikidata-image",
+  "width": 3212
  },
  {
   "id": "future",
@@ -986,7 +1054,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Future_-_Openair_Frauenfeld_2019_05.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2330
  },
  {
   "id": "thug",
@@ -999,7 +1068,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Young_Thug_-_Openair_Frauenfeld_2019_20.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3640
  },
  {
   "id": "migos",
@@ -1012,7 +1082,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Migos_Veld_festival_2017.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2720
  },
  {
   "id": "metro",
@@ -1025,7 +1096,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Metro_Boomin_November_2025.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 466
  },
  {
   "id": "travis",
@@ -1038,20 +1110,19 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Travis_Scott_-_Openair_Frauenfeld_2019_08.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 2527
  },
  {
   "id": "keef",
   "name": "Chief Keef",
   "wikipedia": "https://en.wikipedia.org/wiki/Chief_Keef",
   "previous": "Chief_Keef_2019.jpg",
-  "wikidata": "https://www.wikidata.org/wiki/Q127362",
-  "wikidataImages": [
-   "Chief Keef 2019 performance.jpg"
-  ],
-  "previousConfirmed": true,
+  "wikidata": null,
+  "wikidataImages": [],
+  "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts (kept: lookup failed this run)"
  },
  {
   "id": "tyler",
@@ -1064,7 +1135,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Tyler_the_Creator_(52163761341)_(cropped).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 2387
  },
  {
   "id": "asap",
@@ -1077,7 +1149,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:A$AP_Rocky_at_the_2025_Cannes_Film_Festival_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2713
  },
  {
   "id": "cardi",
@@ -1089,8 +1162,9 @@
    "Cardi B at 2026 Essence Festival of Culture 02 (cropped) (cropped).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Cardi_B_2021_01.jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Cardi_B_at_2026_Essence_Festival_of_Culture_02_(cropped)_(cropped).jpg",
+  "how": "wikidata-image",
+  "width": 2839
  },
  {
   "id": "skepta",
@@ -1104,7 +1178,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Skepta_2025_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1705
  },
  {
   "id": "stormzy",
@@ -1117,7 +1192,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Stormzy_-_Openair_Frauenfeld_2019_03.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2616
  },
  {
   "id": "uzi",
@@ -1129,8 +1205,9 @@
    "Lil Uzi Vert (2018).png"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Uzi_Vert_(2018).png",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Luvlogo.png",
+  "how": "commons-depicts",
+  "width": 1000
  },
  {
   "id": "lilnasx",
@@ -1144,8 +1221,9 @@
    "Lil Nas X Talks About Gaining His Father's Acceptance, Growing Up in Atlanta, & FINDING HIMSELF 7-32 screenshot (headshot).jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Nas_X_(cropped).jpg",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Nas_X_back_stage_at_the_MTV_Video_Music_Awards_2019.jpg",
+  "how": "wikidata-image",
+  "width": 1706
  },
  {
   "id": "chance",
@@ -1158,7 +1236,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Chance_the_Rapper_2017.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 2117
  },
  {
   "id": "megan",
@@ -1171,7 +1250,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Megan_Thee_Stallion_Adweek_02.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 572
  },
  {
   "id": "popsmoke",
@@ -1183,7 +1263,8 @@
    "Pop Smoke 2020.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Pop_Smoke_2020.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 766
  },
  {
   "id": "centralcee",
@@ -1196,7 +1277,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Central_cee-5.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3078
  },
  {
   "id": "simz",
@@ -1210,7 +1292,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Little_Simz.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1280
  },
  {
   "id": "doechii",
@@ -1223,7 +1306,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Doechii_World_Pride_DC_09.jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 2252
  },
  {
   "id": "griselda",
@@ -1246,7 +1330,8 @@
   ],
   "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Playboi_Carti_(cropped).jpg",
-  "how": "commons-depicts"
+  "how": "commons-depicts",
+  "width": 1102
  },
  {
   "id": "clipse",
@@ -1259,7 +1344,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Clipse3.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1600
  },
  {
   "id": "racionais",
@@ -1267,10 +1353,13 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Racionais_MC's",
   "previous": "Racionais_MCs_na_Virada_Cultural.jpg",
   "wikidata": "https://www.wikidata.org/wiki/Q3081809",
-  "wikidataImages": [],
+  "wikidataImages": [
+   "Racionais MC's.png"
+  ],
   "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Racionais_MCs_na_Virada_Cultural.jpg",
-  "how": "wikipedia-photo"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Racionais_MC%27s.png",
+  "how": "wikidata-image",
+  "width": 410
  },
  {
   "id": "iam",
@@ -1283,7 +1372,8 @@
   ],
   "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:IAM_-_F%C3%AAte_de_l%27Humanit%C3%A9_2014_-_003.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 5184
  },
  {
   "id": "solaar",
@@ -1295,20 +1385,19 @@
    "MC Solaar Invité du RH Factor.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Solaar-Fete_de_l%27Espoir-1.JPG",
-  "how": "commons-depicts"
+  "chosen": "https://commons.wikimedia.org/wiki/File:MC_Solaar_Invit%C3%A9_du_RH_Factor.jpg",
+  "how": "wikidata-image",
+  "width": 941
  },
  {
   "id": "emicida",
   "name": "Emicida",
   "wikipedia": "https://en.wikipedia.org/wiki/Emicida",
   "previous": null,
-  "wikidata": "https://www.wikidata.org/wiki/Q611208",
-  "wikidataImages": [
-   "Emicida Festival Sensacional 2020.jpg"
-  ],
+  "wikidata": null,
+  "wikidataImages": [],
   "chosen": "https://commons.wikimedia.org/wiki/File:Emicida_Festival_Sensacional_2020.jpg",
-  "how": "wikidata-image"
+  "how": "wikipedia-photo"
  },
  {
   "id": "cindy",
@@ -1340,7 +1429,8 @@
    "Pink MoMA PS1 2 (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Pink_MoMA_PS1_2_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1239
  },
  {
   "id": "marthacooper",
@@ -1352,7 +1442,8 @@
    "Martha cooper-mika.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Martha_cooper-mika.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1095
  },
  {
   "id": "dapperdan",
@@ -1364,7 +1455,8 @@
    "Dapper Dan Interview Dec 2019.png"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Dapper_Dan_Interview_Dec_2019.png",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 360
  },
  {
   "id": "peterock",
@@ -1376,7 +1468,8 @@
    "Pete Rock at Launch Party.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Pete_Rock_at_Launch_Party.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3744
  },
  {
   "id": "largepro",
@@ -1387,8 +1480,9 @@
   "wikidataImages": [
    "Large Professor @ Rahzel and Friends - Brooklyn Bowl 2016.jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Large_Professor_@_Rahzel_and_Friends_-_Brooklyn_Bowl_2016.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Large_prof.jpg",
+  "how": "commons-depicts",
+  "width": 1600
  },
  {
   "id": "redman",
@@ -1399,8 +1493,9 @@
   "wikidataImages": [
    "2016 Redman (cropped).jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:2016_Redman_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Redman_(rapper).jpg",
+  "how": "commons-depicts",
+  "width": 1269
  },
  {
   "id": "dabrat",
@@ -1412,7 +1507,8 @@
    "Da Brat Aug 2018.png"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Da_Brat_Aug_2018.png",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 220
  },
  {
   "id": "hypewilliams",
@@ -1434,7 +1530,8 @@
    "Funkmaster Flex, 2018.png"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Funkmaster_Flex,_2018.png",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 382
  },
  {
   "id": "scarface",
@@ -1446,7 +1543,8 @@
    "Scarface (rapper) (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Scarface_(rapper)_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1598
  },
  {
   "id": "cashmoney",
@@ -1467,8 +1565,9 @@
   "wikidataImages": [
    "DMX.rapper (cropped).jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:DMX.rapper_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Academy_Awards_afterparty_CUN_DMX.jpg",
+  "how": "commons-depicts",
+  "width": 1172
  },
  {
   "id": "bigpun",
@@ -1479,8 +1578,9 @@
   "wikidataImages": [
    "Big Pun passport (cropped).jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Big_Pun_passport_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Big_Pun_passport.jpg",
+  "how": "commons-depicts",
+  "width": 273
  },
  {
   "id": "ghostface",
@@ -1492,7 +1592,8 @@
    "Ghostface Killah in 2010 (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Ghostface_Killah_in_2010_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 505
  },
  {
   "id": "mobbdeep",
@@ -1505,7 +1606,8 @@
    "Out4Fame-Festival 2015 - Mobb Deep (cropped).JPG"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Out4Fame-Festival_2015_-_Mobb_Deep.JPG",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3648
  },
  {
   "id": "lupe",
@@ -1517,7 +1619,8 @@
    "Lupe Fiasco 2012.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Lupe_Fiasco_2012.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1000
  },
  {
   "id": "djdrama",
@@ -1529,7 +1632,8 @@
    "DJ Drama.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:DJ_Drama.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3264
  },
  {
   "id": "jcole",
@@ -1541,7 +1645,8 @@
    "HOTSPOTATL - 21 Savage & J.Cole Light Birthday Bash ATL 2023 On FIRE (xu6HKf40MX0 - 2m38s) (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:HOTSPOTATL_-_21_Savage_%26_J.Cole_Light_Birthday_Bash_ATL_2023_On_FIRE_(xu6HKf40MX0_-_2m38s)_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1080
  },
  {
   "id": "meek",
@@ -1553,7 +1658,8 @@
    "Meek Mill @ Made in America 2015 VII (23724077599) (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Meek_Mill_@_Made_in_America_2015_VII_(23724077599)_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1996
  },
  {
   "id": "dannybrown",
@@ -1565,7 +1671,8 @@
    "Danny Brown at Project Pabst, May 2017.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Danny_Brown_at_Project_Pabst,_May_2017.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 3456
  },
  {
   "id": "rtj",
@@ -1578,7 +1685,8 @@
    "Run the Jewels 2015-07-05 20-37-13 eurocks.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Run_The_Jewels_at_Treefort_Music_Festival.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 5184
  },
  {
   "id": "macmiller",
@@ -1589,8 +1697,9 @@
   "wikidataImages": [
    "Mac Miller 2017.jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Mac_Miller_2017.jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Mac_Miller_(1)_%E2%80%93_splash!_Festival_20_(2017).jpg",
+  "how": "commons-depicts",
+  "width": 6032
  },
  {
   "id": "nipsey",
@@ -1602,19 +1711,18 @@
    "Soundtrack Beat Battle Judging Panel March2011 (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Soundtrack_Beat_Battle_Judging_Panel_March2011_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 909
  },
  {
   "id": "virgil",
   "name": "Virgil Abloh",
   "wikipedia": "https://en.wikipedia.org/wiki/Virgil_Abloh",
   "previous": null,
-  "wikidata": "https://www.wikidata.org/wiki/Q26703582",
-  "wikidataImages": [
-   "Virgil Abloh Paris Fashion Week Autumn Winter 2019 (cropped).jpg"
-  ],
+  "wikidata": null,
+  "wikidataImages": [],
   "chosen": "https://commons.wikimedia.org/wiki/File:Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikipedia-photo"
  },
  {
   "id": "gibbs",
@@ -1627,7 +1735,8 @@
    "Freddie Gibbs close-up from Well Being Trust.png"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:MadGibbs2014_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1207
  },
  {
   "id": "alchemist",
@@ -1639,7 +1748,8 @@
    "TheAlchemist2014.jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:TheAlchemist2014.jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 2609
  },
  {
   "id": "billywoods",
@@ -1656,8 +1766,9 @@
   "wikidataImages": [
    "Lil Baby in 2020.png"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Baby_in_2020.png",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Lil_Baby_HOTSPOTATL_2018.jpg",
+  "how": "commons-depicts",
+  "width": 459
  },
  {
   "id": "glorilla",
@@ -1669,8 +1780,9 @@
    "Glorilla in a 2023 interview (cropped).png"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Glorilla_in_a_2023_interview_(cropped).png",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Glorilla_in_a_2023_interview.png",
+  "how": "commons-depicts",
+  "width": 1920
  },
  {
   "id": "mustard",
@@ -1682,7 +1794,8 @@
    "DJ Mustard 2019 by Glenn Francis (cropped).jpg"
   ],
   "chosen": "https://commons.wikimedia.org/wiki/File:DJ_Mustard_2019_by_Glenn_Francis_(cropped).jpg",
-  "how": "wikidata-image"
+  "how": "wikidata-image",
+  "width": 1279
  },
  {
   "id": "babykeem",
@@ -1693,7 +1806,8 @@
   "wikidataImages": [
    "Baby Keep 2022 (cropped).jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Baby_Keem_2022_(cropped).jpg",
-  "how": "wikidata-image"
+  "chosen": "https://commons.wikimedia.org/wiki/File:Baby_Keem_2022.jpg",
+  "how": "commons-depicts",
+  "width": 1080
  }
 ]
