@@ -1,15 +1,29 @@
 import Link from "next/link";
 import CoverGrid from "@/components/CoverGrid";
-import CoverLink from "@/components/CoverLink";
-import { firstSentence, getCovers, getFeatured, getTypes, toCard } from "@/lib/data";
-import { fullImage, inkFor } from "@/lib/img";
+import HeroCrate, { type CrateCover } from "@/components/HeroCrate";
+import { getCovers, getFeatured, getTypes, toCard } from "@/lib/data";
+import { inkFor, squareImage } from "@/lib/img";
 
 export const revalidate = 3600;
 
 export default async function Home() {
   const [featured, covers, types] = await Promise.all([getFeatured(), getCovers(), getTypes()]);
-  const bg = featured.color ?? "#111111";
-  const ink = inkFor(bg);
+  // The crate: the cover of the week up front, then one cover from each stretch of years,
+  // so a turn of the crate walks from the early records to the newest ones.
+  const withArt = covers.filter((c) => c.image_url);
+  const byYear = [...withArt].sort((a, b) => a.release_year - b.release_year);
+  const picks = [featured];
+  const want = 20;
+  for (let i = 0; i < want * 3 && picks.length < want; i++) {
+    const c = byYear[Math.floor((i * byYear.length) / (want * 3))];
+    if (c && !picks.some((p) => p.id === c.id || p.artist === c.artist)) picks.push(c);
+  }
+  const crate: CrateCover[] = picks
+    .filter((c) => c.image_url)
+    .map((c) => {
+      const color = c.color && /^#[0-9a-f]{6}$/i.test(c.color) ? c.color : "#111111";
+      return { slug: c.slug, title: c.title, artist: c.artist, year: c.release_year, image: squareImage(c.image_url, 600), color, ink: inkFor(color) };
+    });
   const recent = covers.filter((c) => c.id !== featured.id).slice(0, 12);
 
   const doors = [
@@ -21,28 +35,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className="feature" style={{ "--bg": bg, "--ink": ink } as React.CSSProperties}>
-        <CoverLink href={`/covers/${featured.slug}`} className="feature-link">
-          <span className="feature-art" data-art>
-            <img
-              src={fullImage(featured.image_url, 1400)}
-              alt={`${featured.title} by ${featured.artist}, album cover`}
-              width={1400}
-              height={1400}
-              fetchPriority="high"
-            />
-          </span>
-          <span className="feature-text">
-            <span className="feature-label">Cover of the week</span>
-            <span className="feature-title">{featured.title}</span>
-            <span className="feature-artist">
-              {featured.artist}, {featured.release_year}
-            </span>
-            <span className="feature-story">{firstSentence(featured.description_html)}</span>
-            <span className="feature-more">Read the story</span>
-          </span>
-        </CoverLink>
-      </section>
+      <HeroCrate covers={crate} total={covers.length} since={byYear[0]?.release_year ?? 1980} />
 
       <section className="home-section" aria-labelledby="recent-h">
         <div className="section-head">
