@@ -158,10 +158,9 @@ h6 {
 }
 
 .wordmark {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.015em;
   text-decoration: none;
   font-family: var(--sans);
 }
@@ -287,8 +286,8 @@ h6 {
 
 .footer-mark {
   color: var(--page-ink, var(--ink));
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   font-family: var(--sans);
