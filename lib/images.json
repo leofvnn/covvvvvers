@@ -997,6 +997,14 @@
    },
    "cover": true
   },
+  "Food & Liquor|Lupe Fiasco": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/4/49/Foodliquor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "full": "https://upload.wikimedia.org/wikipedia/en/4/49/Foodliquor.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Lupe_Fiasco's_Food_%26_Liquor"
+   }
+  },
   "King|T.I.": {
    "src": "https://upload.wikimedia.org/wikipedia/en/1/10/King_%28album%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
    "full": "https://upload.wikimedia.org/wikipedia/en/1/10/King_%28album%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
@@ -1060,6 +1068,14 @@
    "source": {
     "name": "Wikipedia",
     "url": "https://en.wikipedia.org/wiki/Man_on_the_Moon%3A_The_End_of_Day"
+   }
+  },
+  "Only Built 4 Cuban Linx... Pt. II|Raekwon": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/d/d4/Raekwon-OnlyBuilt4CubanLinxIICover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "full": "https://upload.wikimedia.org/wikipedia/en/d/d4/Raekwon-OnlyBuilt4CubanLinxIICover.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Only_Built_4_Cuban_Linx..._Pt._II"
    }
   },
   "My Beautiful Dark Twisted Fantasy|Kanye West": {
@@ -1862,6 +1878,14 @@
     "url": "https://en.wikipedia.org/wiki/Technics_SL-1200"
    }
   },
+  "SL-1200MK2|Technics": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Technics_SL-1200MK2-2.jpg/960px-Technics_SL-1200MK2-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "full": "https://upload.wikimedia.org/wikipedia/commons/5/50/Technics_SL-1200MK2-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Technics_SL-1200"
+   }
+  },
   "Christmas Rappin'|Kurtis Blow": {
    "src": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/600x600bb.jpg",
    "full": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/2000x2000bb.jpg",
@@ -1884,6 +1908,14 @@
    "source": {
     "name": "Wikipedia",
     "url": "https://en.wikipedia.org/wiki/The_Breaks_(song)"
+   }
+  },
+  "TR-808 Rhythm Composer|Roland": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg/960px-TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "full": "https://upload.wikimedia.org/wikipedia/commons/e/e6/TR-808_-_MIM%2C_Phoenix_%282019-08-30_14.59.26_by_Bryan_Pocius%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Roland_TR-808"
    }
   },
   "Rapture|Blondie": {
@@ -2012,6 +2044,22 @@
    "source": {
     "name": "Wikipedia",
     "url": "https://en.wikipedia.org/wiki/E-mu_SP-1200"
+   }
+  },
+  "MPC60|Akai and Roger Linn": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Akai_MPC60.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "full": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Akai_MPC60.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Akai_MPC"
+   }
+  },
+  "The Bridge|MC Shan": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/f/fc/Down_by_Law_%28MC_Shan_album%29_coveart.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "full": "https://upload.wikimedia.org/wikipedia/en/f/fc/Down_by_Law_%28MC_Shan_album%29_coveart.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+   "source": {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Down_by_Law_(MC_Shan_album)"
    }
   },
   "Push It|Salt-N-Pepa": {
@@ -3033,6 +3081,20 @@
    "license": "CC BY-SA 3.0",
    "from": "commons"
   },
+  "screw": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/7/7d/DJ_Screw.jpeg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://en.wikipedia.org/wiki/File:DJ_Screw.jpeg",
+   "credit": null,
+   "license": "Fair use",
+   "from": "wikipedia-nonfree"
+  },
+  "ugk": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/0/0b/Underground_Kingz.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://en.wikipedia.org/wiki/File:Underground_Kingz.jpg",
+   "credit": null,
+   "license": "Fair use",
+   "from": "wikipedia-nonfree"
+  },
   "masterp": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Master_p-02.jpg/960px-Master_p-02.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "page": "https://commons.wikimedia.org/wiki/File:Master_p-02.jpg",
@@ -3123,6 +3185,13 @@
    "credit": "Photographer: Evan Guest Retouches by BLZ—however, there is no need to credit me for these edits to satisfy the Creative Commons license requirements described below, instead please just credit the original photographer.",
    "license": "CC BY 2.0",
    "from": "commons"
+  },
+  "dilla": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/2/27/J_Dilla_1996_photograph.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://en.wikipedia.org/wiki/File:J_Dilla_1996_photograph.jpg",
+   "credit": "Bruce Giffin",
+   "license": "Fair use",
+   "from": "wikipedia-nonfree"
   },
   "madlib": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/MadlibMarch2014Echo_%28cropped%29.jpg/960px-MadlibMarch2014Echo_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3362,6 +3431,13 @@
    "license": "CC BY-SA 2.0",
    "from": "wikipedia"
   },
+  "cindy": {
+   "src": "https://upload.wikimedia.org/wikipedia/en/0/05/Cindy_Campbell.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://en.wikipedia.org/wiki/File:Cindy_Campbell.jpg",
+   "credit": "Dimension Films and Miramax Films",
+   "license": "Fair use",
+   "from": "wikipedia-nonfree"
+  },
   "ladypink": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Pink_MoMA_PS1_2_%28cropped%29.jpg/960px-Pink_MoMA_PS1_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "page": "https://commons.wikimedia.org/wiki/File:Pink_MoMA_PS1_2_(cropped).jpg",
@@ -3574,22 +3650,11 @@
   }
  },
  "missing": {
-  "records": [
-   "Food & Liquor|Lupe Fiasco",
-   "Only Built 4 Cuban Linx... Pt. II|Raekwon",
-   "SL-1200MK2|Technics",
-   "TR-808 Rhythm Composer|Roland",
-   "MPC60|Akai and Roger Linn",
-   "The Bridge|MC Shan"
-  ],
+  "records": [],
   "people": [
    "sharock",
    "shocklee",
-   "screw",
-   "ugk",
-   "dilla",
    "griselda",
-   "cindy",
    "crazylegs",
    "hypewilliams"
   ]
