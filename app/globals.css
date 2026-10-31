@@ -4382,13 +4382,14 @@ html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
   padding: 0 8px;
 }
 
-/* Page headings: 45px on desktop, 30px on phones. */
-h1 {
+/* Page headings: 45px on desktop, 30px on phones. The :not() only raises the rule above
+   page-level heading rules like .page-head h1, so these sizes always win. */
+h1:not(.h-none) {
   font-size: 45px;
 }
 
 @media (max-width: 799px) {
-  h1 {
+  h1:not(.h-none) {
     font-size: 30px;
   }
 }
