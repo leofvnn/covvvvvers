@@ -55,7 +55,7 @@ export default function MoveImages({ remaining: initial }: { remaining: number }
         into your Supabase storage and points the site at the copy. Keep this page open until it finishes.
       </p>
       <div className="intro-actions">
-        <button className="button solid" type="button" onClick={run} disabled={running}>
+        <button className="button solid" type="button" onClick={run} disabled={running} aria-busy={running}>
           {running ? `Moving images, ${remaining} left` : "Move images to Supabase"}
         </button>
         {running && (

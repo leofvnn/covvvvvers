@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+import { startProgress } from "@/lib/progress";
 import { getBrowserClient } from "@/lib/supabase/client";
 
 type Props = {
@@ -20,11 +21,13 @@ export default function ListOwnerTools({ id, title, description, isPublic, cover
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [busy, setBusy] = useState<"" | "save" | "delete">("");
 
   const save = async (e: React.FormEvent) => {
     e.preventDefault();
     const db = getBrowserClient();
     if (!db) return;
+    setBusy("save");
     const { error } = await db
       .from("lists")
       .update({
@@ -36,8 +39,10 @@ export default function ListOwnerTools({ id, title, description, isPublic, cover
       .eq("id", id);
     if (error) {
       setError("The changes didn't save. Try again.");
+      setBusy("");
       return;
     }
+    setBusy("");
     dialog.current?.close();
     router.refresh();
   };
@@ -52,11 +57,14 @@ export default function ListOwnerTools({ id, title, description, isPublic, cover
   const destroy = async () => {
     const db = getBrowserClient();
     if (!db) return;
+    setBusy("delete");
     const { error } = await db.from("lists").delete().eq("id", id);
     if (error) {
       setError("The list wasn't deleted. Try again.");
+      setBusy("");
       return;
     }
+    startProgress();
     router.push("/me#lists");
   };
 
@@ -123,13 +131,13 @@ export default function ListOwnerTools({ id, title, description, isPublic, cover
               </ul>
             </fieldset>
           )}
-          <button className="button solid" type="submit">
+          <button className="button solid" type="submit" disabled={!!busy} aria-busy={busy === "save"}>
             Save changes
           </button>
           {confirmDelete ? (
             <p className="danger-row">
               Delete this list for good?{" "}
-              <button type="button" className="text-button danger" onClick={destroy}>
+              <button type="button" className="text-button danger" onClick={destroy} disabled={!!busy} aria-busy={busy === "delete"}>
                 Delete list
               </button>{" "}
               <button type="button" className="text-button" onClick={() => setConfirmDelete(false)}>

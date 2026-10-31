@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { doneProgress, markPressed, startProgress } from "./progress";
 
 type Router = ReturnType<typeof useRouter>;
 
@@ -8,6 +9,7 @@ let pending: (() => void) | null = null;
 
 /** Called by <NavTransitions> once the new page has rendered. */
 export function finishTransition() {
+  doneProgress();
   if (!pending) return;
   const done = pending;
   pending = null;
@@ -23,6 +25,10 @@ export function navigateWithTransition(router: Router, href: string, art?: HTMLE
     startViewTransition?: (cb: () => Promise<void>) => { finished: Promise<void> };
   };
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Show the click landed before anything else: the loading bar and a pressed state.
+  const target = new URL(href, window.location.href);
+  if (target.pathname !== window.location.pathname) startProgress();
+  markPressed(art?.closest("a") ?? art);
   if (!doc.startViewTransition || reduce) {
     router.push(href);
     return;
@@ -39,8 +45,14 @@ export function navigateWithTransition(router: Router, href: string, art?: HTMLE
       new Promise<void>((resolve) => {
         pending = resolve;
         router.push(href);
-        // Never leave the page frozen if the new route is slow.
-        setTimeout(finishTransition, 1200);
+        // A view transition holds the old page still until the new one is ready. If that
+        // takes more than a moment, let go so the loading bar shows while it arrives.
+        setTimeout(() => {
+          if (pending === resolve) {
+            pending = null;
+            resolve();
+          }
+        }, 350);
       }),
   );
   t.finished.finally(() => {

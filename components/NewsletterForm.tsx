@@ -17,7 +17,7 @@ export default function NewsletterForm() {
       ) : (
         <div className="newsletter-row">
           <input id="nl-email" name="email" type="email" required placeholder="Your email" autoComplete="email" />
-          <button className="button solid" type="submit" disabled={pending}>
+          <button className="button solid" type="submit" disabled={pending} aria-busy={pending}>
             {pending ? "Joining" : "Join"}
           </button>
         </div>

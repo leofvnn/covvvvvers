@@ -76,7 +76,7 @@ export default function FavoriteButton({ coverId, slug }: { coverId: string; slu
 
   return (
     <>
-      <button type="button" className="save" aria-pressed={saved} onClick={toggle} disabled={busy}>
+      <button type="button" className="save" aria-pressed={saved} onClick={toggle} disabled={busy} aria-busy={busy}>
         <Heart filled={saved} />
         {saved ? "Saved" : "Save"}
       </button>

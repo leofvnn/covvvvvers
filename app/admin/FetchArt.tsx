@@ -56,7 +56,7 @@ export default function FetchArt({ remaining: initial }: { remaining: number }) 
         soon as they have an image. Keep this page open until it finishes.
       </p>
       <div className="intro-actions">
-        <button className="button solid" type="button" onClick={run} disabled={running}>
+        <button className="button solid" type="button" onClick={run} disabled={running} aria-busy={running}>
           {running ? `Fetching covers, ${remaining} left` : "Fetch cover art"}
         </button>
         {running && (

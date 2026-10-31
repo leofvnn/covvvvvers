@@ -135,7 +135,7 @@ export default function AddToList({ coverId, slug }: { coverId: string; slug: st
               placeholder="New list, like Best 90s covers"
               maxLength={80}
             />
-            <button className="button solid" type="submit" disabled={busy || !title.trim()}>
+            <button className="button solid" type="submit" disabled={busy || !title.trim()} aria-busy={busy}>
               Create
             </button>
           </form>

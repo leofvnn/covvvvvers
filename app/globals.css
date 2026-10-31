@@ -4317,3 +4317,122 @@ h1:not(.h-none) {
 .image-source a {
   color: inherit;
 }
+
+/* ------------------------------------------------------------------ */
+/* Loading feedback                                                     */
+
+/* A thin bar along the top while the next page loads. It creeps towards the end
+   and finishes when the page arrives. */
+.nav-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 3px;
+  background: var(--page-ink, var(--ink));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-progress.is-loading {
+  opacity: 1;
+  animation: nav-creep 8s cubic-bezier(0.1, 0.7, 0.2, 1) forwards;
+}
+
+.nav-progress.is-done {
+  transform: scaleX(1);
+  opacity: 0;
+  animation: none;
+  transition: transform 0.2s ease, opacity 0.3s ease 0.15s;
+}
+
+@keyframes nav-creep {
+  0% {
+    transform: scaleX(0);
+  }
+  10% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: scaleX(0.92);
+  }
+}
+
+html[data-loading] body {
+  cursor: progress;
+}
+
+/* What was clicked dims a little right away, so the click clearly landed. */
+.is-pressed {
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+/* Buttons respond to the press itself. */
+.button,
+.save,
+.shuffle,
+.menu-button,
+.text-button,
+.theme-toggle button,
+.h-rail button,
+.h-era-artists button {
+  transition-property: transform, background-color, color, opacity, border-color;
+  transition-duration: 0.15s;
+}
+
+.button:active:not(:disabled),
+.save:active:not(:disabled),
+.shuffle:active,
+.menu-button:active,
+.h-rail button:active,
+.h-era-artists button:active {
+  transform: scale(0.96);
+}
+
+/* A spinner inside any button that is saving or loading. */
+[aria-busy="true"] {
+  position: relative;
+  cursor: progress;
+}
+
+button[aria-busy="true"] {
+  color: transparent !important;
+}
+
+button[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--page-ink, var(--ink));
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: busy-spin 0.7s linear infinite;
+}
+
+.button.solid[aria-busy="true"]::after {
+  border-color: var(--paper);
+  border-right-color: transparent;
+}
+
+@keyframes busy-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-progress.is-loading {
+    animation: none;
+    transform: scaleX(0.6);
+  }
+  button[aria-busy="true"]::after {
+    animation-duration: 2s;
+  }
+}
