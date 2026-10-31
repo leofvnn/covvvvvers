@@ -66,11 +66,13 @@ export default async function CoverPage({ params }: Params) {
   const quote = cover.pull_quote ?? pickPullQuote(cover.description_html);
   const [firstPara, restParas] = essayParts(cover.description_html ?? "");
 
-  const listen = [
-    ["Spotify", cover.spotify_url],
-    ["Apple Music", cover.apple_music_url],
-    ["YouTube", cover.youtube_url],
-  ].filter(([, url]) => url) as [string, string][];
+  // Saved links where we have them, otherwise a search for this exact album.
+  const q = encodeURIComponent(`${cover.artist} ${cover.title}`);
+  const listen: [string, string][] = [
+    ["Spotify", cover.spotify_url ?? `https://open.spotify.com/search/${q}`],
+    ["Apple Music", cover.apple_music_url ?? `https://music.apple.com/us/search?term=${q}`],
+    ["YouTube", cover.youtube_url ?? `https://www.youtube.com/results?search_query=${q}+full+album`],
+  ];
 
   const sleeve: [string, React.ReactNode][] = [
     ["Album", cover.title],

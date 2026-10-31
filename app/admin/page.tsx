@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
+import FetchArt from "./FetchArt";
 import MoveImages from "./MoveImages";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +10,7 @@ export const metadata: Metadata = { title: "Admin", robots: { index: false } };
 export default async function AdminHome() {
   const { db } = await requireAdmin("/admin");
   const count = async (q: PromiseLike<{ count: number | null }>) => (await q).count ?? 0;
-  const [published, drafts, pending, feedback, subscribers, coversOnWix, typesOnWix] = await Promise.all([
+  const [published, drafts, pending, feedback, subscribers, coversOnWix, typesOnWix, noImage] = await Promise.all([
     count(db.from("covers").select("id", { count: "exact", head: true }).eq("status", "published")),
     count(db.from("covers").select("id", { count: "exact", head: true }).eq("status", "draft")),
     count(db.from("submissions").select("id", { count: "exact", head: true }).eq("status", "pending")),
@@ -17,6 +18,7 @@ export default async function AdminHome() {
     count(db.from("subscribers").select("id", { count: "exact", head: true }).is("unsubscribed_at", null)),
     count(db.from("covers").select("id", { count: "exact", head: true }).like("image_url", "%static.wixstatic.com%")),
     count(db.from("cover_types").select("id", { count: "exact", head: true }).like("hero_image", "%static.wixstatic.com%")),
+    count(db.from("covers").select("id", { count: "exact", head: true }).is("image_url", null)),
   ]);
 
   const tiles = [
@@ -43,6 +45,12 @@ export default async function AdminHome() {
         <section className="review-group">
           <h2>Cover images</h2>
           <MoveImages remaining={coversOnWix + typesOnWix} />
+        </section>
+      )}
+      {noImage > 0 && (
+        <section className="review-group">
+          <h2>New covers</h2>
+          <FetchArt remaining={noImage} />
         </section>
       )}
     </section>
