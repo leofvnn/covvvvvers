@@ -19,7 +19,7 @@ export type CoverMini = {
   apple?: string | null;
   youtube?: string | null;
 };
-type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][] };
+type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][]; art?: string | null };
 type MomentView = Omit<Moment, "records"> & { records: RecordView[] };
 export type EraView = {
   id: string;
@@ -35,7 +35,7 @@ export type EraView = {
   posterCover: CoverMini | null;
   covers: number;
   contributors: (Person & { id: string })[];
-  years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][] })[] }[];
+  years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][]; art?: string | null })[] }[];
 };
 
 const GUIDE: [keyof Guide, string][] = [
@@ -141,7 +141,11 @@ function RecordChip({ r }: { r: RecordView }) {
   return (
     <li className="h-record">
       <span className="h-record-main">
+        {r.art ? (
+        <ArtImage src={r.art} alt="" className="h-record-art" fallback={<span className={`h-record-icon ${r.kind}`} aria-hidden="true" />} />
+      ) : (
         <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
+      )}
         <span className="h-record-text">
           <strong>{r.title}</strong>
           <span>
@@ -154,16 +158,35 @@ function RecordChip({ r }: { r: RecordView }) {
   );
 }
 
-function KeyCard({ r }: { r: KeyRecord & { cover: CoverMini | null; listen: [string, string][] } }) {
+function Blank({ r }: { r: HistoryRecord }) {
+  return (
+    <span className={`h-key-art is-blank kind-${r.kind}`} aria-hidden="true">
+      <span>{r.title}</span>
+    </span>
+  );
+}
+
+/** Outside artwork, swapped for the placeholder if it fails to load. */
+function ArtImage({ src, alt, className, fallback }: { src: string; alt: string; className: string; fallback: React.ReactNode }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return <>{fallback}</>;
+  return (
+    <span className={className}>
+      <img src={src} alt={alt} width={200} height={200} loading="lazy" onError={() => setFailed(true)} />
+    </span>
+  );
+}
+
+function KeyCard({ r }: { r: KeyRecord & { cover: CoverMini | null; listen: [string, string][]; art?: string | null } }) {
   const kind = KIND[r.kind];
   const art = r.cover ? (
     <span className="h-key-art" data-art>
       <img src={squareImage(r.cover.image, 400)} alt={`${r.title} by ${r.artist}, cover`} width={200} height={200} loading="lazy" />
     </span>
+  ) : r.art ? (
+    <ArtImage src={r.art} alt={`${r.title} by ${r.artist}, cover`} className="h-key-art" fallback={<Blank r={r} />} />
   ) : (
-    <span className={`h-key-art is-blank kind-${r.kind}`} aria-hidden="true">
-      <span>{r.title}</span>
-    </span>
+    <Blank r={r} />
   );
   return (
     <li className="h-key">

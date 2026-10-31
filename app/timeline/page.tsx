@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import History, { type CoverMini, type EraView } from "@/components/History";
+import { artworkFor } from "@/lib/artwork";
 import { CHAPTERS } from "@/lib/chapters";
 import { getCovers } from "@/lib/data";
 import { MOMENTS, SOURCES, type HistoryRecord } from "@/lib/history";
@@ -57,7 +59,7 @@ export default async function TimelinePage() {
 
   const withLinks = <R extends HistoryRecord>(r: R) => {
     const cover = r.kind === "album" || r.kind === "mixtape" ? findCover(r.title, r.artist) : null;
-    if (r.kind !== "song" && r.kind !== "album" && r.kind !== "mixtape") return { ...r, cover, listen: [] as [string, string][] };
+    if (r.kind !== "song" && r.kind !== "album" && r.kind !== "mixtape") return { ...r, cover, listen: [] as [string, string][], art: null as string | null };
     // Exact links where we have them, otherwise a search for that exact song or album.
     const q = encodeURIComponent(`${r.title} ${r.artist.split(/ feat\. | & | and /)[0]}`);
     const id = SPOTIFY[`${r.title}|${r.artist}`];
@@ -66,8 +68,28 @@ export default async function TimelinePage() {
       ["Apple Music", cover?.apple ?? `https://music.apple.com/us/search?term=${q}`],
       ["YouTube", cover?.youtube ?? `https://www.youtube.com/results?search_query=${q}`],
     ];
-    return { ...r, cover, listen };
+    return { ...r, cover, listen, art: cover ? null : (art.get(`${r.title}|${r.artist}`) ?? null) };
   };
+
+  // Real cover art for every song, album and mixtape that isn't in the collection yet.
+  const musical = (k: string) => k === "song" || k === "album" || k === "mixtape";
+  const wanted = new Map<string, { key: string; title: string; artist: string; kind: string }>();
+  const consider = (r: HistoryRecord) => {
+    if (!musical(r.kind)) return;
+    if ((r.kind === "album" || r.kind === "mixtape") && findCover(r.title, r.artist)) return;
+    const key = `${r.title}|${r.artist}`;
+    if (!wanted.has(key)) wanted.set(key, { key, title: r.title, artist: r.artist, kind: r.kind });
+  };
+  for (const ch of CHAPTERS) {
+    ch.records.forEach(consider);
+    for (const id of ch.moments) (MOMENTS[id]?.records ?? []).forEach(consider);
+  }
+  // Cached for a week so MusicBrainz is only asked again when something changes.
+  const items = [...wanted.values()];
+  const found = await unstable_cache(async () => [...(await artworkFor(items)).entries()], ["timeline-artwork", JSON.stringify(items.map((i) => i.key))], {
+    revalidate: 60 * 60 * 24 * 7,
+  })();
+  const art = new Map(found);
 
   // A moment's year: the first year it names, or the middle of the decade it names.
   const yearOf = (when: string) => {
