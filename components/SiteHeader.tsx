@@ -16,7 +16,6 @@ const MAIN = [
   { href: "/games", label: "Games" },
 ];
 
-const MORE = [{ href: "/colors", label: "Colours" }];
 
 const CONTRIBUTE = [
   { href: "/submit", label: "Submit a cover" },
@@ -78,13 +77,6 @@ export default function SiteHeader() {
           <nav id="menu" className="menu-sheet" aria-label="Main" hidden={!open}>
             <div className="menu-main">
               {MAIN.map((l) => (
-                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-            <div className="menu-more">
-              {MORE.map((l) => (
                 <Link key={l.href} href={l.href} aria-current={current(l.href)}>
                   {l.label}
                 </Link>

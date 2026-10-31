@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
   staticPageGenerationTimeout: 180,
   // The quiz became the Games section.
   async redirects() {
-    return [{ source: "/quiz", destination: "/games", permanent: true }];
+    return [
+      { source: "/quiz", destination: "/games", permanent: true },
+      // Colours is a filter on the covers page now; the query string carries over.
+      { source: "/colors", destination: "/covers", permanent: true },
+    ];
   },
   // The share images read these font files at runtime.
   outputFileTracingIncludes: {

@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { FAMILIES } from "@/lib/color";
 import { getBrowserClient } from "@/lib/supabase/client";
 import type { CoverCard as Card } from "@/lib/types";
 import CoverCard, { cardMeta } from "./CoverCard";
 
 type Sort = "newest" | "added" | "oldest" | "az" | "saved";
-type Filters = { type: string; decade: string; country: string; q: string; sort: Sort };
-const EMPTY: Filters = { type: "", decade: "", country: "", q: "", sort: "newest" };
+type Filters = { type: string; color: string; decade: string; country: string; q: string; sort: Sort };
+const EMPTY: Filters = { type: "", color: "", decade: "", country: "", q: "", sort: "newest" };
 
 const SORTS: { value: Sort; label: string }[] = [
   { value: "newest", label: "Newest releases" },
@@ -19,7 +20,7 @@ const SORTS: { value: Sort; label: string }[] = [
 
 type Props = {
   covers: Card[];
-  /** Show search, sorting and the type, decade and country filters. */
+  /** Show search, sorting and the type, colour, decade and country filters. */
   filters?: boolean;
   types?: { slug: string; title: string }[];
   emptyText?: string;
@@ -41,6 +42,8 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
     const sort = p.get("sort") as Sort | null;
     setF({
       type: p.get("type") ?? "",
+      // "c" is the old Colours page's link format, which now redirects here.
+      color: p.get("color") ?? p.get("c") ?? "",
       decade: p.get("decade") ?? "",
       country: p.get("country") ?? "",
       q: p.get("q") ?? "",
@@ -70,6 +73,8 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
     });
   }, [f.sort, saves]);
 
+  // Colours in the order of the colour wheel, only those some cover has.
+  const colors = useMemo(() => FAMILIES.filter((fam) => covers.some((c) => c.family === fam.slug)), [covers]);
   const decades = useMemo(() => [...new Set(covers.map((c) => c.decade))].sort().reverse(), [covers]);
   const countries = useMemo(
     () => [...new Set(covers.map((c) => c.country).filter(Boolean) as string[])].sort((a, b) => a.localeCompare(b)),
@@ -81,6 +86,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
     const list = covers.filter(
       (c) =>
         (!f.type || c.type?.slug === f.type) &&
+        (!f.color || c.family === f.color) &&
         (!f.decade || c.decade === f.decade) &&
         (!f.country || c.country === f.country) &&
         (!q ||
@@ -112,7 +118,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
     return inTitle ? undefined : `${cardMeta(c, showType)}. Mentioned in the story`;
   };
 
-  const activeCount = [f.type, f.decade, f.country].filter(Boolean).length;
+  const activeCount = [f.type, f.color, f.decade, f.country].filter(Boolean).length;
   const set = (k: keyof Filters) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setF({ ...f, [k]: e.target.value });
 
@@ -135,6 +141,17 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
           {types.map((t) => (
             <option key={t.slug} value={t.slug}>
               {t.title}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="field">
+        <span>Colour</span>
+        <select value={f.color} onChange={set("color")}>
+          <option value="">All colours</option>
+          {colors.map((c) => (
+            <option key={c.slug} value={c.slug}>
+              {c.name}
             </option>
           ))}
         </select>
