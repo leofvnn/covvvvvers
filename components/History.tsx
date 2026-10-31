@@ -236,7 +236,7 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: S
       </nav>
 
       <div className="h-story">
-        {eras.map((era, i) => {
+        {eras.map((era) => {
           return (
             <section
               key={era.id}
@@ -248,9 +248,7 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: S
             >
               <div className="h-era-band">
                 <div className="h-era-text">
-                  <p className="h-era-num">
-                    Chapter {i + 1} · {era.span}
-                  </p>
+                  <p className="h-era-num">{era.span}</p>
                   <h2 id={`${era.id}-title`}>{era.title}</h2>
                   <p className="h-era-intro">{era.intro}</p>
                 </div>
