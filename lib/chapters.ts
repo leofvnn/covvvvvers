@@ -398,7 +398,7 @@ export const CHAPTERS: Chapter[] = [
   {
     id: "now",
     label: "2020s",
-    span: "2020 to now",
+    span: "2020 to 2026",
     from: 2020,
     to: 2026,
     title: "Modern hip-hop",
