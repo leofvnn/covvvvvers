@@ -79,6 +79,15 @@ const MUSIC_DESC = /album|song|single|mixtape|\bep\b|record|soundtrack|compilati
 
 // ------------------------------------------------------------------ records
 
+/** The lead image of a named Wikipedia article (for the hand-picked overrides). */
+async function fromWikipediaPage(title) {
+  const data = await wiki({ action: "query", titles: title, redirects: "1", prop: "pageimages", piprop: "thumbnail|original", pithumbsize: "600", pilicense: "any" });
+  const p = data?.query?.pages?.[0];
+  const img = p?.thumbnail?.source ?? p?.original?.source;
+  if (img && (await loads(img))) return { src: img, full: p.original?.source ?? img, source: { name: "Wikipedia", url: wikiPage(p.title) } };
+  return null;
+}
+
 async function fromWikipedia(r) {
   const artist = mainArtist(r.artist);
   const queries = MUSIC.has(r.kind)
@@ -188,11 +197,13 @@ async function person(p) {
     const own = await fileInfo(p.file);
     if (own) return { ...own, from: "commons" };
   }
-  const data = await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageimages", piprop: "name", pilicense: "free" });
-  const name = data?.query?.pages?.[0]?.pageimage;
-  if (name) {
+  // A freely licensed lead photo first; otherwise whatever photo the article uses, credited to it.
+  for (const pilicense of ["free", "any"]) {
+    const data = await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageimages", piprop: "name", pilicense });
+    const name = data?.query?.pages?.[0]?.pageimage;
+    if (!name) continue;
     const lead = await fileInfo(name);
-    if (lead) return { ...lead, from: "wikipedia" };
+    if (lead) return { ...lead, from: pilicense === "free" ? "wikipedia" : "wikipedia-nonfree" };
   }
   return null;
 }
@@ -204,15 +215,24 @@ let prev = {};
 try {
   prev = JSON.parse(readFileSync("lib/images.json", "utf8"));
 } catch {}
+let overrides = { records: {} };
+try {
+  overrides = JSON.parse(readFileSync("scripts/image-overrides.json", "utf8"));
+} catch {}
 const out = { records: {}, people: {}, missing: { records: [], people: [] } };
-const only = process.env.ONLY; // "records" or "people" to redo one half
+// Images found before are kept, so a run only searches for what's new or still missing.
+// ONLY=records or ONLY=people searches that half again from scratch; FRESH=1 redoes everything.
+const only = process.env.ONLY;
+const fresh = process.env.FRESH === "1";
+const keep = (half, key) => !fresh && only !== half && prev[half]?.[key];
 
 for (const [i, r] of req.records.entries()) {
-  if (only === "people" && prev.records?.[r.key]) {
+  if (keep("records", r.key) && !overrides.records?.[r.key]) {
     out.records[r.key] = prev.records[r.key];
     continue;
   }
-  const hit = (await fromWikipedia(r)) ?? (await fromCoverArtArchive(r)) ?? (await fromAppleMusic(r));
+  const page = overrides.records?.[r.key];
+  const hit = (page && (await fromWikipediaPage(page))) ?? (await fromWikipedia(r)) ?? (await fromCoverArtArchive(r)) ?? (await fromAppleMusic(r));
   // "cover": a collection cover whose art comes from here, so the site keeps crediting it.
   if (hit) out.records[r.key] = r.cover ? { ...hit, cover: true } : hit;
   else out.missing.records.push(r.key);
@@ -220,7 +240,7 @@ for (const [i, r] of req.records.entries()) {
 }
 
 for (const [i, p] of req.people.entries()) {
-  if (only === "records" && prev.people?.[p.id]) {
+  if (keep("people", p.id)) {
     out.people[p.id] = prev.people[p.id];
     continue;
   }

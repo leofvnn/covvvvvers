@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "Redo only 'records' or 'people' (blank for both)"
+        description: "Search 'records' or 'people' again from scratch (blank: only what's new or missing)"
         required: false
         default: ""
   push:
@@ -14,6 +14,7 @@ on:
     paths:
       - scripts/image-requests.json
       - scripts/resolve-images.mjs
+      - scripts/image-overrides.json
 
 permissions:
   contents: write

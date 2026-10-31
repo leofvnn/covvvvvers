@@ -1,0 +1,11 @@
+{
+ "_note": "Wikipedia articles to take an image from when the automatic search can't find the right one. Keys match scripts/image-requests.json.",
+ "records": {
+  "Food & Liquor|Lupe Fiasco": "Lupe Fiasco's Food & Liquor",
+  "Only Built 4 Cuban Linx... Pt. II|Raekwon": "Only Built 4 Cuban Linx... Pt. II",
+  "SL-1200MK2|Technics": "Technics SL-1200",
+  "TR-808 Rhythm Composer|Roland": "Roland TR-808",
+  "MPC60|Akai and Roger Linn": "Akai MPC",
+  "The Bridge|MC Shan": "The Bridge (MC Shan song)"
+ }
+}
