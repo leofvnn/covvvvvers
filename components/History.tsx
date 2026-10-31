@@ -213,7 +213,6 @@ function KeyCard({ r }: { r: KeyRecord & { cover: CoverMini | null; listen: [str
 export default function History({ eras, sources }: { eras: EraView[]; sources: { title: string; url: string }[] }) {
   const [filter, setFilter] = useState<Tag | "all">("all");
   const [active, setActive] = useState<string | undefined>(eras[0]?.id);
-  const [year, setYear] = useState(NOW);
   const [progress, setProgress] = useState(0);
   const [flash, setFlash] = useState<string | null>(null);
   const [person, setPerson] = useState<{ era: string; index: number } | null>(null);
@@ -224,21 +223,6 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   const people = useMemo(() => new Set(eras.flatMap((e) => e.contributors.map((p) => p.id))).size, [eras]);
   const shown = (m: MomentView) => filter === "all" || m.tags.includes(filter);
   const count = useMemo(() => eras.reduce((n, e) => n + e.years.reduce((k, y) => k + y.moments.filter(shown).length, 0), 0), [eras, filter]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // The hero year ticks from 1973 up to today.
-  useEffect(() => {
-    if (reduced()) return;
-    setYear(FIRST);
-    let raf = 0;
-    const start = performance.now();
-    const tick = (t: number) => {
-      const p = Math.min(1, (t - start) / 1800);
-      setYear(Math.round(FIRST + (NOW - FIRST) * (1 - (1 - p) ** 3)));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, []);
 
   // Which era is on screen, and how far through the story the reader is.
   useEffect(() => {
@@ -318,16 +302,10 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
     <div className="history" ref={root}>
       <header className="h-hero">
         <p className="h-kicker">The story of hip-hop</p>
-        <h1 className="h-hero-year" aria-label={`${FIRST} to ${NOW}`}>
-          <span>{FIRST}</span>
-          <span className="h-hero-arrow" aria-hidden="true">
-            →
-          </span>
-          <span className="h-hero-now">{year}</span>
-        </h1>
+        <h1>Through the Years</h1>
         <p className="h-hero-lede">
-          How a back-to-school party in a Bronx rec room grew into the biggest music in the world, year by year: {total} milestones,
-          {records} key records and {people} people who made it happen.
+          How a back-to-school party in a Bronx rec room grew into the biggest music in the world, year by year, {FIRST} to {NOW}:{" "}
+          {total} milestones, {records} key records and {people} people who made it happen.
         </p>
         <div className="h-hero-actions">
           <button type="button" className="button solid" onClick={() => go(eras[0].id)}>

@@ -1822,25 +1822,6 @@ kbd {
   color: var(--muted);
 }
 
-.h-hero-year {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 0.25em;
-  margin: 0;
-  font-size: clamp(4rem, 15vw, 12rem);
-  font-weight: 800;
-  line-height: 0.86;
-  letter-spacing: -0.03em;
-  font-family: var(--display);
-  font-variant-numeric: tabular-nums;
-}
-
-.h-hero-arrow {
-  font-weight: 400;
-  color: var(--muted);
-}
-
 .h-hero-lede {
   max-width: 58ch;
   margin: 6px 0 0;
@@ -4444,13 +4425,13 @@ html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
   padding: 0 8px;
 }
 
-/* Page headings: 45px on desktop, 30px on phones. The timeline's big year counter keeps its own size. */
-h1:not(.h-hero-year) {
+/* Page headings: 45px on desktop, 30px on phones. */
+h1 {
   font-size: 45px;
 }
 
 @media (max-width: 799px) {
-  h1:not(.h-hero-year) {
+  h1 {
     font-size: 30px;
   }
 }

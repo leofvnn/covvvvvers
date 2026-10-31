@@ -11,7 +11,7 @@ import { SPOTIFY } from "@/lib/spotify";
 
 export const revalidate = 3600;
 export const metadata: Metadata = {
-  title: "Timeline",
+  title: "Through the Years",
   description:
     "The history of hip-hop from a Bronx rec room in 1973 to now: how it sounded and looked, where and why it grew, the records, technology, milestones and people that shaped each era.",
 };
