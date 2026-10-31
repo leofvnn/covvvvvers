@@ -735,7 +735,7 @@ body:has(.ring-hero) .site-footer {
 
 .ring-hero::after {
   z-index: 2;
-  background: linear-gradient(#0b0b0c 0, rgba(11, 11, 12, 0.85) 30%, transparent 48%, transparent 92%, #0b0b0c);
+  background: linear-gradient(transparent 85%, #0b0b0c);
 }
 
 .ring-scene {
@@ -824,11 +824,10 @@ body:has(.ring-hero) .site-footer {
 
 .ring-text p {
   margin: 0;
-  max-width: 38ch;
+  max-width: 50vw;
   font-family: var(--serif);
   font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
   line-height: 1.45;
-  text-wrap: balance;
   text-shadow: 0 1px 18px rgba(0, 0, 0, 0.9);
 }
 
@@ -858,6 +857,16 @@ body:has(.ring-hero) .site-footer {
   from {
     opacity: 0;
     scale: 1.5;
+  }
+}
+
+@media (max-width: 799px) {
+  .ring-text {
+    right: 0;
+  }
+  .ring-text h1,
+  .ring-text p {
+    max-width: none;
   }
 }
 

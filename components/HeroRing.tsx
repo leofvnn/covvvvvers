@@ -25,6 +25,13 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
     if (!el || !cyl) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const cards = [...cyl.querySelectorAll<HTMLElement>(".ring-card")];
+    const scene = cyl.parentElement as HTMLElement;
+    const text = el.querySelector<HTMLElement>(".ring-text");
+    // How far the rings are moved up or down so their highest cover stops 40px under the text.
+    const GAP = 40;
+    let shift = 0;
+    let settled = false;
+    let tick = 0;
     const step = 360 / perRow;
 
     let rot = 0; // degrees
@@ -44,7 +51,10 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
     const size = () => {
       const w = el.clientWidth;
       const h = el.clientHeight;
-      const card = Math.round(w < 700 ? Math.min(h * 0.22, w * 0.5) : Math.min(h * 0.21, w * 0.15));
+      // Covers sized to fill the space between the text and the bottom of the screen.
+      const textBottom = text ? text.getBoundingClientRect().bottom - el.getBoundingClientRect().top : h * 0.4;
+      const room = Math.max(200, h - textBottom - GAP);
+      const card = Math.round(Math.min(room * (w < 700 ? 0.55 : 0.42), w < 700 ? w * 0.8 : w * 0.17));
       const radius = Math.round((perRow * card * 1.14) / (2 * Math.PI));
       el.style.setProperty("--card", `${card}px`);
       el.style.setProperty("--radius", `${radius}px`);
@@ -52,7 +62,10 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
       el.style.setProperty("--persp", `${Math.round(radius * 0.85)}px`);
     };
     size();
-    const ro = new ResizeObserver(size);
+    const ro = new ResizeObserver(() => {
+      size();
+      settled = false;
+    });
     ro.observe(el);
 
     const frame = () => {
@@ -78,6 +91,23 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
           front = c.dataset.color ?? "";
         }
       });
+      // Every few frames, measure the highest cover on screen and line it up under the text.
+      if (text && tick++ % 15 === 0) {
+        const box = el.getBoundingClientRect();
+        let top = Infinity;
+        for (const c of cards) {
+          // Only covers well in front of the camera; the ones passing beside it are huge.
+          if (Number(c.style.getPropertyValue("--f")) < 0.6) continue;
+          const r = c.getBoundingClientRect();
+          if (r.right > box.left && r.left < box.right) top = Math.min(top, r.top);
+        }
+        if (top < Infinity) {
+          const want = text.getBoundingClientRect().bottom + GAP;
+          shift += (want - top) * (settled ? 0.35 : 1);
+          settled = true;
+          scene.style.translate = `0 ${shift.toFixed(1)}px`;
+        }
+      }
       if (front && front !== glow) {
         glow = front;
         el.style.setProperty("--glow", front);
