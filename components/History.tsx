@@ -5,7 +5,7 @@ import { squareImage } from "@/lib/img";
 import type { Guide, KeyRecord } from "@/lib/chapters";
 import type { HistoryRecord, Moment } from "@/lib/history";
 import type { Person } from "@/lib/people";
-import { PHOTOS, commonsImage } from "@/lib/photos";
+import type { PersonPhoto, RecordImage } from "@/lib/images";
 import CoverLink from "./CoverLink";
 import PersonModal from "./PersonModal";
 
@@ -19,7 +19,7 @@ export type CoverMini = {
   apple?: string | null;
   youtube?: string | null;
 };
-type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][]; art?: string | null };
+type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][]; art?: RecordImage | null };
 type MomentView = Omit<Moment, "records"> & { records: RecordView[] };
 export type EraView = {
   id: string;
@@ -34,8 +34,8 @@ export type EraView = {
   ink: string;
   posterCover: CoverMini | null;
   covers: number;
-  contributors: (Person & { id: string })[];
-  years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][]; art?: string | null })[] }[];
+  contributors: (Person & { id: string; photo: PersonPhoto | null })[];
+  years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][]; art?: RecordImage | null })[] }[];
 };
 
 const GUIDE: [keyof Guide, string][] = [
@@ -107,7 +107,7 @@ function RecordCard({ r }: { r: RecordView & { note?: string } }) {
       <img src={squareImage(r.cover.image, 400)} alt={alt} width={200} height={200} loading="lazy" />
     </span>
   ) : r.art ? (
-    <ArtImage src={r.art} alt={alt} className="h-key-art" fallback={<Blank r={r} />} />
+    <ArtImage src={r.art.src} alt={alt} className="h-key-art" fallback={<Blank r={r} />} />
   ) : (
     <Blank r={r} />
   );
@@ -128,6 +128,14 @@ function RecordCard({ r }: { r: RecordView & { note?: string } }) {
         <p className="h-key-artist">{r.artist}</p>
         {r.note && <p className="h-key-note">{r.note}</p>}
         <Listen links={r.listen} />
+        {!r.cover && r.art && (
+          <p className="image-source">
+            Image:{" "}
+            <a href={r.art.source.url} target="_blank" rel="noopener noreferrer">
+              {r.art.source.name}
+            </a>
+          </p>
+        )}
       </div>
     </li>
   );
@@ -259,8 +267,8 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                       <li key={p.id}>
                         <button type="button" onClick={() => setPerson({ era: era.id, index })} aria-haspopup="dialog">
                           <span className="h-avatar" aria-hidden="true">
-                            {PHOTOS[p.id] ? (
-                              <img src={commonsImage(PHOTOS[p.id].file, 96)} alt="" width={28} height={28} loading="lazy" />
+                            {p.photo ? (
+                              <img src={p.photo.src} alt="" width={28} height={28} loading="lazy" />
                             ) : (
                               p.name.replace(/^The /, "")[0]
                             )}

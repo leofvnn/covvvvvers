@@ -2,6 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import { cache } from "react";
 import local from "@/data/collection.json";
 import { familyOf } from "./color";
+import { recordImage } from "./images";
 import { SUPABASE_ANON_KEY, SUPABASE_URL, supabaseEnabled } from "./supabase/config";
 import { plainText } from "./text";
 import type { Cover, CoverCard, CoverType, Creator } from "./types";
@@ -37,8 +38,11 @@ const loadCollection = cache(async (): Promise<Raw> => {
   return {
     types: types.data,
     creators: creators.data,
-    // Drafts and covers without art stay off the public site.
-    covers: (covers.data as RawCover[]).filter((c) => (c.status ?? "published") === "published" && c.image_url),
+    // Drafts stay off the public site, and so do covers with no art anywhere. A cover whose art
+    // hasn't been imported yet shows the image found for it, credited to its source.
+    covers: (covers.data as RawCover[]).filter(
+      (c) => (c.status ?? "published") === "published" && (c.image_url || recordImage(c.title, c.artist)),
+    ),
     cover_creators: links.data,
   } as Raw;
 });
@@ -58,8 +62,13 @@ const assemble = cache(async () => {
   const covers: Cover[] = raw.covers
     .map(({ cover_type_id, ...c }) => {
       const t = cover_type_id ? typeById.get(cover_type_id) : undefined;
+      // Covers added from the history list credit where their art came from, before and
+      // after it's copied into our bucket.
+      const found = recordImage(c.title, c.artist);
       return {
         ...c,
+        image_url: c.image_url || found!.src,
+        image_source: !c.image_url || found?.cover ? (found?.source ?? null) : null,
         subgenres: c.subgenres ?? [],
         type: t ? { slug: t.slug, title: t.title } : null,
         creators: creatorsByCover.get(c.id) ?? [],

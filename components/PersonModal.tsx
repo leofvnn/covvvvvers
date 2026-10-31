@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Person } from "@/lib/people";
-import { PHOTOS, commonsImage, commonsPage } from "@/lib/photos";
+import type { PersonPhoto } from "@/lib/images";
+import { PHOTOS } from "@/lib/photos";
 
 type Summary = { image: string | null; url: string; description: string | null };
 const cache = new Map<string, Promise<Summary>>();
@@ -41,7 +42,7 @@ export default function PersonModal({
   onNext,
   onClose,
 }: {
-  person: Person & { id: string };
+  person: Person & { id: string; photo?: PersonPhoto | null };
   era: { title: string; span: string; bg: string; ink: string };
   position: string;
   onPrev: () => void;
@@ -85,8 +86,16 @@ export default function PersonModal({
     return () => window.removeEventListener("keydown", onKey);
   }, [onNext, onPrev]);
 
+  // The photo found for this person (with its photographer and licence), else the one on
+  // their Wikipedia article.
+  const found = person.photo ?? null;
   const own = PHOTOS[person.id];
-  const photo = broken ? null : own ? commonsImage(own.file, 800) : (info?.image ?? null);
+  // A note like "With Mickey Baker, 1956" belongs to the hand-picked photo, so only show it with that one.
+  const note = found && own && decodeURIComponent(found.page).endsWith(own.file.replace(/ /g, "_")) ? own.note : undefined;
+  const photo = broken ? null : (found?.src ?? info?.image ?? null);
+  const credit = found
+    ? [note, found.credit, found.license].filter(Boolean).join(", ")
+    : null;
 
   return (
     <dialog
@@ -137,8 +146,8 @@ export default function PersonModal({
             {photo && (
               <>
                 {" · "}
-                <a href={own ? commonsPage(own.file) : (info?.url ?? "#")} target="_blank" rel="noreferrer">
-                  Photo{own?.note ? `: ${own.note}` : ""}, Wikimedia Commons
+                <a href={found?.page ?? info?.url ?? "#"} target="_blank" rel="noreferrer">
+                  Photo: {credit ? `${credit}, via Wikimedia Commons` : found ? "Wikimedia Commons" : "Wikipedia"}
                 </a>
               </>
             )}

@@ -213,7 +213,8 @@ for (const [i, r] of req.records.entries()) {
     continue;
   }
   const hit = (await fromWikipedia(r)) ?? (await fromCoverArtArchive(r)) ?? (await fromAppleMusic(r));
-  if (hit) out.records[r.key] = hit;
+  // "cover": a collection cover whose art comes from here, so the site keeps crediting it.
+  if (hit) out.records[r.key] = r.cover ? { ...hit, cover: true } : hit;
   else out.missing.records.push(r.key);
   console.log(`[${i + 1}/${req.records.length}] ${hit ? hit.source.name.padEnd(17) : "MISSING          "} ${r.key}`);
 }

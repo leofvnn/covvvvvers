@@ -33,6 +33,8 @@ export type Cover = {
   color: string | null;
   accent_color: string | null;
   image_url: string;
+  /** Where the image comes from, when it isn't our own copy (Wikipedia, Cover Art Archive…). */
+  image_source?: { name: string; url: string } | null;
   image_width: number | null;
   image_height: number | null;
   spotify_album_id: string | null;

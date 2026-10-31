@@ -10,20 +10,23 @@ import { ERAS } from "../lib/history";
 import { PEOPLE } from "../lib/people";
 import { PHOTOS } from "../lib/photos";
 
-const records = new Map<string, { key: string; title: string; artist: string; kind: string; year: number }>();
-const add = (r: { title: string; artist: string; kind: string; year: number }) => {
+type Req = { key: string; title: string; artist: string; kind: string; year: number; cover?: boolean };
+const records = new Map<string, Req>();
+const add = (r: { title: string; artist: string; kind: string; year: number }, cover = false) => {
   const key = `${r.title}|${r.artist}`;
-  if (!records.has(key)) records.set(key, { key, title: r.title, artist: r.artist, kind: r.kind, year: r.year });
+  const had = records.get(key);
+  if (!had) records.set(key, { key, title: r.title, artist: r.artist, kind: r.kind, year: r.year, ...(cover ? { cover } : {}) });
+  else if (cover) had.cover = true;
 };
-CHAPTERS.forEach((c) => c.records.forEach(add));
-ERAS.forEach((e) => e.moments.forEach((m) => (m.records ?? []).forEach(add)));
+CHAPTERS.forEach((c) => c.records.forEach((r) => add(r)));
+ERAS.forEach((e) => e.moments.forEach((m) => (m.records ?? []).forEach((r) => add(r))));
 
 // Covers inserted without an image by supabase/new-covers.sql.
 const sql = readFileSync("supabase/new-covers.sql", "utf8");
 const row = /values \('((?:[^']|'')*)','((?:[^']|'')*)','((?:[^']|'')*)',(\d{4})/g;
 for (const m of sql.matchAll(row)) {
   const un = (s: string) => s.replace(/''/g, "'");
-  add({ title: un(m[2]), artist: un(m[3]), kind: "album", year: Number(m[4]) });
+  add({ title: un(m[2]), artist: un(m[3]), kind: "album", year: Number(m[4]) }, true);
 }
 
 const people = Object.entries(PEOPLE).map(([id, p]) => ({ id, name: p.name, wiki: p.wiki, file: PHOTOS[id]?.file ?? null }));

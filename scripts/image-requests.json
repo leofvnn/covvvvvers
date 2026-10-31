@@ -47,7 +47,8 @@
    "title": "Kurtis Blow",
    "artist": "Kurtis Blow",
    "kind": "album",
-   "year": 1980
+   "year": 1980,
+   "cover": true
   },
   {
    "key": "The Adventures of Grandmaster Flash on the Wheels of Steel|Grandmaster Flash",
@@ -89,7 +90,8 @@
    "title": "Escape",
    "artist": "Whodini",
    "kind": "album",
-   "year": 1984
+   "year": 1984,
+   "cover": true
   },
   {
    "key": "Run-D.M.C.|Run-DMC",
@@ -159,14 +161,16 @@
    "title": "Criminal Minded",
    "artist": "Boogie Down Productions",
    "kind": "album",
-   "year": 1987
+   "year": 1987,
+   "cover": true
   },
   {
    "key": "Yo! Bum Rush the Show|Public Enemy",
    "title": "Yo! Bum Rush the Show",
    "artist": "Public Enemy",
    "kind": "album",
-   "year": 1987
+   "year": 1987,
+   "cover": true
   },
   {
    "key": "It Takes a Nation of Millions to Hold Us Back|Public Enemy",
@@ -250,7 +254,8 @@
    "title": "All Hail the Queen",
    "artist": "Queen Latifah",
    "kind": "album",
-   "year": 1989
+   "year": 1989,
+   "cover": true
   },
   {
    "key": "Fight the Power|Public Enemy",
@@ -264,7 +269,8 @@
    "title": "AmeriKKKa's Most Wanted",
    "artist": "Ice Cube",
    "kind": "album",
-   "year": 1990
+   "year": 1990,
+   "cover": true
   },
   {
    "key": "People's Instinctive Travels and the Paths of Rhythm|A Tribe Called Quest",
@@ -299,7 +305,8 @@
    "title": "Breaking Atoms",
    "artist": "Main Source",
    "kind": "album",
-   "year": 1991
+   "year": 1991,
+   "cover": true
   },
   {
    "key": "We Can't Be Stopped|Geto Boys",
@@ -341,14 +348,16 @@
    "title": "Daily Operation",
    "artist": "Gang Starr",
    "kind": "album",
-   "year": 1992
+   "year": 1992,
+   "cover": true
   },
   {
    "key": "Whut? Thee Album|Redman",
    "title": "Whut? Thee Album",
    "artist": "Redman",
    "kind": "album",
-   "year": 1992
+   "year": 1992,
+   "cover": true
   },
   {
    "key": "Bizarre Ride II the Pharcyde|The Pharcyde",
@@ -383,7 +392,8 @@
    "title": "Black Sunday",
    "artist": "Cypress Hill",
    "kind": "album",
-   "year": 1993
+   "year": 1993,
+   "cover": true
   },
   {
    "key": "93 'til Infinity|Souls of Mischief",
@@ -439,7 +449,8 @@
    "title": "The Sun Rises in the East",
    "artist": "Jeru the Damaja",
    "kind": "album",
-   "year": 1994
+   "year": 1994,
+   "cover": true
   },
   {
    "key": "Funkdafied|Da Brat",
@@ -551,7 +562,8 @@
    "title": "Ironman",
    "artist": "Ghostface Killah",
    "kind": "album",
-   "year": 1996
+   "year": 1996,
+   "cover": true
   },
   {
    "key": "Ridin' Dirty|UGK",
@@ -614,7 +626,8 @@
    "title": "It's Dark and Hell Is Hot",
    "artist": "DMX",
    "kind": "album",
-   "year": 1998
+   "year": 1998,
+   "cover": true
   },
   {
    "key": "Aquemini|OutKast",
@@ -698,7 +711,8 @@
    "title": "Supreme Clientele",
    "artist": "Ghostface Killah",
    "kind": "album",
-   "year": 2000
+   "year": 2000,
+   "cover": true
   },
   {
    "key": "Stankonia|OutKast",
@@ -726,7 +740,8 @@
    "title": "Miss E... So Addictive",
    "artist": "Missy Elliott",
    "kind": "album",
-   "year": 2001
+   "year": 2001,
+   "cover": true
   },
   {
    "key": "The Cold Vein|Cannibal Ox",
@@ -747,7 +762,8 @@
    "title": "Nellyville",
    "artist": "Nelly",
    "kind": "album",
-   "year": 2002
+   "year": 2002,
+   "cover": true
   },
   {
    "key": "Lose Yourself|Eminem",
@@ -768,21 +784,24 @@
    "title": "Speakerboxxx/The Love Below",
    "artist": "OutKast",
    "kind": "album",
-   "year": 2003
+   "year": 2003,
+   "cover": true
   },
   {
    "key": "Diplomatic Immunity|The Diplomats",
    "title": "Diplomatic Immunity",
    "artist": "The Diplomats",
    "kind": "album",
-   "year": 2003
+   "year": 2003,
+   "cover": true
   },
   {
    "key": "Vaudeville Villain|Viktor Vaughn",
    "title": "Vaudeville Villain",
    "artist": "Viktor Vaughn",
    "kind": "album",
-   "year": 2003
+   "year": 2003,
+   "cover": true
   },
   {
    "key": "Trap Muzik|T.I.",
@@ -831,7 +850,8 @@
    "title": "Let's Get It: Thug Motivation 101",
    "artist": "Young Jeezy",
    "kind": "album",
-   "year": 2005
+   "year": 2005,
+   "cover": true
   },
   {
    "key": "Tha Carter II|Lil Wayne",
@@ -852,7 +872,8 @@
    "title": "Hell Hath No Fury",
    "artist": "Clipse",
    "kind": "album",
-   "year": 2006
+   "year": 2006,
+   "cover": true
   },
   {
    "key": "Food & Liquor|Lupe Fiasco",
@@ -866,7 +887,8 @@
    "title": "King",
    "artist": "T.I.",
    "kind": "album",
-   "year": 2006
+   "year": 2006,
+   "cover": true
   },
   {
    "key": "Crank That (Soulja Boy)|Soulja Boy",
@@ -936,14 +958,16 @@
    "title": "Teflon Don",
    "artist": "Rick Ross",
    "kind": "album",
-   "year": 2010
+   "year": 2010,
+   "cover": true
   },
   {
    "key": "Sir Lucious Left Foot: The Son of Chico Dusty|Big Boi",
    "title": "Sir Lucious Left Foot: The Son of Chico Dusty",
    "artist": "Big Boi",
    "kind": "album",
-   "year": 2010
+   "year": 2010,
+   "cover": true
   },
   {
    "key": "Pink Friday|Nicki Minaj",
@@ -971,14 +995,16 @@
    "title": "Section.80",
    "artist": "Kendrick Lamar",
    "kind": "album",
-   "year": 2011
+   "year": 2011,
+   "cover": true
   },
   {
    "key": "Goblin|Tyler, the Creator",
    "title": "Goblin",
    "artist": "Tyler, the Creator",
    "kind": "album",
-   "year": 2011
+   "year": 2011,
+   "cover": true
   },
   {
    "key": "Watch the Throne|Jay-Z & Kanye West",
@@ -1013,7 +1039,8 @@
    "title": "Dreams and Nightmares",
    "artist": "Meek Mill",
    "kind": "album",
-   "year": 2012
+   "year": 2012,
+   "cover": true
   },
   {
    "key": "Yeezus|Kanye West",
@@ -1027,14 +1054,16 @@
    "title": "Long. Live. A$AP",
    "artist": "A$AP Rocky",
    "kind": "album",
-   "year": 2013
+   "year": 2013,
+   "cover": true
   },
   {
    "key": "Acid Rap|Chance the Rapper",
    "title": "Acid Rap",
    "artist": "Chance the Rapper",
    "kind": "mixtape",
-   "year": 2013
+   "year": 2013,
+   "cover": true
   },
   {
    "key": "Old|Danny Brown",
@@ -1076,7 +1105,8 @@
    "title": "DS2",
    "artist": "Future",
    "kind": "album",
-   "year": 2015
+   "year": 2015,
+   "cover": true
   },
   {
    "key": "Rodeo|Travis Scott",
@@ -1097,7 +1127,8 @@
    "title": "Barter 6",
    "artist": "Young Thug",
    "kind": "mixtape",
-   "year": 2015
+   "year": 2015,
+   "cover": true
   },
   {
    "key": "Coloring Book|Chance the Rapper",
@@ -1125,7 +1156,8 @@
    "title": "We Got It from Here... Thank You 4 Your Service",
    "artist": "A Tribe Called Quest",
    "kind": "album",
-   "year": 2016
+   "year": 2016,
+   "cover": true
   },
   {
    "key": "Konnichiwa|Skepta",
@@ -1153,7 +1185,8 @@
    "title": "4:44",
    "artist": "Jay-Z",
    "kind": "album",
-   "year": 2017
+   "year": 2017,
+   "cover": true
   },
   {
    "key": "Flower Boy|Tyler, the Creator",
@@ -1209,14 +1242,16 @@
    "title": "Invasion of Privacy",
    "artist": "Cardi B",
    "kind": "album",
-   "year": 2018
+   "year": 2018,
+   "cover": true
   },
   {
    "key": "Swimming|Mac Miller",
    "title": "Swimming",
    "artist": "Mac Miller",
    "kind": "album",
-   "year": 2018
+   "year": 2018,
+   "cover": true
   },
   {
    "key": "Die Lit|Playboi Carti",
@@ -1244,21 +1279,24 @@
    "title": "Grey Area",
    "artist": "Little Simz",
    "kind": "album",
-   "year": 2019
+   "year": 2019,
+   "cover": true
   },
   {
    "key": "Bandana|Freddie Gibbs & Madlib",
    "title": "Bandana",
    "artist": "Freddie Gibbs & Madlib",
    "kind": "album",
-   "year": 2019
+   "year": 2019,
+   "cover": true
   },
   {
    "key": "ZUU|Denzel Curry",
    "title": "ZUU",
    "artist": "Denzel Curry",
    "kind": "album",
-   "year": 2019
+   "year": 2019,
+   "cover": true
   },
   {
    "key": "Psychodrama|Dave",
@@ -1293,28 +1331,32 @@
    "title": "My Turn",
    "artist": "Lil Baby",
    "kind": "album",
-   "year": 2020
+   "year": 2020,
+   "cover": true
   },
   {
    "key": "Alfredo|Freddie Gibbs & The Alchemist",
    "title": "Alfredo",
    "artist": "Freddie Gibbs & The Alchemist",
    "kind": "album",
-   "year": 2020
+   "year": 2020,
+   "cover": true
   },
   {
    "key": "RTJ4|Run the Jewels",
    "title": "RTJ4",
    "artist": "Run the Jewels",
    "kind": "album",
-   "year": 2020
+   "year": 2020,
+   "cover": true
   },
   {
    "key": "Shoot for the Stars, Aim for the Moon|Pop Smoke",
    "title": "Shoot for the Stars, Aim for the Moon",
    "artist": "Pop Smoke",
    "kind": "album",
-   "year": 2020
+   "year": 2020,
+   "cover": true
   },
   {
    "key": "WAP|Cardi B feat. Megan Thee Stallion",
@@ -1328,7 +1370,8 @@
    "title": "King's Disease",
    "artist": "Nas",
    "kind": "album",
-   "year": 2020
+   "year": 2020,
+   "cover": true
   },
   {
    "key": "Whole Lotta Red|Playboi Carti",
@@ -1349,21 +1392,24 @@
    "title": "Sometimes I Might Be Introvert",
    "artist": "Little Simz",
    "kind": "album",
-   "year": 2021
+   "year": 2021,
+   "cover": true
   },
   {
    "key": "Donda|Kanye West",
    "title": "Donda",
    "artist": "Kanye West",
    "kind": "album",
-   "year": 2021
+   "year": 2021,
+   "cover": true
   },
   {
    "key": "The Off-Season|J. Cole",
    "title": "The Off-Season",
    "artist": "J. Cole",
    "kind": "album",
-   "year": 2021
+   "year": 2021,
+   "cover": true
   },
   {
    "key": "Mr. Morale & the Big Steppers|Kendrick Lamar",
@@ -1377,28 +1423,32 @@
    "title": "It's Almost Dry",
    "artist": "Pusha T",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   },
   {
    "key": "I Never Liked You|Future",
    "title": "I Never Liked You",
    "artist": "Future",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   },
   {
    "key": "Melt My Eyez See Your Future|Denzel Curry",
    "title": "Melt My Eyez See Your Future",
    "artist": "Denzel Curry",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   },
   {
    "key": "The Forever Story|JID",
    "title": "The Forever Story",
    "artist": "JID",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   },
   {
    "key": "Cheat Codes|Black Thought & Danger Mouse",
@@ -1412,7 +1462,8 @@
    "title": "King's Disease III",
    "artist": "Nas",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   },
   {
    "key": "Sprinter|Dave & Central Cee",
@@ -1433,21 +1484,24 @@
    "title": "Michael",
    "artist": "Killer Mike",
    "kind": "album",
-   "year": 2023
+   "year": 2023,
+   "cover": true
   },
   {
    "key": "Magic 3|Nas",
    "title": "Magic 3",
    "artist": "Nas",
    "kind": "album",
-   "year": 2023
+   "year": 2023,
+   "cover": true
   },
   {
    "key": "We Don't Trust You|Future & Metro Boomin",
    "title": "We Don't Trust You",
    "artist": "Future & Metro Boomin",
    "kind": "album",
-   "year": 2024
+   "year": 2024,
+   "cover": true
   },
   {
    "key": "Not Like Us|Kendrick Lamar",
@@ -2336,14 +2390,16 @@
    "title": "Lupe Fiasco's Food & Liquor",
    "artist": "Lupe Fiasco",
    "kind": "album",
-   "year": 2006
+   "year": 2006,
+   "cover": true
   },
   {
    "key": "Cheat Codes|Danger Mouse & Black Thought",
    "title": "Cheat Codes",
    "artist": "Danger Mouse & Black Thought",
    "kind": "album",
-   "year": 2022
+   "year": 2022,
+   "cover": true
   }
  ],
  "people": [

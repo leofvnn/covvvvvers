@@ -1,6 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import sharp from "sharp";
+import { recordImage } from "@/lib/images";
 import { getServerClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
@@ -99,11 +100,18 @@ export async function POST() {
 
   for (const [i, c] of (covers ?? []).entries()) {
     try {
-      if (i > 0) await sleep(1100); // MusicBrainz allows one request a second.
-      const group = await findGroup(c.title, c.artist, c.release_year);
-      if (!group) throw new Error("not found on MusicBrainz");
-      const art = await fetch(`https://coverartarchive.org/release-group/${group.id}/front`, { cache: "no-store", redirect: "follow" });
-      if (!art.ok) throw new Error(`no front cover in the Cover Art Archive (${art.status})`);
+      // The image already found for this cover (Wikipedia, Cover Art Archive or Apple Music),
+      // else a fresh MusicBrainz lookup.
+      const known = recordImage(c.title, c.artist);
+      let url = known?.full ?? known?.src;
+      if (!url) {
+        if (i > 0) await sleep(1100); // MusicBrainz allows one request a second.
+        const group = await findGroup(c.title, c.artist, c.release_year);
+        if (!group) throw new Error("not found on MusicBrainz");
+        url = `https://coverartarchive.org/release-group/${group.id}/front`;
+      }
+      const art = await fetch(url, { cache: "no-store", redirect: "follow", headers: { "User-Agent": UA } });
+      if (!art.ok) throw new Error(`couldn't download the cover (${art.status})`);
       const original = Buffer.from(await art.arrayBuffer());
       const full = await sharp(original).rotate().resize(2000, 2000, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 88 }).toBuffer({ resolveWithObject: true });
       const thumb = await sharp(original).rotate().resize(600, 600, { fit: "cover" }).jpeg({ quality: 82 }).toBuffer();

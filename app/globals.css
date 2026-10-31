@@ -4348,3 +4348,19 @@ h1:not(.h-none) {
     font-size: 30px;
   }
 }
+
+/* Where an image comes from, under images we don't host ourselves. */
+.image-source {
+  margin: 8px 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.cover-art .image-source {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.image-source a {
+  color: inherit;
+}

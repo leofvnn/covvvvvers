@@ -101,6 +101,14 @@ export default async function CoverPage({ params }: Params) {
             src={squareImage(cover.image_url, 120)}
             fallback={[cover.color, cover.accent_color].filter(Boolean) as string[]}
           />
+          {cover.image_source && (
+            <p className="image-source">
+              Image:{" "}
+              <a href={cover.image_source.url} target="_blank" rel="noopener noreferrer">
+                {cover.image_source.name}
+              </a>
+            </p>
+          )}
         </div>
 
         <div className="cover-body">
