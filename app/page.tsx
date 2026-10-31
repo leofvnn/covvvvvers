@@ -8,8 +8,8 @@ export default async function Home() {
   const covers = (await getCovers()).filter((c) => c.image_url);
   const since = Math.min(...covers.map((c) => c.release_year));
 
-  // 48 covers for the rings, spread across the years and mixed so neighbours differ.
-  const want = 48;
+  // 32 covers for the two rings, spread across the years and mixed so neighbours differ.
+  const want = 32;
   const byYear = [...covers].sort((a, b) => a.release_year - b.release_year);
   const picked = Array.from({ length: Math.min(want, byYear.length) }, (_, i) => byYear[Math.floor((i * byYear.length) / Math.min(want, byYear.length))]);
   const mixed = picked.map((c, i) => ({ c, k: (i * 29) % picked.length })).sort((a, b) => a.k - b.k).map((x) => x.c);

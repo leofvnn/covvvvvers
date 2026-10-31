@@ -689,7 +689,7 @@ select {
 
 /* Home */
 
-/* Home: one full-screen hero. Three rings of covers spin around the headline. */
+/* Home: one full-screen hero. Headline top left, two rings of covers along the bottom. */
 
 body:has(.ring-hero) .site-footer {
   display: none;
@@ -728,28 +728,26 @@ body:has(.ring-hero) .site-footer {
 }
 
 .ring-hero::before {
-  background: radial-gradient(60% 50% at 50% 55%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%);
+  background: radial-gradient(70% 45% at 50% 78%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%);
   opacity: 0.55;
   transition: background 1.2s ease;
 }
 
 .ring-hero::after {
   z-index: 2;
-  background:
-    radial-gradient(ellipse 42% 30% at 50% 50%, rgba(11, 11, 12, 0.72), transparent 100%),
-    linear-gradient(#0b0b0c, transparent 18%, transparent 82%, #0b0b0c);
+  background: linear-gradient(#0b0b0c 0, rgba(11, 11, 12, 0.85) 30%, transparent 48%, transparent 92%, #0b0b0c);
 }
 
 .ring-scene {
   position: absolute;
   inset: 0;
   perspective: var(--persp, 900px);
-  perspective-origin: 50% 50%;
+  perspective-origin: 50% 76%;
 }
 
 .ring-cyl {
   position: absolute;
-  top: 50%;
+  top: 76%;
   left: 50%;
   width: 0;
   height: 0;
@@ -777,7 +775,6 @@ body:has(.ring-hero) .site-footer {
 }
 
 .ring-link {
-  border-radius: 6px;
   overflow: hidden;
   transition: scale 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
   -webkit-user-drag: none;
@@ -796,21 +793,20 @@ body:has(.ring-hero) .site-footer {
 
 .ring-text {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   z-index: 3;
   display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: clamp(16px, 2.5vh, 28px);
-  padding: var(--header) var(--gutter) 0;
-  text-align: center;
+  justify-items: start;
+  gap: clamp(14px, 2vh, 24px);
+  padding: calc(var(--header) + clamp(16px, 4vh, 48px)) var(--gutter) 0;
   pointer-events: none;
 }
 
 .ring-text h1 {
   margin: 0;
-  max-width: 12ch;
-  font-size: clamp(3rem, min(9vw, 13svh), 9rem);
+  max-width: 13ch;
+  font-size: clamp(2.75rem, min(7.5vw, 10svh), 7.5rem);
   font-weight: 800;
   line-height: 0.88;
   letter-spacing: -0.02em;
@@ -828,9 +824,9 @@ body:has(.ring-hero) .site-footer {
 
 .ring-text p {
   margin: 0;
-  max-width: 36ch;
+  max-width: 38ch;
   font-family: var(--serif);
-  font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
   line-height: 1.45;
   text-wrap: balance;
   text-shadow: 0 1px 18px rgba(0, 0, 0, 0.9);

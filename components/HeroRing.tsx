@@ -5,14 +5,14 @@ import CoverLink from "./CoverLink";
 
 export type RingCover = { slug: string; title: string; artist: string; image: string; color: string };
 
-const ROWS = 3;
-// Each row turns at its own speed, and the middle one turns the other way.
-const ROW_SPEED = [1, -0.75, 1.2];
+const ROWS = 2;
+// The two rings turn in opposite directions.
+const ROW_SPEED = [1, -0.8];
 
 /**
- * The home hero: three rings of covers spinning around the headline inside a tilted
- * cylinder. Drag or scroll to throw it, move the pointer to tilt it. Covers facing away
- * fade into the dark, and the glow behind the text takes the colour of the cover in front.
+ * The home hero: the headline top left, and two counter-rotating rings of covers along
+ * the bottom, seen from inside. Drag or scroll to throw them, move the pointer to tilt the
+ * view, hover a cover to slow them down. The glow takes the colour of the cover in front.
  */
 export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; title: React.ReactNode; sub: string }) {
   const root = useRef<HTMLElement>(null);
@@ -29,7 +29,8 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
 
     let rot = 0; // degrees
     let vel = reduced ? 0 : 0.06; // degrees per frame
-    const cruise = reduced ? 0 : 0.06;
+    const base = reduced ? 0 : 0.06;
+    let cruise = base;
     let tiltX = 0;
     let tiltY = 0;
     let aimX = 0;
@@ -43,12 +44,11 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
     const size = () => {
       const w = el.clientWidth;
       const h = el.clientHeight;
-      const card = Math.round(w < 700 ? h * 0.3 : Math.min(h * 0.24, w * 0.17));
+      const card = Math.round(w < 700 ? Math.min(h * 0.22, w * 0.5) : Math.min(h * 0.21, w * 0.15));
       const radius = Math.round((perRow * card * 1.14) / (2 * Math.PI));
       el.style.setProperty("--card", `${card}px`);
       el.style.setProperty("--radius", `${radius}px`);
-      // The camera stands just inside the ring, so the far wall sits behind the headline
-      // and the near covers sweep past the edges of the screen.
+      // The camera stands just inside the rings, so the near covers sweep past the edges.
       el.style.setProperty("--persp", `${Math.round(radius * 0.85)}px`);
     };
     size();
@@ -60,7 +60,7 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
       rot += vel;
       tiltX += (aimX - tiltX) * 0.06;
       tiltY += (aimY - tiltY) * 0.06;
-      cyl.style.transform = `translateZ(calc(var(--persp) * 0.6)) rotateX(${4 + tiltY}deg) rotateZ(${-6 + tiltX * 0.25}deg) rotateY(${tiltX}deg)`;
+      cyl.style.transform = `translateZ(calc(var(--persp) * 0.6)) rotateX(${-3 + tiltY}deg) rotateZ(${-4 + tiltX * 0.25}deg) rotateY(${tiltX}deg)`;
 
       let best = -2;
       let front = "";
@@ -73,7 +73,7 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
         // Covers behind the camera are hidden; the rest stay lit.
         c.style.setProperty("--f", Math.max(0, facing + 0.15).toFixed(3));
         c.style.visibility = facing < -0.2 ? "hidden" : "";
-        if (row === 1 && facing > best) {
+        if (row === 0 && facing > best) {
           best = facing;
           front = c.dataset.color ?? "";
         }
@@ -102,6 +102,10 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
       vel = dx * 0.12;
     };
     const up = () => (dragging = false);
+    // Hovering a cover slows the rings so it can be clicked.
+    const over = (e: PointerEvent) => {
+      cruise = (e.target as HTMLElement).closest?.(".ring-link") ? base * 0.15 : base;
+    };
     const wheel = (e: WheelEvent) => {
       const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
       vel = Math.max(-4, Math.min(4, vel + d * 0.004));
@@ -118,6 +122,7 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
     window.addEventListener("pointermove", move);
     window.addEventListener("pointerup", up);
     window.addEventListener("pointercancel", up);
+    el.addEventListener("pointerover", over);
     el.addEventListener("wheel", wheel, { passive: true });
     el.addEventListener("click", click, true);
 
@@ -132,6 +137,7 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
       window.removeEventListener("pointermove", move);
       window.removeEventListener("pointerup", up);
       window.removeEventListener("pointercancel", up);
+      el.removeEventListener("pointerover", over);
       el.removeEventListener("wheel", wheel);
       el.removeEventListener("click", click, true);
       header?.classList.remove("on-ring");
@@ -140,18 +146,18 @@ export default function HeroRing({ covers, title, sub }: { covers: RingCover[]; 
 
   return (
     <section ref={root} className="ring-hero">
-      <div className="ring-scene" aria-hidden="false">
+      <div className="ring-scene">
         <div ref={ring} className="ring-cyl">
           {covers.slice(0, perRow * ROWS).map((c, i) => (
             <div
               key={c.slug}
               className="ring-card"
               data-color={c.color}
-              style={{ "--row": Math.floor(i / perRow) - 1 } as React.CSSProperties}
+              style={{ "--row": Math.floor(i / perRow) - 0.5 } as React.CSSProperties}
             >
               <CoverLink href={`/covers/${c.slug}`} className="ring-link">
                 <span data-art>
-                  <img src={c.image} alt={`${c.title} by ${c.artist}`} width={300} height={300} draggable={false} loading={i < perRow * ROWS ? "eager" : "lazy"} />
+                  <img src={c.image} alt={`${c.title} by ${c.artist}`} width={300} height={300} draggable={false} loading="eager" />
                 </span>
               </CoverLink>
             </div>
