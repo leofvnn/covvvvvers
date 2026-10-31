@@ -842,6 +842,11 @@ body:has(.ring-hero) .site-footer {
 
 /* The ring opens out of the dark. Scaling the scene (not fading the ring) keeps it 3D. */
 .ring-scene {
+  opacity: 0;
+}
+
+.is-ready .ring-scene {
+  opacity: 1;
   animation: ring-open 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
 }
 
@@ -873,7 +878,7 @@ body:has(.ring-hero) .site-footer {
 @media (prefers-reduced-motion: reduce) {
   .ring-text h1,
   .ring-text p,
-  .ring-scene {
+  .is-ready .ring-scene {
     animation: none;
   }
 }
