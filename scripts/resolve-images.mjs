@@ -321,7 +321,12 @@ for (const [i, p] of req.people.entries()) {
     out.people[p.id] = prev.people[p.id];
     continue;
   }
-  const { hit, check } = await person(p);
+  let { hit, check } = await person(p);
+  // If Wikipedia didn't answer at all this time, keep the photo checked on an earlier run.
+  if (!hit && !check.wikidata && prev.people?.[p.id]) {
+    hit = prev.people[p.id];
+    check = { ...check, chosen: hit.page, how: `${hit.from} (kept: lookup failed this run)` };
+  }
   checks.push(check);
   if (hit) out.people[p.id] = hit;
   else out.missing.people.push(p.id);
