@@ -109,7 +109,7 @@ async function fromWikipedia(r) {
         if (!MUSIC_DESC.test(desc) && !MUSIC_DESC.test(paren)) continue;
         if (!loose(desc, artist) && !loose(paren, artist) && !desc.toLowerCase().includes(norm(artist))) continue;
       }
-      if (await loads(img)) return { src: img, source: { name: "Wikipedia", url: wikiPage(p.title) } };
+      if (await loads(img)) return { src: img, full: p.original?.source ?? img, source: { name: "Wikipedia", url: wikiPage(p.title) } };
     }
     await sleep(150);
   }
@@ -140,7 +140,7 @@ async function fromCoverArtArchive(r) {
     );
   for (const g of groups.slice(0, 3)) {
     const src = `https://coverartarchive.org/release-group/${g.id}/front-500`;
-    if (await loads(src)) return { src, source: { name: "Cover Art Archive", url: `https://musicbrainz.org/release-group/${g.id}` } };
+    if (await loads(src)) return { src, full: `https://coverartarchive.org/release-group/${g.id}/front`, source: { name: "Cover Art Archive", url: `https://musicbrainz.org/release-group/${g.id}` } };
   }
   return null;
 }
@@ -155,7 +155,7 @@ async function fromAppleMusic(r) {
     const name = entity === "song" ? it.trackName : it.collectionName;
     if (norm(name) !== norm(r.title) || !loose(it.artistName, artist) || !it.artworkUrl100) continue;
     const src = it.artworkUrl100.replace(/\/\d+x\d+bb\./, "/600x600bb.");
-    if (await loads(src)) return { src, source: { name: "Apple Music", url: (entity === "song" ? it.trackViewUrl : it.collectionViewUrl)?.split("?")[0] } };
+    if (await loads(src)) return { src, full: src.replace("/600x600bb.", "/2000x2000bb."), source: { name: "Apple Music", url: (entity === "song" ? it.trackViewUrl : it.collectionViewUrl)?.split("?")[0] } };
   }
   return null;
 }
