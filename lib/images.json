@@ -16,6 +16,22 @@
     "url": "https://music.apple.com/us/album/rappers-delight-hip-hop-remix-long-version-single/40459285"
    }
   },
+  "Love Rap|Spoonie Gee": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f2/e1/1a/f2e11aaa-38dc-df32-786c-cc881a52b932/197187607730.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f2/e1/1a/f2e11aaa-38dc-df32-786c-cc881a52b932/197187607730.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/love-rap/1663076498"
+   }
+  },
+  "The New Rap Language|Treacherous Three": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d2/28/84/d2288490-1bc5-c816-52ff-5bd34119dddc/196626901071.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d2/28/84/d2288490-1bc5-c816-52ff-5bd34119dddc/196626901071.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/the-new-rap-language-feat-pooche-costello/1644418055"
+   }
+  },
   "That's the Joint|Funky 4 + 1": {
    "src": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e0/3b/cf/e03bcf74-4d82-96ae-50e0-6002ba4cf4f4/603497836154.jpg/600x600bb.jpg",
    "full": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e0/3b/cf/e03bcf74-4d82-96ae-50e0-6002ba4cf4f4/603497836154.jpg/2000x2000bb.jpg",
@@ -407,6 +423,14 @@
    "source": {
     "name": "Apple Music",
     "url": "https://music.apple.com/us/album/enter-the-wu-tang-36-chambers/1746566237"
+   }
+  },
+  "Doggystyle|Snoop Doggy Dogg": {
+   "src": "https://coverartarchive.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5/front-500",
+   "full": "https://coverartarchive.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5/front",
+   "source": {
+    "name": "Cover Art Archive",
+    "url": "https://musicbrainz.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5"
    }
   },
   "Midnight Marauders|A Tribe Called Quest": {
@@ -1822,6 +1846,14 @@
     "url": "https://en.wikipedia.org/wiki/Give_It_Up_or_Turnit_a_Loose"
    }
   },
+  "Apache|Incredible Bongo Band": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/fe/31/8dfe31b7-233a-0060-e098-72e44b08b8f1/HONEY3_COVER_3000pxls.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/fe/31/8dfe31b7-233a-0060-e098-72e44b08b8f1/HONEY3_COVER_3000pxls.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/apache-grandmaster-flash-remix/1147396105"
+   }
+  },
   "It's Just Begun|The Jimmy Castor Bunch": {
    "src": "https://coverartarchive.org/release-group/a6399a76-858d-3384-8efd-5ad7492f9b00/front-500",
    "full": "https://coverartarchive.org/release-group/a6399a76-858d-3384-8efd-5ad7492f9b00/front",
@@ -1852,6 +1884,14 @@
    "source": {
     "name": "Wikipedia",
     "url": "https://en.wikipedia.org/wiki/Technics_SL-1200"
+   }
+  },
+  "Christmas Rappin'|Kurtis Blow": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/christmas-rappin/1443893926"
    }
   },
   "Sugar Hill Records|Sylvia and Joe Robinson": {
@@ -1932,6 +1972,22 @@
    "source": {
     "name": "Apple Music",
     "url": "https://music.apple.com/us/album/white-lines-re-recorded-sped-up-single/1683389348"
+   }
+  },
+  "Sucker M.C.'s|Run-DMC": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/8b/83/6b8b83ef-751f-6bf6-53e2-0270d863db19/828766956023.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/8b/83/6b8b83ef-751f-6bf6-53e2-0270d863db19/828766956023.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/sucker-m-c-s-krush-groove-1/281812827"
+   }
+  },
+  "Roxanne, Roxanne|UTFO": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/37/6d/58376d9f-a410-ff84-686c-46efe6e94fb0/s06.amqhfgzs.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/37/6d/58376d9f-a410-ff84-686c-46efe6e94fb0/s06.amqhfgzs.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/roxanne-roxanne/40284048"
    }
   },
   "Friends|Whodini": {
@@ -2270,6 +2326,14 @@
     "url": "https://en.wikipedia.org/wiki/Fantastic%2C_Vol._2"
    }
   },
+  "Ether|Nas": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/07/34/390734a6-4855-9ceb-7e19-25cc8b6e9e33/696998626522.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/07/34/390734a6-4855-9ceb-7e19-25cc8b6e9e33/696998626522.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/ether/265104376"
+   }
+  },
   "Get Ur Freak On|Missy Elliott": {
    "src": "https://coverartarchive.org/release-group/e03c14b5-5c3c-35e0-be87-945ca2ca0692/front-500",
    "full": "https://coverartarchive.org/release-group/e03c14b5-5c3c-35e0-be87-945ca2ca0692/front",
@@ -2292,6 +2356,14 @@
    "source": {
     "name": "Cover Art Archive",
     "url": "https://musicbrainz.org/release-group/e0938463-82fa-4b79-9f40-d99f6d76baa1"
+   }
+  },
+  "Eskimo|Wiley": {
+   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/91/1f/10911fb2-4fe1-1c54-4b8b-b466e662af19/cover.jpg/600x600bb.jpg",
+   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/91/1f/10911fb2-4fe1-1c54-4b8b-b466e662af19/cover.jpg/2000x2000bb.jpg",
+   "source": {
+    "name": "Apple Music",
+    "url": "https://music.apple.com/us/album/eskimo/1684377067"
    }
   },
   "Original Pirate Material|The Streets": {
@@ -2380,6 +2452,14 @@
    "source": {
     "name": "Cover Art Archive",
     "url": "https://musicbrainz.org/release-group/7a6aaece-f9a2-34c6-b454-5f621a056b36"
+   }
+  },
+  "Int'l Players Anthem (I Choose You)|UGK feat. OutKast": {
+   "src": "https://coverartarchive.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427/front-500",
+   "full": "https://coverartarchive.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427/front",
+   "source": {
+    "name": "Cover Art Archive",
+    "url": "https://musicbrainz.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427"
    }
   },
   "FL Studio|Image-Line": {
@@ -2655,86 +2735,6 @@
     "url": "https://music.apple.com/us/album/cheat-codes/6794391491"
    },
    "cover": true
-  },
-  "Love Rap|Spoonie Gee": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f2/e1/1a/f2e11aaa-38dc-df32-786c-cc881a52b932/197187607730.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f2/e1/1a/f2e11aaa-38dc-df32-786c-cc881a52b932/197187607730.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/love-rap/1663076498"
-   }
-  },
-  "The New Rap Language|Treacherous Three": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d2/28/84/d2288490-1bc5-c816-52ff-5bd34119dddc/196626901071.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d2/28/84/d2288490-1bc5-c816-52ff-5bd34119dddc/196626901071.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/the-new-rap-language-feat-pooche-costello/1644418055"
-   }
-  },
-  "Doggystyle|Snoop Doggy Dogg": {
-   "src": "https://coverartarchive.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5/front-500",
-   "full": "https://coverartarchive.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5/front",
-   "source": {
-    "name": "Cover Art Archive",
-    "url": "https://musicbrainz.org/release-group/649762c9-8785-3d9c-803d-2f0496f168e5"
-   }
-  },
-  "Apache|Incredible Bongo Band": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/fe/31/8dfe31b7-233a-0060-e098-72e44b08b8f1/HONEY3_COVER_3000pxls.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8d/fe/31/8dfe31b7-233a-0060-e098-72e44b08b8f1/HONEY3_COVER_3000pxls.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/apache-grandmaster-flash-remix/1147396105"
-   }
-  },
-  "Christmas Rappin'|Kurtis Blow": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/9f/54/e2/9f54e24f-671b-268e-e6cd-38612543d1e2/00044007702826.rgb.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/christmas-rappin/1443893926"
-   }
-  },
-  "Sucker M.C.'s|Run-DMC": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/8b/83/6b8b83ef-751f-6bf6-53e2-0270d863db19/828766956023.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6b/8b/83/6b8b83ef-751f-6bf6-53e2-0270d863db19/828766956023.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/sucker-m-c-s-krush-groove-1/281812827"
-   }
-  },
-  "Roxanne, Roxanne|UTFO": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/37/6d/58376d9f-a410-ff84-686c-46efe6e94fb0/s06.amqhfgzs.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/58/37/6d/58376d9f-a410-ff84-686c-46efe6e94fb0/s06.amqhfgzs.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/roxanne-roxanne/40284048"
-   }
-  },
-  "Ether|Nas": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/07/34/390734a6-4855-9ceb-7e19-25cc8b6e9e33/696998626522.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/07/34/390734a6-4855-9ceb-7e19-25cc8b6e9e33/696998626522.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/ether/265104376"
-   }
-  },
-  "Eskimo|Wiley": {
-   "src": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/91/1f/10911fb2-4fe1-1c54-4b8b-b466e662af19/cover.jpg/600x600bb.jpg",
-   "full": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/10/91/1f/10911fb2-4fe1-1c54-4b8b-b466e662af19/cover.jpg/2000x2000bb.jpg",
-   "source": {
-    "name": "Apple Music",
-    "url": "https://music.apple.com/us/album/eskimo/1684377067"
-   }
-  },
-  "Int'l Players Anthem (I Choose You)|UGK feat. OutKast": {
-   "src": "https://coverartarchive.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427/front-500",
-   "full": "https://coverartarchive.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427/front",
-   "source": {
-    "name": "Cover Art Archive",
-    "url": "https://musicbrainz.org/release-group/87b43fc5-9be6-4441-9c65-dd5483072427"
-   }
   }
  },
  "people": {
@@ -2987,8 +2987,8 @@
    "from": "wikipedia-photo"
   },
   "icecube": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ice_Cube_%286934067684%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Ice_Cube_(6934067684).jpg",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Ice_Cube_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Ice_Cube_2012.jpg",
    "credit": "Eva Rinaldi",
    "license": "CC BY-SA 2.0",
    "width": 1000,
@@ -3168,7 +3168,7 @@
    "credit": "Brendan_linden",
    "license": "CC0",
    "width": 1081,
-   "from": "wikipedia-photo"
+   "from": "wikidata-image"
   },
   "doom": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/MF_Doom_-_Hultsfred_2011.jpg/1280px-MF_Doom_-_Hultsfred_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3371,10 +3371,11 @@
    "from": "commons-depicts"
   },
   "keef": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Chief_Keef_2019.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
-   "credit": "glenjamn3",
-   "license": "CC BY 3.0",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/1/16/Chief_Keef_2017.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2017.jpg",
+   "credit": "Miami-Dade Corrections and Rehabilitation",
+   "license": "Public domain",
+   "width": 960,
    "from": "commons-depicts"
   },
   "tyler": {
@@ -3514,12 +3515,12 @@
    "from": "wikidata-image"
   },
   "solaar": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/6/6e/MC_Solaar_Invit%C3%A9_du_RH_Factor.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:MC_Solaar_Invit%C3%A9_du_RH_Factor.jpg",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/MC_Solaar_%26_Roy_Hargrove_RH_Factor_Live_in_Marseille.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:MC_Solaar_%26_Roy_Hargrove_RH_Factor_Live_in_Marseille.jpg",
    "credit": "Thomas Faivre-Duboz",
    "license": "CC BY-SA 2.0",
-   "width": 941,
-   "from": "wikidata-image"
+   "width": 1063,
+   "from": "commons-depicts"
   },
   "emicida": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Emicida_Festival_Sensacional_2020.jpg/1280px-Emicida_Festival_Sensacional_2020.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3527,7 +3528,7 @@
    "credit": "Festival Sensacional. Foto: Bruno Figueiredo / Área de Serviço",
    "license": "CC BY-SA 2.0",
    "width": 1548,
-   "from": "wikipedia-photo"
+   "from": "wikidata-image"
   },
   "cindy": {
    "src": "https://upload.wikimedia.org/wikipedia/en/0/05/Cindy_Campbell.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -3706,12 +3707,12 @@
    "from": "commons-depicts"
   },
   "nipsey": {
-   "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Soundtrack_Beat_Battle_Judging_Panel_March2011_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-   "page": "https://commons.wikimedia.org/wiki/File:Soundtrack_Beat_Battle_Judging_Panel_March2011_(cropped).jpg",
-   "credit": "Soundtrack Beat Battle",
-   "license": "CC BY 2.5",
-   "width": 909,
-   "from": "wikidata-image"
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Marathon_Burger_Melrose_%E2%80%93_Fairfax_District%2C_Los_Angeles.jpg/1280px-Marathon_Burger_Melrose_%E2%80%93_Fairfax_District%2C_Los_Angeles.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Marathon_Burger_Melrose_%E2%80%93_Fairfax_District,_Los_Angeles.jpg",
+   "credit": "Myunboundedlife",
+   "license": "CC BY 4.0",
+   "width": 3024,
+   "from": "commons-depicts"
   },
   "virgil": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg/1280px-Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -3719,7 +3720,7 @@
    "credit": "Myles Kalus Anak Jihem",
    "license": "CC BY-SA 4.0",
    "width": 1775,
-   "from": "wikipedia-photo"
+   "from": "wikidata-image"
   },
   "gibbs": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/MadGibbs2014_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",

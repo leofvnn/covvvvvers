@@ -460,7 +460,7 @@
    "Ice Cube September 2025.png"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Ice_Cube_(6934067684).jpg",
+  "chosen": "https://commons.wikimedia.org/wiki/File:Ice_Cube_2012.jpg",
   "how": "commons-depicts",
   "width": 1000
  },
@@ -733,14 +733,11 @@
   "name": "Master P",
   "wikipedia": "https://en.wikipedia.org/wiki/Master_P",
   "previous": "Master_p-02.jpg",
-  "wikidata": "https://www.wikidata.org/wiki/Q722042",
-  "wikidataImages": [
-   "Master p-02.jpg"
-  ],
-  "previousConfirmed": true,
+  "wikidata": null,
+  "wikidataImages": [],
+  "previousConfirmed": false,
   "chosen": "https://commons.wikimedia.org/wiki/File:Master_p-02.jpg",
-  "how": "wikidata-image",
-  "width": 1103
+  "how": "wikidata-image (kept: lookup failed this run)"
  },
  {
   "id": "three6",
@@ -761,11 +758,14 @@
   "name": "Eminem",
   "wikipedia": "https://en.wikipedia.org/wiki/Eminem",
   "previous": "Eminem_2021_Color_Corrected.jpg",
-  "wikidata": null,
-  "wikidataImages": [],
-  "previousConfirmed": false,
+  "wikidata": "https://www.wikidata.org/wiki/Q5608",
+  "wikidataImages": [
+   "Eminem 2021 Color Corrected.jpg"
+  ],
+  "previousConfirmed": true,
   "chosen": "https://commons.wikimedia.org/wiki/File:Eminem_2021_Color_Corrected.jpg",
-  "how": "wikipedia-photo"
+  "how": "wikidata-image",
+  "width": 1081
  },
  {
   "id": "doom",
@@ -1118,11 +1118,14 @@
   "name": "Chief Keef",
   "wikipedia": "https://en.wikipedia.org/wiki/Chief_Keef",
   "previous": "Chief_Keef_2019.jpg",
-  "wikidata": null,
-  "wikidataImages": [],
-  "previousConfirmed": false,
-  "chosen": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2019.jpg",
-  "how": "commons-depicts (kept: lookup failed this run)"
+  "wikidata": "https://www.wikidata.org/wiki/Q127362",
+  "wikidataImages": [
+   "Chief Keef 2019 performance.jpg"
+  ],
+  "previousConfirmed": true,
+  "chosen": "https://commons.wikimedia.org/wiki/File:Chief_Keef_2017.jpg",
+  "how": "commons-depicts",
+  "width": 960
  },
  {
   "id": "tyler",
@@ -1385,19 +1388,22 @@
    "MC Solaar Invité du RH Factor.jpg"
   ],
   "previousConfirmed": true,
-  "chosen": "https://commons.wikimedia.org/wiki/File:MC_Solaar_Invit%C3%A9_du_RH_Factor.jpg",
-  "how": "wikidata-image",
-  "width": 941
+  "chosen": "https://commons.wikimedia.org/wiki/File:MC_Solaar_%26_Roy_Hargrove_RH_Factor_Live_in_Marseille.jpg",
+  "how": "commons-depicts",
+  "width": 1063
  },
  {
   "id": "emicida",
   "name": "Emicida",
   "wikipedia": "https://en.wikipedia.org/wiki/Emicida",
   "previous": null,
-  "wikidata": null,
-  "wikidataImages": [],
+  "wikidata": "https://www.wikidata.org/wiki/Q611208",
+  "wikidataImages": [
+   "Emicida Festival Sensacional 2020.jpg"
+  ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Emicida_Festival_Sensacional_2020.jpg",
-  "how": "wikipedia-photo"
+  "how": "wikidata-image",
+  "width": 1548
  },
  {
   "id": "cindy",
@@ -1710,19 +1716,22 @@
   "wikidataImages": [
    "Soundtrack Beat Battle Judging Panel March2011 (cropped).jpg"
   ],
-  "chosen": "https://commons.wikimedia.org/wiki/File:Soundtrack_Beat_Battle_Judging_Panel_March2011_(cropped).jpg",
-  "how": "wikidata-image",
-  "width": 909
+  "chosen": "https://commons.wikimedia.org/wiki/File:Marathon_Burger_Melrose_%E2%80%93_Fairfax_District,_Los_Angeles.jpg",
+  "how": "commons-depicts",
+  "width": 3024
  },
  {
   "id": "virgil",
   "name": "Virgil Abloh",
   "wikipedia": "https://en.wikipedia.org/wiki/Virgil_Abloh",
   "previous": null,
-  "wikidata": null,
-  "wikidataImages": [],
+  "wikidata": "https://www.wikidata.org/wiki/Q26703582",
+  "wikidataImages": [
+   "Virgil Abloh Paris Fashion Week Autumn Winter 2019 (cropped).jpg"
+  ],
   "chosen": "https://commons.wikimedia.org/wiki/File:Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_(cropped).jpg",
-  "how": "wikipedia-photo"
+  "how": "wikidata-image",
+  "width": 1775
  },
  {
   "id": "gibbs",
