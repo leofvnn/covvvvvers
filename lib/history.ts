@@ -86,7 +86,7 @@ export const ERAS: Era[] = [
         id: "zulu",
         when: "1973",
         title: "The Universal Zulu Nation",
-        text: "Afrika Bambaataa, a former member of the Black Spades gang, founded a group that steered young people toward DJing, rapping, breaking and graffiti, and gave hip-hop its idea of elements, with knowledge added later as a fifth. His sets mixed funk with rock, salsa and German electronic music. In 2016 he stepped away from the Zulu Nation after several men accused him of sexually abusing them as teenagers.",
+        text: "Afrika Bambaataa, a former member of the Black Spades gang, founded a group that steered young people toward DJing, rapping, breaking and graffiti, and gave hip-hop its idea of elements, with knowledge added later as a fifth. His sets mixed funk with rock, salsa and German electronic music. In 2016 he stepped away from the Zulu Nation after several men accused him of sexually abusing them as teenagers, allegations he denies.",
         tags: ["culture"],
       },
       {
@@ -371,7 +371,7 @@ export const ERAS: Era[] = [
         id: "wu",
         when: "1993",
         title: "Wu-Tang and 'Doggystyle'",
-        text: "RZA produced 'Enter the Wu-Tang (36 Chambers)' on a small budget, with grimy kung fu samples and nine rappers trading verses, and negotiated a deal that let each member sign solo contracts elsewhere. Two weeks later Snoop Doggy Dogg's 'Doggystyle' entered the Billboard 200 at number one with 806,858 copies sold in its first week, a record for a debut artist at the time. Sean Combs launched Bad Boy Records, and Queen Latifah's 'U.N.I.T.Y.' took on misogyny and won a Grammy.",
+        text: "RZA produced 'Enter the Wu-Tang (36 Chambers)' on a small budget, with grimy kung fu samples and nine rappers trading verses, and negotiated a deal that let each member sign solo contracts elsewhere. Two weeks later Snoop Doggy Dogg's 'Doggystyle' entered the Billboard 200 at number one with 806,858 copies sold in its first week, a record for a debut artist at the time. Sean Combs launched Bad Boy Records (in 2025 Combs was convicted on two federal prostitution-related counts and sentenced to 50 months), and Queen Latifah's 'U.N.I.T.Y.' took on misogyny and won a Grammy.",
         tags: ["business", "sound", "women"],
         stat: { value: 806858, label: "copies of 'Doggystyle' sold in week one" },
         records: [
@@ -458,7 +458,7 @@ export const ERAS: Era[] = [
         id: "lauryn",
         when: "1998",
         title: "Rap outsells country",
-        text: "In 1998, for the first time, rap outsold country, which had been America's top-selling format. Lauryn Hill's 'The Miseducation of Lauryn Hill' mixed rap and soul and, in February 1999, became the first hip-hop album to win the Grammy for Album of the Year. Big Pun's 'Capital Punishment' was the first album by a solo Latino rapper to go platinum, Jay-Z's 'Hard Knock Life' sampled Broadway, and Cash Money signed a distribution deal with Universal. That autumn Cher's 'Believe' introduced the world to Auto-Tune as an effect.",
+        text: "In 1998, for the first time, rap outsold country, which had been America's top-selling format. Lauryn Hill's 'The Miseducation of Lauryn Hill' mixed rap and soul and, in February 1999, became what is widely cited as the first hip-hop album to win the Grammy for Album of the Year (the Academy classed it as R&B, so some count OutKast's 2004 win as the first for rap). Big Pun's 'Capital Punishment' was the first album by a solo Latino rapper to go platinum, Jay-Z's 'Hard Knock Life' sampled Broadway, and Cash Money signed a distribution deal with Universal. That autumn Cher's 'Believe' introduced the world to Auto-Tune as an effect.",
         tags: ["first", "business", "women", "tech"],
         records: [
           album("The Miseducation of Lauryn Hill", "Lauryn Hill", 1998),
@@ -837,17 +837,22 @@ export const ERAS: Era[] = [
         id: "super-bowl-lix",
         when: "2025",
         title: "A solo headliner at the Super Bowl",
-        text: "'Not Like Us' won five Grammys in February, including Record and Song of the Year, and Doechii became the third woman to win Best Rap Album. A week later Lamar became the first solo hip-hop artist to headline the Super Bowl halftime show. In the summer Clipse returned with 'Let God Sort Em Out', their first album in 16 years.",
+        text: "'Not Like Us' won five Grammys in February, including Record and Song of the Year, and Doechii became the third woman to win Best Rap Album. A week later Lamar became the first solo hip-hop artist to headline the Super Bowl halftime show, watched by an average of 133.5 million people in the US, the most-watched halftime on record. Playboi Carti's 'MUSIC' had the biggest rap week of the spring, and in the summer Clipse returned with 'Let God Sort Em Out', their first album in 16 years, released independently. In October a federal judge dismissed Drake's defamation suit against Universal over 'Not Like Us'.",
         tags: ["first", "culture", "women"],
         stat: { value: 5, label: "Grammys for 'Not Like Us'" },
-        records: [album("Let God Sort Em Out", "Clipse", 2025), album("God Does Like Ugly", "JID", 2025), album("Lotus", "Little Simz", 2025)],
+        records: [album("MUSIC", "Playboi Carti", 2025), album("Let God Sort Em Out", "Clipse", 2025), album("God Does Like Ugly", "JID", 2025), album("Lotus", "Little Simz", 2025)],
       },
       {
         id: "most-awarded",
         when: "2026",
         title: "The most-awarded rapper in Grammy history",
-        text: "In February 'GNX' won the Grammy for Best Rap Album, and Lamar's wins that night took him past Jay-Z as the most-awarded rapper in Grammy history. Fifty-three years after a rec room party in the Bronx, the story keeps going.",
-        tags: ["first"],
+        text: "In February 'GNX' won the Grammy for Best Rap Album and 'Luther' won Record of the Year, taking Lamar to 27 Grammys, more than any other rapper. Clipse's 'Chains & Whips' won Best Rap Performance, and Bad Bunny's 'Debí Tirar Más Fotos' became the first mainly Spanish-language Album of the Year. Big releases kept coming: A$AP Rocky's 'Don't Be Dumb', with a cover by Tim Burton, J. Cole's double album 'The Fall-Off', billed as his last, and Drake's 'Iceman', which gave him a 15th number one album, more than Jay-Z. Fifty-three years after a rec room party in the Bronx, the story keeps going.",
+        tags: ["first", "business"],
+        records: [
+          { title: "Don't Be Dumb", artist: "A$AP Rocky", year: 2026, kind: "album" },
+          { title: "The Fall-Off", artist: "J. Cole", year: 2026, kind: "album" },
+          { title: "Iceman", artist: "Drake", year: 2026, kind: "album" },
+        ],
       },
     ],
   },
@@ -880,3 +885,6 @@ export const SOURCES: { title: string; url: string }[] = [
   { title: "2026 Grammy Awards winners list, Q107", url: "https://q107.com/news/11640024/2026-grammy-awards-winners-list/" },
   { title: "Photos and biographies: Wikipedia and Wikimedia Commons", url: "https://commons.wikimedia.org/" },
 ];
+
+/** Every moment by id, so chapters can arrange them. */
+export const MOMENTS: Record<string, Moment> = Object.fromEntries(ERAS.flatMap((e) => e.moments.map((m) => [m.id, m])));

@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { squareImage } from "@/lib/img";
-import { TAGS, type Era, type HistoryRecord, type Moment, type Tag } from "@/lib/history";
+import type { Guide, KeyRecord } from "@/lib/chapters";
+import { TAGS, type HistoryRecord, type Moment, type Tag } from "@/lib/history";
 import type { Person } from "@/lib/people";
 import { PHOTOS, commonsImage } from "@/lib/photos";
 import CoverLink from "./CoverLink";
@@ -20,14 +21,32 @@ export type CoverMini = {
 };
 type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][] };
 type MomentView = Omit<Moment, "records"> & { records: RecordView[] };
-export type EraView = Omit<Era, "moments"> & {
+export type EraView = {
+  id: string;
+  label: string;
+  span: string;
+  from: number;
+  to: number;
+  title: string;
+  intro: string;
+  guide: Guide;
   bg: string;
   ink: string;
   posterCover: CoverMini | null;
   covers: number;
   contributors: (Person & { id: string })[];
+  keyRecords: (KeyRecord & { cover: CoverMini | null; listen: [string, string][] })[];
   moments: MomentView[];
 };
+
+const GUIDE: [keyof Guide, string][] = [
+  ["sound", "What it sounded like"],
+  ["look", "What it looked like"],
+  ["where", "Where and why it grew"],
+  ["tech", "The technology"],
+  ["impact", "What it changed"],
+  ["legacy", "What it left behind"],
+];
 
 const KIND: Record<HistoryRecord["kind"], string> = {
   album: "Album",
@@ -136,6 +155,39 @@ function RecordChip({ r }: { r: RecordView }) {
   );
 }
 
+function KeyCard({ r }: { r: KeyRecord & { cover: CoverMini | null; listen: [string, string][] } }) {
+  const kind = KIND[r.kind];
+  const art = r.cover ? (
+    <span className="h-key-art" data-art>
+      <img src={squareImage(r.cover.image, 400)} alt={`${r.title} by ${r.artist}, cover`} width={200} height={200} loading="lazy" />
+    </span>
+  ) : (
+    <span className={`h-key-art is-blank kind-${r.kind}`} aria-hidden="true">
+      <span>{r.title}</span>
+    </span>
+  );
+  return (
+    <li className="h-key">
+      {r.cover ? (
+        <CoverLink href={`/covers/${r.cover.slug}`} className="h-key-link">
+          {art}
+        </CoverLink>
+      ) : (
+        art
+      )}
+      <div className="h-key-body">
+        <p className="h-key-meta">
+          {r.year} · {kind}
+        </p>
+        <h4>{r.cover ? <CoverLink href={`/covers/${r.cover.slug}`}>{r.title}</CoverLink> : r.title}</h4>
+        <p className="h-key-artist">{r.artist}</p>
+        <p className="h-key-note">{r.note}</p>
+        <Listen links={r.listen} />
+      </div>
+    </li>
+  );
+}
+
 export default function History({ eras, sources }: { eras: EraView[]; sources: { title: string; url: string }[] }) {
   const [filter, setFilter] = useState<Tag | "all">("all");
   const [active, setActive] = useState<string | undefined>(eras[0]?.id);
@@ -146,6 +198,7 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   const root = useRef<HTMLDivElement>(null);
 
   const total = useMemo(() => eras.reduce((n, e) => n + e.moments.length, 0), [eras]);
+  const records = useMemo(() => eras.reduce((n, e) => n + e.keyRecords.length, 0), [eras]);
   const people = useMemo(() => new Set(eras.flatMap((e) => e.contributors.map((p) => p.id))).size, [eras]);
   const shown = (m: MomentView) => filter === "all" || m.tags.includes(filter);
   const count = useMemo(() => eras.reduce((n, e) => n + e.moments.filter(shown).length, 0), [eras, filter]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -251,8 +304,8 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
           <span className="h-hero-now">{year}</span>
         </h1>
         <p className="h-hero-lede">
-          How a back-to-school party in a Bronx rec room grew into the biggest music in the world. {total} moments, the records,
-          machines and labels behind them, and {people} people who made it happen.
+          How a back-to-school party in a Bronx rec room grew into the biggest music in the world. Seven eras, each with how it
+          sounded and looked, where and why it grew, {total} milestones, {records} key records and {people} people who made it happen.
         </p>
         <div className="h-hero-actions">
           <button type="button" className="button solid" onClick={() => go(eras[0].id)}>
@@ -315,9 +368,6 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                   </p>
                   <h2 id={`${era.id}-title`}>{era.title}</h2>
                   <p className="h-era-intro">{era.intro}</p>
-                  <p className="h-era-sound">
-                    <span>The sound</span> {era.sound}
-                  </p>
                 </div>
                 {era.posterCover && (
                   <CoverLink href={`/covers/${era.posterCover.slug}`} className="h-era-poster">
@@ -356,6 +406,16 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                 </div>
               </div>
 
+              <div className="h-guide">
+                {GUIDE.map(([k, label]) => (
+                  <section key={k} className={`h-guide-item g-${k}`}>
+                    <h3>{label}</h3>
+                    <p>{era.guide[k]}</p>
+                  </section>
+                ))}
+              </div>
+
+              <h3 className="h-sub">Milestones</h3>
               <ol className="h-moments">
                 {visible.map((m) => (
                   <li key={m.id} id={m.id} className={`h-moment${flash === m.id ? " is-flash" : ""}`}>
@@ -391,6 +451,16 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                 ))}
                 {visible.length === 0 && <li className="h-empty">Nothing tagged this way in these years.</li>}
               </ol>
+              <div className="h-keys">
+                <h3 className="h-sub">
+                  Key records <span>{era.keyRecords.length}</span>
+                </h3>
+                <ul className="h-key-grid">
+                  {era.keyRecords.map((r) => (
+                    <KeyCard key={r.title + r.artist} r={r} />
+                  ))}
+                </ul>
+              </div>
               {era.covers > 0 && (
                 <p className="h-era-more">
                   {era.covers} {era.covers === 1 ? "cover" : "covers"} in the collection from {era.span.replace(" to now", " onward")}.

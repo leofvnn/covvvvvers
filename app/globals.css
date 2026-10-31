@@ -2350,6 +2350,215 @@ kbd {
   }
 }
 
+/* Era guide */
+
+.h-guide {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.h-guide-item {
+  padding: 24px var(--gutter);
+  background: var(--paper);
+}
+
+.h-guide-item h3,
+.h-sub {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.h-guide-item h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--era-bg);
+  box-shadow: 0 0 0 1px var(--ink);
+  vertical-align: 1px;
+}
+
+.h-guide-item p {
+  margin: 0;
+  max-width: 62ch;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 760px) {
+  .h-guide {
+    grid-template-columns: 1fr 1fr;
+  }
+  .h-guide-item {
+    padding: 28px 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .h-guide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.h-sub {
+  padding: clamp(32px, 5vw, 56px) var(--gutter) 0;
+  font-size: 0.8125rem;
+}
+
+.h-sub span {
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.h-sub + .h-moments {
+  padding-top: 24px;
+}
+
+/* Key records */
+
+.h-keys {
+  padding-bottom: clamp(24px, 4vw, 40px);
+  border-top: 1px solid var(--line);
+}
+
+.h-key-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px 24px;
+  margin: 0;
+  padding: 20px var(--gutter) 0;
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .h-key-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .h-key-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1400px) {
+  .h-key-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.h-key {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.h-key-link {
+  display: block;
+}
+
+.h-key-art {
+  display: block;
+  width: 96px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--soft);
+  transition: transform 0.3s var(--ease);
+}
+
+.h-key-link:hover .h-key-art {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+.h-key-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h-key-art.is-blank {
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  background: var(--era-bg);
+  color: var(--era-ink);
+}
+
+.h-key-art.is-blank span {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  line-height: 1.05;
+  font-variation-settings: "wdth" 70;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.h-key-art.is-blank.kind-song {
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle, var(--era-bg) 0 30%, #161616 31% 100%);
+  color: #fff;
+}
+
+.h-key-art.is-blank.kind-song span {
+  display: none;
+}
+
+.h-key-body h4 {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.h-key-body h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.h-key-body h4 a:hover {
+  text-decoration: underline;
+}
+
+.h-key-meta,
+.h-key-artist {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.h-key-meta {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+}
+
+.h-key-note {
+  margin: 8px 0 0;
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.h-key .h-listen {
+  margin-top: 8px;
+}
+
 /* Contributor modal */
 
 .person-modal {
