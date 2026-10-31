@@ -25,11 +25,7 @@ export default async function Home() {
   return (
     <HeroRing
       covers={ring}
-      title={
-        <>
-          Every rap album cover <em>has a story.</em>
-        </>
-      }
+      title="Every rap album cover has a story."
       sub={`${covers.length} covers from ${since} to now, and the people, places and ideas behind each one.`}
     />
   );

@@ -158,8 +158,8 @@ h6 {
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.015em;
-  font-family: var(--display);
   text-decoration: none;
+  font-family: var(--sans);
 }
 
 .nav-inline {
@@ -286,8 +286,8 @@ h6 {
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
-  font-family: var(--display);
   text-decoration: none;
+  font-family: var(--sans);
 }
 
 .site-footer p {
@@ -817,27 +817,16 @@ body:has(.ring-hero) .site-footer {
 
 .ring-text h1 {
   margin: 0;
-  max-width: 13ch;
-  font-size: clamp(2.75rem, min(7.5vw, 10svh), 7.5rem);
-  font-weight: 800;
-  line-height: 0.88;
-  letter-spacing: -0.02em;
-  font-family: var(--display);
-  text-wrap: balance;
-}
-
-.ring-text h1 em {
-  display: block;
-  font-style: normal;
-  font-weight: 300;
+  max-width: 14ch;
+  font-size: clamp(2.75rem, 7vw, 5rem);
 }
 
 .ring-text p {
   margin: 0;
   max-width: 50vw;
-  font-family: var(--serif);
-  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
-  line-height: 1.45;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  opacity: 0.8;
   text-shadow: 0 1px 18px rgba(0, 0, 0, 0.9);
 }
 
@@ -4450,4 +4439,11 @@ html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
 
 .menu-theme .theme-toggle button {
   padding: 0 8px;
+}
+
+/* Page headings are 35px on phones. The timeline's big year counter keeps its own size. */
+@media (max-width: 799px) {
+  h1:not(.h-hero-year) {
+    font-size: 35px;
+  }
 }
