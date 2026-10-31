@@ -69,6 +69,34 @@ export default async function TimelinePage() {
     return { ...r, cover, listen };
   };
 
+  // A moment's year: the first year it names, or the middle of the decade it names.
+  const yearOf = (when: string) => {
+    const decade = when.match(/(early|mid|late)-?\s*(\d{4})s/i);
+    if (decade) return Number(decade[2]) + ({ early: 1, mid: 5, late: 8 } as Record<string, number>)[decade[1].toLowerCase()];
+    const y = when.match(/\d{4}/);
+    return y ? Number(y[0]) : 0;
+  };
+
+  const byYear = (from: number, to: number, momentIds: string[], records: (typeof CHAPTERS)[number]["records"]) => {
+    const years = new Map<number, { year: number; moments: EraView["years"][number]["moments"]; records: EraView["years"][number]["records"] }>();
+    const slot = (y: number) => {
+      const k = Math.min(to, Math.max(from, y));
+      if (!years.has(k)) years.set(k, { year: k, moments: [], records: [] });
+      return years.get(k)!;
+    };
+    for (const id of momentIds) {
+      const mo = MOMENTS[id];
+      if (!mo) continue;
+      // Albums live with the year's records; moments keep the songs, gear, labels and shows.
+      slot(yearOf(mo.when)).moments.push({ ...mo, records: (mo.records ?? []).filter((r) => r.kind !== "album").map(withLinks) });
+    }
+    for (const r of records) slot(r.year).records.push(withLinks(r));
+    // A song listed under the year's records isn't repeated inside the milestone.
+    const listed = new Set(records.map((r) => norm(r.title)));
+    for (const y of years.values()) for (const mo of y.moments) mo.records = mo.records.filter((r) => !listed.has(norm(r.title)));
+    return [...years.values()].sort((x, y) => x.year - y.year);
+  };
+
   const eras: EraView[] = CHAPTERS.map((ch) => {
     const poster = bySlug.get(ch.poster);
     const bg = pageColor(poster?.color ?? null);
@@ -86,14 +114,7 @@ export default async function TimelinePage() {
       posterCover: poster ? mini(poster) : null,
       covers: covers.filter((c) => c.release_year >= ch.from && c.release_year <= ch.to).length,
       contributors: ch.people.filter((id) => PEOPLE[id]).map((id) => ({ id, ...PEOPLE[id] })),
-      keyRecords: [...ch.records].sort((x, y) => x.year - y.year).map(withLinks),
-      moments: ch.moments
-        .filter((id) => MOMENTS[id])
-        .map((id) => {
-          const mo = MOMENTS[id];
-          // Albums live in Key records; moments keep the songs, gear, labels and shows.
-          return { ...mo, records: (mo.records ?? []).filter((r) => r.kind !== "album").map(withLinks) };
-        }),
+      years: byYear(ch.from, ch.to, ch.moments, ch.records),
     };
   });
 

@@ -35,8 +35,7 @@ export type EraView = {
   posterCover: CoverMini | null;
   covers: number;
   contributors: (Person & { id: string })[];
-  keyRecords: (KeyRecord & { cover: CoverMini | null; listen: [string, string][] })[];
-  moments: MomentView[];
+  years: { year: number; moments: MomentView[]; records: (KeyRecord & { cover: CoverMini | null; listen: [string, string][] })[] }[];
 };
 
 const GUIDE: [keyof Guide, string][] = [
@@ -197,11 +196,11 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   const [person, setPerson] = useState<{ era: string; index: number } | null>(null);
   const root = useRef<HTMLDivElement>(null);
 
-  const total = useMemo(() => eras.reduce((n, e) => n + e.moments.length, 0), [eras]);
-  const records = useMemo(() => eras.reduce((n, e) => n + e.keyRecords.length, 0), [eras]);
+  const total = useMemo(() => eras.reduce((n, e) => n + e.years.reduce((k, y) => k + y.moments.length, 0), 0), [eras]);
+  const records = useMemo(() => eras.reduce((n, e) => n + e.years.reduce((k, y) => k + y.records.length, 0), 0), [eras]);
   const people = useMemo(() => new Set(eras.flatMap((e) => e.contributors.map((p) => p.id))).size, [eras]);
   const shown = (m: MomentView) => filter === "all" || m.tags.includes(filter);
-  const count = useMemo(() => eras.reduce((n, e) => n + e.moments.filter(shown).length, 0), [eras, filter]); // eslint-disable-line react-hooks/exhaustive-deps
+  const count = useMemo(() => eras.reduce((n, e) => n + e.years.reduce((k, y) => k + y.moments.filter(shown).length, 0), 0), [eras, filter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // The hero year ticks from 1973 up to today.
   useEffect(() => {
@@ -247,7 +246,7 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   useEffect(() => {
     const el = root.current;
     if (!el) return;
-    const items = el.querySelectorAll<HTMLElement>(".h-moment:not(.is-in), .h-era-band:not(.is-in)");
+    const items = el.querySelectorAll<HTMLElement>(".h-year:not(.is-in), .h-era-band:not(.is-in)");
     if (reduced() || !("IntersectionObserver" in window)) {
       items.forEach((i) => i.classList.add("is-in"));
       return;
@@ -278,13 +277,13 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
   };
 
   const surprise = () => {
-    const pool = eras.flatMap((e) => e.moments.filter(shown).map((m) => m.id));
+    const pool = eras.flatMap((e) => e.years.flatMap((y) => y.moments.filter(shown).map((m) => m.id)));
     if (!pool.length) return;
     let pick = pool[Math.floor(Math.random() * pool.length)];
     if (pool.length > 1 && pick === flash) pick = pool[(pool.indexOf(pick) + 1) % pool.length];
     const el = document.getElementById(pick);
     if (!el) return;
-    el.classList.add("is-in");
+    el.closest(".h-year")?.classList.add("is-in");
     el.scrollIntoView({ behavior: reduced() ? "auto" : "smooth", block: "center" });
     setFlash(pick);
     window.setTimeout(() => setFlash((f) => (f === pick ? null : f)), 2600);
@@ -304,8 +303,8 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
           <span className="h-hero-now">{year}</span>
         </h1>
         <p className="h-hero-lede">
-          How a back-to-school party in a Bronx rec room grew into the biggest music in the world. Seven eras, each with how it
-          sounded and looked, where and why it grew, {total} milestones, {records} key records and {people} people who made it happen.
+          How a back-to-school party in a Bronx rec room grew into the biggest music in the world, year by year: {total} milestones,
+          {records} key records and {people} people who made it happen.
         </p>
         <div className="h-hero-actions">
           <button type="button" className="button solid" onClick={() => go(eras[0].id)}>
@@ -351,7 +350,6 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
 
       <div className="h-story">
         {eras.map((era, i) => {
-          const visible = era.moments.filter(shown);
           return (
             <section
               key={era.id}
@@ -406,61 +404,76 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                 </div>
               </div>
 
-              <div className="h-guide">
-                {GUIDE.map(([k, label]) => (
-                  <section key={k} className={`h-guide-item g-${k}`}>
-                    <h3>{label}</h3>
-                    <p>{era.guide[k]}</p>
-                  </section>
-                ))}
-              </div>
-
-              <h3 className="h-sub">Milestones</h3>
-              <ol className="h-moments">
-                {visible.map((m) => (
-                  <li key={m.id} id={m.id} className={`h-moment${flash === m.id ? " is-flash" : ""}`}>
-                    <div className="h-when">
-                      <span className="h-dot" aria-hidden="true" />
-                      <span>{m.when}</span>
-                    </div>
-                    <div className="h-card">
-                      <div className="h-tags">
-                        {m.tags.map((t) => (
-                          <button key={t} type="button" onClick={() => setFilter(t)} aria-label={`Show only ${TAGS.find((x) => x.id === t)?.label}`}>
-                            {TAGS.find((x) => x.id === t)?.label}
-                          </button>
-                        ))}
-                      </div>
-                      <h3>{m.title}</h3>
-                      <p>{m.text}</p>
-                      {m.stat && (
-                        <p className="h-stat">
-                          <CountUp value={m.stat.value} prefix={m.stat.prefix} suffix={m.stat.suffix} />
-                          <span className="h-stat-label">{m.stat.label}</span>
-                        </p>
-                      )}
-                      {m.records.length > 0 && (
-                        <ul className="h-records" aria-label="Records">
-                          {m.records.map((r) => (
-                            <RecordChip key={r.title + r.artist + r.kind} r={r} />
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </li>
-                ))}
-                {visible.length === 0 && <li className="h-empty">Nothing tagged this way in these years.</li>}
-              </ol>
-              <div className="h-keys">
-                <h3 className="h-sub">
-                  Key records <span>{era.keyRecords.length}</span>
-                </h3>
-                <ul className="h-key-grid">
-                  {era.keyRecords.map((r) => (
-                    <KeyCard key={r.title + r.artist} r={r} />
+              <details className="h-guide-wrap">
+                <summary>
+                  About this era <span>How it sounded and looked, where and why it grew, and what it left behind</span>
+                </summary>
+                <div className="h-guide">
+                  {GUIDE.map(([k, label]) => (
+                    <section key={k} className={`h-guide-item g-${k}`}>
+                      <h3>{label}</h3>
+                      <p>{era.guide[k]}</p>
+                    </section>
                   ))}
-                </ul>
-              </div>
+                </div>
+              </details>
+
+              <ol className="h-years">
+                {era.years.map((y) => {
+                  const ms = y.moments.filter(shown);
+                  const recs = filter === "all" ? y.records : [];
+                  if (!ms.length && !recs.length) return null;
+                  return (
+                    <li key={y.year} id={`year-${y.year}`} className="h-year">
+                      <div className="h-year-label">
+                        <span className="h-dot" aria-hidden="true" />
+                        <span>{y.year}</span>
+                      </div>
+                      <div className="h-year-body">
+                        {ms.map((m) => (
+                          <article key={m.id} id={m.id} className={`h-entry${flash === m.id ? " is-flash" : ""}`}>
+                            <div className="h-card">
+                              <div className="h-tags">
+                                {m.when !== String(y.year) && <span className="h-when-note">{m.when}</span>}
+                                {m.tags.map((t) => (
+                                  <button key={t} type="button" onClick={() => setFilter(t)} aria-label={`Show only ${TAGS.find((x) => x.id === t)?.label}`}>
+                                    {TAGS.find((x) => x.id === t)?.label}
+                                  </button>
+                                ))}
+                              </div>
+                              <h3>{m.title}</h3>
+                              <p>{m.text}</p>
+                              {m.stat && (
+                                <p className="h-stat">
+                                  <CountUp value={m.stat.value} prefix={m.stat.prefix} suffix={m.stat.suffix} />
+                                  <span className="h-stat-label">{m.stat.label}</span>
+                                </p>
+                              )}
+                              {m.records.length > 0 && (
+                                <ul className="h-records" aria-label="Records">
+                                  {m.records.map((r) => (
+                                    <RecordChip key={r.title + r.artist + r.kind} r={r} />
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          </article>
+                        ))}
+                        {recs.length > 0 && (
+                          <div className="h-year-records">
+                            <p className="h-year-rel">Released in {y.year}</p>
+                            <ul className="h-key-grid">
+                              {recs.map((r) => (
+                                <KeyCard key={r.title + r.artist} r={r} />
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
               {era.covers > 0 && (
                 <p className="h-era-more">
                   {era.covers} {era.covers === 1 ? "cover" : "covers"} in the collection from {era.span.replace(" to now", " onward")}.
