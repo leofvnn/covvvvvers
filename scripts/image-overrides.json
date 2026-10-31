@@ -9,8 +9,6 @@
   "The Bridge|MC Shan": "The Bridge (MC Shan song)"
  },
  "people": {
-  "_note": "null: no photo (the search found the wrong thing). A string: use that Commons file.",
-  "griselda": null,
-  "crazylegs": null
+  "_note": "null: no photo. A string: use that Commons file (it is still checked against Wikidata)."
  }
 }

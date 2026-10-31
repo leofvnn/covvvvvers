@@ -192,31 +192,87 @@ async function fileInfo(file) {
   };
 }
 
+const commons = (params) =>
+  get(`https://commons.wikimedia.org/w/api.php?${new URLSearchParams({ format: "json", formatversion: "2", origin: "*", ...params })}`);
+const wikidata = (params) =>
+  get(`https://www.wikidata.org/w/api.php?${new URLSearchParams({ format: "json", formatversion: "2", origin: "*", ...params })}`);
+const fileKey = (f = "") => f.replace(/^File:/, "").replace(/ /g, "_");
+
+/** The Wikidata items a Commons file says it depicts (its structured "depicts" statements). */
+async function depicts(file) {
+  const info = await commons({ action: "query", titles: `File:${fileKey(file)}`, prop: "info" });
+  const id = info?.query?.pages?.[0]?.pageid;
+  if (!id) return [];
+  const data = await commons({ action: "wbgetentities", ids: `M${id}` });
+  const statements = data?.entities?.[`M${id}`]?.statements?.P180 ?? [];
+  return statements.map((st) => st.mainsnak?.datavalue?.value?.id).filter(Boolean);
+}
+
+/**
+ * The photo of a person, found through who they are rather than their name:
+ *   1. the image on their Wikidata item (P18), the photo Wikidata uses to show that person
+ *   2. the photo on their own Wikipedia article (a free one first, else the article's non-free one)
+ *   3. a photo in their own Commons category (P373) that is tagged as depicting them
+ * A hand-picked file from lib/photos.ts is kept only when it is one of these or is tagged
+ * as depicting them. Returns the photo and a record of how it was checked.
+ */
 async function person(p) {
-  if (p.file) {
-    const own = await fileInfo(p.file);
-    if (own) return { ...own, from: "commons" };
+  const check = { id: p.id, name: p.name, wikipedia: wikiPage(p.wiki.replace(/_/g, " ")), previous: p.file ?? null };
+  const page = await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageprops|pageimages", ppprop: "wikibase_item", piprop: "name", pilicense: "any" });
+  const pg = page?.query?.pages?.[0];
+  const qid = pg?.pageprops?.wikibase_item ?? null;
+  check.wikidata = qid ? `https://www.wikidata.org/wiki/${qid}` : null;
+  let p18 = [];
+  let category = null;
+  if (qid) {
+    const ent = await wikidata({ action: "wbgetentities", ids: qid, props: "claims" });
+    const claims = ent?.entities?.[qid]?.claims ?? {};
+    p18 = (claims.P18 ?? []).map((c) => c.mainsnak?.datavalue?.value).filter(Boolean);
+    category = (claims.P373 ?? []).map((c) => c.mainsnak?.datavalue?.value).find(Boolean) ?? null;
   }
-  // A freely licensed lead photo first; otherwise whatever photo the article uses, credited to it.
+  check.wikidataImages = p18;
+
+  const take = async (file, how) => {
+    const photo = await fileInfo(fileKey(file));
+    if (!photo) return null;
+    check.chosen = photo.page;
+    check.how = how;
+    return { ...photo, from: how };
+  };
+
+  // A hand-picked photo stays if Wikidata agrees it shows them.
+  if (p.file) {
+    const same = p18.some((f) => fileKey(f) === fileKey(p.file));
+    const tagged = !same && qid ? (await depicts(p.file)).includes(qid) : false;
+    check.previousConfirmed = same || tagged;
+    if (same || tagged) {
+      const hit = await take(p.file, same ? "wikidata-image" : "commons-depicts");
+      if (hit) return { hit, check };
+    }
+  }
+  for (const f of p18) {
+    const hit = await take(f, "wikidata-image");
+    if (hit) return { hit, check };
+  }
   for (const pilicense of ["free", "any"]) {
-    const data = await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageimages", piprop: "name", pilicense });
+    const data = pilicense === "any" ? page : await wiki({ action: "query", titles: p.wiki.replace(/_/g, " "), redirects: "1", prop: "pageimages", piprop: "name", pilicense });
     const name = data?.query?.pages?.[0]?.pageimage;
     if (!name) continue;
-    const lead = await fileInfo(name);
-    if (lead) return { ...lead, from: pilicense === "free" ? "wikipedia" : "wikipedia-nonfree" };
+    const hit = await take(name, pilicense === "free" ? "wikipedia-photo" : "wikipedia-nonfree");
+    if (hit) return { hit, check };
   }
-  // No photo on their article: a Commons photo whose file name has their full name in it.
-  const name = p.name.replace(/^The /, "");
-  const found = await get(
-    `https://commons.wikimedia.org/w/api.php?${new URLSearchParams({ action: "query", list: "search", srnamespace: "6", srsearch: `"${name}"`, srlimit: "10", format: "json", formatversion: "2", origin: "*" })}`,
-  );
-  for (const hit of found?.query?.search ?? []) {
-    const file = hit.title.replace(/^File:/, "");
-    if (!/\.(jpe?g|png)$/i.test(file) || !norm(file).includes(norm(name))) continue;
-    const photo = await fileInfo(file);
-    if (photo) return { ...photo, from: "commons-search" };
+  if (category && qid) {
+    const members = await commons({ action: "query", list: "categorymembers", cmtitle: `Category:${category}`, cmtype: "file", cmlimit: "30" });
+    for (const m of members?.query?.categorymembers ?? []) {
+      if (!/\.(jpe?g|png)$/i.test(m.title)) continue;
+      if (!(await depicts(m.title)).includes(qid)) continue;
+      const hit = await take(m.title, "commons-category");
+      if (hit) return { hit, check };
+    }
   }
-  return null;
+  check.chosen = null;
+  check.how = "no photo found";
+  return { hit: null, check };
 }
 
 // ------------------------------------------------------------------ run
@@ -250,24 +306,27 @@ for (const [i, r] of req.records.entries()) {
   console.log(`[${i + 1}/${req.records.length}] ${hit ? hit.source.name.padEnd(17) : "MISSING          "} ${r.key}`);
 }
 
+const checks = [];
 for (const [i, p] of req.people.entries()) {
   const pick = overrides.people?.[p.id];
   if (pick === null) {
     out.missing.people.push(p.id);
-    console.log(`[${i + 1}/${req.people.length}] SKIPPED   ${p.name}`);
+    checks.push({ id: p.id, name: p.name, chosen: null, how: "left blank by hand" });
     continue;
   }
   if (typeof pick === "string") p.file = pick;
-  if (keep("people", p.id) && typeof pick !== "string") {
+  if (keep("people", p.id) && only !== "people" && process.env.CHECK_PEOPLE !== "1") {
     out.people[p.id] = prev.people[p.id];
     continue;
   }
-  const hit = await person(p);
+  const { hit, check } = await person(p);
+  checks.push(check);
   if (hit) out.people[p.id] = hit;
   else out.missing.people.push(p.id);
-  console.log(`[${i + 1}/${req.people.length}] ${hit ? hit.from.padEnd(9) : "MISSING  "} ${p.name}`);
+  console.log(`[${i + 1}/${req.people.length}] ${(hit ? hit.from : "MISSING").padEnd(18)} ${p.name}`);
   await sleep(100);
 }
+if (checks.length) writeFileSync("scripts/people-photo-check.json", JSON.stringify(checks, null, 1) + "\n");
 
 writeFileSync("lib/images.json", JSON.stringify(out, null, 1) + "\n");
 console.log(
