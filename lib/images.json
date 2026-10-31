@@ -3389,6 +3389,13 @@
    "license": "CC BY 4.0",
    "from": "commons"
   },
+  "griselda": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Segment_of_Ribbons_sculpture_featuring_Angela_Morley_%26_Griselda_Pollock.jpg/960px-Segment_of_Ribbons_sculpture_featuring_Angela_Morley_%26_Griselda_Pollock.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Segment_of_Ribbons_sculpture_featuring_Angela_Morley_%26_Griselda_Pollock.jpg",
+   "credit": "Lajmmoore",
+   "license": "CC BY-SA 4.0",
+   "from": "commons-search"
+  },
   "carti": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Playboi_Carti_%28cropped%29.jpg/960px-Playboi_Carti_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "page": "https://commons.wikimedia.org/wiki/File:Playboi_Carti_(cropped).jpg",
@@ -3438,6 +3445,13 @@
    "license": "Fair use",
    "from": "wikipedia-nonfree"
   },
+  "crazylegs": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Dahlia_%27Crazy_Legs%27_04.JPG/960px-Dahlia_%27Crazy_Legs%27_04.JPG?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Crazy_Legs%27_04.JPG",
+   "credit": "AfroBrazilian: Aleksandrs Balodis",
+   "license": "CC BY-SA 4.0",
+   "from": "commons-search"
+  },
   "ladypink": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Pink_MoMA_PS1_2_%28cropped%29.jpg/960px-Pink_MoMA_PS1_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "page": "https://commons.wikimedia.org/wiki/File:Pink_MoMA_PS1_2_(cropped).jpg",
@@ -3486,6 +3500,13 @@
    "credit": "Sister Circle TV",
    "license": "CC BY 3.0",
    "from": "wikipedia"
+  },
+  "hypewilliams": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Hype_Williams_2010_2.jpg/960px-Hype_Williams_2010_2.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Hype_Williams_2010_2.jpg",
+   "credit": "Sascha Pohflepp",
+   "license": "CC BY 2.0",
+   "from": "commons-search"
   },
   "funkflex": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Funkmaster_Flex%2C_2018.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -3653,10 +3674,7 @@
   "records": [],
   "people": [
    "sharock",
-   "shocklee",
-   "griselda",
-   "crazylegs",
-   "hypewilliams"
+   "shocklee"
   ]
  }
 }
