@@ -31,7 +31,9 @@ export default async function TimelinePage() {
     artist: c.artist,
     year: c.release_year,
     image: c.image_url,
-    spotify: c.spotify_album_id,
+    spotify: c.spotify_url ?? (c.spotify_album_id ? `https://open.spotify.com/album/${c.spotify_album_id}` : null),
+    apple: c.apple_music_url,
+    youtube: c.youtube_url,
   });
 
   // Match a landmark album to a cover in the collection by title and artist.
@@ -65,10 +67,16 @@ export default async function TimelinePage() {
         ...m,
         records: (m.records ?? []).map((r) => {
           const cover = r.kind === "album" || r.kind === "mixtape" ? findCover(r.title, r.artist) : null;
-          // Only the exact song or album named in the story, never a playlist.
-          const id = SPOTIFY[`${r.title}|${r.artist}`] ?? (cover?.spotify ? `album/${cover.spotify}` : null);
-          const spotify = id && /^(track|album)\//.test(id) ? id : null;
-          return { ...r, cover, spotify };
+          if (r.kind !== "song" && r.kind !== "album" && r.kind !== "mixtape") return { ...r, cover, listen: [] };
+          // Exact links where we have them, otherwise a search for that exact song or album.
+          const q = encodeURIComponent(`${r.title} ${r.artist.split(/ feat\. | & | and /)[0]}`);
+          const id = SPOTIFY[`${r.title}|${r.artist}`];
+          const listen: [string, string][] = [
+            ["Spotify", id ? `https://open.spotify.com/${id}` : (cover?.spotify ?? `https://open.spotify.com/search/${q}`)],
+            ["Apple Music", cover?.apple ?? `https://music.apple.com/us/search?term=${q}`],
+            ["YouTube", cover?.youtube ?? `https://www.youtube.com/results?search_query=${q}`],
+          ];
+          return { ...r, cover, listen };
         }),
       })),
     };

@@ -8,8 +8,17 @@ import { PHOTOS, commonsImage } from "@/lib/photos";
 import CoverLink from "./CoverLink";
 import PersonModal from "./PersonModal";
 
-export type CoverMini = { slug: string; title: string; artist: string; year: number; image: string; spotify?: string | null };
-type RecordView = HistoryRecord & { cover: CoverMini | null; spotify: string | null };
+export type CoverMini = {
+  slug: string;
+  title: string;
+  artist: string;
+  year: number;
+  image: string;
+  spotify?: string | null;
+  apple?: string | null;
+  youtube?: string | null;
+};
+type RecordView = HistoryRecord & { cover: CoverMini | null; listen: [string, string][] };
 type MomentView = Omit<Moment, "records"> & { records: RecordView[] };
 export type EraView = Omit<Era, "moments"> & {
   bg: string;
@@ -74,30 +83,28 @@ function CountUp({ value, prefix = "", suffix = "" }: { value: number; prefix?: 
   );
 }
 
-function PlayIcon({ on }: { on: boolean }) {
+function Listen({ links }: { links: [string, string][] }) {
+  if (!links.length) return null;
   return (
-    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
-      {on ? <path d="M1.5 4.5h2l3-2.5v8l-3-2.5h-2zM8.5 3.8a3 3 0 0 1 0 4.4M9.8 2.4a5 5 0 0 1 0 7.2" fill="currentColor" stroke="currentColor" strokeWidth="1" /> : <path d="M3 1.5v9l7.5-4.5z" fill="currentColor" />}
-    </svg>
+    <p className="h-listen">
+      <span>Listen</span>
+      {links.map(([name, url], i) => (
+        <span key={name}>
+          {i > 0 && ", "}
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {name}
+          </a>
+        </span>
+      ))}
+    </p>
   );
 }
 
-function RecordChip({ r, playing, onPlay }: { r: RecordView; playing: boolean; onPlay: () => void }) {
+function RecordChip({ r }: { r: RecordView }) {
   const kind = KIND[r.kind];
-  const play = r.spotify && (
-    <button
-      type="button"
-      className={`h-play${playing ? " is-on" : ""}`}
-      onClick={onPlay}
-      aria-pressed={playing}
-      aria-label={`${playing ? "In the player:" : "Load into the player:"} ${r.title} by ${r.artist}`}
-    >
-      <PlayIcon on={playing} />
-    </button>
-  );
   if (r.cover) {
     return (
-      <li className={`h-record has-cover${playing ? " is-playing" : ""}`}>
+      <li className="h-record has-cover">
         <CoverLink href={`/covers/${r.cover.slug}`} className="h-record-link">
           <span className="h-record-art" data-art>
             <img src={squareImage(r.cover.image, 160)} alt="" width={80} height={80} loading="lazy" />
@@ -105,59 +112,27 @@ function RecordChip({ r, playing, onPlay }: { r: RecordView; playing: boolean; o
           <span className="h-record-text">
             <strong>{r.title}</strong>
             <span>
-              {r.artist} · {r.year}
+              {kind} · {r.artist} · {r.year}
             </span>
           </span>
         </CoverLink>
-        {play}
+        <Listen links={r.listen} />
       </li>
     );
   }
   return (
-    <li className={`h-record${r.spotify ? " is-playable" : ""}${playing ? " is-playing" : ""}`}>
-      <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
-      <span className="h-record-text">
-        <strong>{r.title}</strong>
-        <span>
-          {kind} · {r.artist} · {r.year}
+    <li className="h-record">
+      <span className="h-record-main">
+        <span className={`h-record-icon ${r.kind}`} aria-hidden="true" />
+        <span className="h-record-text">
+          <strong>{r.title}</strong>
+          <span>
+            {kind} · {r.artist} · {r.year}
+          </span>
         </span>
       </span>
-      {play}
+      <Listen links={r.listen} />
     </li>
-  );
-}
-
-/** One Spotify player per moment; the record chips choose what it plays. */
-function Player({ uri, title }: { uri: string; title: string }) {
-  const tall = uri.startsWith("album/");
-  return (
-    <div className={`h-player${tall ? " is-tall" : ""}`}>
-      <iframe
-        key={uri}
-        title={`Spotify player: ${title}`}
-        src={`https://open.spotify.com/embed/${uri}?utm_source=generator`}
-        width="100%"
-        height={tall ? 352 : 152}
-        loading="lazy"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      />
-    </div>
-  );
-}
-
-function Records({ records }: { records: RecordView[] }) {
-  const first = records.find((r) => r.spotify);
-  const [uri, setUri] = useState(first?.spotify ?? null);
-  const current = records.find((r) => r.spotify === uri);
-  return (
-    <>
-      {uri && <Player uri={uri} title={current ? `${current.title} by ${current.artist}` : "Now playing"} />}
-      <ul className="h-records" aria-label="Records">
-        {records.map((r) => (
-          <RecordChip key={r.title + r.artist + r.kind} r={r} playing={!!r.spotify && r.spotify === uri} onPlay={() => setUri(r.spotify)} />
-        ))}
-      </ul>
-    </>
   );
 }
 
@@ -404,7 +379,13 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
                           <span className="h-stat-label">{m.stat.label}</span>
                         </p>
                       )}
-                      {m.records.length > 0 && <Records records={m.records} />}
+                      {m.records.length > 0 && (
+                        <ul className="h-records" aria-label="Records">
+                          {m.records.map((r) => (
+                            <RecordChip key={r.title + r.artist + r.kind} r={r} />
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </li>
                 ))}
