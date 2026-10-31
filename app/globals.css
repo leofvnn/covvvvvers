@@ -14,7 +14,7 @@
   --sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
   --serif: "Source Serif 4 Variable", Georgia, serif;
 
-  --gutter: clamp(16px, 4vw, 48px);
+  --gutter: 20px;
   --header: 56px;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   color-scheme: light;
@@ -695,10 +695,17 @@ body:has(.ring-hero) .site-footer {
   display: none;
 }
 
+/* On the home hero the header bar is see-through, but the menu takes the hero's colour. */
 .site-header.on-ring {
-  --page-bg: transparent;
+  --page-bg: #0b0b0c;
   --page-ink: #f4f1ea;
   background: transparent;
+}
+
+@media (max-width: 899px) {
+  html.menu-open .site-header.on-ring {
+    background: var(--page-bg);
+  }
 }
 
 .ring-hero {
