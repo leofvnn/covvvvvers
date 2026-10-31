@@ -8,11 +8,15 @@ import AccountLink from "./AccountLink";
 import GridToggle from "./GridToggle";
 import ThemeToggle from "./ThemeToggle";
 
-const MORE = [
-  { href: "/colors", label: "Colours" },
+// Big links at the top of the menu.
+const MAIN = [
+  { href: "/covers", label: "Covers" },
+  { href: "/types", label: "Types" },
   { href: "/timeline", label: "Timeline" },
   { href: "/games", label: "Games" },
 ];
+
+const MORE = [{ href: "/colors", label: "Colours" }];
 
 const CONTRIBUTE = [
   { href: "/submit", label: "Submit a cover" },
@@ -73,13 +77,11 @@ export default function SiteHeader() {
           </button>
           <nav id="menu" className="menu-sheet" aria-label="Main" hidden={!open}>
             <div className="menu-main">
-              <Link href="/">Home</Link>
-              <Link href="/covers" aria-current={current("/covers")}>
-                Covers
-              </Link>
-              <Link href="/types" aria-current={current("/types")}>
-                Types
-              </Link>
+              {MAIN.map((l) => (
+                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
+                  {l.label}
+                </Link>
+              ))}
             </div>
             <div className="menu-more">
               {MORE.map((l) => (

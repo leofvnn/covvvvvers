@@ -246,7 +246,7 @@ h6 {
     padding: 8px 0;
     font-size: 1.125rem;
     font-weight: 500;
-    font-family: var(--display);
+    font-family: var(--sans);
   }
   .menu-sheet:not([hidden]) {
     position: fixed;
