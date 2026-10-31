@@ -205,6 +205,17 @@ async function person(p) {
     const lead = await fileInfo(name);
     if (lead) return { ...lead, from: pilicense === "free" ? "wikipedia" : "wikipedia-nonfree" };
   }
+  // No photo on their article: a Commons photo whose file name has their full name in it.
+  const name = p.name.replace(/^The /, "");
+  const found = await get(
+    `https://commons.wikimedia.org/w/api.php?${new URLSearchParams({ action: "query", list: "search", srnamespace: "6", srsearch: `"${name}"`, srlimit: "10", format: "json", formatversion: "2", origin: "*" })}`,
+  );
+  for (const hit of found?.query?.search ?? []) {
+    const file = hit.title.replace(/^File:/, "");
+    if (!/\.(jpe?g|png)$/i.test(file) || !norm(file).includes(norm(name))) continue;
+    const photo = await fileInfo(file);
+    if (photo) return { ...photo, from: "commons-search" };
+  }
   return null;
 }
 
