@@ -4444,9 +4444,13 @@ html[data-grid="small"] .recent .cover-grid li:nth-child(n + 11) {
   padding: 0 8px;
 }
 
-/* Page headings are 35px on phones. The timeline's big year counter keeps its own size. */
+/* Page headings: 45px on desktop, 30px on phones. The timeline's big year counter keeps its own size. */
+h1:not(.h-hero-year) {
+  font-size: 45px;
+}
+
 @media (max-width: 799px) {
   h1:not(.h-hero-year) {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
