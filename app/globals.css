@@ -11,8 +11,10 @@
   --focus: #2457ff;
   --error: #b3261e;
 
-  --sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
-  --serif: "Source Serif 4 Variable", Georgia, serif;
+  /* Headings in Clash Display, everything else in Helvetica. */
+  --display: "Clash Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: var(--sans);
 
   --gutter: 20px;
   --header: 56px;
@@ -67,7 +69,6 @@ body {
   font-family: var(--sans);
   font-size: 1rem;
   line-height: 1.5;
-  font-variation-settings: "wdth" 100;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -98,11 +99,15 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--display);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.01em;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .visually-hidden {
@@ -153,7 +158,7 @@ h3 {
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.015em;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   text-decoration: none;
 }
 
@@ -238,7 +243,7 @@ h3 {
     padding: 8px 0;
     font-size: 1.125rem;
     font-weight: 500;
-    font-variation-settings: "wdth" 100;
+    font-family: var(--display);
   }
   .menu-sheet:not([hidden]) {
     position: fixed;
@@ -255,7 +260,7 @@ h3 {
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.05;
-    font-variation-settings: "wdth" 66;
+    font-family: var(--display);
   }
   .menu-sheet a[aria-current="page"] {
     text-decoration: underline;
@@ -281,7 +286,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   text-decoration: none;
 }
 
@@ -669,7 +674,7 @@ select {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.15;
-  font-variation-settings: "wdth" 78;
+  font-family: var(--display);
 }
 
 .card-meta {
@@ -817,16 +822,14 @@ body:has(.ring-hero) .site-footer {
   font-weight: 800;
   line-height: 0.88;
   letter-spacing: -0.02em;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   text-wrap: balance;
 }
 
 .ring-text h1 em {
   display: block;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-variation-settings: normal;
-  letter-spacing: -0.03em;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .ring-text p {
@@ -935,7 +938,7 @@ body:has(.ring-hero) .site-footer {
   font-size: clamp(2.25rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .door-note {
@@ -1126,7 +1129,7 @@ body:has(.ring-hero) .site-footer {
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  font-variation-settings: "wdth" 72;
+  font-family: var(--display);
 }
 
 .pull-quote p::before {
@@ -1257,7 +1260,7 @@ body:has(.ring-hero) .site-footer {
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .index-desc {
@@ -1787,7 +1790,7 @@ kbd {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .collection-card:hover .collection-title {
@@ -1837,7 +1840,7 @@ kbd {
   font-weight: 800;
   line-height: 0.86;
   letter-spacing: -0.03em;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1969,7 +1972,7 @@ kbd {
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
-  font-variation-settings: "wdth" 70;
+  font-family: var(--display);
 }
 
 .h-era-intro {
@@ -2119,7 +2122,7 @@ kbd {
 .h-when {
   font-size: 0.9375rem;
   font-weight: 800;
-  font-variation-settings: "wdth" 80;
+  font-family: var(--display);
 }
 
 .h-card h3 {
@@ -2180,7 +2183,7 @@ kbd {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 70;
+  font-family: var(--display);
   font-variant-numeric: tabular-nums;
 }
 
@@ -2614,7 +2617,7 @@ kbd {
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
 }
 
 .h-year .h-dot {
@@ -2782,7 +2785,7 @@ kbd {
   font-size: 0.6875rem;
   font-weight: 800;
   line-height: 1.05;
-  font-variation-settings: "wdth" 70;
+  font-family: var(--display);
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -2886,7 +2889,7 @@ kbd {
   place-items: center;
   font-size: clamp(4rem, 14vw, 8rem);
   font-weight: 800;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   opacity: 0.35;
 }
 
@@ -2922,7 +2925,7 @@ kbd {
   margin: 8px 0 4px;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 0.95;
-  font-variation-settings: "wdth" 70;
+  font-family: var(--display);
 }
 
 .person-role {
@@ -3223,7 +3226,7 @@ kbd {
 .sleeve-mark {
   margin-top: 20px;
   font-weight: 800;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   opacity: 0.6;
 }
 
@@ -3512,7 +3515,7 @@ kbd {
   font-size: clamp(4rem, 14vw, 7rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
 }
 
 .quiz-review {
@@ -3585,7 +3588,7 @@ kbd {
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .admin-tile-note {
@@ -3978,7 +3981,7 @@ kbd {
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 66;
+  font-family: var(--display);
 }
 
 .game-card:hover .game-title {
@@ -4013,7 +4016,7 @@ kbd {
   font-size: clamp(3.5rem, 10vw, 5.5rem);
   font-weight: 800;
   line-height: 1;
-  font-variation-settings: "wdth" 62;
+  font-family: var(--display);
   font-variant-numeric: tabular-nums;
 }
 
@@ -4055,7 +4058,7 @@ kbd {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
   line-height: 1.1;
-  font-variation-settings: "wdth" 72;
+  font-family: var(--display);
 }
 
 .blank-slot {
@@ -4350,7 +4353,7 @@ kbd {
     font-size: 2.25rem;
     font-weight: 800;
     line-height: 1.05;
-    font-variation-settings: "wdth" 66;
+    font-family: var(--display);
   }
   .menu-sheet a:hover,
   .menu-sheet a[aria-current="page"] {
