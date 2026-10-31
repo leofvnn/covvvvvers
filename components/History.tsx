@@ -128,20 +128,14 @@ function RecordCard({ r }: { r: RecordView & { note?: string } }) {
         <p className="h-key-artist">{r.artist}</p>
         {r.note && <p className="h-key-note">{r.note}</p>}
         <Listen links={r.listen} />
-        {!r.cover && r.art && (
-          <p className="image-source">
-            Image:{" "}
-            <a href={r.art.source.url} target="_blank" rel="noopener noreferrer">
-              {r.art.source.name}
-            </a>
-          </p>
-        )}
       </div>
     </li>
   );
 }
 
-export default function History({ eras, sources }: { eras: EraView[]; sources: { title: string; url: string }[] }) {
+export type SourceGroup = { title: string; note: string; items: { title: string; url: string }[] };
+
+export default function History({ eras, sources }: { eras: EraView[]; sources: SourceGroup[] }) {
   const [active, setActive] = useState<string | undefined>(eras[0]?.id);
   const [progress, setProgress] = useState(0);
   const [person, setPerson] = useState<{ era: string; index: number } | null>(null);
@@ -365,16 +359,23 @@ export default function History({ eras, sources }: { eras: EraView[]; sources: {
 
       <footer className="h-sources">
         <h2>Sources</h2>
-        <p>Dates, chart positions and sales figures were checked against these.</p>
-        <ul>
-          {sources.map((s) => (
-            <li key={s.url}>
-              <a href={s.url} target="_blank" rel="noreferrer">
-                {s.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {sources.map((g) => (
+          <section key={g.title} className="h-source-group">
+            <h3>
+              {g.title} <span>({g.items.length})</span>
+            </h3>
+            <p>{g.note}</p>
+            <ul>
+              {g.items.map((s) => (
+                <li key={s.title + s.url}>
+                  <a href={s.url} target="_blank" rel="noreferrer">
+                    {s.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </footer>
     </div>
   );

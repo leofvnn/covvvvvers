@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import History, { type CoverMini, type EraView } from "@/components/History";
+import History, { type CoverMini, type EraView, type SourceGroup } from "@/components/History";
 import { CHAPTERS } from "@/lib/chapters";
 import { getCovers } from "@/lib/data";
 import { personPhoto, recordImage } from "@/lib/images";
 import { MOMENTS, SOURCES, type HistoryRecord } from "@/lib/history";
 import { inkFor } from "@/lib/img";
 import { PEOPLE } from "@/lib/people";
+import { PHOTOS } from "@/lib/photos";
 import { SPOTIFY } from "@/lib/spotify";
 
 export const revalidate = 3600;
@@ -120,5 +121,47 @@ export default async function TimelinePage() {
     };
   });
 
-  return <History eras={eras} sources={SOURCES} />;
+  // Every source behind the page: the reading for the history, each person's article, each
+  // photo with its photographer and licence, and where each record's image comes from.
+  const shownPeople = [...new Map(eras.flatMap((e) => e.contributors).map((p) => [p.id, p])).values()].sort((a, b) =>
+    a.name.replace(/^The /, "").localeCompare(b.name.replace(/^The /, "")),
+  );
+  const fileName = (page: string) => decodeURIComponent(page.split("/File:")[1] ?? "").replace(/_/g, " ");
+  const records = [
+    ...new Map(
+      eras
+        .flatMap((e) => e.years.flatMap((y) => [...y.records, ...y.moments.flatMap((m) => m.records)]))
+        .filter((r) => !r.cover && r.art)
+        .map((r) => [`${r.title}|${r.artist}`, r]),
+    ).values(),
+  ].sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+  const sources: SourceGroup[] = [
+    { title: "History", note: "Dates, chart positions, sales figures and events were checked against these.", items: SOURCES },
+    {
+      title: "Notable figures",
+      note: "Each profile draws on the person's Wikipedia article.",
+      items: shownPeople.map((p) => ({ title: `${p.name}, Wikipedia`, url: `https://en.wikipedia.org/wiki/${p.wiki}` })),
+    },
+    {
+      title: "Photos",
+      note: "Photographer, licence and file for each photo of a notable figure.",
+      items: shownPeople
+        .filter((p) => p.photo)
+        .map((p) => {
+          const ph = p.photo!;
+          const own = PHOTOS[p.id];
+          const note = own?.note && fileName(ph.page) === own.file.replace(/_/g, " ") ? ` (${own.note})` : "";
+          const host = ph.page.includes("commons.wikimedia.org") ? "Wikimedia Commons" : "Wikipedia";
+          const by = [ph.credit, ph.license].filter(Boolean).join(", ");
+          return { title: `${p.name}${note}: ${by ? `${by}, ` : ""}via ${host}`, url: ph.page };
+        }),
+    },
+    {
+      title: "Cover art and images",
+      note: "Where the image on each song, album and release card comes from. Covers in the collection are our own copies.",
+      items: records.map((r) => ({ title: `${r.title}, ${r.artist} (${r.year}): ${r.art!.source.name}`, url: r.art!.source.url })),
+    },
+  ];
+
+  return <History eras={eras} sources={sources} />;
 }

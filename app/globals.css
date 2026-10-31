@@ -2950,6 +2950,24 @@ kbd {
   padding: 4px 0;
 }
 
+.h-source-group {
+  margin-top: 32px;
+}
+
+.h-source-group h3 {
+  font-size: 1rem;
+}
+
+.h-source-group h3 span {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+
+.h-sources ul {
+  columns: 3 300px;
+}
+
 /* ------------------------------------------------------------------ */
 /* Cover page extras                                                   */
 

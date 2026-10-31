@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { Person } from "@/lib/people";
 import type { PersonPhoto } from "@/lib/images";
-import { PHOTOS } from "@/lib/photos";
 
 type Summary = { image: string | null; url: string; description: string | null };
 const cache = new Map<string, Promise<Summary>>();
@@ -86,16 +85,10 @@ export default function PersonModal({
     return () => window.removeEventListener("keydown", onKey);
   }, [onNext, onPrev]);
 
-  // The photo found for this person (with its photographer and licence), else the one on
-  // their Wikipedia article.
+  // The photo found for this person, else the one on their Wikipedia article. Photo credits
+  // are listed in the page's Sources.
   const found = person.photo ?? null;
-  const own = PHOTOS[person.id];
-  // A note like "With Mickey Baker, 1956" belongs to the hand-picked photo, so only show it with that one.
-  const note = found && own && decodeURIComponent(found.page).endsWith(own.file.replace(/ /g, "_")) ? own.note : undefined;
   const photo = broken ? null : (found?.src ?? info?.image ?? null);
-  const credit = found
-    ? [note, found.credit, found.license].filter(Boolean).join(", ")
-    : null;
 
   return (
     <dialog
@@ -139,19 +132,6 @@ export default function PersonModal({
               ))}
             </ul>
           </div>
-          <p className="person-credit">
-            <a href={info?.url ?? `https://en.wikipedia.org/wiki/${person.wiki}`} target="_blank" rel="noreferrer">
-              Read more on Wikipedia
-            </a>
-            {photo && (
-              <>
-                {" · "}
-                <a href={found?.page ?? info?.url ?? "#"} target="_blank" rel="noreferrer">
-                  Photo: {credit ? `${credit}, via Wikimedia Commons` : found ? "Wikimedia Commons" : "Wikipedia"}
-                </a>
-              </>
-            )}
-          </p>
         </div>
       </div>
       <div className="person-nav">
