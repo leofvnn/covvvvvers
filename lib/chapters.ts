@@ -197,7 +197,7 @@ export const CHAPTERS: Chapter[] = [
     to: 1999,
     title: "East, West and the rise of the South",
     intro:
-      "Rap became the dominant force in American music. A rivalry between New York and Los Angeles ended with the killings of 2Pac and The Notorious B.I.G., the South built independent empires, superstars went pop, and by 1998 rap outsold country. Abroad, France and Brazil built rap cultures of their own.",
+      "Rap became the dominant force in American music. A rivalry between New York and Los Angeles ended with the killings of 2Pac and The Notorious B.I.G., the South built independent empires, superstars went pop, and by 1998 rap outsold country.",
     poster: "aquemini",
     guide: {
       sound:
@@ -205,7 +205,7 @@ export const CHAPTERS: Chapter[] = [
       look:
         "Shiny suits, Coogi sweaters, Timbs and fatigues, Iceberg and Avirex, platinum chains and grills. Rappers launched their own brands: Wu Wear, Sean John (1998) and Rocawear (1999). Hype Williams's fisheye videos set the visual tone. Pen & Pixel's gold airbrushed covers defined No Limit and Cash Money, while New York used cinematic photography, from the noir of 'Reasonable Doubt' to the chess-board 'Liquid Swords'. 'Aquemini' was painted, and 'Miseducation' was a school desk.",
       where:
-        "The coastal feud between Death Row and Bad Boy escalated through 1995 and 1996. In the South, independent labels sold millions through car culture and street networks while keeping ownership of their music. France became rap's second market and Brazil's Racionais MC's sold enormously on their own label.",
+        "The coastal feud between Death Row and Bad Boy escalated through 1995 and 1996. In the South, independent labels sold millions through car culture and street networks while keeping ownership of their music.",
       tech:
         "The Akai MPC2000 (1997) and Auto-Tune (1997), which went pop with Cher's 'Believe' in 1998. CD sales peaked around 1999 and 2000, just as Napster (1999) arrived. Street mixtapes became the way new artists broke through.",
       impact:
@@ -214,7 +214,7 @@ export const CHAPTERS: Chapter[] = [
         "Memphis triplets, Houston's slowed sound and New Orleans bounce became the DNA of mainstream rap in the 2000s and 2010s. Jay-Z's mogul model and Eminem's arrival set up the next decade.",
     },
     moments: ["south", "pac", "biggie", "lauryn", "shady"],
-    people: ["tupac", "biggie", "jayz", "lauryn", "missy", "timbaland", "mobbdeep", "ghostface", "ugk", "three6", "screw", "masterp", "cashmoney", "dmx", "bigpun", "lilkim", "busta", "eminem", "doom", "iam", "solaar", "racionais"],
+    people: ["tupac", "biggie", "jayz", "lauryn", "missy", "timbaland", "mobbdeep", "ghostface", "ugk", "three6", "screw", "masterp", "cashmoney", "dmx", "bigpun", "lilkim", "busta", "eminem", "doom"],
     records: [
       a("Me Against the World", "2Pac", 1995, "2Pac's most vulnerable album, about poverty, trauma, family and death. It went to No. 1 while he was in prison."),
       a("The Infamous", "Mobb Deep", 1995, "Havoc's haunting production and Prodigy's cold delivery, including 'Shook Ones (Part II)', defined dark New York street rap."),
@@ -235,8 +235,6 @@ export const CHAPTERS: Chapter[] = [
       a("Life After Death", "The Notorious B.I.G.", 1997, "Released 16 days after Biggie was killed, a versatile double album that moved between hardcore rap, radio hits and storytelling."),
       a("Supa Dupa Fly", "Missy Elliott", 1997, "Timbaland's futuristic production and Missy's inventive delivery and videos changed the sound and look of rap and pop."),
       a("Wu-Tang Forever", "Wu-Tang Clan", 1997, "Debuted at No. 1 and showed the commercial power of a rap collective."),
-      a("L'École du micro d'argent", "IAM", 1997, "The landmark of French rap, from Marseille."),
-      a("Sobrevivendo no Inferno", "Racionais MC's", 1997, "Brazil's essential rap album, released on the group's own label, and the best-selling rap album in the country's history."),
       a("The Miseducation of Lauryn Hill", "Lauryn Hill", 1998, "One of the most influential fusions of rap, soul and R&B. It won five Grammys including Album of the Year, widely cited as a first for hip-hop."),
       a("It's Dark and Hell Is Hot", "DMX", 1998, "Raw aggression, vulnerability and spiritual struggle; it debuted at No. 1 and revived hardcore rap."),
       a("Aquemini", "OutKast", 1998, "Funk, soul, psychedelia and storytelling; one of the greatest statements of Southern rap's ambition."),
@@ -259,15 +257,15 @@ export const CHAPTERS: Chapter[] = [
     to: 2009,
     title: "Superstar rap and the changing sound",
     intro:
-      "Rap became pop music. Superproducers wrote the sound of radio, the South took over the charts, grime grew in London, and as CD sales collapsed after Napster, mixtapes, ringtones, blogs and YouTube decided who broke through. By the end of the decade Auto-Tune and vulnerability had changed what a rapper could be.",
+      "Rap became pop music. Superproducers wrote the sound of radio, the South took over the charts, and as CD sales collapsed after Napster, mixtapes, ringtones, blogs and YouTube decided who broke through. By the end of the decade Auto-Tune and vulnerability had changed what a rapper could be.",
     poster: "the-college-dropout",
     guide: {
       sound:
-        "The Neptunes' sparse futurism, Timbaland's stutters, Just Blaze and Kanye West's sped-up 'chipmunk soul'. The South ruled: crunk (Lil Jon), snap (D4L, Soulja Boy), trap (T.I., Young Jeezy, Gucci Mane, producer Zaytoven), Houston's slowed-down sound and Bay Area hyphy. Auto-Tune spread from T-Pain to Lil Wayne and '808s & Heartbreak'. Underground labels Def Jux, Stones Throw and Rhymesayers thrived, and grime grew in London.",
+        "The Neptunes' sparse futurism, Timbaland's stutters, Just Blaze and Kanye West's sped-up 'chipmunk soul'. The South ruled: crunk (Lil Jon), snap (D4L, Soulja Boy), trap (T.I., Young Jeezy, Gucci Mane, producer Zaytoven), Houston's slowed-down sound and Bay Area hyphy. Auto-Tune spread from T-Pain to Lil Wayne and '808s & Heartbreak'. Underground labels Def Jux, Stones Throw and Rhymesayers thrived.",
       look:
         "Throwback jerseys, tall white tees, Air Force 1s, Bape, fitted caps, Rocawear and Sean John, then polos, backpacks, shutter shades, Louis Vuitton and skinny jeans by 2008. Kanye brought fine art to covers, with the Dropout Bear trilogy and Takashi Murakami's 'Graduation'. Other icons: the mask on 'Madvillainy', the baby photo on 'Tha Carter III' and the deflated heart of '808s & Heartbreak'.",
       where:
-        "Atlanta, New Orleans, Houston, Miami, Memphis and St. Louis became the commercial centre, with strip-club DJs breaking hits. Chicago (Kanye, Lupe) and Detroit (Eminem, Dilla) rose. After Napster, album sales fell and the money moved to mixtapes, ringtones and endorsements. In London, grime grew on pirate radio.",
+        "Atlanta, New Orleans, Houston, Miami, Memphis and St. Louis became the commercial centre, with strip-club DJs breaking hits. Chicago (Kanye, Lupe) and Detroit (Eminem, Dilla) rose. After Napster, album sales fell and the money moved to mixtapes, ringtones and endorsements.",
       tech:
         "Pro Tools and FL Studio, the iTunes Store (2003), ringtones, YouTube (2005), MySpace, DatPiff (2005) and rap blogs. A 2007 raid on DJ Drama's studio showed the industry's uneasy relationship with mixtapes.",
       impact:
@@ -276,7 +274,7 @@ export const CHAPTERS: Chapter[] = [
         "The 2010s inherited three tools from this decade: trap, Auto-Tuned melody and the free mixtape pipeline.",
     },
     moments: ["mmlp", "blueprint", "lose-yourself", "trap", "dropout", "youtube", "crank", "808s"],
-    people: ["eminem", "jayz", "kanye", "neptunes", "fiftycent", "wayne", "ti", "liljon", "gucci", "dilla", "madlib", "doom", "ghostface", "clipse", "lupe", "djdrama", "dizzee", "wiley", "tpain", "soulja", "cudi", "outkast", "missy"],
+    people: ["eminem", "jayz", "kanye", "neptunes", "fiftycent", "wayne", "ti", "liljon", "gucci", "dilla", "madlib", "doom", "ghostface", "clipse", "lupe", "djdrama", "tpain", "soulja", "cudi", "outkast", "missy"],
     records: [
       a("The Marshall Mathers LP", "Eminem", 2000, "Sold about 1.76 million copies in its first week. It pushed technical rhyme schemes and confession to a huge audience, and drew protests over homophobia."),
       a("Supreme Clientele", "Ghostface Killah", 2000, "Abstract, stream-of-consciousness street rhymes over soul samples; an underground influence for decades."),
@@ -293,7 +291,6 @@ export const CHAPTERS: Chapter[] = [
       a("Diplomatic Immunity", "The Diplomats", 2003, "Defined Harlem's street-rap style, slang and fashion with soulful, sample-heavy beats."),
       a("Vaudeville Villain", "Viktor Vaughn", 2003, "MF DOOM under another alias, with fictional stories and abstract rhymes."),
       a("Trap Muzik", "T.I.", 2003, "Gave a whole Atlanta style its name."),
-      a("Boy in da Corner", "Dizzee Rascal", 2003, "The landmark of grime; it won the Mercury Prize."),
       a("The Black Album", "Jay-Z", 2003, "Billed as a farewell, with '99 Problems' and 'Encore'."),
       a("The College Dropout", "Kanye West", 2004, "A vulnerable, funny, socially observant debut with soulful production that reshaped mainstream rap."),
       a("Madvillainy", "Madvillain", 2004, "Madlib's fragmented beats and DOOM's dense rhymes set a new standard for independent rap."),
@@ -308,8 +305,7 @@ export const CHAPTERS: Chapter[] = [
       a("Graduation", "Kanye West", 2007, "Synths and stadium-sized sound; it outsold 50 Cent's 'Curtis' in a head-to-head release week, a symbolic shift away from gangsta rap."),
       m("Da Drought 3", "Lil Wayne", 2007, "A free mixtape from Wayne's flood of releases that made him the most influential rapper of the era."),
       a("Tha Carter III", "Lil Wayne", 2008, "Sold about a million copies in its first week and won Best Rap Album."),
-      a("808s & Heartbreak", "Kanye West", 2008, "Auto-Tune, heartbreak and cold drum machines; the blueprint for Drake, Kid Cudi, Travis Scott and the SoundCloud generation."),
-      m("So Far Gone", "Drake", 2009, "A free mixtape that launched Drake and the sung-rapped style he would ride to the top."),
+      a("808s & Heartbreak", "Kanye West", 2008, "Auto-Tune, heartbreak and cold drum machines; the blueprint for Kid Cudi, Travis Scott and the SoundCloud generation."),
       a("Man on the Moon: The End of Day", "Kid Cudi", 2009, "Made introspective, melancholy rap normal; foundational to emo rap."),
       a("Only Built 4 Cuban Linx... Pt. II", "Raekwon", 2009, "Revived mafioso rap for a new generation and reaffirmed Wu-Tang's influence."),
     ],
@@ -322,37 +318,36 @@ export const CHAPTERS: Chapter[] = [
     to: 2019,
     title: "Trap, streaming and SoundCloud",
     intro:
-      "The internet changed how artists found audiences, and streaming changed how music was counted. Atlanta's trap became the sound of pop, drill spread from Chicago to London and Brooklyn, SoundCloud made stars of teenagers, and in 2017 R&B and hip-hop became the most-consumed music in America. Kendrick Lamar won a Pulitzer.",
+      "The internet changed how artists found audiences, and streaming changed how music was counted. Atlanta's trap became the sound of pop, drill spread from Chicago to Brooklyn, SoundCloud made stars of teenagers, and in 2017 R&B and hip-hop became the most-consumed music in America. Kendrick Lamar won a Pulitzer.",
     poster: "to-pimp-a-butterfly",
     guide: {
       sound:
-        "Trap became pop: Lex Luger's orchestral 808s, Metro Boomin and 808 Mafia, Migos's triplet flow, Future's Auto-Tuned melancholy and Young Thug's elastic voice. Drill travelled from Chicago to London and Brooklyn. SoundCloud rap brought distortion and emo melody, and Playboi Carti and Pi'erre Bourne's plugg pointed to rage. Kendrick's jazz-funk, Odd Future, Chance's gospel, Run the Jewels and Griselda's grit kept the alternatives strong, and grime came back in the UK.",
+        "Trap became pop: Lex Luger's orchestral 808s, Metro Boomin and 808 Mafia, Migos's triplet flow, Future's Auto-Tuned melancholy and Young Thug's elastic voice. Drill travelled from Chicago to Brooklyn. SoundCloud rap brought distortion and emo melody, and Playboi Carti and Pi'erre Bourne's plugg pointed to rage. Kendrick's jazz-funk, Odd Future, Chance's gospel, Run the Jewels and Griselda's grit kept the alternatives strong.",
       look:
         "Streetwear merged with luxury: Off-White, Yeezy, Supreme and Gucci 'drip', with skinny distressed denim, face tattoos and dyed hair. Young Thug wore a dress on the 'Jeffery' cover. Covers became art: George Condo's paintings for 'My Beautiful Dark Twisted Fantasy', the clear 'Yeezus' case, the Polaroid of 'good kid, m.A.A.d city', the White House lawn of 'To Pimp a Butterfly', David LaChapelle's 'Astroworld' and the Whitney Houston photo on 'Daytona'. Every cover now had to work as a tiny thumbnail.",
       where:
-        "Atlanta was the hit capital, from Quality Control to YSL to the Magic City strip club. Chicago drill grew from violence and segregation, Toronto had OVO and South Florida had the SoundCloud scene. France, Germany, Brazil, the UK and Latin trap built huge markets. Streaming flattened geography and virality replaced gatekeepers; after Ferguson in 2014, 'Alright' became a protest chant.",
+        "Atlanta was the hit capital, from Quality Control to YSL to the Magic City strip club. Chicago drill grew from violence and segregation, and South Florida had the SoundCloud scene. Streaming flattened geography and virality replaced gatekeepers; after Ferguson in 2014, 'Alright' became a protest chant.",
       tech:
         "Spotify launched in the US in 2011, Apple Music and Tidal in 2015. Billboard began counting streams on the Hot 100 in 2013 and on its album chart in December 2014. SoundCloud, Vine, Instagram and, from 2018, TikTok became the new discovery engines, and producers sold 'type beats' online.",
       impact:
-        "Black Lives Matter anthems, a new wave of women at the top, LGBTQ+ visibility through Frank Ocean, Tyler and Lil Nas X, and mental health as a central subject. The use of lyrics as evidence in court became a civil-liberties fight, and rap became the language of youth worldwide.",
+        "Black Lives Matter anthems, a new wave of women at the top, LGBTQ+ visibility through Frank Ocean, Tyler and Lil Nas X, and mental health as a central subject. The use of lyrics as evidence in court became a civil-liberties fight.",
       legacy:
-        "The 2020s inherited streaming economics, drill's global network, the SoundCloud aesthetic of rage and plugg, and Kendrick's model of the serious concept album.",
+        "The 2020s inherited streaming economics, drill, the SoundCloud aesthetic of rage and plugg, and Kendrick's model of the serious concept album.",
     },
     moments: ["mbdtf", "odd-future", "drill", "versace", "tpab", "soundcloud", "pulitzer", "this-is-america"],
-    people: ["kanye", "drake", "kendrick", "nicki", "jcole", "future", "thug", "migos", "metro", "travis", "keef", "tyler", "asap", "chance", "meek", "dannybrown", "rtj", "macmiller", "nipsey", "cardi", "uzi", "lilnasx", "virgil", "skepta", "stormzy", "emicida"],
+    people: ["kanye", "kendrick", "nicki", "jcole", "future", "thug", "migos", "metro", "travis", "keef", "tyler", "asap", "chance", "meek", "dannybrown", "rtj", "macmiller", "nipsey", "cardi", "uzi", "lilnasx", "virgil"],
     records: [
       a("My Beautiful Dark Twisted Fantasy", "Kanye West", 2010, "Maximalist orchestral, soul and prog-rock rap, previewed with free 'G.O.O.D. Fridays' songs. It raised expectations for what a rap album could be."),
       a("Teflon Don", "Rick Ross", 2010, "Grand, cinematic luxury rap that shaped the sound of mainstream street rap."),
       a("Sir Lucious Left Foot: The Son of Chico Dusty", "Big Boi", 2010, "Funk, electronics and technical rhymes; Southern rap at its most inventive."),
       a("Pink Friday", "Nicki Minaj", 2010, "Revived mainstream women's rap and carried 'Super Bass'."),
       a("Flockaveli", "Waka Flocka Flame", 2010, "Lex Luger's loud, orchestral 808s set the template for 2010s trap."),
-      a("Take Care", "Drake", 2011, "Defined the modern melodic rapper who sings, raps and talks about relationships; the first Best Rap Album won by a non-American."),
       a("Section.80", "Kendrick Lamar", 2011, "Kendrick's first album, about generational struggles and young Black life."),
       a("Goblin", "Tyler, the Creator", 2011, "Odd Future's internet-driven, provocative do-it-yourself rap; its lyrics drew criticism for homophobia."),
       a("Watch the Throne", "Jay-Z & Kanye West", 2011, "A luxury blockbuster with a gold cover by Riccardo Tisci of Givenchy."),
       m("Live.Love.A$AP", "A$AP Rocky", 2011, "Harlem rap over Houston and Memphis sounds and Clams Casino's cloud-rap beats; a sign of how the internet blended regions."),
       a("good kid, m.A.A.d city", "Kendrick Lamar", 2012, "A cinematic coming-of-age story in Compton that brought concept albums back to the centre."),
-      a("Finally Rich", "Chief Keef", 2012, "Brought Chicago drill to a major label and influenced UK and Brooklyn drill."),
+      a("Finally Rich", "Chief Keef", 2012, "Brought Chicago drill to a major label and influenced Brooklyn drill."),
       a("Dreams and Nightmares", "Meek Mill", 2012, "Its intro became the defining modern street-rap anthem."),
       a("Yeezus", "Kanye West", 2013, "Industrial, abrasive minimalism that influenced Travis Scott and a generation of experimental producers."),
       a("Long. Live. A$AP", "A$AP Rocky", 2013, "Debuted at No. 1 and made fashion-conscious, psychedelic rap mainstream."),
@@ -370,14 +365,11 @@ export const CHAPTERS: Chapter[] = [
       a("The Life of Pablo", "Kanye West", 2016, "An album that kept changing after release, a sign of the streaming age."),
       a("Atrocity Exhibition", "Danny Brown", 2016, "Pushed rap into industrial and avant-garde territory."),
       a("We Got It from Here... Thank You 4 Your Service", "A Tribe Called Quest", 2016, "A No. 1 farewell made after Phife Dawg's death that connected the golden age with the present."),
-      a("Konnichiwa", "Skepta", 2016, "Took grime global and won the Mercury Prize."),
-      a("Dans la légende", "PNL", 2016, "Independent French cloud rap from two brothers who barely gave interviews."),
       a("DAMN.", "Kendrick Lamar", 2017, "Complex themes made accessible; the first work outside classical music and jazz to win the Pulitzer Prize for Music."),
       a("4:44", "Jay-Z", 2017, "A mature look at marriage, fatherhood, wealth and Black economics."),
       a("Flower Boy", "Tyler, the Creator", 2017, "Tyler's turn into a songwriter and producer, exploring loneliness and his sexuality."),
       a("Culture", "Migos", 2017, "Took the triplet flow and Atlanta trap worldwide; 'Bad and Boujee' was a No. 1."),
       s("Bodak Yellow", "Cardi B", 2017, "The first No. 1 by a solo woman rapper since Lauryn Hill in 1998."),
-      a("Gang Signs & Prayer", "Stormzy", 2017, "The first grime album to top the UK albums chart."),
       a("Luv Is Rage 2", "Lil Uzi Vert", 2017, "SoundCloud rap reaches No. 1, with 'XO Tour Llif3'."),
       a("Astroworld", "Travis Scott", 2018, "Psychedelic trap as an immersive event; 'Sicko Mode' went to No. 1."),
       a("Daytona", "Pusha T", 2018, "Seven tracks that proved a short album could be complete; it sparked a feud with Drake."),
@@ -386,13 +378,10 @@ export const CHAPTERS: Chapter[] = [
       a("Die Lit", "Playboi Carti", 2018, "Baby-voiced ad-libs over Pi'erre Bourne's beats; a cult blueprint for rage."),
       s("This Is America", "Childish Gambino", 2018, "The first rap song to win Record and Song of the Year."),
       a("Igor", "Tyler, the Creator", 2019, "Rap, neo-soul and pop blended into one story; it won Best Rap Album."),
-      a("Grey Area", "Little Simz", 2019, "Established Simz as a leading voice of UK and international rap."),
       a("Bandana", "Freddie Gibbs & Madlib", 2019, "Continued the revival of the producer-led album."),
       a("ZUU", "Denzel Curry", 2019, "A celebration of Carol City, Florida, with Miami bass influences."),
-      a("Psychodrama", "Dave", 2019, "A concept album framed as therapy; it won the Mercury Prize."),
       s("Old Town Road", "Lil Nas X feat. Billy Ray Cyrus", 2019, "Spread through TikTok and spent a record 19 weeks at No. 1."),
-      a("AmarElo", "Emicida", 2019, "Brazilian rap with samba, gospel and a Belchior sample."),
-      s("Welcome to the Party", "Pop Smoke", 2019, "Brooklyn drill's breakthrough, over a UK drill beat by 808Melo."),
+      s("Welcome to the Party", "Pop Smoke", 2019, "Brooklyn drill's breakthrough."),
     ],
   },
   {
@@ -403,24 +392,24 @@ export const CHAPTERS: Chapter[] = [
     to: 2026,
     title: "Modern hip-hop",
     intro:
-      "Rap is now the main language of popular music worldwide. Drill and rage are the sounds of the young, independent veterans make some of the best records, women and international artists lead the charts, and hip-hop has been honoured at the Super Bowl, the Olympics and the Pulitzers. The story is still being written.",
+      "Rap is now the main language of popular music worldwide. Drill and rage are the sounds of the young, independent veterans make some of the best records, women lead the charts, and hip-hop has been honoured at the Super Bowl and the Pulitzers. The story is still being written.",
     poster: "gnx",
     guide: {
       sound:
-        "Global drill, from Pop Smoke's Brooklyn to the Bronx's sample drill and UK drill-pop like 'Sprinter'. Rage, from Playboi Carti's 'Whole Lotta Red' to Ken Carson and Yeat. Plugg, Detroit street rap, Memphis's GloRilla, Griselda and the drumless loops of The Alchemist and billy woods. Jersey club, Afrobeats and Latin trap in the mix, and the West Coast bounce back on top with 'GNX'.",
+        "Drill, from Pop Smoke's Brooklyn to the Bronx's sample drill. Rage, from Playboi Carti's 'Whole Lotta Red' to Ken Carson and Yeat. Plugg, Detroit street rap, Memphis's GloRilla, Griselda and the drumless loops of The Alchemist and billy woods. Jersey club in the mix, and the West Coast bounce back on top with 'GNX'.",
       look:
         "Pharrell at Louis Vuitton (2023), A$AP Rocky co-chairing the 2025 Met Gala, Opium's goth-punk, Tyler's Golf le Fleur, a Y2K revival and drill balaclavas. Covers are personal again: Kendrick with his 1987 Buick on 'GNX', J. Cole's teenage bedroom on 'The Fall-Off', Baby Keem as a baby on 'Ca$ino', a cover by Tim Burton for 'Don't Be Dumb'. Vinyl variants drive first-week sales again.",
       where:
-        "COVID-19 lockdowns pushed everything online, and TikTok and YouTube Shorts now build regional scenes. The George Floyd protests revived protest rap. UK drill, Afro-fusion and Latin trap compete worldwide, owning masters became realistic for independents, and courts became part of the story, from lyrics used as evidence to the Sean Combs and Tupac cases.",
+        "COVID-19 lockdowns pushed everything online, and TikTok and YouTube Shorts now build regional scenes. The George Floyd protests revived protest rap. Owning masters became realistic for independents, and courts became part of the story, from lyrics used as evidence to the Sean Combs and Tupac cases.",
       tech:
-        "TikTok as the hit engine, surprise Monday releases and deluxe editions, livestream rollouts and vinyl variants. AI arrived with 'Heart on My Sleeve' (2023), a fake Drake and the Weeknd song, and Drake's 'Taylor Made Freestyle' (2024), pulled after Tupac's estate objected to its AI voice.",
+        "TikTok as the hit engine, surprise Monday releases and deluxe editions, livestream rollouts and vinyl variants.",
       impact:
-        "The Super Bowl, the Pulitzer, the Olympics and the Senate's Hip-Hop 50 resolution made hip-hop an institution. Women and queer artists are more visible than ever, Irish, Brazilian, French and UK rap carry debates about national identity, and California limited the use of lyrics as evidence in 2022.",
+        "The Super Bowl, the Pulitzer and the Senate's Hip-Hop 50 resolution made hip-hop an institution. Women and queer artists are more visible than ever, and California limited the use of lyrics as evidence in 2022.",
       legacy:
-        "Still being written. The decade will likely be remembered for a rap feud fought at stadium scale, drill and rage as the youth sounds, independent veterans' comebacks, women and international rap reaching the top, and the open question of AI.",
+        "Still being written. The decade will likely be remembered for a rap feud fought at stadium scale, drill and rage as the youth sounds, independent veterans' comebacks, women reaching the top, and the open question of AI.",
     },
     moments: ["pop-smoke", "super-bowl-lvi", "fifty", "not-like-us", "super-bowl-lix", "most-awarded"],
-    people: ["kendrick", "drake", "doechii", "megan", "cardi", "lilbaby", "popsmoke", "carti", "tyler", "clipse", "gibbs", "alchemist", "billywoods", "griselda", "glorilla", "centralcee", "simz", "mustard", "jcole", "asap", "babykeem"],
+    people: ["kendrick", "doechii", "megan", "cardi", "lilbaby", "popsmoke", "carti", "tyler", "clipse", "gibbs", "alchemist", "billywoods", "griselda", "glorilla", "mustard", "jcole", "asap", "babykeem"],
     records: [
       a("My Turn", "Lil Baby", 2020, "The top Billboard 200 album of 2020; melodic Atlanta street rap at the centre of pop."),
       a("Alfredo", "Freddie Gibbs & The Alchemist", 2020, "Soul samples and detailed street stories; Grammy-nominated."),
@@ -430,7 +419,6 @@ export const CHAPTERS: Chapter[] = [
       a("King's Disease", "Nas", 2020, "Produced by Hit-Boy; it won Best Rap Album, Nas's first Grammy, and started a late-career run."),
       a("Whole Lotta Red", "Playboi Carti", 2020, "Released on Christmas Day, divisive at first and now the bible of rage."),
       a("Call Me If You Get Lost", "Tyler, the Creator", 2021, "A tribute to DJ Drama's mixtapes with luxurious beats and sharp rapping; Best Rap Album."),
-      a("Sometimes I Might Be Introvert", "Little Simz", 2021, "Orchestral, cinematic and personal; it won the Mercury Prize."),
       a("Donda", "Kanye West", 2021, "Gospel-heavy and released after stadium listening parties."),
       a("The Off-Season", "J. Cole", 2021, "Competitive, athletic rapping that showed traditional skills could still top the charts."),
       a("Mr. Morale & the Big Steppers", "Kendrick Lamar", 2022, "Therapy, generational trauma, masculinity and family; Best Rap Album."),
@@ -440,7 +428,6 @@ export const CHAPTERS: Chapter[] = [
       a("The Forever Story", "JID", 2022, "Rapid flows, family history and Southern identity; elite lyricism."),
       a("Cheat Codes", "Black Thought & Danger Mouse", 2022, "Elite rapping over inventive sample-based production."),
       a("King's Disease III", "Nas", 2022, "The peak of Nas and Hit-Boy's run, decades after his debut."),
-      s("Sprinter", "Dave & Central Cee", 2023, "UK drill-pop at its biggest; ten weeks at No. 1 in the UK."),
       a("Utopia", "Travis Scott", 2023, "Ambitious sound design and global scale; a No. 1."),
       a("Michael", "Killer Mike", 2023, "Southern soul, gospel and politics; it swept the rap Grammys in 2024."),
       a("Magic 3", "Nas", 2023, "Closed Nas and Hit-Boy's run of six albums."),
@@ -452,7 +439,6 @@ export const CHAPTERS: Chapter[] = [
       a("GNX", "Kendrick Lamar", 2024, "A celebration of West Coast sound. 'Squabble Up' and 'Luther' went to No. 1, and it won Best Rap Album in 2026."),
       a("MUSIC", "Playboi Carti", 2025, "Debuted at No. 1 with the biggest rap week of early 2025."),
       a("Golliwog", "billy woods", 2025, "A horror-themed record that reclaims racist imagery; a critics' favourite of the year."),
-      a("Lotus", "Little Simz", 2025, "Released in June 2025 with producer Miles Clinton James."),
       a("Let God Sort Em Out", "Clipse", 2025, "Their first album in 16 years, produced by Pharrell and released independently. Nominated for Album of the Year; 'Chains & Whips' won Best Rap Performance."),
       a("Don't Tap the Glass", "Tyler, the Creator", 2025, "A dance-floor record and his fourth straight No. 1."),
       a("Alfredo 2", "Freddie Gibbs & The Alchemist", 2025, "Launched with a noir short film shot in Japan."),
@@ -460,7 +446,6 @@ export const CHAPTERS: Chapter[] = [
       a("Don't Be Dumb", "A$AP Rocky", 2026, "His first album in eight years, with a cover by Tim Burton; it debuted at No. 1."),
       a("The Fall-Off", "J. Cole", 2026, "A double album billed as his last; it debuted at No. 1, his seventh."),
       a("Ca$ino", "Baby Keem", 2026, "Nearly five years in the making, with Kendrick Lamar and Too Short among the guests."),
-      a("Iceman", "Drake", 2026, "Drake's 15th No. 1 album, more than Jay-Z; he became the first artist to hold the top three spots of the Billboard 200 at once."),
     ],
   },
 ];

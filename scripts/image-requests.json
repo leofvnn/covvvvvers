@@ -601,20 +601,6 @@
    "year": 1997
   },
   {
-   "key": "L'École du micro d'argent|IAM",
-   "title": "L'École du micro d'argent",
-   "artist": "IAM",
-   "kind": "album",
-   "year": 1997
-  },
-  {
-   "key": "Sobrevivendo no Inferno|Racionais MC's",
-   "title": "Sobrevivendo no Inferno",
-   "artist": "Racionais MC's",
-   "kind": "album",
-   "year": 1997
-  },
-  {
    "key": "The Miseducation of Lauryn Hill|Lauryn Hill",
    "title": "The Miseducation of Lauryn Hill",
    "artist": "Lauryn Hill",
@@ -811,13 +797,6 @@
    "year": 2003
   },
   {
-   "key": "Boy in da Corner|Dizzee Rascal",
-   "title": "Boy in da Corner",
-   "artist": "Dizzee Rascal",
-   "kind": "album",
-   "year": 2003
-  },
-  {
    "key": "The Black Album|Jay-Z",
    "title": "The Black Album",
    "artist": "Jay-Z",
@@ -926,13 +905,6 @@
    "year": 2008
   },
   {
-   "key": "So Far Gone|Drake",
-   "title": "So Far Gone",
-   "artist": "Drake",
-   "kind": "mixtape",
-   "year": 2009
-  },
-  {
    "key": "Man on the Moon: The End of Day|Kid Cudi",
    "title": "Man on the Moon: The End of Day",
    "artist": "Kid Cudi",
@@ -982,13 +954,6 @@
    "artist": "Waka Flocka Flame",
    "kind": "album",
    "year": 2010
-  },
-  {
-   "key": "Take Care|Drake",
-   "title": "Take Care",
-   "artist": "Drake",
-   "kind": "album",
-   "year": 2011
   },
   {
    "key": "Section.80|Kendrick Lamar",
@@ -1160,20 +1125,6 @@
    "cover": true
   },
   {
-   "key": "Konnichiwa|Skepta",
-   "title": "Konnichiwa",
-   "artist": "Skepta",
-   "kind": "album",
-   "year": 2016
-  },
-  {
-   "key": "Dans la légende|PNL",
-   "title": "Dans la légende",
-   "artist": "PNL",
-   "kind": "album",
-   "year": 2016
-  },
-  {
    "key": "DAMN.|Kendrick Lamar",
    "title": "DAMN.",
    "artist": "Kendrick Lamar",
@@ -1207,13 +1158,6 @@
    "title": "Bodak Yellow",
    "artist": "Cardi B",
    "kind": "song",
-   "year": 2017
-  },
-  {
-   "key": "Gang Signs & Prayer|Stormzy",
-   "title": "Gang Signs & Prayer",
-   "artist": "Stormzy",
-   "kind": "album",
    "year": 2017
   },
   {
@@ -1275,14 +1219,6 @@
    "year": 2019
   },
   {
-   "key": "Grey Area|Little Simz",
-   "title": "Grey Area",
-   "artist": "Little Simz",
-   "kind": "album",
-   "year": 2019,
-   "cover": true
-  },
-  {
    "key": "Bandana|Freddie Gibbs & Madlib",
    "title": "Bandana",
    "artist": "Freddie Gibbs & Madlib",
@@ -1299,24 +1235,10 @@
    "cover": true
   },
   {
-   "key": "Psychodrama|Dave",
-   "title": "Psychodrama",
-   "artist": "Dave",
-   "kind": "album",
-   "year": 2019
-  },
-  {
    "key": "Old Town Road|Lil Nas X feat. Billy Ray Cyrus",
    "title": "Old Town Road",
    "artist": "Lil Nas X feat. Billy Ray Cyrus",
    "kind": "song",
-   "year": 2019
-  },
-  {
-   "key": "AmarElo|Emicida",
-   "title": "AmarElo",
-   "artist": "Emicida",
-   "kind": "album",
    "year": 2019
   },
   {
@@ -1388,14 +1310,6 @@
    "year": 2021
   },
   {
-   "key": "Sometimes I Might Be Introvert|Little Simz",
-   "title": "Sometimes I Might Be Introvert",
-   "artist": "Little Simz",
-   "kind": "album",
-   "year": 2021,
-   "cover": true
-  },
-  {
    "key": "Donda|Kanye West",
    "title": "Donda",
    "artist": "Kanye West",
@@ -1464,13 +1378,6 @@
    "kind": "album",
    "year": 2022,
    "cover": true
-  },
-  {
-   "key": "Sprinter|Dave & Central Cee",
-   "title": "Sprinter",
-   "artist": "Dave & Central Cee",
-   "kind": "song",
-   "year": 2023
   },
   {
    "key": "Utopia|Travis Scott",
@@ -1553,13 +1460,6 @@
    "year": 2025
   },
   {
-   "key": "Lotus|Little Simz",
-   "title": "Lotus",
-   "artist": "Little Simz",
-   "kind": "album",
-   "year": 2025
-  },
-  {
    "key": "Let God Sort Em Out|Clipse",
    "title": "Let God Sort Em Out",
    "artist": "Clipse",
@@ -1609,13 +1509,6 @@
    "year": 2026
   },
   {
-   "key": "Iceman|Drake",
-   "title": "Iceman",
-   "artist": "Drake",
-   "kind": "album",
-   "year": 2026
-  },
-  {
    "key": "Give It Up or Turnit a Loose|James Brown",
    "title": "Give It Up or Turnit a Loose",
    "artist": "James Brown",
@@ -1633,13 +1526,6 @@
    "key": "It's Just Begun|The Jimmy Castor Bunch",
    "title": "It's Just Begun",
    "artist": "The Jimmy Castor Bunch",
-   "kind": "song",
-   "year": 1972
-  },
-  {
-   "key": "The Mexican|Babe Ruth",
-   "title": "The Mexican",
-   "artist": "Babe Ruth",
    "kind": "song",
    "year": 1972
   },
@@ -1698,13 +1584,6 @@
    "artist": "Tom Silverman",
    "kind": "label",
    "year": 1981
-  },
-  {
-   "key": "Buffalo Gals|Malcolm McLaren",
-   "title": "Buffalo Gals",
-   "artist": "Malcolm McLaren",
-   "kind": "song",
-   "year": 1982
   },
   {
    "key": "Wild Style|Charlie Ahearn",
@@ -1924,13 +1803,6 @@
    "year": 1992
   },
   {
-   "key": "Die da!?!|Die Fantastischen Vier",
-   "title": "Die da!?!",
-   "artist": "Die Fantastischen Vier",
-   "kind": "song",
-   "year": 1992
-  },
-  {
    "key": "C.R.E.A.M.|Wu-Tang Clan",
    "title": "C.R.E.A.M.",
    "artist": "Wu-Tang Clan",
@@ -1957,13 +1829,6 @@
    "artist": "Gang Starr",
    "kind": "song",
    "year": 1994
-  },
-  {
-   "key": "Paris sous les bombes|Suprême NTM",
-   "title": "Paris sous les bombes",
-   "artist": "Suprême NTM",
-   "kind": "album",
-   "year": 1995
   },
   {
    "key": "California Love|2Pac feat. Dr. Dre",
@@ -2012,13 +1877,6 @@
    "title": "Bling Bling",
    "artist": "B.G.",
    "kind": "song",
-   "year": 1999
-  },
-  {
-   "key": "A lo cubano|Orishas",
-   "title": "A lo cubano",
-   "artist": "Orishas",
-   "kind": "album",
    "year": 1999
   },
   {
@@ -2071,20 +1929,6 @@
    "year": 2002
   },
   {
-   "key": "Eskimo|Wiley",
-   "title": "Eskimo",
-   "artist": "Wiley",
-   "kind": "song",
-   "year": 2002
-  },
-  {
-   "key": "Original Pirate Material|The Streets",
-   "title": "Original Pirate Material",
-   "artist": "The Streets",
-   "kind": "album",
-   "year": 2002
-  },
-  {
    "key": "In da Club|50 Cent",
    "title": "In da Club",
    "artist": "50 Cent",
@@ -2097,13 +1941,6 @@
    "artist": "Lil Jon & the East Side Boyz",
    "kind": "song",
    "year": 2002
-  },
-  {
-   "key": "Vom Bordstein bis zur Skyline|Bushido",
-   "title": "Vom Bordstein bis zur Skyline",
-   "artist": "Bushido",
-   "kind": "album",
-   "year": 2003
   },
   {
    "key": "Jesus Walks|Kanye West",
@@ -2260,23 +2097,9 @@
    "year": 2014
   },
   {
-   "key": "That's Not Me|Skepta",
-   "title": "That's Not Me",
-   "artist": "Skepta",
-   "kind": "song",
-   "year": 2014
-  },
-  {
    "key": "Alright|Kendrick Lamar",
    "title": "Alright",
    "artist": "Kendrick Lamar",
-   "kind": "song",
-   "year": 2015
-  },
-  {
-   "key": "Hotline Bling|Drake",
-   "title": "Hotline Bling",
-   "artist": "Drake",
    "kind": "song",
    "year": 2015
   },
@@ -2300,20 +2123,6 @@
    "artist": "Lil Uzi Vert",
    "kind": "song",
    "year": 2017
-  },
-  {
-   "key": "Scorpion|Drake",
-   "title": "Scorpion",
-   "artist": "Drake",
-   "kind": "album",
-   "year": 2018
-  },
-  {
-   "key": "Rockstar|Sfera Ebbasta",
-   "title": "Rockstar",
-   "artist": "Sfera Ebbasta",
-   "kind": "album",
-   "year": 2018
   },
   {
    "key": "Victory Lap|Nipsey Hussle",
@@ -2351,32 +2160,11 @@
    "year": 2020
   },
   {
-   "key": "Doja|Central Cee",
-   "title": "Doja",
-   "artist": "Central Cee",
-   "kind": "song",
-   "year": 2022
-  },
-  {
    "key": "Heroes & Villains|Metro Boomin",
    "title": "Heroes & Villains",
    "artist": "Metro Boomin",
    "kind": "album",
    "year": 2022
-  },
-  {
-   "key": "Mass Country|AKA",
-   "title": "Mass Country",
-   "artist": "AKA",
-   "kind": "album",
-   "year": 2023
-  },
-  {
-   "key": "La divina commedia|Tedua",
-   "title": "La divina commedia",
-   "artist": "Tedua",
-   "kind": "album",
-   "year": 2023
   },
   {
    "key": "Like That|Future, Metro Boomin & Kendrick Lamar",

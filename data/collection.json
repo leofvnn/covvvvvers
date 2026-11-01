@@ -132,12 +132,6 @@
    "role": "Designer"
   },
   {
-   "id": "1a942088-2df4-4f90-98b9-496d359510ec",
-   "slug": "adonis-graham",
-   "name": "Adonis Graham",
-   "role": "Illustrator"
-  },
-  {
    "id": "6110f56a-f126-43ac-b499-01596dfdad3e",
    "slug": "adrien-vargas",
    "name": "Adrien Vargas",
@@ -162,40 +156,16 @@
    "role": "Designer"
   },
   {
-   "id": "992e04eb-e9be-40e7-891b-cf230158d657",
-   "slug": "alexandre-cabanel",
-   "name": "Alexandre Cabanel",
-   "role": "Painter"
-  },
-  {
-   "id": "6dcf5443-2907-417b-b9e8-e9c34b971770",
-   "slug": "alice-moitie",
-   "name": "Alice Moitié",
-   "role": "Photographer"
-  },
-  {
    "id": "08bcb5d5-e92c-4a55-96e3-8fa75ecaeaad",
    "slug": "alli",
    "name": "Alli",
    "role": "Art Director"
   },
   {
-   "id": "9b4820b8-ec56-4401-933d-8dd4d66d9a01",
-   "slug": "alvaro-b-junior",
-   "name": "Alvaro B. Junior",
-   "role": "Artist"
-  },
-  {
    "id": "099c833c-1033-45d9-ad5a-fa6d3ad4a70f",
    "slug": "andrew-gura",
    "name": "Andrew Gura",
    "role": "Photographer"
-  },
-  {
-   "id": "dba54d23-20ba-46b7-893e-5b5d1789ef72",
-   "slug": "andy-picton",
-   "name": "Andy Picton",
-   "role": "Concept"
   },
   {
    "id": "0fdb8d68-397e-4ba6-9bba-4325449768a0",
@@ -228,12 +198,6 @@
    "role": "Photographer"
   },
   {
-   "id": "cca570ad-a1b1-4a96-b3d4-bf4f47e31ca5",
-   "slug": "armen",
-   "name": "Armen",
-   "role": "Photographer"
-  },
-  {
    "id": "dc7b5367-d7e9-4a81-9ebd-77bf2ba9dd30",
    "slug": "art-dealer",
    "name": "Art Dealer",
@@ -244,12 +208,6 @@
    "slug": "b-e-johnson",
    "name": "B.E. Johnson",
    "role": "Illustrator"
-  },
-  {
-   "id": "9d2ef829-a84c-4f0a-aa17-29e679abbd14",
-   "slug": "ben-drury",
-   "name": "Ben Drury",
-   "role": "Designer"
   },
   {
    "id": "f9415ea9-797a-416d-bfdf-11b34795a7e8",
@@ -291,12 +249,6 @@
    "id": "4da4b701-939e-4756-9184-58e5be3dbda3",
    "slug": "butch-belair",
    "name": "Butch Belair",
-   "role": "Photographer"
-  },
-  {
-   "id": "ec86af23-a2d2-4d4a-a585-bc53cecc7e23",
-   "slug": "caitlin-cronenberg",
-   "name": "Caitlin Cronenberg",
    "role": "Photographer"
   },
   {
@@ -384,12 +336,6 @@
    "role": "Art Director"
   },
   {
-   "id": "a22f2459-b8fd-451d-9832-3154c6291319",
-   "slug": "crowns-owls",
-   "name": "Crowns & Owls",
-   "role": "Concept"
-  },
-  {
    "id": "8e9158ae-a11b-4b02-bc85-6898c5309306",
    "slug": "d-l-warfield",
    "name": "D.L. Warfield",
@@ -411,12 +357,6 @@
    "id": "d21f013a-fc3c-4c02-a5bc-155493547ef7",
    "slug": "dan-monick",
    "name": "Dan Monick",
-   "role": "Photographer"
-  },
-  {
-   "id": "0348b215-937b-4c97-8889-d0cea9420344",
-   "slug": "daniel-assis",
-   "name": "Daniel Assis",
    "role": "Photographer"
   },
   {
@@ -480,18 +420,6 @@
    "role": "Photographer"
   },
   {
-   "id": "be2c6fe2-281a-4ce2-96da-4e43c1178de1",
-   "slug": "dean-chalkley",
-   "name": "Dean Chalkley",
-   "role": "Photographer"
-  },
-  {
-   "id": "e2b2ab2e-bec4-465a-b554-e2c214972944",
-   "slug": "denis-cisma",
-   "name": "Denis Cisma",
-   "role": "Art Director"
-  },
-  {
    "id": "5fa27205-47d2-40ce-b39d-fc9fb7368a9e",
    "slug": "denis-rouvre",
    "name": "Denis Rouvre",
@@ -507,12 +435,6 @@
    "id": "6d4af0b7-4fb3-408d-9440-fe92a0ec6537",
    "slug": "don-cunningham",
    "name": "Don Cunningham",
-   "role": "Art Director"
-  },
-  {
-   "id": "f594c628-28f9-409e-a37c-09de5ad69dd6",
-   "slug": "donald-hearn",
-   "name": "Donald Hearn",
    "role": "Art Director"
   },
   {
@@ -538,12 +460,6 @@
    "slug": "el-p",
    "name": "El-P",
    "role": "Art Director"
-  },
-  {
-   "id": "ef421037-cfdf-4e26-91d8-0e73b5379d9c",
-   "slug": "enio-cesar",
-   "name": "Enio César",
-   "role": "Photographer"
   },
   {
    "id": "4565d8ee-9b37-4b33-82b3-0cc3248b07e9",
@@ -600,18 +516,6 @@
    "role": "Photographer"
   },
   {
-   "id": "08266432-50cd-4108-8e52-d8c22d7bf75d",
-   "slug": "fifou",
-   "name": "Fifou",
-   "role": "Photographer"
-  },
-  {
-   "id": "554422f5-db93-4313-9722-9b31143468c5",
-   "slug": "funcographics",
-   "name": "Funcographics",
-   "role": "Designer"
-  },
-  {
    "id": "8208bf58-f61e-4832-9665-7936748a6b6a",
    "slug": "garfield-larmond",
    "name": "Garfield Larmond",
@@ -622,12 +526,6 @@
    "slug": "george-condo",
    "name": "George Condo",
    "role": "Artist"
-  },
-  {
-   "id": "b1e06fbe-391b-44c7-b146-a1a22f2c0164",
-   "slug": "george-smith",
-   "name": "George Smith",
-   "role": "Designer"
   },
   {
    "id": "d9751436-6a32-4c40-a433-8bab17c2caee",
@@ -672,34 +570,10 @@
    "role": "Art Director"
   },
   {
-   "id": "9dae02f5-9c8c-4cd2-af5e-75945bbb67c1",
-   "slug": "hi-tek",
-   "name": "Hi-Tek",
-   "role": "Artist"
-  },
-  {
-   "id": "20a1c7d1-5e7d-4343-be7c-2d634b285f84",
-   "slug": "hyghly-alleyne",
-   "name": "Hyghly Alleyne",
-   "role": "Photographer"
-  },
-  {
-   "id": "c80c5f73-0772-46b7-841a-bf8b60e084ea",
-   "slug": "isa-saalabi",
-   "name": "Isa Saalabi",
-   "role": "Art Director"
-  },
-  {
    "id": "138405f3-533c-40b9-9292-cff45b10648a",
    "slug": "ithaka-darin-pappas",
    "name": "Ithaka Darin Pappas",
    "role": "Photographer"
-  },
-  {
-   "id": "65c60bc3-627b-4720-95d8-48cdeb8716ab",
-   "slug": "james-hamilton",
-   "name": "James Hamilton",
-   "role": "Art Director"
   },
   {
    "id": "cd14dcb5-5855-454a-b608-09cb737a1877",
@@ -756,12 +630,6 @@
    "role": "Photographer"
   },
   {
-   "id": "816b76d9-7a65-4512-92bf-fe5b90f3a950",
-   "slug": "jim-joe",
-   "name": "Jim Joe",
-   "role": "Typographer"
-  },
-  {
    "id": "b1676eec-b057-423a-bfbe-7eabce625c75",
    "slug": "joe-grant",
    "name": "Joe Grant",
@@ -771,12 +639,6 @@
    "id": "f4d35e3c-319c-40d4-9282-b3f7b3e6aa9a",
    "slug": "joe-perez",
    "name": "Joe Perez",
-   "role": "Designer"
-  },
-  {
-   "id": "17bb5d63-fdce-4f31-81b0-5e98157b9eec",
-   "slug": "johnny-malepa",
-   "name": "Johnny Malepa",
    "role": "Designer"
   },
   {
@@ -790,12 +652,6 @@
    "slug": "josh-sperling",
    "name": "Josh Sperling",
    "role": "Artist"
-  },
-  {
-   "id": "43120719-1690-4193-99a2-a2b275a38668",
-   "slug": "joao-wainer",
-   "name": "João Wainer",
-   "role": "Photographer"
   },
   {
    "id": "2e94a722-d1fa-4e14-8520-ff0a2f782184",
@@ -822,28 +678,10 @@
    "role": "Art Director"
   },
   {
-   "id": "7bf0351a-5b9d-4bf1-9e0c-501bbff2e990",
-   "slug": "kadir-nelson",
-   "name": "Kadir Nelson",
-   "role": "Painter"
-  },
-  {
    "id": "6c6e53af-d544-40da-b2ba-87b690b4ac8e",
    "slug": "kanye-west",
    "name": "Kanye West",
    "role": "Art Director"
-  },
-  {
-   "id": "782f98e4-1fef-4e63-bbd9-9885af0facc3",
-   "slug": "karabo-poppy",
-   "name": "Karabo Poppy",
-   "role": "Illustrator"
-  },
-  {
-   "id": "929670d5-135a-42e7-89dc-c4b44cc04170",
-   "slug": "katja-kuhl",
-   "name": "Katja Kuhl",
-   "role": "Photographer"
   },
   {
    "id": "9ff68486-c08e-474f-9e9b-51ca0cbd0adb",
@@ -924,22 +762,10 @@
    "role": "Photographer"
   },
   {
-   "id": "3c48cba7-8d53-4ef2-87f3-c43c4df362a5",
-   "slug": "lamar-taylor",
-   "name": "Lamar Taylor",
-   "role": "Photographer"
-  },
-  {
    "id": "af658b7d-3e51-4f14-b81e-59beccfa845f",
    "slug": "lauryn-hill",
    "name": "Lauryn Hill",
    "role": "Art Director"
-  },
-  {
-   "id": "1a333fa4-41f8-4e28-a6cf-538e66d00eec",
-   "slug": "lewis-levi",
-   "name": "Lewis Levi",
-   "role": "Creative Director"
   },
   {
    "id": "8a03b417-df74-42e2-88af-a5d1a7398702",
@@ -958,12 +784,6 @@
    "slug": "louis-marino",
    "name": "Louis Marino",
    "role": "Creative Director"
-  },
-  {
-   "id": "9a9632a4-7db0-4fe3-af94-3960f447ca15",
-   "slug": "lucas-rampazzo",
-   "name": "Lucas Rampazzo",
-   "role": "Designer"
   },
   {
    "id": "8ccd6032-f717-4b59-bbc6-fe0da196a4b2",
@@ -990,28 +810,10 @@
    "role": "Concept"
   },
   {
-   "id": "6958a0ae-5611-40a8-9ceb-0b3330ad8c55",
-   "slug": "mano-brown",
-   "name": "Mano Brown",
-   "role": "Concept"
-  },
-  {
    "id": "f743c99e-0919-4f48-9700-8fc147cc1f0c",
    "slug": "marc-baptiste",
    "name": "Marc Baptiste",
    "role": "Photographer"
-  },
-  {
-   "id": "77efeacc-7021-49dd-a989-b1adf9223dcc",
-   "slug": "marcelo-lima",
-   "name": "Marcelo Lima",
-   "role": "Artist"
-  },
-  {
-   "id": "4ed33fdd-6904-4f02-b2b7-0cb99777900d",
-   "slug": "marcos-marques",
-   "name": "Marcos Marques",
-   "role": "Art Director"
   },
   {
    "id": "063bc7af-8e2a-4952-b867-dc96a72222fa",
@@ -1020,22 +822,10 @@
    "role": "Photographer"
   },
   {
-   "id": "24386053-9e8b-44b2-b322-0632cbf28bd9",
-   "slug": "martin-drop-wong",
-   "name": "Martin \"Drop\" Wong",
-   "role": "Designer"
-  },
-  {
    "id": "6e004c85-9919-4d89-9450-3d331348b7c8",
    "slug": "matthew-scott",
    "name": "Matthew Scott",
    "role": "Photographer"
-  },
-  {
-   "id": "5e7bccb2-07cc-432a-b155-957802bb8f3e",
-   "slug": "maxwell-alexandre",
-   "name": "Maxwell Alexandre",
-   "role": "Painter"
   },
   {
    "id": "53c2f6e6-cde1-495b-bb91-71663487924e",
@@ -1104,34 +894,10 @@
    "role": "Creative Director"
   },
   {
-   "id": "4c2bd382-00f8-493e-acbd-42b9988c724b",
-   "slug": "nicky-heat",
-   "name": "Nicky Heat",
-   "role": "Designer"
-  },
-  {
-   "id": "dd777d9a-37a2-4939-9f63-e4f36a8e50c0",
-   "slug": "nicky-orenstein",
-   "name": "Nicky Orenstein",
-   "role": "Art Director"
-  },
-  {
-   "id": "e2abb798-2cb4-45f5-8163-c1808c59a0ef",
-   "slug": "nicolas-despis",
-   "name": "Nicolas Despis",
-   "role": "Photographer"
-  },
-  {
    "id": "aa2ca935-e4cf-4ab3-9399-10211c5aefa5",
    "slug": "ola-kudu",
    "name": "Ola Kudu",
    "role": "Creative Director"
-  },
-  {
-   "id": "e53d7280-f69c-484f-b82d-2c56f0ba2229",
-   "slug": "olli-nbk",
-   "name": "Olli.NBK",
-   "role": "Photographer"
   },
   {
    "id": "dc7c4b36-7e0f-41fe-b033-26806f8b361a",
@@ -1188,12 +954,6 @@
    "role": "Photographer"
   },
   {
-   "id": "7cd9ed4b-a63b-4e39-8d8c-902cb406dd19",
-   "slug": "ricardo-fernandes",
-   "name": "Ricardo Fernandes",
-   "role": "Designer"
-  },
-  {
    "id": "c0531dcb-58f5-48de-b719-150b6aac6baf",
    "slug": "riccardo-tisci",
    "name": "Riccardo Tisci",
@@ -1240,12 +1000,6 @@
    "slug": "ruth-kaplan",
    "name": "Ruth Kaplan",
    "role": "Art Director"
-  },
-  {
-   "id": "7c661830-4fa5-418c-8a2e-44f0e7313693",
-   "slug": "rgular",
-   "name": "Rægular",
-   "role": "Designer"
   },
   {
    "id": "8bd22b13-aa28-4cf3-bc20-1b557f5f9162",
@@ -1314,12 +1068,6 @@
    "role": "Artist"
   },
   {
-   "id": "6d4d3e41-e776-4bce-a8a4-36717a8a1551",
-   "slug": "specter",
-   "name": "Specter",
-   "role": "Art Director"
-  },
-  {
    "id": "b87d0639-ea09-4eca-a52b-d7785a105af4",
    "slug": "stacy-drummond",
    "name": "Stacy Drummond",
@@ -1365,12 +1113,6 @@
    "id": "7f535744-9ad0-4a02-932f-2e0396b42723",
    "slug": "takashi-murakami",
    "name": "Takashi Murakami",
-   "role": "Artist"
-  },
-  {
-   "id": "4802e4f7-cf04-4504-8979-d9fdc742b26c",
-   "slug": "taonga",
-   "name": "Taonga",
    "role": "Artist"
   },
   {
@@ -1578,90 +1320,6 @@
    "created_at": "2026-10-20T08:00:00+00:00"
   },
   {
-   "id": "193f38f6-2ca6-43c0-88f7-b46e280c64c6",
-   "slug": "for-all-the-dogs",
-   "title": "For All the Dogs",
-   "artist": "Drake",
-   "release_year": 2023,
-   "decade": "2020s",
-   "label": "OVO / Republic",
-   "country": "Canada",
-   "cover_type_id": "cac97ec2-47e9-4562-b1b0-ebb5ae534086",
-   "subgenres": [
-    "Canadian hip-hop",
-    "Trap"
-   ],
-   "credits_text": "Cover drawn by Adonis Graham, Drake's son",
-   "description_html": "<p>The cover of For All the Dogs is a child's drawing: a scratchy white dog with long ears and glaring red eyes, standing on a black background. It was drawn by Drake's son, Adonis Graham, who was five at the time, and Drake revealed it in August 2023 with the simple caption \"Cover by Adonis.\"</p><p>Adonis described the drawing as \"a carefree piece of work,\" and Drake linked it to his own past, calling it an inspiration from his 2016 album Views and dedicating it to a picture he had drawn in fifth grade of a cat with blue eyes. The choice suited a father whose relationship with his son had become a public subject after years of rumours and diss tracks.</p><p>The drawing quickly became merchandise, sticker sheets and fan art. For All the Dogs was released on 6 October 2023 and debuted at number one, and two unused alternative covers for the album later appeared in 2024.</p>",
-   "color": "#070804",
-   "accent_color": "#999F9B",
-   "image_url": "https://static.wixstatic.com/media/b519fa_8e04f610456148e29ffc145613191b4c~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "4czdORdCWP9umpbhFXK2fW",
-   "spotify_url": "https://open.spotify.com/album/4czdORdCWP9umpbhFXK2fW",
-   "apple_music_url": "https://music.apple.com/us/album/for-all-the-dogs/1710685602",
-   "youtube_url": "https://www.youtube.com/results?search_query=Drake+For+All+the+Dogs+full+album",
-   "featured": false,
-   "created_at": "2026-10-14T08:00:00+00:00"
-  },
-  {
-   "id": "5423826e-c3b8-4437-a44f-eef6a68a293b",
-   "slug": "la-divina-commedia",
-   "title": "La Divina Commedia",
-   "artist": "Tedua",
-   "release_year": 2023,
-   "decade": "2020s",
-   "label": "Epic / Sony Music Italy",
-   "country": "Italy",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "Italian hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Photography by David LaChapelle",
-   "description_html": "<p>The Genoese rapper Tedua built his album around Dante's Divine Comedy, the poem that travels through Hell, Purgatory and Paradise. To shoot its covers he hired David LaChapelle, the American photographer famous for his lurid, theatrical images of celebrities, and the same artist behind Travis Scott's ASTROWORLD.</p><p>LaChapelle produced two covers, one for Purgatorio and one for Inferno, revealed a week apart in May 2023. The Inferno cover was shot on the slopes of a Hawaiian volcano and shows Tedua in a torn work suit among the lava, a modern sinner in a landscape of fire.</p><p>Tedua presented the album as his own journey from hell towards paradise. La Divina Commedia was released on 2 June 2023, and the pairing of a young Italian rapper with one of the world's best-known photographers made the covers an event in Italian rap.</p>",
-   "color": "#142135",
-   "accent_color": "#DFAE2E",
-   "image_url": "https://static.wixstatic.com/media/b519fa_c15383e88daf4dd7a243fc0be1be4c10~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "4ir7AIjfrMVHTxZhnfzhWl",
-   "spotify_url": "https://open.spotify.com/album/4ir7AIjfrMVHTxZhnfzhWl",
-   "apple_music_url": "https://music.apple.com/it/album/la-divina-commedia/1689797901",
-   "youtube_url": "https://www.youtube.com/results?search_query=Tedua+La+Divina+Commedia+full+album",
-   "featured": false,
-   "created_at": "2026-10-10T17:00:00+00:00"
-  },
-  {
-   "id": "8b2fe929-d438-40a3-9339-193547156bc9",
-   "slug": "mass-country",
-   "title": "Mass Country",
-   "artist": "AKA",
-   "release_year": 2023,
-   "decade": "2020s",
-   "label": "Vth A / Sony Music Africa",
-   "country": "South Africa",
-   "cover_type_id": "cac97ec2-47e9-4562-b1b0-ebb5ae534086",
-   "subgenres": [
-    "South African hip-hop",
-    "Amapiano"
-   ],
-   "credits_text": "Illustration by Karabo Poppy",
-   "description_html": "<p>AKA revealed the cover of Mass Country on Instagram on 11 January 2023. It was drawn by the South African illustrator Karabo Poppy, known for her bright, patterned portraits, and shows AKA's face surrounded by objects that stand for South African culture, including a ten-cent coin, a vintage BMW, a skull and a snake.</p><p>Like the album title, the drawing celebrates South Africa itself, with AKA at the centre of the things that made him.</p><p>Four weeks after the reveal, on 10 February 2023, AKA was shot dead outside a restaurant in Durban at the age of 35. Mass Country was released posthumously on 24 February 2023 and quickly went gold, and the cover became the last portrait of one of South Africa's biggest rap stars.</p>",
-   "color": "#C24326",
-   "accent_color": "#D8986D",
-   "image_url": "https://static.wixstatic.com/media/b519fa_3667fe168fe142c3afb4e25536c3d431~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "376vzaVcBQAbefjO1t7vu5",
-   "spotify_url": "https://open.spotify.com/album/376vzaVcBQAbefjO1t7vu5",
-   "apple_music_url": "https://music.apple.com/za/album/mass-country/1664064205",
-   "youtube_url": "https://www.youtube.com/results?search_query=AKA+Mass+Country+full+album",
-   "featured": false,
-   "created_at": "2026-10-10T08:00:00+00:00"
-  },
-  {
    "id": "ba68ad1b-5f84-4ef0-9559-6ee1d30bda44",
    "slug": "utopia",
    "title": "UTOPIA",
@@ -1746,90 +1404,6 @@
    "created_at": "2026-10-09T23:00:00+00:00"
   },
   {
-   "id": "7872e0e6-8b44-4b5d-a7e6-b9635c62d101",
-   "slug": "civilisation",
-   "title": "Civilisation",
-   "artist": "Orelsan",
-   "release_year": 2021,
-   "decade": "2020s",
-   "label": "7th Magnitude / 3e Bureau / Wagram",
-   "country": "France",
-   "cover_type_id": "c0217d82-6644-4ea9-99d1-67b7e9dbe7a7",
-   "subgenres": [
-    "French hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Flag designed by Rægular; photography by Alice Moitié",
-   "description_html": "<p>For his fourth album, Orelsan invented a country. The cover is built around a new flag for an imaginary micronation, and Orelsan described himself stepping back behind that symbol. The graphic designer Rægular drew the flag from his ideas and went through around a hundred versions before reaching the final one, and Alice Moitié is credited with the photography.</p><p>Every part of the flag has a meaning. The blue and red come from the French flag and can also point to the colours of Caen, Orelsan's city. The white was left out, since royalty was not the point. A green band stands for the provinces and nature, and a grey and white checkerboard copies Photoshop's empty transparent background, so anyone can make the flag their own. A black rectangle stands for respect, and a white shape combines a shuriken for defence with a star for hope and the diversity of beliefs.</p><p>Civilisation was released on 19 November 2021, and on the later Civilisation perdue edition Moitié's photo was replaced by a flat black field with only the flag's star kept.</p>",
-   "color": "#356E96",
-   "accent_color": "#138F54",
-   "image_url": "https://static.wixstatic.com/media/b519fa_2457977e18294cd786fd32944da7d6ca~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "2o2GBOfy2GG9oKYZgfZkur",
-   "spotify_url": "https://open.spotify.com/album/2o2GBOfy2GG9oKYZgfZkur",
-   "apple_music_url": "https://music.apple.com/us/album/civilisation/1788304818",
-   "youtube_url": "https://www.youtube.com/results?search_query=Orelsan+Civilisation+full+album",
-   "featured": false,
-   "created_at": "2026-10-16T11:00:00+00:00"
-  },
-  {
-   "id": "9795e8b3-b5df-4e53-8a77-272dc3e31681",
-   "slug": "flop",
-   "title": "Flop",
-   "artist": "Salmo",
-   "release_year": 2021,
-   "decade": "2020s",
-   "label": "Machete Empire / Columbia",
-   "country": "Italy",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "Italian hip-hop",
-    "Rap rock"
-   ],
-   "credits_text": "After Alexandre Cabanel's painting The Fallen Angel (1847)",
-   "description_html": "<p>The Sardinian rapper Salmo recreated one of the most famous paintings of the 19th century for his 2021 album. The cover is a close-up of Salmo's face posed as Lucifer in Alexandre Cabanel's The Fallen Angel, the 1847 canvas in which the beautiful rebel angel, just cast out of heaven, glares over his folded arm with eyes full of tears and rage.</p><p>Salmo copies the pose and the look, his face half hidden behind his arm and his eyes staring sideways, against a patch of blue sky. Italian critics and art blogs pointed out the quotation at once.</p><p>The image fits the title, which means failure, and an album about success, pride and falling from grace. Flop was released on 1 October 2021 on his label Machete Empire and Columbia, and the fallen-angel portrait became one of the most discussed Italian covers of the year.</p>",
-   "color": "#2F231D",
-   "accent_color": "#3E6CBA",
-   "image_url": "https://static.wixstatic.com/media/b519fa_7d58895fd2eb4b9c888ca14d9451d72c~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "7DvK67C21i6go7olhjvLgT",
-   "spotify_url": "https://open.spotify.com/album/7DvK67C21i6go7olhjvLgT",
-   "apple_music_url": "https://music.apple.com/us/album/flop/1587171881",
-   "youtube_url": "https://www.youtube.com/results?search_query=Salmo+Flop+full+album",
-   "featured": false,
-   "created_at": "2026-10-13T05:00:00+00:00"
-  },
-  {
-   "id": "c23ae502-f18b-42d4-ae58-7da4925f21b1",
-   "slug": "historias-da-minha-area",
-   "title": "Histórias da Minha Área",
-   "artist": "Djonga",
-   "release_year": 2020,
-   "decade": "2020s",
-   "label": "A Quadrilha",
-   "country": "Brazil",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Photography by Daniel Assis (176 Studio); art by Alvaro B. Junior (Caverna Studios)",
-   "description_html": "<p>Djonga, the rapper from Belo Horizonte, released an album every March for several years in a row, and the cover of his fourth is one of his hardest images. In a narrow favela alley, young Black men stand and sit together, some alive and wearing football shirts, others lying on the ground with bullet wounds.</p><p>The photograph is by Daniel Assis of 176 Studio, with art by Alvaro B. Junior, known as Alvinho, of Caverna Studios. Placing the living and the dead in the same frame makes the cover's message plain: without opportunities, the future for boys in poor neighbourhoods can end in an early death.</p><p>The title means stories from my area, and the album tells them one by one. Histórias da Minha Área came out on 16 March 2020, and its cover reads as a portrait of police violence and everyday loss in Brazil's peripheries.</p>",
-   "color": "#13171C",
-   "accent_color": "#69504A",
-   "image_url": "https://static.wixstatic.com/media/b519fa_fc88b45acdb34a7cbc323f4b054df595~mv2.jpg",
-   "image_width": 2500,
-   "image_height": 2500,
-   "spotify_album_id": "3NjTHK6FovpR3rHceaT5FE",
-   "spotify_url": "https://open.spotify.com/album/3NjTHK6FovpR3rHceaT5FE",
-   "apple_music_url": "https://music.apple.com/br/album/hist%C3%B3rias-da-minha-%C3%A1rea/1502146741",
-   "youtube_url": "https://www.youtube.com/results?search_query=Djonga+Histórias+da+Minha+Área+full+album",
-   "featured": false,
-   "created_at": "2026-10-24T08:00:00+00:00"
-  },
-  {
    "id": "27b58720-0925-4142-97fc-a7d0a9c0f104",
    "slug": "pray-for-paris",
    "title": "Pray for Paris",
@@ -1886,34 +1460,6 @@
    "created_at": "2026-10-16T05:00:00+00:00"
   },
   {
-   "id": "a28f9e93-75db-4382-afc1-7bc1eb665774",
-   "slug": "amarelo",
-   "title": "AmarElo",
-   "artist": "Emicida",
-   "release_year": 2019,
-   "decade": "2010s",
-   "label": "Laboratório Fantasma",
-   "country": "Brazil",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "MPB"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of AmarElo is a small black-and-white photograph of young Black men in a street, set inside a wide white border, with the title and Emicida's name below in a thin rainbow of colours.</p><p>The São Paulo rapper made the album as a celebration of Black Brazilian history and joy. Its title song samples Belchior's \"Sujeito de Sorte\" and features Majur and Pabllo Vittar, and the album won a Latin Grammy in 2020, followed by the Netflix documentary AmarElo: It's All for Yesterday.</p><p>The simple, documentary photograph and the bright lettering capture the album's mix of memory and hope. AmarElo became one of the most important Brazilian records of its time, linking rap to samba, MPB and the country's Black cultural movement.</p>",
-   "color": "#FDFDFD",
-   "accent_color": "#1A1A1A",
-   "image_url": "https://static.wixstatic.com/media/b519fa_1cbe8873ad8047a38986014c75498ba8~mv2.jpg",
-   "image_width": 1400,
-   "image_height": 1400,
-   "spotify_album_id": "22ltKhPdKZ4IuFrna73xPG",
-   "spotify_url": "https://open.spotify.com/album/22ltKhPdKZ4IuFrna73xPG",
-   "apple_music_url": "https://music.apple.com/us/album/amarelo/1484562276",
-   "youtube_url": "https://www.youtube.com/results?search_query=Emicida+AmarElo+full+album",
-   "featured": false,
-   "created_at": "2026-10-15T11:00:00+00:00"
-  },
-  {
    "id": "42038f4d-781e-4877-adce-21ea8a71fd9a",
    "slug": "igor",
    "title": "IGOR",
@@ -1940,90 +1486,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Tyler%2C+the+Creator+IGOR+full+album",
    "featured": false,
    "created_at": "2026-10-11T23:00:00+00:00"
-  },
-  {
-   "id": "b6494978-a5fd-4374-9766-11cd7d0ede3e",
-   "slug": "les-etoiles-vagabondes",
-   "title": "Les Étoiles vagabondes",
-   "artist": "Nekfeu",
-   "release_year": 2019,
-   "decade": "2010s",
-   "label": "Seine Zoo / Polydor",
-   "country": "France",
-   "cover_type_id": "c0217d82-6644-4ea9-99d1-67b7e9dbe7a7",
-   "subgenres": [
-    "French hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Graphic design by Rægular",
-   "description_html": "<p>Nekfeu's third album arrived with its film. Les Étoiles vagabondes was first presented as an \"album au cinéma,\" a documentary directed by Syrine Boulanouar and Nekfeu that followed the making of the record through Paris, Japan, Greece and the United States. It was shown once, in nearly 200 cinemas across France, Belgium, Morocco, Switzerland and Canada, and drew more than 100,000 people, a French record for a single screening of a music documentary.</p><p>The packaging was designed to feel like something carried home from the trip. Rægular handled the graphic design, and the original CD was sold in a sealed plastic sleeve that served as the whole package, limited to 100,000 copies. The cover shows exactly that: a shiny, crinkled pouch with the disc pressed inside.</p><p>About two weeks later Nekfeu followed up with Expansion, adding 16 new songs for 34 tracks in total. Its physical edition came in a padded bubble-wrap mailer, another piece of packaging that turned an everyday object into the artwork.</p>",
-   "color": "#010508",
-   "accent_color": "#545663",
-   "image_url": "https://static.wixstatic.com/media/b519fa_c10386dd45da4b1ea176c38e0cdfd2b0~mv2.jpg",
-   "image_width": 640,
-   "image_height": 640,
-   "spotify_album_id": "5eLZYtCXkFIsOmpVc7vrI2",
-   "spotify_url": "https://open.spotify.com/album/5eLZYtCXkFIsOmpVc7vrI2",
-   "apple_music_url": "https://music.apple.com/fr/album/les-%C3%A9toiles-vagabondes-expansion/1468503258",
-   "youtube_url": "https://www.youtube.com/results?search_query=Nekfeu+Les+Étoiles+vagabondes+full+album",
-   "featured": false,
-   "created_at": "2026-10-11T11:00:00+00:00"
-  },
-  {
-   "id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "slug": "nothing-great-about-britain",
-   "title": "Nothing Great About Britain",
-   "artist": "slowthai",
-   "release_year": 2019,
-   "decade": "2010s",
-   "label": "Method Records",
-   "country": "United Kingdom",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "UK hip-hop",
-    "Grime"
-   ],
-   "credits_text": "Concept by Crowns & Owls; creative direction by Lewis Levi; set and art direction by James Hamilton; graphic design by George Smith; produced by Andy Picton",
-   "description_html": "<p>slowthai's debut album cover puts the Northampton rapper naked in a wooden pillory, the medieval stocks used for public shaming, flanked by Union flags and grinning straight at the camera. The concept came from the creative studio Crowns & Owls, with Lewis Levi as creative director and James Hamilton building the set.</p><p>The shoot took place on the Spring Boroughs estate in Northampton, in front of the block where slowthai grew up, a building whose residents had been given eviction notices and which was later demolished. Placing the stocks there tied an old punishment to modern public shaming, including the kind dealt out on social media, and to a country he felt had left places like his behind.</p><p>The title spells out the joke and the anger at once, on an album released on 17 May 2019, in the middle of the Brexit years. The record was shortlisted for the Mercury Prize, and the image of a naked rapper locked in the stocks outside his childhood home became one of the most talked-about British album covers of the decade. George Smith handled the graphic design, and Andy Picton produced the shoot.</p>",
-   "color": "#685346",
-   "accent_color": "#B48350",
-   "image_url": "https://static.wixstatic.com/media/b519fa_3cb24ea1610a4eb7bebdbaf8feda5653~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "5Ki4YFQrUx7hCcQx1LJUQb",
-   "spotify_url": "https://open.spotify.com/album/5Ki4YFQrUx7hCcQx1LJUQb",
-   "apple_music_url": "https://music.apple.com/us/album/nothing-great-about-britain/1457181800",
-   "youtube_url": "https://www.youtube.com/results?search_query=slowthai+Nothing+Great+About+Britain+full+album",
-   "featured": false,
-   "created_at": "2026-10-21T20:00:00+00:00"
-  },
-  {
-   "id": "7a1b21a7-1883-42ba-9211-c0f2fad705f6",
-   "slug": "psychodrama",
-   "title": "PSYCHODRAMA",
-   "artist": "Dave",
-   "release_year": 2019,
-   "decade": "2010s",
-   "label": "Neighbourhood",
-   "country": "United Kingdom",
-   "cover_type_id": "464ed954-6e08-4d0e-84ab-1a736b658cd3",
-   "subgenres": [
-    "British hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of PSYCHODRAMA shows a dark figure whose head has been replaced by a burning blue flame, under the title in jagged blue letters, an image of a mind on fire.</p><p>The south London rapper framed his debut album as a series of therapy sessions, moving through songs about race, family, love and his brother's imprisonment, including \"Black\" and the eleven-minute story \"Lesley.\" Released on 8 March 2019, it debuted at number one and won the Mercury Prize.</p><p>The burning head turns the title into an image of inner pressure. PSYCHODRAMA was praised as one of the most ambitious British rap albums ever made and made Dave one of the defining voices of his generation.</p>",
-   "color": "#010203",
-   "accent_color": "#0D7FE4",
-   "image_url": "https://static.wixstatic.com/media/b519fa_9c5ed9ba8e6a4fcc8bf93f4341d8cb2e~mv2.jpg",
-   "image_width": 1400,
-   "image_height": 1400,
-   "spotify_album_id": "4GrFuXwRmEBJec22p58fsD",
-   "spotify_url": "https://open.spotify.com/album/4GrFuXwRmEBJec22p58fsD",
-   "apple_music_url": "https://music.apple.com/us/album/psychodrama/1839406091",
-   "youtube_url": "https://www.youtube.com/results?search_query=Dave+PSYCHODRAMA+full+album",
-   "featured": false,
-   "created_at": "2026-10-26T05:00:00+00:00"
   },
   {
    "id": "075091e0-3d68-4460-82bb-07afa00b7038",
@@ -2110,34 +1572,6 @@
    "created_at": "2026-10-12T05:00:00+00:00"
   },
   {
-   "id": "fda721f8-6334-4984-9283-e71ae5eedd69",
-   "slug": "gigantes",
-   "title": "Gigantes",
-   "artist": "BK'",
-   "release_year": 2018,
-   "decade": "2010s",
-   "label": "Pirâmide Perdida Records",
-   "country": "Brazil",
-   "cover_type_id": "6cbdce99-93a5-4ccd-adbc-b5e907e3ee7e",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Painting by Maxwell Alexandre",
-   "description_html": "<p>The Rio de Janeiro rapper BK' asked the painter Maxwell Alexandre, an artist from the Rocinha favela whose work has since entered museums such as MASP in São Paulo and the Reina Sofía in Madrid, to paint the cover of his second album. The canvas fills a warm yellow field with figures, rooftops and scenes from the streets of Lapa in Rio.</p><p>At the bottom of the painting stand Black children, and as the eye moves up they grow into giants, all wearing masks of the Deus do Furdunço. The painting turns the album's title into an image of Black pride and of young Black people growing into their own power, the central theme of the record.</p><p>Gigantes was released on 13 October 2018 on BK's label Pirâmide Perdida. The cover tied Brazilian rap directly to one of the country's most celebrated young painters, at the moment his career was taking off.</p>",
-   "color": "#D6A844",
-   "accent_color": "#8C744D",
-   "image_url": "https://static.wixstatic.com/media/b519fa_2099ff234e8d43008dd519e4efb1af55~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "4W2IL1NXpcbsYmGdAjeJGg",
-   "spotify_url": "https://open.spotify.com/album/4W2IL1NXpcbsYmGdAjeJGg",
-   "apple_music_url": "https://music.apple.com/br/album/gigantes/1439659556",
-   "youtube_url": "https://www.youtube.com/results?search_query=BK'+Gigantes+full+album",
-   "featured": false,
-   "created_at": "2026-10-22T11:00:00+00:00"
-  },
-  {
    "id": "dfef6a04-fda7-428a-b3ff-ddb04e1598ce",
    "slug": "kids-see-ghosts",
    "title": "Kids See Ghosts",
@@ -2164,62 +1598,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Kanye+West+Kid+Cudi+Kids+See+Ghosts+full+album",
    "featured": false,
    "created_at": "2026-10-09T14:00:00+00:00"
-  },
-  {
-   "id": "6e140fe7-4b33-4dd1-9bd4-7df6eaeb6233",
-   "slug": "rockstar",
-   "title": "Rockstar",
-   "artist": "Sfera Ebbasta",
-   "release_year": 2018,
-   "decade": "2010s",
-   "label": "Def Jam / Universal Music Italia",
-   "country": "Italy",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "Italian hip-hop",
-    "Trap"
-   ],
-   "credits_text": null,
-   "description_html": "<p>Sfera Ebbasta poses on the cover of Rockstar with bright red hair, white sunglasses and a pink fur coat against a yellow background, a loud pop-star image for a trap record.</p><p>The rapper from Cinisello Balsamo, near Milan, made the album with his producer Charlie Charles. Released on 19 January 2018, it gathered 35 million streams in its first week, put all eleven tracks in the top twelve of the Italian singles chart at once and made him the first Italian artist on Spotify's global top 100.</p><p>The flamboyant cover matched an artist who treated trap as pop stardom. Rockstar was the best-selling Italian album of 2018 and showed that Italian trap could compete with the biggest international releases.</p>",
-   "color": "#E07A86",
-   "accent_color": "#F8B806",
-   "image_url": "https://static.wixstatic.com/media/b519fa_5b393b8dc8d64631afd47ec55b17523c~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "5YXyBqtxW2APQNBCscATw0",
-   "spotify_url": "https://open.spotify.com/album/5YXyBqtxW2APQNBCscATw0",
-   "apple_music_url": "https://music.apple.com/it/album/rockstar/1440909949",
-   "youtube_url": "https://www.youtube.com/results?search_query=Sfera+Ebbasta+Rockstar+full+album",
-   "featured": false,
-   "created_at": "2026-10-18T14:00:00+00:00"
-  },
-  {
-   "id": "4ecab9f9-afb1-4181-9230-60a8c45bfbcb",
-   "slug": "touch-my-blood",
-   "title": "Touch My Blood",
-   "artist": "AKA",
-   "release_year": 2018,
-   "decade": "2010s",
-   "label": "Beam Group",
-   "country": "South Africa",
-   "cover_type_id": "c0217d82-6644-4ea9-99d1-67b7e9dbe7a7",
-   "subgenres": [
-    "South African hip-hop",
-    "Pop rap"
-   ],
-   "credits_text": "Front cover by Nicky Heat and Johnny Malepa (fan design contest winners); back cover by Taonga",
-   "description_html": "<p>For his third album, the Johannesburg rapper AKA let his fans design the cover. On 20 April 2018 he announced the \"Touch My Blood Challenge,\" inviting anyone to submit artwork, and he later narrowed the entries down to a top ten.</p><p>The winning front cover, a bold silhouette of AKA's head against a flat red background, came from Nicky Heat and Johnny Malepa, and the official artwork was unveiled on 8 May 2018. The runner-up, a visual artist from Rustenburg in the North West province known as Taonga, designed the back cover and was rewarded with an internship at AKA's company, Beam Group.</p><p>The contest turned the album's release into a shared project with his audience. Touch My Blood was released on 15 June 2018, after a short delay so AKA could finish videos and plan his tour.</p>",
-   "color": "#0D0302",
-   "accent_color": "#D3534F",
-   "image_url": "https://static.wixstatic.com/media/b519fa_814d7ffdd4314ffe8b2c6e8ed56c8876~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "2Upg5l79vSVNVS9v8vDqUa",
-   "spotify_url": "https://open.spotify.com/album/2Upg5l79vSVNVS9v8vDqUa",
-   "apple_music_url": "https://music.apple.com/us/album/touch-my-blood/1391157689",
-   "youtube_url": "https://www.youtube.com/results?search_query=AKA+Touch+My+Blood+full+album",
-   "featured": false,
-   "created_at": "2026-10-13T23:00:00+00:00"
   },
   {
    "id": "550509f0-025e-447e-87ba-ee75911e6f60",
@@ -2362,34 +1740,6 @@
    "created_at": "2026-10-21T02:00:00+00:00"
   },
   {
-   "id": "0d57a6be-0e04-40d5-9f36-eae2c5434ec5",
-   "slug": "gang-signs-prayer",
-   "title": "Gang Signs & Prayer",
-   "artist": "Stormzy",
-   "release_year": 2017,
-   "decade": "2010s",
-   "label": "#Merky",
-   "country": "United Kingdom",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "Grime",
-    "British hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>Stormzy sits at the centre of a long table on the cover of his debut album, surrounded by men in balaclavas, in a dark scene that recreates Leonardo da Vinci's Last Supper, with his name and the title in small type at the top.</p><p>The south London MC moved between hard grime and gospel on the album, from \"Big for Your Boots\" to \"Blinded by Your Grace.\" Released on 24 February 2017 on his own #Merky label, Gang Signs & Prayer became the first grime album to reach number one in the UK.</p><p>The Last Supper image joins the two halves of the title, the street and the church, in one picture. It made Stormzy one of Britain's biggest stars and prepared the way for his historic headline set at Glastonbury in 2019.</p>",
-   "color": "#040501",
-   "accent_color": "#484546",
-   "image_url": "https://static.wixstatic.com/media/b519fa_f550d650544e467a9a8347eb20b42953~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "5fkFWJ9LZizXE4yPenNGuy",
-   "spotify_url": "https://open.spotify.com/album/5fkFWJ9LZizXE4yPenNGuy",
-   "apple_music_url": "https://music.apple.com/us/album/gang-signs-prayer/1673768631",
-   "youtube_url": "https://www.youtube.com/results?search_query=Stormzy+Gang+Signs+%26+Prayer+full+album",
-   "featured": false,
-   "created_at": "2026-10-14T11:00:00+00:00"
-  },
-  {
    "id": "ac15f1af-12c8-473b-985f-150f958f1a7d",
    "slug": "atrocity-exhibition",
    "title": "Atrocity Exhibition",
@@ -2444,34 +1794,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Chance+the+Rapper+Coloring+Book+full+album",
    "featured": false,
    "created_at": "2026-10-08T11:00:00+00:00"
-  },
-  {
-   "id": "5436ad51-e6b3-488c-a68a-000cf94bb15c",
-   "slug": "dans-la-legende",
-   "title": "Dans la légende",
-   "artist": "PNL",
-   "release_year": 2016,
-   "decade": "2010s",
-   "label": "QLF",
-   "country": "France",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "French hip-hop",
-    "Cloud rap"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The brothers Ademo and N.O.S of PNL face each other on the cover of Dans la légende, both in sunglasses, their faces glowing in a smooth gradient of orange, pink and blue, with no text on the image at all.</p><p>The duo from Corbeil-Essonnes, south of Paris, released their music independently on their own label, QLF, gave almost no interviews and built their following through striking music videos. Released on 16 September 2016, Dans la légende mixed dreamy, melancholy production with Auto-Tuned verses about the estate they grew up on, and it became a huge commercial success.</p><p>The wordless, colourful portrait matches a group that spoke mainly through images. PNL changed the sound and the look of French rap, and the mirrored faces of the two brothers became one of its most recognisable covers.</p>",
-   "color": "#E9A9A5",
-   "accent_color": "#ED9917",
-   "image_url": "https://static.wixstatic.com/media/b519fa_9489b1c8c4194df9b7a42929e333982e~mv2.jpg",
-   "image_width": 1440,
-   "image_height": 1440,
-   "spotify_album_id": "5GFHFEASZeJF0gyWuDDjGE",
-   "spotify_url": "https://open.spotify.com/album/5GFHFEASZeJF0gyWuDDjGE",
-   "apple_music_url": "https://music.apple.com/fr/album/dans-la-l%C3%A9gende/1663880916",
-   "youtube_url": "https://www.youtube.com/results?search_query=PNL+Dans+la+l%C3%A9gende+full+album",
-   "featured": false,
-   "created_at": "2026-10-15T23:00:00+00:00"
   },
   {
    "id": "64d04c4a-aa0e-47c0-bd95-854a1490563a",
@@ -2530,34 +1852,6 @@
    "created_at": "2026-10-26T17:00:00+00:00"
   },
   {
-   "id": "2d67f2a6-cf84-42b9-8660-33ae067da252",
-   "slug": "konnichiwa",
-   "title": "Konnichiwa",
-   "artist": "Skepta",
-   "release_year": 2016,
-   "decade": "2010s",
-   "label": "Boy Better Know",
-   "country": "United Kingdom",
-   "cover_type_id": "c0217d82-6644-4ea9-99d1-67b7e9dbe7a7",
-   "subgenres": [
-    "Grime",
-    "British hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of Konnichiwa looks like a letter from Japan: a plain white surface with a red square stamp and a black round postmark, and the title written by hand, as if the album had arrived in the post.</p><p>Skepta, the Tottenham grime MC, released the album himself on his Boy Better Know label on 6 May 2016, carried by \"Shutdown\" and \"That's Not Me.\" Its Japanese title and launch show in Tokyo reflected his global ambitions, and it won the Mercury Prize, a landmark for grime.</p><p>The postal stamp fits an album about sending grime around the world. After Konnichiwa, Skepta and grime were celebrated far beyond London, and the cover's simple, independent look matched a record made without a major label.</p>",
-   "color": "#E0DFE3",
-   "accent_color": "#88100E",
-   "image_url": "https://static.wixstatic.com/media/b519fa_da46be1299054401813808e90a0a457a~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "6s4vWWWxNrGcKhrOFYRZzk",
-   "spotify_url": "https://open.spotify.com/album/6s4vWWWxNrGcKhrOFYRZzk",
-   "apple_music_url": "https://music.apple.com/us/album/konnichiwa/1168936007",
-   "youtube_url": "https://www.youtube.com/results?search_query=Skepta+Konnichiwa+full+album",
-   "featured": false,
-   "created_at": "2026-10-16T17:00:00+00:00"
-  },
-  {
    "id": "31638b80-019d-4871-bda9-ecd5d900b43d",
    "slug": "the-life-of-pablo",
    "title": "The Life of Pablo",
@@ -2612,90 +1906,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Kendrick+Lamar+untitled+unmastered.+full+album",
    "featured": false,
    "created_at": "2026-10-27T11:00:00+00:00"
-  },
-  {
-   "id": "7c69f9c1-bd19-42dc-8190-4c4efd353fcf",
-   "slug": "vibe",
-   "title": "Vibe",
-   "artist": "Fler",
-   "release_year": 2016,
-   "decade": "2010s",
-   "label": "Maskulin Music Group",
-   "country": "Germany",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "German hip-hop",
-    "Trap"
-   ],
-   "credits_text": "Photography by Katja Kuhl",
-   "description_html": "<p>The photographer Katja Kuhl shot Fler at night in front of a graffiti wall in Berlin, using a long exposure that turned the background into streaks of colour while he stands still in an Alpha Industries bomber jacket and cap, looking down. The single white word \"Vibe\" sits in the centre of the frame. The album had originally been called Carlo Escobar, before Fler changed the title in May 2016.</p><p>Fans quickly compared the cover to YG's Still Brazy, released the same summer, which also uses a blurred, motion-smeared portrait. Fler denied copying it. \"Kenne den Typen nich mal,\" he answered, I don't even know the guy, adding that his cover was a real long exposure while YG's was a cheap effect.</p><p>Vibe was released on 2 September 2016 on Fler's own Maskulin label and debuted at number one in Germany, Austria and Switzerland, his second German number-one album.</p>",
-   "color": "#303D38",
-   "accent_color": "#4A665C",
-   "image_url": "https://static.wixstatic.com/media/b519fa_c9363365ed2147de8e17928cb407dfa1~mv2.jpg",
-   "image_width": 640,
-   "image_height": 640,
-   "spotify_album_id": "7EBmwHYrrAlw2BH8bjzKS6",
-   "spotify_url": "https://open.spotify.com/album/7EBmwHYrrAlw2BH8bjzKS6",
-   "apple_music_url": "https://music.apple.com/de/album/vibe/1824481570",
-   "youtube_url": "https://www.youtube.com/results?search_query=Fler+Vibe+full+album",
-   "featured": false,
-   "created_at": "2026-10-10T05:00:00+00:00"
-  },
-  {
-   "id": "7b05350d-c0f5-4091-8bcc-6886b6b159b8",
-   "slug": "views",
-   "title": "Views",
-   "artist": "Drake",
-   "release_year": 2016,
-   "decade": "2010s",
-   "label": "Young Money / Cash Money / Republic",
-   "country": "Canada",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "Canadian hip-hop",
-    "Pop rap"
-   ],
-   "credits_text": "Photography by Caitlin Cronenberg; art direction and design by Nicky Orenstein",
-   "description_html": "<p>Drake built his fourth album around Toronto, and the cover put him on top of the city's best-known landmark. The image shows him sitting alone on the edge of the CN Tower, legs hanging over the drop, under a grey sky. Toronto photographer Caitlin Cronenberg shot the cover and booklet, with art direction and design by Nicky Orenstein.</p><p>Drake revealed the artwork on 24 April 2016, after the last stop of his Toronto pop-up store. People noticed at once that he looked far too big for the tower. The Toronto Star wrote about \"Drake's towering view of The 6,\" and The Verge ran a tongue-in-cheek \"scientific investigation\" into how tall he would have to be. The CN Tower's own account confirmed the image had been photoshopped.</p><p>The picture turned into one of the most copied memes of the year, with fans pasting a tiny Drake onto every tall object they could find. Views came out on 29 April 2016 and spent 13 weeks at number one in the United States, and its cover became the defining image of Drake as the city's self-appointed giant.</p>",
-   "color": "#47535A",
-   "accent_color": "#657278",
-   "image_url": "https://static.wixstatic.com/media/b519fa_cf9ed3a4cd9b40b988b44c36c68719d8~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "40GMAhriYJRO1rsY4YdrZb",
-   "spotify_url": "https://open.spotify.com/album/40GMAhriYJRO1rsY4YdrZb",
-   "apple_music_url": "https://music.apple.com/us/album/views/1440841363",
-   "youtube_url": "https://www.youtube.com/results?search_query=Drake+Views+full+album",
-   "featured": false,
-   "created_at": "2026-10-22T23:00:00+00:00"
-  },
-  {
-   "id": "f4db7414-50e4-4817-8dcc-907961d15d4b",
-   "slug": "if-you-re-reading-this-it-s-too-late",
-   "title": "If You're Reading This It's Too Late",
-   "artist": "Drake",
-   "release_year": 2015,
-   "decade": "2010s",
-   "label": "OVO Sound",
-   "country": "Canada",
-   "cover_type_id": "4450e9cf-43d6-481d-b606-2e75cef9e7f9",
-   "subgenres": [
-    "Canadian hip-hop",
-    "Trap"
-   ],
-   "credits_text": "Cover art by Jim Joe",
-   "description_html": "<p>The cover of If You're Reading This It's Too Late is just seven unpunctuated words in black on a white background, written in jerky, angular capitals that slope downward. Many people first assumed Drake had scrawled it himself. It was the work of Jim Joe, an anonymous graffiti writer who began tagging in Montreal and became known in New York for plain, one-colour text.</p><p>Jim Joe already had ties to Kanye West's creative circle, and his art had appeared on the Yeezus iTunes page. For Drake, he was given the whole cover. The project dropped by surprise late on 12 February 2015, and fans immediately pored over the words, with some reading them as a message aimed at Birdman and Cash Money.</p><p>As Hazlitt put it, \"the cover alone was an overnight hit.\" Fans built free fonts and online generators to make their own versions, the design spread across Etsy merchandise, and Pusha T name-checked Jim Joe on a 2015 track. The album debuted at number one with 535,000 units in its first week.</p>",
-   "color": "#FEFEFE",
-   "accent_color": "#111111",
-   "image_url": "https://static.wixstatic.com/media/b519fa_aaa4fa8c5ea045b9a952c300080b0407~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "0ptlfJfwGTy0Yvrk14JK1I",
-   "spotify_url": "https://open.spotify.com/album/0ptlfJfwGTy0Yvrk14JK1I",
-   "apple_music_url": "https://music.apple.com/us/album/if-youre-reading-this-its-too-late/1440839718",
-   "youtube_url": "https://www.youtube.com/results?search_query=Drake+If+You're+Reading+This+It's+Too+Late+full+album",
-   "featured": false,
-   "created_at": "2026-10-28T20:00:00+00:00"
   },
   {
    "id": "df7724ee-e539-4516-a746-f44a0362e4e2",
@@ -2811,62 +2021,6 @@
    "created_at": "2026-10-24T11:00:00+00:00"
   },
   {
-   "id": "b67a66c5-0e57-4b14-92f6-1f71f039013a",
-   "slug": "convoque-seu-buda",
-   "title": "Convoque Seu Buda",
-   "artist": "Criolo",
-   "release_year": 2014,
-   "decade": "2010s",
-   "label": "Oloko Records",
-   "country": "Brazil",
-   "cover_type_id": "2a9002ef-8700-4b4b-bc97-eae22cc36802",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Alternative hip-hop"
-   ],
-   "credits_text": "Art direction by Denis Cisma; graphic design by Lucas Rampazzo",
-   "description_html": "<p>Criolo, the São Paulo rapper who rose from the Grajaú district to national fame, followed his breakthrough album Nó na Orelha with a record that mixes rap with samba, Afro-Brazilian rhythms and psychedelia. Its cover is a crowded, colourful collage by art director Denis Cisma and graphic designer Lucas Rampazzo.</p><p>Illustrations, photographs, insects, plants and patterns are stacked together around Criolo's name, written vertically in tall green letters. Among the pieces is a figure of an official from the Javanese court in Indonesia, one of the borrowed images that give the cover its dreamlike, faraway feel.</p><p>The title means summon your Buddha, an invitation to inner calm in the middle of chaos. Released on 13 November 2014, the album and its experimental collage matched each other, and the cover is often named among the most creative in Brazilian rap.</p>",
-   "color": "#988A6C",
-   "accent_color": "#BEAA87",
-   "image_url": "https://static.wixstatic.com/media/b519fa_4c4b2cae1bfd40b1bf1abb8372af5265~mv2.jpg",
-   "image_width": 1400,
-   "image_height": 1400,
-   "spotify_album_id": "5xnpDQuOSNPG5IuyqnEqVS",
-   "spotify_url": "https://open.spotify.com/album/5xnpDQuOSNPG5IuyqnEqVS",
-   "apple_music_url": "https://music.apple.com/br/album/convoque-seu-buda/1690463415",
-   "youtube_url": "https://www.youtube.com/results?search_query=Criolo+Convoque+Seu+Buda+full+album",
-   "featured": false,
-   "created_at": "2026-10-25T14:00:00+00:00"
-  },
-  {
-   "id": "7bc0fdb6-fe20-42be-9831-86879b6e3a98",
-   "slug": "les-yeux-plus-gros-que-le-monde",
-   "title": "Les Yeux plus gros que le monde",
-   "artist": "Black M",
-   "release_year": 2014,
-   "decade": "2010s",
-   "label": "Wati B / Jive / Epic",
-   "country": "France",
-   "cover_type_id": "2a9002ef-8700-4b4b-bc97-eae22cc36802",
-   "subgenres": [
-    "French hip-hop",
-    "Pop rap"
-   ],
-   "credits_text": "Artwork and photography by Fifou",
-   "description_html": "<p>Black M, a member of the group Sexion d'Assaut, made his solo debut with a cover that looks straight back to Michael Jackson. Fifou, the photographer and art director behind many of the biggest French rap covers, created the artwork and photography: a dense circus of ornaments, globes, masks, animals and symbols arranged around Black M's face in the centre.</p><p>The resemblance to Jackson's 1991 album Dangerous, with its packed gold carnival of images around Jackson's eyes, was impossible to miss, and it set off a debate about plagiarism. Black M answered that the cover was a big wink to the original, \"un gros clin d'œil,\" an open homage to one of his idols.</p><p>The homage fitted an album whose title means the eyes bigger than the world, about ambition and dreams. Les Yeux plus gros que le monde was released on 31 March 2014.</p>",
-   "color": "#1A1619",
-   "accent_color": "#3C5E8A",
-   "image_url": "https://static.wixstatic.com/media/b519fa_9264bb560bd948daac52e9a8d7e2b13b~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "1D2Rs9qcENebbiDR5wk88T",
-   "spotify_url": "https://open.spotify.com/album/1D2Rs9qcENebbiDR5wk88T",
-   "apple_music_url": "https://music.apple.com/fr/album/les-yeux-plus-gros-que-le-monde/1057641068",
-   "youtube_url": "https://www.youtube.com/results?search_query=Black+M+Les+Yeux+plus+gros+que+le+monde+full+album",
-   "featured": false,
-   "created_at": "2026-10-09T08:00:00+00:00"
-  },
-  {
    "id": "83cb1fe5-4fdd-4c81-a54c-4e1df7efd1da",
    "slug": "pinata",
    "title": "Piñata",
@@ -2923,34 +2077,6 @@
    "created_at": "2026-10-07T23:00:00+00:00"
   },
   {
-   "id": "8b9410a1-4b10-4461-9f71-22c5db2bee7f",
-   "slug": "confundindo-sabios",
-   "title": "Confundindo Sábios",
-   "artist": "Rashid",
-   "release_year": 2013,
-   "decade": "2010s",
-   "label": "Independent",
-   "country": "Brazil",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": "Art by Marcelo Lima; photography by Enio César",
-   "description_html": "<p>The cover of Rashid's debut album is a black-and-white photograph of a boy in Brasilândia, in the north zone of São Paulo, pulling a black ski mask up off his own face and grinning underneath it. The art is by Marcelo Lima and the photography by Enio César, and the picture was taken in the neighbourhood itself.</p><p>A ski mask on a boy from the periphery is an image loaded with fear and suspicion in Brazil. Rashid explained the idea directly: \"O menino da capa do disco representa a desmarginalização.\" The boy on the cover stands for de-marginalisation, a child taking off the label society puts on him and showing the face underneath.</p><p>The title, confusing the wise, comes from the biblical idea of the humble outsmarting the learned. Released on 24 September 2013, the album established Rashid as one of the leading voices of São Paulo rap.</p>",
-   "color": "#423E3E",
-   "accent_color": "#605F5F",
-   "image_url": "https://static.wixstatic.com/media/b519fa_aed0486c76544fb199fba3a9fac36961~mv2.jpg",
-   "image_width": 1476,
-   "image_height": 1476,
-   "spotify_album_id": "73vP5dotg2gtDXVl1VoLYU",
-   "spotify_url": "https://open.spotify.com/album/73vP5dotg2gtDXVl1VoLYU",
-   "apple_music_url": "https://music.apple.com/us/album/confundindo-s%C3%A1bios/703960320",
-   "youtube_url": "https://www.youtube.com/results?search_query=Rashid+Confundindo+Sábios+full+album",
-   "featured": false,
-   "created_at": "2026-10-10T23:00:00+00:00"
-  },
-  {
    "id": "d6e9b374-7ffd-4d0a-a565-2b3ea9a53b96",
    "slug": "doris",
    "title": "Doris",
@@ -3005,62 +2131,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Pusha+T+My+Name+Is+My+Name+full+album",
    "featured": false,
    "created_at": "2026-10-20T05:00:00+00:00"
-  },
-  {
-   "id": "170a50e0-54d1-4513-bccc-0d4d1ed5e05a",
-   "slug": "nothing-was-the-same",
-   "title": "Nothing Was the Same",
-   "artist": "Drake",
-   "release_year": 2013,
-   "decade": "2010s",
-   "label": "OVO Sound",
-   "country": "Canada",
-   "cover_type_id": "6cbdce99-93a5-4ccd-adbc-b5e907e3ee7e",
-   "subgenres": [
-    "Canadian hip-hop",
-    "Pop rap"
-   ],
-   "credits_text": "Painting by Kadir Nelson; art direction and design by Donald Hearn and Isa Saalabi",
-   "description_html": "<p>Drake wanted a signature painting for Nothing Was the Same, something that did not look like a typical hip-hop cover. He turned to Kadir Nelson, a Southern California artist who had painted the cover of Michael Jackson's posthumous album Michael. Nelson made several sketches, the two chose one together, and Nelson listened to Drake's music in the studio as he worked.</p><p>The result came in two versions, sold side by side so buyers could choose. Both are oil paintings of Drake in profile against a cloudy blue sky. One shows him as a child with an afro comb in his hair, the other as an adult wearing a gold chain. Drake said the artwork captured \"my most clear, concise thoughts from now\" alongside his best memory of his younger self.</p><p>Critics compared the childhood version to the covers of Illmatic, Ready to Die and Tha Carter III, and Complex ranked it the fourth-best cover of 2013. Nelson gave Drake a full-size painting of the cover. The album was released on 24 September 2013. Donald Hearn and Isa Saalabi handled the art direction and design around Nelson's paintings.</p>",
-   "color": "#7BB6DF",
-   "accent_color": "#0771B6",
-   "image_url": "https://static.wixstatic.com/media/b519fa_1501cf4231ea4de88d27e984359a3817~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "3PAv4PLPv9V68fstzIqhyb",
-   "spotify_url": "https://open.spotify.com/album/3PAv4PLPv9V68fstzIqhyb",
-   "apple_music_url": "https://music.apple.com/us/album/nothing-was-the-same-deluxe/1440829462",
-   "youtube_url": "https://www.youtube.com/results?search_query=Drake+Nothing+Was+the+Same+full+album",
-   "featured": false,
-   "created_at": "2026-10-24T20:00:00+00:00"
-  },
-  {
-   "id": "a39be2e3-3381-4d01-93b2-4c336149eea0",
-   "slug": "unknown-death-2002",
-   "title": "Unknown Death 2002",
-   "artist": "Yung Lean",
-   "release_year": 2013,
-   "decade": "2010s",
-   "label": "YEAR0001",
-   "country": "Sweden",
-   "cover_type_id": "4450e9cf-43d6-481d-b606-2e75cef9e7f9",
-   "subgenres": [
-    "Cloud rap",
-    "Alternative hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of Unknown Death 2002 is a slab of dark grey marble, streaked with white veins, with Yung Lean's name and the title in thin yellow letters and the Japanese characters for \"unknown death.\"</p><p>Yung Lean was a teenager in Stockholm when he and his Sad Boys collaborators Yung Sherman and Yung Gud made this mixtape. Released on 16 August 2013, it mixed hazy, melancholy beats with internet imagery, Arizona Iced Tea and anime, and songs like \"Ginseng Strip 2002\" went viral.</p><p>The cold stone and the Japanese text capture the album's strange, sad internet mood. Yung Lean became a cult figure, and the cloud rap and online aesthetics he helped popularise shaped artists from Bladee and Drain Gang to a whole generation of SoundCloud rappers.</p>",
-   "color": "#1D2329",
-   "accent_color": "#869499",
-   "image_url": "https://static.wixstatic.com/media/b519fa_cd0fa1d90a71473cbc04bcca1279af8a~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "2u07QZy2B5vzr0s5pBbKga",
-   "spotify_url": "https://open.spotify.com/album/2u07QZy2B5vzr0s5pBbKga",
-   "apple_music_url": "https://music.apple.com/nz/album/unknown-death-2002/1616529900",
-   "youtube_url": "https://www.youtube.com/results?search_query=Yung+Lean+Unknown+Death+2002+full+album",
-   "featured": false,
-   "created_at": "2026-10-12T11:00:00+00:00"
   },
   {
    "id": "a3503580-c4d7-466c-bc08-877236331a67",
@@ -3201,34 +2271,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=A%24AP+Rocky+LIVE.LOVE.A%24AP+full+album",
    "featured": false,
    "created_at": "2026-10-13T11:00:00+00:00"
-  },
-  {
-   "id": "6d21d545-68b0-4025-b0cd-f885f919518c",
-   "slug": "take-care",
-   "title": "Take Care",
-   "artist": "Drake",
-   "release_year": 2011,
-   "decade": "2010s",
-   "label": "Young Money / Cash Money / Universal Republic",
-   "country": "Canada",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "Canadian hip-hop",
-    "Alternative R&B"
-   ],
-   "credits_text": "Artwork and design by Martin \"Drop\" Wong; photography by Hyghly Alleyne and Lamar Taylor",
-   "description_html": "<p>On the cover of his second album, Drake sits alone at a table in a dark, wood-panelled room, slumped over a golden goblet, with a tall candlestick and gold ornaments around him. It is an image of a man surrounded by wealth with no one to share it with, which suits an album full of late-night regret and lonely success.</p><p>Drake posted the official artwork on his October's Very Own blog on 23 September 2011. Listeners quickly pointed out its close resemblance to Labi Siffre's 1975 album Remember My Song, which also shows a man brooding at a table, and the comparison has followed the cover ever since. Drake has sampled and championed older soul records throughout his career.</p><p>The liner notes credit Martin \"Drop\" Wong for artwork and design, with photography by Hyghly Alleyne and Lamar Taylor. Take Care was released on 15 November 2011 and won the Grammy for Best Rap Album, and its gloomy gold portrait remains one of the most recognisable images of his career.</p>",
-   "color": "#0A0C0E",
-   "accent_color": "#845A3C",
-   "image_url": "https://static.wixstatic.com/media/b519fa_43cb932528a04051a4a294cc6a8c076a~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "6X1x82kppWZmDzlXXK3y3q",
-   "spotify_url": "https://open.spotify.com/album/6X1x82kppWZmDzlXXK3y3q",
-   "apple_music_url": "https://music.apple.com/us/album/take-care-deluxe-version/1440642493",
-   "youtube_url": "https://www.youtube.com/results?search_query=Drake+Take+Care+full+album",
-   "featured": false,
-   "created_at": "2026-10-23T14:00:00+00:00"
   },
   {
    "id": "a7a2eeac-d9ba-4959-b49a-d1d35d2c6873",
@@ -3456,34 +2498,6 @@
    "created_at": "2026-10-14T17:00:00+00:00"
   },
   {
-   "id": "5e335902-9f55-403b-896d-6745982538e8",
-   "slug": "ouest-side",
-   "title": "Ouest Side",
-   "artist": "Booba",
-   "release_year": 2006,
-   "decade": "2000s",
-   "label": "Tallac Records / Barclay",
-   "country": "France",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "French hip-hop",
-    "Gangsta rap"
-   ],
-   "credits_text": "Concept and photography by Armen",
-   "description_html": "<p>Booba's third album cover shows the rapper in a vest, his heavily tattooed arm raised as he peers out through the slats of a window blind, ready for whatever is coming. The idea came from the photographer Armen, who also shot it, and it is a deliberate homage to one of the most famous images of the civil rights era.</p><p>The reference is the 1964 photograph of Malcolm X holding a rifle as he looks out of his window. Armen knew that KRS-One had already reused the image for Boogie Down Productions, and he suggested a French version to Booba, who was won over immediately. Booba's picture changes the weapon, the gaze and the clothes, while keeping the watchful pose.</p><p>VICE France described the result as arrogant, provocative and divisive, which suits Booba's public image. Ouest Side, named after his home turf of Boulogne in the west of Paris, was released on 13 February 2006 and became one of his best-selling records.</p>",
-   "color": "#030405",
-   "accent_color": "#495558",
-   "image_url": "https://static.wixstatic.com/media/b519fa_8a365c9f26064c769e9afaea0065fcf3~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "5DEorR03yrZwQHhfem7KV2",
-   "spotify_url": "https://open.spotify.com/album/5DEorR03yrZwQHhfem7KV2",
-   "apple_music_url": "https://music.apple.com/fr/album/ouest-side/1442232307",
-   "youtube_url": "https://www.youtube.com/results?search_query=Booba+Ouest+Side+full+album",
-   "featured": false,
-   "created_at": "2026-10-29T20:00:00+00:00"
-  },
-  {
    "id": "860477fa-b79d-40db-b72e-a67e60ecabd9",
    "slug": "late-registration",
    "title": "Late Registration",
@@ -3512,62 +2526,6 @@
    "created_at": "2026-10-15T17:00:00+00:00"
   },
   {
-   "id": "ae6fa632-a61b-4c49-98d5-653d0f2ca77c",
-   "slug": "modal-soul",
-   "title": "Modal Soul",
-   "artist": "Nujabes",
-   "release_year": 2005,
-   "decade": "2000s",
-   "label": "Hydeout Productions",
-   "country": "Japan",
-   "cover_type_id": "6cbdce99-93a5-4ccd-adbc-b5e907e3ee7e",
-   "subgenres": [
-    "Jazz rap",
-    "Instrumental hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of Modal Soul is an abstract painting of soft red, blue and white blocks, like a weathered wall or a sunset over water, with the title in small type in the lower corner.</p><p>Nujabes, the Tokyo producer Jun Seba, built gentle, piano and jazz-driven hip-hop that reached the world through the anime Samurai Champloo. Modal Soul, released on 11 November 2005, includes \"Feather\" with Cise Starr and Akin and \"Luv(sic) Part 3\" with Shing02.</p><p>The quiet, painterly cover matches music made for calm reflection. Nujabes died in a car accident in 2010, and his sound became the foundation of the lo-fi hip-hop playlists and live streams that millions now study and relax to.</p>",
-   "color": "#C44D42",
-   "accent_color": "#C97060",
-   "image_url": "https://static.wixstatic.com/media/b519fa_19cd2d67519e4d16b26c82f86149e1b0~mv2.jpg",
-   "image_width": 1700,
-   "image_height": 1484,
-   "spotify_album_id": "1RJDe9Eo8473Kg4pdUVGDM",
-   "spotify_url": "https://open.spotify.com/album/1RJDe9Eo8473Kg4pdUVGDM",
-   "apple_music_url": "https://music.apple.com/us/album/modal-soul/1078914477",
-   "youtube_url": "https://www.youtube.com/results?search_query=Nujabes+Modal+Soul+full+album",
-   "featured": false,
-   "created_at": "2026-10-21T17:00:00+00:00"
-  },
-  {
-   "id": "d2468756-0905-4020-a9bb-5d215215ba70",
-   "slug": "peines-de-maures-arc-en-ciel-pour-daltoniens",
-   "title": "Peines de Maures / Arc-en-ciel pour daltoniens",
-   "artist": "La Caution",
-   "release_year": 2005,
-   "decade": "2000s",
-   "label": "Kerozen Music",
-   "country": "France",
-   "cover_type_id": "52e1479f-82f9-46b7-86e4-f22d676e06cc",
-   "subgenres": [
-    "French hip-hop",
-    "Alternative hip-hop"
-   ],
-   "credits_text": "Artwork by Hi-Tek; photography by Nicolas Despis",
-   "description_html": "<p>La Caution is a duo of two brothers from Noisy-le-Sec, Hi-Tek and Nikkfurie, and the cover of their second album is an old photo of the two of them as small children, posed side by side in front of a flowered wallpaper with serious faces. The group's logo floats across the top in curling white letters.</p><p>Slate.fr, writing about the many childhood photos on rap covers, described it as the kind of picture you could imagine hanging proudly in the family living room. The double title adds a second layer: Peines de Maures is a pun on \"peine de mort,\" the death penalty, and on the Moors, while Arc-en-ciel pour daltoniens means a rainbow for the colour-blind.</p><p>The artwork is credited to Hi-Tek himself, with photography by Nicolas Despis. Released on 17 October 2005 on Kerozen Music, the album is one of the most inventive records in French alternative rap, and its family portrait keeps the brothers' story at the centre.</p>",
-   "color": "#0A0404",
-   "accent_color": "#BB9780",
-   "image_url": "https://static.wixstatic.com/media/b519fa_0cd25fddee7b44099c147f5e523b8a00~mv2.jpg",
-   "image_width": 2400,
-   "image_height": 2400,
-   "spotify_album_id": "3t7jR4CHdzu4zLLcpQW3Yr",
-   "spotify_url": "https://open.spotify.com/album/3t7jR4CHdzu4zLLcpQW3Yr",
-   "apple_music_url": "https://music.apple.com/us/album/peines-de-maures-arc-en-ciel-pour-daltoniens/963222169",
-   "youtube_url": "https://www.youtube.com/results?search_query=La+Caution+Peines+de+Maures+Arc-en-ciel+pour+daltoniens+full+album",
-   "featured": false,
-   "created_at": "2026-10-09T20:00:00+00:00"
-  },
-  {
    "id": "8635ecd6-77e7-410d-ad05-796113274ce2",
    "slug": "tha-carter-ii",
    "title": "Tha Carter II",
@@ -3594,62 +2552,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Lil+Wayne+Tha+Carter+II+full+album",
    "featured": false,
    "created_at": "2026-10-19T23:00:00+00:00"
-  },
-  {
-   "id": "50858662-ac41-4a4c-9c85-5f0a851e671c",
-   "slug": "babylon-by-gus-vol-1-o-ano-do-macaco",
-   "title": "Babylon by Gus, Vol. 1: O Ano do Macaco",
-   "artist": "Black Alien",
-   "release_year": 2004,
-   "decade": "2000s",
-   "label": "Deckdisc",
-   "country": "Brazil",
-   "cover_type_id": "52e1479f-82f9-46b7-86e4-f22d676e06cc",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Alternative hip-hop"
-   ],
-   "credits_text": "Cover by Ricardo Fernandes",
-   "description_html": "<p>Black Alien, the rapper Gustavo Ribeiro from Niterói, had already made his name in the group Planet Hemp before his solo debut. For its cover, the designer Ricardo Fernandes used a childhood photo of the rapper, a smiling curly-haired boy, set against warm vintage orange and gold, with his name written across the top like an old soft-drink logo.</p><p>The choice was a nod to Nas's Illmatic, the 1994 album whose cover put Nas's own childhood photo over a picture of his neighbourhood. Black Alien's version carries the same idea, the boy who would become the rapper, and roots the album in where he came from.</p><p>The title combines Babylon with his nickname Gus and with the Chinese Year of the Monkey. Released on 8 September 2004 by Deckdisc, the album is considered one of the best Brazilian rap records of the 2000s.</p>",
-   "color": "#E5930F",
-   "accent_color": "#8C3A2E",
-   "image_url": "https://static.wixstatic.com/media/b519fa_866778a564bd4cab95adcddb76b3c24d~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "5J9RW8lwdU6dIU2vdfbI7s",
-   "spotify_url": "https://open.spotify.com/album/5J9RW8lwdU6dIU2vdfbI7s",
-   "apple_music_url": "https://music.apple.com/us/album/babylon-by-gus-vol-1-o-ano-do-macaco/977460213",
-   "youtube_url": "https://www.youtube.com/results?search_query=Black+Alien+Babylon+by+Gus,+Vol.+1+O+Ano+do+Macaco+full+album",
-   "featured": false,
-   "created_at": "2026-10-23T02:00:00+00:00"
-  },
-  {
-   "id": "f35a8f5d-c652-4648-b175-6ab9d661c1cf",
-   "slug": "la-fierte-des-notres",
-   "title": "La Fierté des nôtres",
-   "artist": "Rohff",
-   "release_year": 2004,
-   "decade": "2000s",
-   "label": "Delabel",
-   "country": "France",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "French hip-hop",
-    "Hardcore hip-hop"
-   ],
-   "credits_text": "Photography by Jonathan Mannion; artwork by Funcographics",
-   "description_html": "<p>Rohff, the rapper from Vitry-sur-Seine, sits in a white tracksuit and sneakers on top of the Arc de Triomphe, Paris's monument to national glory, looking down at the camera with the avenue stretching away behind him. The photograph was taken by Jonathan Mannion, the American photographer behind covers for Jay-Z, DMX and Eminem, with artwork by Funcographics.</p><p>Rohff explained the image in a June 2004 interview on Skyrock. He said the Arc de Triomphe is France's greatest pride, and that putting himself on top of it was meant to grab attention and to say that people matter more than monuments. The title, the pride of our people, made it a statement on behalf of the suburbs he came from.</p><p>La Fierté des nôtres was released on 18 June 2004, and VICE France later called it the best album of his career. The picture of a young man from the banlieue enthroned on the Arc became one of the most famous images in French rap.</p>",
-   "color": "#595E60",
-   "accent_color": "#B9BCB6",
-   "image_url": "https://static.wixstatic.com/media/b519fa_c8d6d4290bae4ad78b84d9cb77708621~mv2.jpg",
-   "image_width": 1400,
-   "image_height": 1400,
-   "spotify_album_id": "5Cp07JiZnqruQBNZb88OCf",
-   "spotify_url": "https://open.spotify.com/album/5Cp07JiZnqruQBNZb88OCf",
-   "apple_music_url": "https://music.apple.com/fr/album/la-fiert%C3%A9-des-n%C3%B4tres/693103816",
-   "youtube_url": "https://www.youtube.com/results?search_query=Rohff+La+Fierté+des+nôtres+full+album",
-   "featured": false,
-   "created_at": "2026-10-11T02:00:00+00:00"
   },
   {
    "id": "7989f8b3-05bb-4d9b-919a-9a9ce2e051e7",
@@ -3737,34 +2639,6 @@
    "created_at": "2026-10-18T02:00:00+00:00"
   },
   {
-   "id": "46ccf126-b15b-4aaf-84da-7d73af87ce91",
-   "slug": "boy-in-da-corner",
-   "title": "Boy in da Corner",
-   "artist": "Dizzee Rascal",
-   "release_year": 2003,
-   "decade": "2000s",
-   "label": "XL Recordings",
-   "country": "United Kingdom",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "Grime",
-    "UK hip-hop"
-   ],
-   "credits_text": "Photography by Dean Chalkley; cover and logo design by Ben Drury",
-   "description_html": "<p>The title becomes the picture. On the cover of Boy in da Corner, a teenage Dizzee Rascal crouches in the lower corner of a vast field of hazard-yellow, dressed in a black tracksuit and Nike Air Max trainers, small against all that empty colour.</p><p>Photographer Dean Chalkley, who had shot for NME, Mixmag and Dazed & Confused, spent a day with Dizzee and his manager Nick \"Cage\" Denton at Street Studios near Shoreditch in early 2003, shooting on film. \"There was no pretense or anything,\" he said, and the clothes were what Dizzee would have worn anyway. The sleeve was designed by Ben Drury, known for his work with the Mo' Wax label, who also created the album's rugged, futuristic logo.</p><p>Boy in da Corner was released by XL Recordings on 21 July 2003 and won the Mercury Prize that year. Its stark yellow cover became one of the defining images of grime.</p>",
-   "color": "#FEE01B",
-   "accent_color": "#898342",
-   "image_url": "https://static.wixstatic.com/media/b519fa_2ae3947d37aa4e3d98e1261d59aa06ec~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "16m3S8uDo5ZNLEekcnOSxf",
-   "spotify_url": "https://open.spotify.com/album/16m3S8uDo5ZNLEekcnOSxf",
-   "apple_music_url": "https://music.apple.com/us/album/boy-in-da-corner/465625689",
-   "youtube_url": "https://www.youtube.com/results?search_query=Dizzee+Rascal+Boy+in+da+Corner+full+album",
-   "featured": false,
-   "created_at": "2026-10-22T05:00:00+00:00"
-  },
-  {
    "id": "16dda0a1-787d-4fee-910e-e7cea34f98b0",
    "slug": "get-rich-or-die-tryin",
    "title": "Get Rich or Die Tryin'",
@@ -3849,34 +2723,6 @@
    "created_at": "2026-10-20T23:00:00+00:00"
   },
   {
-   "id": "c4af288b-3aad-421b-9381-ee9708376a4d",
-   "slug": "vom-bordstein-bis-zur-skyline",
-   "title": "Vom Bordstein bis zur Skyline",
-   "artist": "Bushido",
-   "release_year": 2003,
-   "decade": "2000s",
-   "label": "Aggro Berlin",
-   "country": "Germany",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "German hip-hop",
-    "Gangsta rap"
-   ],
-   "credits_text": "Art direction and design by Specter; photography by Olli.NBK",
-   "description_html": "<p>Bushido's debut album, From the Kerb to the Skyline, made him one of the first big stars of the Berlin label Aggro Berlin. The cover is a dark portrait of the rapper in a cap, staring out from the shadows in front of a wall, with his name spelled in bright green capitals and a large black B beside it. That green and that B became his trademark for years.</p><p>The cover was designed by Specter, the Aggro Berlin co-founder who shaped the label's look, with photography by Olli.NBK. Years later, a tweet that posted the unedited originals of classic German rap covers revealed a comic detail behind the hard image: in the untouched photo, Bushido was wearing an unusual pair of corduroy trousers.</p><p>Released on 14 July 2003, the album is regarded as a cornerstone of German gangsta rap, and Bushido returned to its title years later with Von der Skyline zum Bordstein zurück. The version on streaming services today is a 2021 re-release.</p>",
-   "color": "#030307",
-   "accent_color": "#756F67",
-   "image_url": "https://static.wixstatic.com/media/b519fa_60aaffbdfdd0453a8b3f6a7fe71eb0d1~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "1jEoprw8f8UDwGF7gLLeCJ",
-   "spotify_url": "https://open.spotify.com/album/1jEoprw8f8UDwGF7gLLeCJ",
-   "apple_music_url": "https://music.apple.com/de/album/vom-bordstein-bis-zur-skyline-re-release/1605974970",
-   "youtube_url": "https://www.youtube.com/results?search_query=Bushido+Vom+Bordstein+bis+zur+Skyline+full+album",
-   "featured": false,
-   "created_at": "2026-10-08T17:00:00+00:00"
-  },
-  {
    "id": "23d91644-bff0-47c8-8549-ff4c64da13e5",
    "slug": "lord-willin",
    "title": "Lord Willin'",
@@ -3903,34 +2749,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Clipse+Lord+Willin%27+full+album",
    "featured": false,
    "created_at": "2026-10-18T20:00:00+00:00"
-  },
-  {
-   "id": "82d915e8-68c6-466f-9e3d-7d1482f42bb7",
-   "slug": "original-pirate-material",
-   "title": "Original Pirate Material",
-   "artist": "The Streets",
-   "release_year": 2002,
-   "decade": "2000s",
-   "label": "Locked On",
-   "country": "United Kingdom",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "UK garage",
-    "British hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of Original Pirate Material is a photograph of a council tower block at night, its windows lit in warm yellow against the dark, with The Streets' logo in white and red near the corner.</p><p>Mike Skinner, a young producer from Birmingham, rapped in his own accent about chips, kebabs, fights and nights out over garage beats he made at home. Released on 25 March 2002, the album carried \"Has It Come to This?\" and \"Weak Become Heroes\" and was nominated for the Mercury Prize.</p><p>The tower block, full of other people's lit windows, is the ordinary British life the album describes. Original Pirate Material showed that British rap could sound like Britain, and grime and UK rap that followed owe much to its plain-spoken voice.</p>",
-   "color": "#523426",
-   "accent_color": "#945C38",
-   "image_url": "https://static.wixstatic.com/media/b519fa_a2b5130fefe54e4a87d5ec736ac6899e~mv2.jpg",
-   "image_width": 1417,
-   "image_height": 1417,
-   "spotify_album_id": "0hkZGxfsFypXbjq15hM6U9",
-   "spotify_url": "https://open.spotify.com/album/0hkZGxfsFypXbjq15hM6U9",
-   "apple_music_url": "https://music.apple.com/gb/album/original-pirate-material/63836809",
-   "youtube_url": "https://www.youtube.com/results?search_query=The+Streets+Original+Pirate+Material+full+album",
-   "featured": false,
-   "created_at": "2026-10-29T05:00:00+00:00"
   },
   {
    "id": "2045ecb1-649e-47b1-892a-f82d11953840",
@@ -4101,34 +2919,6 @@
    "created_at": "2026-10-12T08:00:00+00:00"
   },
   {
-   "id": "3c2fdad8-8803-46dc-8078-3be2219204a4",
-   "slug": "proverbios-13",
-   "title": "Provérbios 13",
-   "artist": "509-E",
-   "release_year": 2000,
-   "decade": "2000s",
-   "label": "Atração",
-   "country": "Brazil",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "Brazilian hip-hop",
-    "Gangsta rap"
-   ],
-   "credits_text": "Photography by João Wainer",
-   "description_html": "<p>509-E is a rap group formed inside a prison. Its members, Dexter and Afro-X, met while serving time in the Casa de Detenção de São Paulo, better known as Carandiru, the huge prison where 111 inmates were killed by police during a riot in 1992, and they took their name from their cell number.</p><p>For the cover of their debut, the photographer João Wainer shot real inmates inside Carandiru, a crowd of men in the yard below the cell blocks, with the two rappers standing above them. The result has the raw, unpolished feel of a documentary photograph, and it shows prison life plainly, without any staging.</p><p>Provérbios 13 was released on 1 May 2000, and the songs, written and recorded from behind bars, made 509-E a voice for prisoners across Brazil. Carandiru was demolished in 2002, which makes the cover one of the last records of life inside it.</p>",
-   "color": "#686A3F",
-   "accent_color": "#919569",
-   "image_url": "https://static.wixstatic.com/media/b519fa_d906543b7c26415fb5cb2973964a7937~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "6NoGigzafbVAzRZpDTNhL2",
-   "spotify_url": "https://open.spotify.com/album/6NoGigzafbVAzRZpDTNhL2",
-   "apple_music_url": "https://music.apple.com/br/album/prov%C3%A9rbios-13/1150938161",
-   "youtube_url": "https://www.youtube.com/results?search_query=509-E+Provérbios+13+full+album",
-   "featured": false,
-   "created_at": "2026-10-09T02:00:00+00:00"
-  },
-  {
    "id": "257985ab-c04d-4342-aaaf-91dcaee32d93",
    "slug": "stankonia",
    "title": "Stankonia",
@@ -4211,34 +3001,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Dr.+Dre+2001+full+album",
    "featured": false,
    "created_at": "2026-10-22T14:00:00+00:00"
-  },
-  {
-   "id": "406f68d6-afd9-4df6-b307-f499dce3222b",
-   "slug": "a-lo-cubano",
-   "title": "A lo cubano",
-   "artist": "Orishas",
-   "release_year": 1999,
-   "decade": "1990s",
-   "label": "EMI",
-   "country": "Cuba",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "Latin hip-hop",
-    "Cuban hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The four members of Orishas look up toward the light on the cover of their debut, their faces lit in warm gold and brown against a dark background, with the group's name and the title in the centre.</p><p>Orishas, named after the gods of the Afro-Cuban Yoruba religion, were Cuban rappers who had moved to Paris. A lo cubano blended rap with son, rumba and Cuban guitar, and its single \"537 C.U.B.A.,\" built on the melody of \"Chan Chan\" from the Buena Vista Social Club, became an international hit.</p><p>The upward gaze gives the cover a spiritual feeling that fits the group's name. The album brought Cuban hip-hop to audiences across Europe and Latin America and showed how rap could carry a national tradition with it.</p>",
-   "color": "#22212B",
-   "accent_color": "#DFA658",
-   "image_url": "https://static.wixstatic.com/media/b519fa_909deb71844645778eefbf060086b233~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "3zXdL8n7OMWKY156NgUZ4m",
-   "spotify_url": "https://open.spotify.com/album/3zXdL8n7OMWKY156NgUZ4m",
-   "apple_music_url": "https://music.apple.com/es/album/a-lo-cubano/726238957",
-   "youtube_url": "https://www.youtube.com/results?search_query=Orishas+A+lo+cubano+full+album",
-   "featured": false,
-   "created_at": "2026-10-13T20:00:00+00:00"
   },
   {
    "id": "3bf46c1e-9200-4730-b077-9170985cbaea",
@@ -4493,34 +3255,6 @@
    "created_at": "2026-10-14T20:00:00+00:00"
   },
   {
-   "id": "3fab853f-b142-41b9-a699-49b70118d760",
-   "slug": "le-combat-continue",
-   "title": "Le Combat continue",
-   "artist": "Ideal J",
-   "release_year": 1998,
-   "decade": "1990s",
-   "label": "Alariana",
-   "country": "France",
-   "cover_type_id": "27d91a37-0b27-477a-b65d-82e9697175da",
-   "subgenres": [
-    "French hip-hop",
-    "Political hip-hop"
-   ],
-   "credits_text": "Photography and design by Armen",
-   "description_html": "<p>Ideal J, the Orly group led by a young Kery James, wanted their second album to make a political statement about how France treated its Black and Arab citizens. The cover shows a dark-skinned hand clenched hard around the French tricolour, crumpling the blue, white and red cloth in its fist above the title in red capitals.</p><p>The first versions, shot by the photographer Armen, showed a model wrapped in the flag. Kery James turned them down as not strong enough. Armen then asked the model to grip the flag as tightly as possible, so the image became one of demand: communities who had helped build the country holding on to the rights and recognition they had earned.</p><p>The picture divided people, as Kery James knew it would. Released on 26 October 1998, Le Combat continue became one of the founding classics of hardcore French rap, and its fist became a lasting symbol of the anger of the banlieues.</p>",
-   "color": "#030304",
-   "accent_color": "#A6312C",
-   "image_url": "https://static.wixstatic.com/media/b519fa_15bfbe1d243b4d56b20466ce78b9d69b~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "2xvsjf4z8QTDrGOGrhOqPb",
-   "spotify_url": "https://open.spotify.com/album/2xvsjf4z8QTDrGOGrhOqPb",
-   "apple_music_url": "https://music.apple.com/fr/album/le-combat-continue/1536181840",
-   "youtube_url": "https://www.youtube.com/results?search_query=Ideal+J+Le+Combat+continue+full+album",
-   "featured": false,
-   "created_at": "2026-10-28T02:00:00+00:00"
-  },
-  {
    "id": "1f6c4d71-de91-4825-bb75-14ab128700ab",
    "slug": "moment-of-truth",
    "title": "Moment of Truth",
@@ -4717,34 +3451,6 @@
    "created_at": "2026-10-21T05:00:00+00:00"
   },
   {
-   "id": "34e632d5-1b44-4f34-b70a-624f40afeef0",
-   "slug": "l-ecole-du-micro-d-argent",
-   "title": "L'École du micro d'argent",
-   "artist": "IAM",
-   "release_year": 1997,
-   "decade": "1990s",
-   "label": "Delabel",
-   "country": "France",
-   "cover_type_id": "6cbdce99-93a5-4ccd-adbc-b5e907e3ee7e",
-   "subgenres": [
-    "French hip-hop",
-    "Conscious hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of IAM's third album is a painted battle scene: an army of mounted warriors and banners crosses a dark landscape under a blood-red sky, with the group's emblem at the top and the title in ornate letters at the bottom.</p><p>The Marseille group, led by Akhenaton and Shurik'n, built the album on samples of film scores and on rhymes drawing on ancient history, Asian martial arts and the struggles of the city's neighbourhoods. Released in March 1997, it carried \"Demain, c'est loin,\" \"Petit frère\" and \"Nés sous la même étoile\" and sold more than a million copies.</p><p>The epic, cinematic painting fits a group that saw rap as a battle and a school, as the title suggests: the school of the silver microphone. The album is often called the greatest French rap record ever made.</p>",
-   "color": "#15100C",
-   "accent_color": "#A7281C",
-   "image_url": "https://static.wixstatic.com/media/b519fa_03ec55c42e6c4002b3235f659a9beb4b~mv2.jpg",
-   "image_width": 1401,
-   "image_height": 1401,
-   "spotify_album_id": "2SPdngVJBI9rG3omxvp7yj",
-   "spotify_url": "https://open.spotify.com/album/2SPdngVJBI9rG3omxvp7yj",
-   "apple_music_url": "https://music.apple.com/fr/album/l%C3%A9cole-du-micro-dargent/698793153",
-   "youtube_url": "https://www.youtube.com/results?search_query=IAM+L%27%C3%89cole+du+micro+d%27argent+full+album",
-   "featured": false,
-   "created_at": "2026-10-07T20:00:00+00:00"
-  },
-  {
    "id": "5ee93fe0-8a54-4c5f-a567-06b6178dd1fe",
    "slug": "life-after-death",
    "title": "Life After Death",
@@ -4771,34 +3477,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=The+Notorious+B.I.G.+Life+After+Death+full+album",
    "featured": false,
    "created_at": "2026-10-09T11:00:00+00:00"
-  },
-  {
-   "id": "3bae9e4b-9d3e-4ece-a004-9d6e8d4165b3",
-   "slug": "sobrevivendo-no-inferno",
-   "title": "Sobrevivendo no Inferno",
-   "artist": "Racionais MC's",
-   "release_year": 1997,
-   "decade": "1990s",
-   "label": "Cosa Nostra",
-   "country": "Brazil",
-   "cover_type_id": "c0217d82-6644-4ea9-99d1-67b7e9dbe7a7",
-   "subgenres": [
-    "Political hip-hop",
-    "Gangsta rap"
-   ],
-   "credits_text": "Art direction by Marcos Marques, based on Mano Brown's cross tattoo",
-   "description_html": "<p>The cover of Racionais MC's 1997 album, whose title means Surviving in Hell, is almost entirely black. A golden cross sits in the middle, the group's name runs across the top in red gothic letters, and a few lines of small text quote Psalm 23:3: \"Refrigere minha alma e guia-me pelo caminho da justiça,\" restore my soul and guide me along the path of justice.</p><p>The first idea was a photograph of the group in front of a church with Edinho, the son of Pelé. That idea was dropped, and art director Marcos Marques based the design on the cross tattoo on Mano Brown's arm, so the sleeve carries a mark the rapper wore on his own body. On a record about life and death in the periphery of São Paulo, the cross reads as faith, mourning and protection at once.</p><p>Released independently on the group's Cosa Nostra label on 20 December 1997, it became the best-selling rap album in Brazilian history, with around 1.5 million copies sold by 2010. In 2018 the University of Campinas added it to its entrance exam reading list, the first album to be included, and Companhia das Letras published its lyrics as a book.</p>",
-   "color": "#131110",
-   "accent_color": "#F4DB77",
-   "image_url": "https://static.wixstatic.com/media/b519fa_89704ec6ba604d148839b14b782b5e52~mv2.jpg",
-   "image_width": 1400,
-   "image_height": 1400,
-   "spotify_album_id": "1UzrzuOmZfBgXyS3pgKD10",
-   "spotify_url": "https://open.spotify.com/album/1UzrzuOmZfBgXyS3pgKD10",
-   "apple_music_url": "https://music.apple.com/br/album/sobrevivendo-no-inferno/1198315004",
-   "youtube_url": "https://www.youtube.com/results?search_query=Racionais+MC's+Sobrevivendo+no+Inferno+full+album",
-   "featured": false,
-   "created_at": "2026-10-18T23:00:00+00:00"
   },
   {
    "id": "6a51353d-8e9b-48b2-8920-4d2bac0d3df0",
@@ -4967,34 +3645,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Nas+It+Was+Written+full+album",
    "featured": false,
    "created_at": "2026-10-15T02:00:00+00:00"
-  },
-  {
-   "id": "7c53aec2-1947-4369-9076-9fae201cb777",
-   "slug": "mucho-barato",
-   "title": "Mucho Barato",
-   "artist": "Control Machete",
-   "release_year": 1996,
-   "decade": "1990s",
-   "label": "Universal Latino",
-   "country": "Mexico",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "Latin hip-hop",
-    "Mexican hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The members of Control Machete appear in front of a weathered building on the cover of their debut, in a warm, rounded photograph, with the group's name in a green oval logo at the top left.</p><p>The trio from Monterrey, Fermín IV, Pato and Toy Selectah, mixed hard hip-hop beats with Mexican sounds, samples and slang on songs like \"¿Comprendes Mendes?\" and \"Andamos armados.\" Mucho Barato sold widely across Latin America and is regarded as a seminal work in Spanish-language hip-hop.</p><p>The plain, street-level cover fits a record that put northern Mexico on the hip-hop map. Monterrey's rap scene grew from the path Control Machete cut.</p>",
-   "color": "#A37C6B",
-   "accent_color": "#D7D1AF",
-   "image_url": "https://static.wixstatic.com/media/b519fa_ab7ed233e4a14fc6b72986f5568b8726~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "12Fkvf2oi1B6yjDwkMrUog",
-   "spotify_url": "https://open.spotify.com/album/12Fkvf2oi1B6yjDwkMrUog",
-   "apple_music_url": "https://music.apple.com/us/album/mucho-barato/1595217247",
-   "youtube_url": "https://www.youtube.com/results?search_query=Control+Machete+Mucho+Barato+full+album",
-   "featured": false,
-   "created_at": "2026-10-22T08:00:00+00:00"
   },
   {
    "id": "eb35f10e-cb54-4559-ac32-f58831418115",
@@ -5247,34 +3897,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Raekwon+Only+Built+4+Cuban+Linx...+full+album",
    "featured": false,
    "created_at": "2026-10-16T14:00:00+00:00"
-  },
-  {
-   "id": "8a9c1406-ad13-46a1-96ed-27076384bc5f",
-   "slug": "paris-sous-les-bombes",
-   "title": "Paris sous les bombes",
-   "artist": "Suprême NTM",
-   "release_year": 1995,
-   "decade": "1990s",
-   "label": "Epic",
-   "country": "France",
-   "cover_type_id": "0eb085f8-d7ea-47e5-8c4a-bf504de1773f",
-   "subgenres": [
-    "French hip-hop",
-    "Hardcore hip-hop"
-   ],
-   "credits_text": null,
-   "description_html": "<p>JoeyStarr and Kool Shen of Suprême NTM press their heads together on the cover of their third album, in a cold blue photograph, with the giant letters NTM below them and the title in white across the middle.</p><p>The title means Paris under the bombs, a reference to graffiti \"bombing,\" the culture in which the duo started. Released in 1995, the album carried \"La Fièvre,\" \"Qu'est-ce qu'on attend\" and \"Tout n'est pas si facile\" and captured the anger of the Paris suburbs in the year of the film La Haine.</p><p>The two heads pressed together show a partnership at its tightest, and the cold colours match the mood of a France facing riots and racism. The album is widely considered the classic of Parisian rap.</p>",
-   "color": "#11181C",
-   "accent_color": "#6B94A3",
-   "image_url": "https://static.wixstatic.com/media/b519fa_447a98612d654d9baf5eb2800de837c6~mv2.jpg",
-   "image_width": 1500,
-   "image_height": 1500,
-   "spotify_album_id": "5xPygvHXQKEgpTt1Pm8Jbk",
-   "spotify_url": "https://open.spotify.com/album/5xPygvHXQKEgpTt1Pm8Jbk",
-   "apple_music_url": "https://music.apple.com/fr/album/paris-sous-les-bombes/273708033",
-   "youtube_url": "https://www.youtube.com/results?search_query=Supr%C3%AAme+NTM+Paris+sous+les+bombes+full+album",
-   "featured": false,
-   "created_at": "2026-10-20T14:00:00+00:00"
   },
   {
    "id": "7efb228a-9104-45cd-8894-cf666c5b44e9",
@@ -5726,34 +4348,6 @@
    "created_at": "2026-10-08T14:00:00+00:00"
   },
   {
-   "id": "719b2f0a-0e55-4093-815e-a1694840acc7",
-   "slug": "vier-gewinnt",
-   "title": "Vier gewinnt",
-   "artist": "Die Fantastischen Vier",
-   "release_year": 1992,
-   "decade": "1990s",
-   "label": "Columbia",
-   "country": "Germany",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "German hip-hop",
-    "Pop rap"
-   ],
-   "credits_text": null,
-   "description_html": "<p>The cover of Die Fantastischen Vier's second album frames one member in a round window on a bright blue background, wearing a yellow jacket and oversized sunglasses, with the title in small type at the top. The round frame echoes the title, the German name for the game Connect Four.</p><p>The Stuttgart group rapped in German at a time when most German rap was in English, and their single \"Die da!?!\" became a top-ten hit in 1992, one of the first German-language rap songs to break into the mainstream.</p><p>The playful, game-like cover matched a group that brought humour and pop hooks to rap. Die Fantastischen Vier proved that rap in German could sell, and the German rap scenes that followed, up to Aggro Berlin, grew in the space they opened.</p>",
-   "color": "#406891",
-   "accent_color": "#BE5E3B",
-   "image_url": "https://static.wixstatic.com/media/b519fa_1a0bf4652e4f4725b1da70b74f0a91ae~mv2.jpg",
-   "image_width": 600,
-   "image_height": 600,
-   "spotify_album_id": "54tcacygP8sbOOtQZrVVC6",
-   "spotify_url": "https://open.spotify.com/album/54tcacygP8sbOOtQZrVVC6",
-   "apple_music_url": "https://music.apple.com/us/album/vier-gewinnt/267706467",
-   "youtube_url": "https://www.youtube.com/results?search_query=Die+Fantastischen+Vier+Vier+gewinnt+full+album",
-   "featured": false,
-   "created_at": "2026-10-09T05:00:00+00:00"
-  },
-  {
    "id": "6edeaa0c-45dc-4144-8eb8-9662ebe03526",
    "slug": "cypress-hill",
    "title": "Cypress Hill",
@@ -5808,34 +4402,6 @@
    "youtube_url": "https://www.youtube.com/results?search_query=Ice+Cube+Death+Certificate+full+album",
    "featured": false,
    "created_at": "2026-10-18T17:00:00+00:00"
-  },
-  {
-   "id": "5eefb465-fbcd-416a-902f-4185f3c146f8",
-   "slug": "qui-seme-le-vent-recolte-le-tempo",
-   "title": "Qui sème le vent récolte le tempo",
-   "artist": "MC Solaar",
-   "release_year": 1991,
-   "decade": "1990s",
-   "label": "Polydor",
-   "country": "France",
-   "cover_type_id": "818f66a4-a51e-4b8b-b515-691d9aba254d",
-   "subgenres": [
-    "French hip-hop",
-    "Jazz rap"
-   ],
-   "credits_text": null,
-   "description_html": "<p>MC Solaar reclines beside a record player on the cover of his debut album, his head tilted back as if lost in the music, in a cool black-and-white and teal photograph, with his name in bold capitals at the bottom.</p><p>Born in Dakar and raised in the suburbs of Paris, Solaar brought jazz samples and playful, literary wordplay to French rap. Released in October 1991, the album's title turns the proverb \"he who sows the wind reaps the storm\" into a pun on tempo, and singles like \"Bouge de là\" and \"Caroline\" made him a national star.</p><p>The relaxed pose beside the turntable suits an artist who made rap sound gentle and poetic. The album proved French rap could reach the mainstream and made Solaar one of the first French rappers to find success abroad.</p>",
-   "color": "#060505",
-   "accent_color": "#BFBFBF",
-   "image_url": "https://static.wixstatic.com/media/b519fa_99477b56a92848d7bbfa01f1aaa72e17~mv2.jpg",
-   "image_width": 3000,
-   "image_height": 3000,
-   "spotify_album_id": "5hM61fBUA5OIMJUUuMrzyH",
-   "spotify_url": "https://open.spotify.com/album/5hM61fBUA5OIMJUUuMrzyH",
-   "apple_music_url": "https://music.apple.com/fr/album/qui-s%C3%A8me-le-vent-r%C3%A9colte-le-tempo/1572971729",
-   "youtube_url": "https://www.youtube.com/results?search_query=MC+Solaar+Qui+s%C3%A8me+le+vent+r%C3%A9colte+le+tempo+full+album",
-   "featured": false,
-   "created_at": "2026-10-23T23:00:00+00:00"
   },
   {
    "id": "2f9a0495-ecc6-4ec6-9fc4-1f8d6ce88873",
@@ -6462,18 +5028,6 @@
    "creator_id": "3654335b-82ce-48ad-9b25-8d723025f549"
   },
   {
-   "cover_id": "193f38f6-2ca6-43c0-88f7-b46e280c64c6",
-   "creator_id": "1a942088-2df4-4f90-98b9-496d359510ec"
-  },
-  {
-   "cover_id": "5423826e-c3b8-4437-a44f-eef6a68a293b",
-   "creator_id": "11668ee2-463b-44e2-9d44-ff816be0da7c"
-  },
-  {
-   "cover_id": "8b2fe929-d438-40a3-9339-193547156bc9",
-   "creator_id": "782f98e4-1fef-4e63-bbd9-9885af0facc3"
-  },
-  {
    "cover_id": "ba68ad1b-5f84-4ef0-9559-6ee1d30bda44",
    "creator_id": "49158cdf-3fee-44cf-b985-9484d2508508"
   },
@@ -6502,26 +5056,6 @@
    "creator_id": "e712a971-24bd-40bf-852b-a16124abfb67"
   },
   {
-   "cover_id": "7872e0e6-8b44-4b5d-a7e6-b9635c62d101",
-   "creator_id": "7c661830-4fa5-418c-8a2e-44f0e7313693"
-  },
-  {
-   "cover_id": "7872e0e6-8b44-4b5d-a7e6-b9635c62d101",
-   "creator_id": "6dcf5443-2907-417b-b9e8-e9c34b971770"
-  },
-  {
-   "cover_id": "9795e8b3-b5df-4e53-8a77-272dc3e31681",
-   "creator_id": "992e04eb-e9be-40e7-891b-cf230158d657"
-  },
-  {
-   "cover_id": "c23ae502-f18b-42d4-ae58-7da4925f21b1",
-   "creator_id": "0348b215-937b-4c97-8889-d0cea9420344"
-  },
-  {
-   "cover_id": "c23ae502-f18b-42d4-ae58-7da4925f21b1",
-   "creator_id": "9b4820b8-ec56-4401-933d-8dd4d66d9a01"
-  },
-  {
    "cover_id": "27b58720-0925-4142-97fc-a7d0a9c0f104",
    "creator_id": "643c46a9-741b-4fa3-919e-fdf76d283c75"
   },
@@ -6542,30 +5076,6 @@
    "creator_id": "8a03b417-df74-42e2-88af-a5d1a7398702"
   },
   {
-   "cover_id": "b6494978-a5fd-4374-9766-11cd7d0ede3e",
-   "creator_id": "7c661830-4fa5-418c-8a2e-44f0e7313693"
-  },
-  {
-   "cover_id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "creator_id": "a22f2459-b8fd-451d-9832-3154c6291319"
-  },
-  {
-   "cover_id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "creator_id": "1a333fa4-41f8-4e28-a6cf-538e66d00eec"
-  },
-  {
-   "cover_id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "creator_id": "65c60bc3-627b-4720-95d8-48cdeb8716ab"
-  },
-  {
-   "cover_id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "creator_id": "b1e06fbe-391b-44c7-b146-a1a22f2c0164"
-  },
-  {
-   "cover_id": "d1a01a19-e464-4a56-9e3f-e0c8c238170e",
-   "creator_id": "dba54d23-20ba-46b7-893e-5b5d1789ef72"
-  },
-  {
    "cover_id": "075091e0-3d68-4460-82bb-07afa00b7038",
    "creator_id": "11668ee2-463b-44e2-9d44-ff816be0da7c"
   },
@@ -6578,28 +5088,12 @@
    "creator_id": "9e777910-1062-4b6b-a031-d68e194b697f"
   },
   {
-   "cover_id": "fda721f8-6334-4984-9283-e71ae5eedd69",
-   "creator_id": "5e7bccb2-07cc-432a-b155-957802bb8f3e"
-  },
-  {
    "cover_id": "dfef6a04-fda7-428a-b3ff-ddb04e1598ce",
    "creator_id": "7f535744-9ad0-4a02-932f-2e0396b42723"
   },
   {
    "cover_id": "dfef6a04-fda7-428a-b3ff-ddb04e1598ce",
    "creator_id": "ef04bd3d-6502-4214-8f8b-a8fd34f8f519"
-  },
-  {
-   "cover_id": "4ecab9f9-afb1-4181-9230-60a8c45bfbcb",
-   "creator_id": "4c2bd382-00f8-493e-acbd-42b9988c724b"
-  },
-  {
-   "cover_id": "4ecab9f9-afb1-4181-9230-60a8c45bfbcb",
-   "creator_id": "17bb5d63-fdce-4f31-81b0-5e98157b9eec"
-  },
-  {
-   "cover_id": "4ecab9f9-afb1-4181-9230-60a8c45bfbcb",
-   "creator_id": "4802e4f7-cf04-4504-8979-d9fdc742b26c"
   },
   {
    "cover_id": "550509f0-025e-447e-87ba-ee75911e6f60",
@@ -6666,22 +5160,6 @@
    "creator_id": "9fcc14be-f90d-4f7b-9b0d-7454cc920a2c"
   },
   {
-   "cover_id": "7c69f9c1-bd19-42dc-8190-4c4efd353fcf",
-   "creator_id": "929670d5-135a-42e7-89dc-c4b44cc04170"
-  },
-  {
-   "cover_id": "7b05350d-c0f5-4091-8bcc-6886b6b159b8",
-   "creator_id": "ec86af23-a2d2-4d4a-a585-bc53cecc7e23"
-  },
-  {
-   "cover_id": "7b05350d-c0f5-4091-8bcc-6886b6b159b8",
-   "creator_id": "dd777d9a-37a2-4939-9f63-e4f36a8e50c0"
-  },
-  {
-   "cover_id": "f4db7414-50e4-4817-8dcc-907961d15d4b",
-   "creator_id": "816b76d9-7a65-4512-92bf-fe5b90f3a950"
-  },
-  {
    "cover_id": "df7724ee-e539-4516-a746-f44a0362e4e2",
    "creator_id": "06a50ef4-c458-443f-9095-435948a94892"
   },
@@ -6722,18 +5200,6 @@
    "creator_id": "91621b97-0ce4-4d99-9f5f-6da4e552b46a"
   },
   {
-   "cover_id": "b67a66c5-0e57-4b14-92f6-1f71f039013a",
-   "creator_id": "e2b2ab2e-bec4-465a-b554-e2c214972944"
-  },
-  {
-   "cover_id": "b67a66c5-0e57-4b14-92f6-1f71f039013a",
-   "creator_id": "9a9632a4-7db0-4fe3-af94-3960f447ca15"
-  },
-  {
-   "cover_id": "7bc0fdb6-fe20-42be-9831-86879b6e3a98",
-   "creator_id": "08266432-50cd-4108-8e52-d8c22d7bf75d"
-  },
-  {
    "cover_id": "83cb1fe5-4fdd-4c81-a54c-4e1df7efd1da",
    "creator_id": "be767c9e-29e5-4be5-bc52-7ed968eee398"
   },
@@ -6748,14 +5214,6 @@
   {
    "cover_id": "b89a26a5-a992-40a0-bb27-15ab44eba0f2",
    "creator_id": "fdebb9ee-5d95-4f35-b1b8-4f3657d9a05b"
-  },
-  {
-   "cover_id": "8b9410a1-4b10-4461-9f71-22c5db2bee7f",
-   "creator_id": "77efeacc-7021-49dd-a989-b1adf9223dcc"
-  },
-  {
-   "cover_id": "8b9410a1-4b10-4461-9f71-22c5db2bee7f",
-   "creator_id": "ef421037-cfdf-4e26-91d8-0e73b5379d9c"
   },
   {
    "cover_id": "d6e9b374-7ffd-4d0a-a565-2b3ea9a53b96",
@@ -6794,18 +5252,6 @@
    "creator_id": "f9cefc81-a9ea-4652-8d00-7d93f5ef546b"
   },
   {
-   "cover_id": "170a50e0-54d1-4513-bccc-0d4d1ed5e05a",
-   "creator_id": "7bf0351a-5b9d-4bf1-9e0c-501bbff2e990"
-  },
-  {
-   "cover_id": "170a50e0-54d1-4513-bccc-0d4d1ed5e05a",
-   "creator_id": "f594c628-28f9-409e-a37c-09de5ad69dd6"
-  },
-  {
-   "cover_id": "170a50e0-54d1-4513-bccc-0d4d1ed5e05a",
-   "creator_id": "c80c5f73-0772-46b7-841a-bf8b60e084ea"
-  },
-  {
    "cover_id": "a3503580-c4d7-466c-bc08-877236331a67",
    "creator_id": "643c46a9-741b-4fa3-919e-fdf76d283c75"
   },
@@ -6824,18 +5270,6 @@
   {
    "cover_id": "576f378c-2822-41c1-af3d-a85f77be866a",
    "creator_id": "5cef9152-cb31-47ec-ad86-d5f418947346"
-  },
-  {
-   "cover_id": "6d21d545-68b0-4025-b0cd-f885f919518c",
-   "creator_id": "24386053-9e8b-44b2-b322-0632cbf28bd9"
-  },
-  {
-   "cover_id": "6d21d545-68b0-4025-b0cd-f885f919518c",
-   "creator_id": "20a1c7d1-5e7d-4343-be7c-2d634b285f84"
-  },
-  {
-   "cover_id": "6d21d545-68b0-4025-b0cd-f885f919518c",
-   "creator_id": "3c48cba7-8d53-4ef2-87f3-c43c4df362a5"
   },
   {
    "cover_id": "a7a2eeac-d9ba-4959-b49a-d1d35d2c6873",
@@ -6890,10 +5324,6 @@
    "creator_id": "d3d04882-a272-455f-8808-37d66dae66da"
   },
   {
-   "cover_id": "5e335902-9f55-403b-896d-6745982538e8",
-   "creator_id": "cca570ad-a1b1-4a96-b3d4-bf4f47e31ca5"
-  },
-  {
    "cover_id": "860477fa-b79d-40db-b72e-a67e60ecabd9",
    "creator_id": "21d99534-f922-430e-a974-a7269fed7d76"
   },
@@ -6908,26 +5338,6 @@
   {
    "cover_id": "860477fa-b79d-40db-b72e-a67e60ecabd9",
    "creator_id": "0b98c817-d2f9-4554-9f62-dd643b6fc271"
-  },
-  {
-   "cover_id": "d2468756-0905-4020-a9bb-5d215215ba70",
-   "creator_id": "9dae02f5-9c8c-4cd2-af5e-75945bbb67c1"
-  },
-  {
-   "cover_id": "d2468756-0905-4020-a9bb-5d215215ba70",
-   "creator_id": "e2abb798-2cb4-45f5-8163-c1808c59a0ef"
-  },
-  {
-   "cover_id": "50858662-ac41-4a4c-9c85-5f0a851e671c",
-   "creator_id": "7cd9ed4b-a63b-4e39-8d8c-902cb406dd19"
-  },
-  {
-   "cover_id": "f35a8f5d-c652-4648-b175-6ab9d661c1cf",
-   "creator_id": "7ffff3be-e523-4478-a932-02796b0ce2f1"
-  },
-  {
-   "cover_id": "f35a8f5d-c652-4648-b175-6ab9d661c1cf",
-   "creator_id": "554422f5-db93-4313-9722-9b31143468c5"
   },
   {
    "cover_id": "7989f8b3-05bb-4d9b-919a-9a9ce2e051e7",
@@ -6954,14 +5364,6 @@
    "creator_id": "b7499add-7642-48b1-98c7-8d65577e1c63"
   },
   {
-   "cover_id": "46ccf126-b15b-4aaf-84da-7d73af87ce91",
-   "creator_id": "be2c6fe2-281a-4ce2-96da-4e43c1178de1"
-  },
-  {
-   "cover_id": "46ccf126-b15b-4aaf-84da-7d73af87ce91",
-   "creator_id": "9d2ef829-a84c-4f0a-aa17-29e679abbd14"
-  },
-  {
    "cover_id": "16dda0a1-787d-4fee-910e-e7cea34f98b0",
    "creator_id": "2e94a722-d1fa-4e14-8520-ff0a2f782184"
   },
@@ -6976,14 +5378,6 @@
   {
    "cover_id": "44dde968-a969-4f27-a68a-fb47cb549439",
    "creator_id": "e0607871-7dc5-4996-b3e2-492bc0b90284"
-  },
-  {
-   "cover_id": "c4af288b-3aad-421b-9381-ee9708376a4d",
-   "creator_id": "6d4d3e41-e776-4bce-a8a4-36717a8a1551"
-  },
-  {
-   "cover_id": "c4af288b-3aad-421b-9381-ee9708376a4d",
-   "creator_id": "e53d7280-f69c-484f-b82d-2c56f0ba2229"
   },
   {
    "cover_id": "23d91644-bff0-47c8-8549-ff4c64da13e5",
@@ -7044,10 +5438,6 @@
   {
    "cover_id": "d55a9642-0991-4983-91aa-834995cd2297",
    "creator_id": "5c22c1ed-4a98-4d43-a883-1cb22cecc9ab"
-  },
-  {
-   "cover_id": "3c2fdad8-8803-46dc-8078-3be2219204a4",
-   "creator_id": "43120719-1690-4193-99a2-a2b275a38668"
   },
   {
    "cover_id": "257985ab-c04d-4342-aaaf-91dcaee32d93",
@@ -7150,10 +5540,6 @@
    "creator_id": "b664f2e0-89ca-4756-8ec3-55bb38158449"
   },
   {
-   "cover_id": "3fab853f-b142-41b9-a699-49b70118d760",
-   "creator_id": "cca570ad-a1b1-4a96-b3d4-bf4f47e31ca5"
-  },
-  {
    "cover_id": "b0c6decb-25e1-40ac-99f6-f002337ce98d",
    "creator_id": "9516856b-29c7-4037-ae8d-11bcc2ba46f6"
   },
@@ -7204,14 +5590,6 @@
   {
    "cover_id": "5ee93fe0-8a54-4c5f-a567-06b6178dd1fe",
    "creator_id": "90fc9e73-24e9-4f30-b189-d9bf57fa2a68"
-  },
-  {
-   "cover_id": "3bae9e4b-9d3e-4ece-a004-9d6e8d4165b3",
-   "creator_id": "4ed33fdd-6904-4f02-b2b7-0cb99777900d"
-  },
-  {
-   "cover_id": "3bae9e4b-9d3e-4ece-a004-9d6e8d4165b3",
-   "creator_id": "6958a0ae-5611-40a8-9ceb-0b3330ad8c55"
   },
   {
    "cover_id": "6a51353d-8e9b-48b2-8920-4d2bac0d3df0",

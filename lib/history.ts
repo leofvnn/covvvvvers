@@ -4,7 +4,7 @@
  * are in the collection; the page links the ones that are.
  */
 
-export type Tag = "first" | "sound" | "tech" | "business" | "culture" | "women" | "world";
+export type Tag = "first" | "sound" | "tech" | "business" | "culture" | "women";
 
 export const TAGS: { id: Tag; label: string }[] = [
   { id: "first", label: "Firsts" },
@@ -13,7 +13,6 @@ export const TAGS: { id: Tag; label: string }[] = [
   { id: "business", label: "Business" },
   { id: "culture", label: "Culture" },
   { id: "women", label: "Women in rap" },
-  { id: "world", label: "Around the world" },
 ];
 
 export type HistoryRecord = {
@@ -79,7 +78,6 @@ export const ERAS: Era[] = [
           song("Give It Up or Turnit a Loose", "James Brown", 1969),
           song("Apache", "Incredible Bongo Band", 1973),
           song("It's Just Begun", "The Jimmy Castor Bunch", 1972),
-          song("The Mexican", "Babe Ruth", 1972),
         ],
       },
       {
@@ -177,7 +175,6 @@ export const ERAS: Era[] = [
         records: [
           song("Planet Rock", "Afrika Bambaataa & Soulsonic Force", 1982),
           song("The Message", "Grandmaster Flash and the Furious Five", 1982),
-          song("Buffalo Gals", "Malcolm McLaren", 1982),
         ],
       },
       {
@@ -185,7 +182,7 @@ export const ERAS: Era[] = [
         when: "1983",
         title: "Hip-hop on screen",
         text: "Charlie Ahearn's film 'Wild Style', made with Fab 5 Freddy, and the PBS documentary 'Style Wars' carried rapping, DJing, breaking and graffiti to cinemas and televisions around the world. Ralph McDaniels started 'Video Music Box' on New York public television, and Herbie Hancock's 'Rockit' put GrandMixer D.ST's scratching on MTV and the Grammys stage.",
-        tags: ["culture", "world"],
+        tags: ["culture"],
         records: [
           { title: "Wild Style", artist: "Charlie Ahearn", year: 1983, kind: "film" },
           { title: "Style Wars", artist: "Tony Silver and Henry Chalfant", year: 1983, kind: "film" },
@@ -212,8 +209,8 @@ export const ERAS: Era[] = [
         id: "radio",
         when: "1985",
         title: "'Radio', the human beatbox and Philadelphia",
-        text: "Def Jam's first album came from 17-year-old LL Cool J, produced by Rubin with a credit that read 'Reduced by Rick Rubin'. Doug E. Fresh, the Human Beat Box, released 'The Show' with 'La Di Da Di', introducing MC Ricky D, later Slick Rick. In Philadelphia, Schoolly D's 'P.S.K. What Does It Mean?' laid down a blueprint for gangsta rap. That year the first DMC World DJ Championship was held in London.",
-        tags: ["sound", "business", "tech", "world"],
+        text: "Def Jam's first album came from 17-year-old LL Cool J, produced by Rubin with a credit that read 'Reduced by Rick Rubin'. Doug E. Fresh, the Human Beat Box, released 'The Show' with 'La Di Da Di', introducing MC Ricky D, later Slick Rick. In Philadelphia, Schoolly D's 'P.S.K. What Does It Mean?' laid down a blueprint for gangsta rap.",
+        tags: ["sound", "business", "tech"],
         records: [
           album("Radio", "LL Cool J", 1985),
           song("The Show / La Di Da Di", "Doug E. Fresh & the Get Fresh Crew", 1985),
@@ -341,15 +338,14 @@ export const ERAS: Era[] = [
         id: "chronic",
         when: "1992",
         title: "G-funk",
-        text: "Dr. Dre's 'The Chronic' slowed West Coast rap into a lazy, melodic roll built on Parliament-Funkadelic grooves, whining synthesizers and live bass, and introduced Snoop Doggy Dogg on 'Nuthin' but a 'G' Thang'. Released on Death Row in December, it set the sound of mainstream rap for years. Kris Kross's 'Jump' spent eight weeks at number one, Pete Rock & CL Smooth released 'They Reminisce Over You (T.R.O.Y.)', and in Germany Die Fantastischen Vier's 'Die da!?!' brought German-language rap into the charts.",
-        tags: ["sound", "world"],
+        text: "Dr. Dre's 'The Chronic' slowed West Coast rap into a lazy, melodic roll built on Parliament-Funkadelic grooves, whining synthesizers and live bass, and introduced Snoop Doggy Dogg on 'Nuthin' but a 'G' Thang'. Released on Death Row in December, it set the sound of mainstream rap for years. Kris Kross's 'Jump' spent eight weeks at number one, and Pete Rock & CL Smooth released 'They Reminisce Over You (T.R.O.Y.)'.",
+        tags: ["sound"],
         records: [
           album("The Chronic", "Dr. Dre", 1992),
           song("Nuthin' but a 'G' Thang", "Dr. Dre feat. Snoop Doggy Dogg", 1992),
           song("Jump", "Kris Kross", 1992),
           song("They Reminisce Over You (T.R.O.Y.)", "Pete Rock & CL Smooth", 1992),
           song("Scenario", "A Tribe Called Quest", 1992),
-          song("Die da!?!", "Die Fantastischen Vier", 1992),
         ],
       },
     ],
@@ -362,10 +358,10 @@ export const ERAS: Era[] = [
     to: 1999,
     title: "East, West and the South",
     intro:
-      "The mid-1990s brought an extraordinary run of albums from New York and Los Angeles, a feud between the two coasts that ended with two of rap's biggest stars killed, and the rise of the South as a force of its own. Independent labels made fortunes, producers like Timbaland and DJ Premier became stars, and by the end of the decade rap was outselling country in America and had put down roots in France, Brazil, Germany, Cuba and well beyond.",
+      "The mid-1990s brought an extraordinary run of albums from New York and Los Angeles, a feud between the two coasts that ended with two of rap's biggest stars killed, and the rise of the South as a force of its own. Independent labels made fortunes, producers like Timbaland and DJ Premier became stars, and by the end of the decade rap was outselling country in America.",
     sound: "Dusty boom bap in New York, G-funk in California, bounce, screw and Memphis horror in the South.",
     poster: "enter-the-wu-tang-36-chambers",
-    people: ["wutang", "rza", "nas", "biggie", "tupac", "snoop", "outkast", "jayz", "lauryn", "missy", "timbaland", "premier", "screw", "ugk", "masterp", "three6", "eminem", "doom", "lilkim", "busta", "solaar", "iam", "racionais"],
+    people: ["wutang", "rza", "nas", "biggie", "tupac", "snoop", "outkast", "jayz", "lauryn", "missy", "timbaland", "premier", "screw", "ugk", "masterp", "three6", "eminem", "doom", "lilkim", "busta"],
     moments: [
       {
         id: "wu",
@@ -419,7 +415,6 @@ export const ERAS: Era[] = [
           album("The Infamous", "Mobb Deep", 1995),
           album("Me Against the World", "2Pac", 1995),
           album("Mystic Stylez", "Three 6 Mafia", 1995),
-          album("Paris sous les bombes", "Suprême NTM", 1995),
         ],
       },
       {
@@ -442,16 +437,14 @@ export const ERAS: Era[] = [
       {
         id: "biggie",
         when: "1997",
-        title: "Biggie, Timbaland and rap goes global",
-        text: "The Notorious B.I.G. was shot dead in Los Angeles on 9 March, aged 24; 'Life After Death' came out 16 days later and went to number one, and Puff Daddy and Faith Evans's tribute 'I'll Be Missing You' spent 11 weeks at the top of the Hot 100. Missy Elliott and Timbaland's 'Supa Dupa Fly' sounded like the future. Master P's No Limit sold millions independently. IAM's 'L'École du micro d'argent' became a landmark in France, and Racionais MC's 'Sobrevivendo no Inferno', on their own label, became the best-selling rap album in Brazil.",
-        tags: ["world", "culture", "sound", "women", "business"],
+        title: "Biggie, Timbaland and No Limit",
+        text: "The Notorious B.I.G. was shot dead in Los Angeles on 9 March, aged 24; 'Life After Death' came out 16 days later and went to number one, and Puff Daddy and Faith Evans's tribute 'I'll Be Missing You' spent 11 weeks at the top of the Hot 100. Missy Elliott and Timbaland's 'Supa Dupa Fly' sounded like the future. Master P's No Limit sold millions independently.",
+        tags: ["culture", "sound", "women", "business"],
         records: [
           album("Life After Death", "The Notorious B.I.G.", 1997),
           song("Hypnotize", "The Notorious B.I.G.", 1997),
           album("Supa Dupa Fly", "Missy Elliott", 1997),
           album("Ghetto D", "Master P", 1997),
-          album("L'École du micro d'argent", "IAM", 1997),
-          album("Sobrevivendo no Inferno", "Racionais MC's", 1997),
         ],
       },
       {
@@ -484,7 +477,6 @@ export const ERAS: Era[] = [
           album("Black on Both Sides", "Mos Def", 1999),
           album("Operation: Doomsday", "MF DOOM", 1999),
           album("Things Fall Apart", "The Roots", 1999),
-          album("A lo cubano", "Orishas", 1999),
         ],
       },
     ],
@@ -497,10 +489,10 @@ export const ERAS: Era[] = [
     to: 2009,
     title: "Pop, the South and the internet",
     intro:
-      "Hip-hop spent the 2000s as pop music. Producers like the Neptunes, Timbaland and Kanye West wrote the sound of radio, the South took over the charts with crunk, snap and trap, and grime grew up in London. By the end of the decade free mixtapes, blogs, YouTube and Auto-Tune were deciding who broke through.",
+      "Hip-hop spent the 2000s as pop music. Producers like the Neptunes, Timbaland and Kanye West wrote the sound of radio, and the South took over the charts with crunk, snap and trap. By the end of the decade free mixtapes, blogs, YouTube and Auto-Tune were deciding who broke through.",
     sound: "Sped-up soul samples, Neptunes minimalism, crunk chants, trap hi-hats and Auto-Tuned hooks.",
     poster: "the-college-dropout",
-    people: ["eminem", "jayz", "outkast", "kanye", "neptunes", "fiftycent", "missy", "wayne", "ti", "liljon", "gucci", "dilla", "madlib", "doom", "dizzee", "wiley", "tpain", "soulja", "cudi", "clipse"],
+    people: ["eminem", "jayz", "outkast", "kanye", "neptunes", "fiftycent", "missy", "wayne", "ti", "liljon", "gucci", "dilla", "madlib", "doom", "tpain", "soulja", "cudi", "clipse"],
     moments: [
       {
         id: "mmlp",
@@ -534,31 +526,27 @@ export const ERAS: Era[] = [
       {
         id: "lose-yourself",
         when: "2002",
-        title: "'Lose Yourself', the Neptunes and grime's first steps",
-        text: "Eminem's song from '8 Mile' spent 12 weeks at number one on the Hot 100 and, in March 2003, became the first rap song to win the Academy Award for Best Original Song. Clipse and the Neptunes made 'Grindin'' from little more than a drum pattern. In East London, Wiley's icy 'Eskimo' instrumentals laid down the sound of grime, and The Streets released 'Original Pirate Material'.",
-        tags: ["first", "world", "sound"],
+        title: "'Lose Yourself' and the Neptunes",
+        text: "Eminem's song from '8 Mile' spent 12 weeks at number one on the Hot 100 and, in March 2003, became the first rap song to win the Academy Award for Best Original Song. Clipse and the Neptunes made 'Grindin'' from little more than a drum pattern.",
+        tags: ["first", "sound"],
         records: [
           song("Lose Yourself", "Eminem", 2002),
           song("Grindin'", "Clipse", 2002),
           album("Lord Willin'", "Clipse", 2002),
-          song("Eskimo", "Wiley", 2002),
-          album("Original Pirate Material", "The Streets", 2002),
         ],
       },
       {
         id: "trap",
         when: "2003",
-        title: "50 Cent, crunk, trap and grime",
-        text: "50 Cent's 'Get Rich or Die Tryin'' was the best-selling album of the year in the US. In Atlanta, Lil Jon's crunk filled clubs and T.I. gave a whole style its name with 'Trap Muzik'. In London, Dizzee Rascal won the Mercury Prize with 'Boy in da Corner', the album that introduced grime. OutKast's 'Hey Ya!' went to number one, and 'Speakerboxxx/The Love Below' won Album of the Year at the Grammys the next February. Apple opened the iTunes Store, selling songs for 99 cents.",
-        tags: ["sound", "world", "first", "tech"],
+        title: "50 Cent, crunk and trap",
+        text: "50 Cent's 'Get Rich or Die Tryin'' was the best-selling album of the year in the US. In Atlanta, Lil Jon's crunk filled clubs and T.I. gave a whole style its name with 'Trap Muzik'. OutKast's 'Hey Ya!' went to number one, and 'Speakerboxxx/The Love Below' won Album of the Year at the Grammys the next February. Apple opened the iTunes Store, selling songs for 99 cents.",
+        tags: ["sound", "first", "tech"],
         records: [
           album("Get Rich or Die Tryin'", "50 Cent", 2003),
           song("In da Club", "50 Cent", 2003),
           song("Get Low", "Lil Jon & the East Side Boyz", 2002),
           album("Trap Muzik", "T.I.", 2003),
-          album("Boy in da Corner", "Dizzee Rascal", 2003),
           album("Speakerboxxx/The Love Below", "OutKast", 2003),
-          album("Vom Bordstein bis zur Skyline", "Bushido", 2003),
         ],
       },
       {
@@ -609,14 +597,13 @@ export const ERAS: Era[] = [
       {
         id: "808s",
         when: "2008 to 2009",
-        title: "'Tha Carter III', '808s' and 'So Far Gone'",
-        text: "Lil Wayne sold more than a million copies of 'Tha Carter III' in its first week, and 'Lollipop' gave him his first number one. Kanye West's '808s & Heartbreak', sung through Auto-Tune over cold drum machines, opened the door to the melodic, emotional rap that followed. In 2009 Drake released 'So Far Gone' as a free mixtape and Kid Cudi's 'Man on the Moon' turned loneliness into hits.",
+        title: "'Tha Carter III' and '808s'",
+        text: "Lil Wayne sold more than a million copies of 'Tha Carter III' in its first week, and 'Lollipop' gave him his first number one. Kanye West's '808s & Heartbreak', sung through Auto-Tune over cold drum machines, opened the door to the melodic, emotional rap that followed. In 2009 Kid Cudi's 'Man on the Moon' turned loneliness into hits.",
         tags: ["sound", "business"],
         records: [
           album("Tha Carter III", "Lil Wayne", 2008),
           song("A Milli", "Lil Wayne", 2008),
           album("808s & Heartbreak", "Kanye West", 2008),
-          { title: "So Far Gone", artist: "Drake", year: 2009, kind: "mixtape" },
           album("Man on the Moon: The End of Day", "Kid Cudi", 2009),
           song("Day 'n' Nite", "Kid Cudi", 2008),
         ],
@@ -631,10 +618,10 @@ export const ERAS: Era[] = [
     to: 2019,
     title: "Streaming takes over",
     intro:
-      "Streaming changed how music was counted, and rap, with its fast release schedules and young audience, gained more than any other genre. New scenes grew up on SoundCloud, YouTube, Instagram and TikTok, Atlanta became the centre of the sound, women rappers topped the charts again, and rap from London, Paris, Milan and São Paulo reached listeners far from home.",
+      "Streaming changed how music was counted, and rap, with its fast release schedules and young audience, gained more than any other genre. New scenes grew up on SoundCloud, YouTube, Instagram and TikTok, Atlanta became the centre of the sound, and women rappers topped the charts again.",
     sound: "808 bass, triplet flows, Auto-Tuned melody and drill's sliding bass lines.",
     poster: "to-pimp-a-butterfly",
-    people: ["kanye", "drake", "kendrick", "nicki", "future", "thug", "migos", "metro", "travis", "keef", "tyler", "asap", "cardi", "skepta", "stormzy", "uzi", "lilnasx", "chance", "emicida"],
+    people: ["kanye", "kendrick", "nicki", "future", "thug", "migos", "metro", "travis", "keef", "tyler", "asap", "cardi", "uzi", "lilnasx", "chance"],
     moments: [
       {
         id: "mbdtf",
@@ -654,14 +641,13 @@ export const ERAS: Era[] = [
         id: "odd-future",
         when: "2011",
         title: "Crews online, and Spotify arrives",
-        text: "Odd Future, a Los Angeles crew led by Tyler, the Creator, built a following through Tumblr and free downloads, and A$AP Rocky's 'Live.Love.A$AP' mixed Harlem style with Houston and Memphis sounds. Kendrick Lamar released 'Section.80', and 'Watch the Throne' and 'Take Care' showed how big the mainstream had become. In July Spotify launched in the United States.",
+        text: "Odd Future, a Los Angeles crew led by Tyler, the Creator, built a following through Tumblr and free downloads, and A$AP Rocky's 'Live.Love.A$AP' mixed Harlem style with Houston and Memphis sounds. Kendrick Lamar released 'Section.80', and 'Watch the Throne' showed how big the mainstream had become. In July Spotify launched in the United States.",
         tags: ["culture", "tech"],
         records: [
           album("Goblin", "Tyler, the Creator", 2011),
           { title: "Live.Love.A$AP", artist: "A$AP Rocky", year: 2011, kind: "mixtape" },
           album("Section.80", "Kendrick Lamar", 2011),
           album("Watch the Throne", "Jay-Z & Kanye West", 2011),
-          album("Take Care", "Drake", 2011),
           song("Super Bass", "Nicki Minaj", 2011),
         ],
       },
@@ -670,7 +656,7 @@ export const ERAS: Era[] = [
         when: "2012",
         title: "Drill, and 'good kid, m.A.A.d city'",
         text: "Chicago teenager Chief Keef's 'I Don't Like' spread through YouTube, got a Kanye West remix and carried drill, a cold, violent sound from the city's South Side, around the world. Kendrick Lamar's 'good kid, m.A.A.d city' told a coming-of-age story in Compton like a film.",
-        tags: ["sound", "world"],
+        tags: ["sound"],
         records: [
           song("I Don't Like", "Chief Keef feat. Lil Reese", 2012),
           song("Love Sosa", "Chief Keef", 2012),
@@ -692,7 +678,6 @@ export const ERAS: Era[] = [
           song("Thrift Shop", "Macklemore & Ryan Lewis", 2012),
           song("Lifestyle", "Rich Gang", 2014),
           album("Run the Jewels 2", "Run the Jewels", 2014),
-          song("That's Not Me", "Skepta", 2014),
         ],
       },
       {
@@ -705,7 +690,6 @@ export const ERAS: Era[] = [
           album("To Pimp a Butterfly", "Kendrick Lamar", 2015),
           song("Alright", "Kendrick Lamar", 2015),
           album("DS2", "Future", 2015),
-          song("Hotline Bling", "Drake", 2015),
           album("Rodeo", "Travis Scott", 2015),
           album("Barter 6", "Young Thug", 2015),
         ],
@@ -713,33 +697,28 @@ export const ERAS: Era[] = [
       {
         id: "soundcloud",
         when: "2016 to 2017",
-        title: "SoundCloud, grime, and rap on top",
-        text: "Young artists uploading to SoundCloud, from Lil Uzi Vert to Playboi Carti, reached millions before signing anything. Chance the Rapper's 'Coloring Book' became the first streaming-only album to win a Grammy. In Britain, Skepta's 'Konnichiwa' won the Mercury Prize and Stormzy's 'Gang Signs & Prayer' became the first grime album to reach number one. Cardi B's 'Bodak Yellow' made her the first solo woman rapper to top the Hot 100 since Lauryn Hill in 1998, and in July 2017 Nielsen reported that R&B and hip-hop had passed rock as the most-consumed music in the US for the first time.",
-        tags: ["first", "business", "world", "women"],
+        title: "SoundCloud and rap on top",
+        text: "Young artists uploading to SoundCloud, from Lil Uzi Vert to Playboi Carti, reached millions before signing anything. Chance the Rapper's 'Coloring Book' became the first streaming-only album to win a Grammy. Cardi B's 'Bodak Yellow' made her the first solo woman rapper to top the Hot 100 since Lauryn Hill in 1998, and in July 2017 Nielsen reported that R&B and hip-hop had passed rock as the most-consumed music in the US for the first time.",
+        tags: ["first", "business", "women"],
         records: [
           album("Coloring Book", "Chance the Rapper", 2016),
-          album("Konnichiwa", "Skepta", 2016),
           song("Black Beatles", "Rae Sremmurd feat. Gucci Mane", 2016),
           song("Bad and Boujee", "Migos feat. Lil Uzi Vert", 2016),
           song("XO Tour Llif3", "Lil Uzi Vert", 2017),
-          album("Gang Signs & Prayer", "Stormzy", 2017),
           song("Bodak Yellow", "Cardi B", 2017),
-          album("Dans la légende", "PNL", 2016),
         ],
       },
       {
         id: "pulitzer",
         when: "2018",
         title: "A Pulitzer for 'DAMN.'",
-        text: "Kendrick Lamar won the Pulitzer Prize for Music for 'DAMN.', the first time it went to a work outside classical music and jazz. Drake's 'Scorpion' passed a billion streams worldwide in its first week, Travis Scott's 'Sicko Mode' went to number one, and Cardi B's 'Invasion of Privacy' later won Best Rap Album, the first by a solo woman. In Italy, Sfera Ebbasta's 'Rockstar' made trap the sound of the charts. TikTok merged with Musical.ly that August and soon became the place hits were born.",
-        tags: ["first", "sound", "world", "tech", "women"],
+        text: "Kendrick Lamar won the Pulitzer Prize for Music for 'DAMN.', the first time it went to a work outside classical music and jazz. Travis Scott's 'Sicko Mode' went to number one, and Cardi B's 'Invasion of Privacy' later won Best Rap Album, the first by a solo woman. TikTok merged with Musical.ly that August and soon became the place hits were born.",
+        tags: ["first", "sound", "tech", "women"],
         records: [
           album("DAMN.", "Kendrick Lamar", 2017),
-          album("Scorpion", "Drake", 2018),
           album("Astroworld", "Travis Scott", 2018),
           album("Invasion of Privacy", "Cardi B", 2018),
           album("Die Lit", "Playboi Carti", 2018),
-          album("Rockstar", "Sfera Ebbasta", 2018),
           album("Daytona", "Pusha T", 2018),
         ],
       },
@@ -747,15 +726,13 @@ export const ERAS: Era[] = [
         id: "this-is-america",
         when: "2019",
         title: "Rap wins the biggest awards",
-        text: "Childish Gambino's 'This Is America' became the first rap song to win the Grammys for Record and Song of the Year. Lil Nas X's 'Old Town Road', spread through TikTok, spent 19 weeks at number one on the Hot 100, a record at the time. Forbes named Jay-Z hip-hop's first billionaire, Nipsey Hussle was shot dead outside his store in Los Angeles, Dave's 'Psychodrama' won the Mercury Prize, and Emicida's 'AmarElo' drew on samba, gospel and Belchior.",
-        tags: ["first", "world", "tech", "business"],
+        text: "Childish Gambino's 'This Is America' became the first rap song to win the Grammys for Record and Song of the Year. Lil Nas X's 'Old Town Road', spread through TikTok, spent 19 weeks at number one on the Hot 100, a record at the time. Forbes named Jay-Z hip-hop's first billionaire, and Nipsey Hussle was shot dead outside his store in Los Angeles.",
+        tags: ["first", "tech", "business"],
         stat: { value: 19, label: "weeks at No. 1 for 'Old Town Road'", suffix: " wks" },
         records: [
           song("This Is America", "Childish Gambino", 2018),
           song("Old Town Road", "Lil Nas X feat. Billy Ray Cyrus", 2019),
-          album("Psychodrama", "Dave", 2019),
           album("Igor", "Tyler, the Creator", 2019),
-          album("AmarElo", "Emicida", 2019),
           album("Victory Lap", "Nipsey Hussle", 2018),
         ],
       },
@@ -769,16 +746,16 @@ export const ERAS: Era[] = [
     to: 2026,
     title: "Everywhere at once",
     intro:
-      "Rap is now the main language of popular music, made in bedrooms everywhere and passed around through TikTok, playlists and livestreams. Drill moved between Chicago, London and Brooklyn, women rappers led the charts, scenes in Johannesburg, Paris, Milan and São Paulo fed the global sound, and the pioneers were honoured at the Super Bowl, the Olympics and in the US Senate.",
-    sound: "Drill from three continents, rage synths, Griselda grit and the West Coast bounce coming back.",
+      "Rap is now the main language of popular music, made in bedrooms everywhere and passed around through TikTok, playlists and livestreams. Drill moved between Chicago and Brooklyn, women rappers led the charts, and the pioneers were honoured at the Super Bowl and in the US Senate.",
+    sound: "Drill, rage synths, Griselda grit and the West Coast bounce coming back.",
     poster: "gnx",
-    people: ["kendrick", "drake", "megan", "cardi", "popsmoke", "centralcee", "simz", "doechii", "griselda", "carti", "travis", "tyler", "clipse"],
+    people: ["kendrick", "megan", "cardi", "popsmoke", "doechii", "griselda", "carti", "travis", "tyler", "clipse"],
     moments: [
       {
         id: "pop-smoke",
         when: "2020",
-        title: "Brooklyn drill, 'WAP' and Verzuz",
-        text: "Pop Smoke carried UK drill production back to New York; he was killed in February at 20, and his posthumous debut went to number one. Megan Thee Stallion's 'Savage' remix with Beyoncé reached number one, and 'WAP' with Cardi B drew 93 million US streams in its first week, a record. With concerts cancelled, Timbaland and Swizz Beatz launched Verzuz, livestreamed battles of artists' greatest hits watched by millions.",
+        title: "Pop Smoke, 'WAP' and Verzuz",
+        text: "Pop Smoke was killed in February at 20, and his posthumous debut went to number one. Megan Thee Stallion's 'Savage' remix with Beyoncé reached number one, and 'WAP' with Cardi B drew 93 million US streams in its first week, a record. With concerts cancelled, Timbaland and Swizz Beatz launched Verzuz, livestreamed battles of artists' greatest hits watched by millions.",
         tags: ["sound", "women", "tech", "culture"],
         stat: { value: 93, label: "million US streams for 'WAP' in week one", suffix: "M" },
         records: [
@@ -795,36 +772,31 @@ export const ERAS: Era[] = [
         id: "super-bowl-lvi",
         when: "2021 to 2022",
         title: "The Super Bowl gets a hip-hop show",
-        text: "Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar and 50 Cent played the Super Bowl LVI halftime show in Los Angeles in February 2022, the first built around hip-hop, and it became the first halftime show to win an Emmy. Little Simz's 'Sometimes I Might Be Introvert' won the Mercury Prize, Central Cee's 'Doja' spread UK drill worldwide, and Migos's Takeoff was shot dead in Houston.",
-        tags: ["first", "culture", "world", "women"],
+        text: "Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar and 50 Cent played the Super Bowl LVI halftime show in Los Angeles in February 2022, the first built around hip-hop, and it became the first halftime show to win an Emmy. Migos's Takeoff was shot dead in Houston.",
+        tags: ["first", "culture"],
         records: [
           album("Call Me If You Get Lost", "Tyler, the Creator", 2021),
-          album("Sometimes I Might Be Introvert", "Little Simz", 2021),
           album("Mr. Morale & the Big Steppers", "Kendrick Lamar", 2022),
-          song("Doja", "Central Cee", 2022),
           album("Heroes & Villains", "Metro Boomin", 2022),
         ],
       },
       {
         id: "fifty",
         when: "2023",
-        title: "Fifty years, and an AI Drake",
-        text: "Hip-hop marked its 50th birthday with a concert at Yankee Stadium, a tribute at the Grammys and a US Senate resolution honouring the culture. In April a song using AI-generated imitations of Drake and the Weeknd's voices, 'Heart on My Sleeve', went viral before it was pulled from streaming services, starting a fight over voices and copyright. AKA's 'Mass Country' came out two weeks after the South African rapper was killed.",
-        tags: ["culture", "tech", "world"],
+        title: "Fifty years",
+        text: "Hip-hop marked its 50th birthday with a concert at Yankee Stadium, a tribute at the Grammys and a US Senate resolution honouring the culture.",
+        tags: ["culture"],
         stat: { value: 50, label: "years since the party on Sedgwick Avenue", suffix: " yrs" },
         records: [
           album("Utopia", "Travis Scott", 2023),
-          song("Sprinter", "Dave & Central Cee", 2023),
-          album("Mass Country", "AKA", 2023),
-          album("La divina commedia", "Tedua", 2023),
         ],
       },
       {
         id: "not-like-us",
         when: "2024",
-        title: "Kendrick against Drake, and breaking at the Olympics",
-        text: "Over a few weeks in the spring, Kendrick Lamar and Drake traded diss tracks, ending with Lamar's 'Not Like Us', a West Coast party song produced by Mustard that went to number one. In August breaking made its Olympic debut in Paris, where Japan's Ami and Canada's Phil Wizard won the first gold medals. Doechii's 'Alligator Bites Never Heal' and Lamar's surprise album 'GNX' closed the year.",
-        tags: ["culture", "first", "women"],
+        title: "Kendrick against Drake",
+        text: "Over a few weeks in the spring, Kendrick Lamar and Drake traded diss tracks, ending with Lamar's 'Not Like Us', a West Coast party song produced by Mustard that went to number one. Doechii's 'Alligator Bites Never Heal' and Lamar's surprise album 'GNX' closed the year.",
+        tags: ["culture", "women"],
         records: [
           song("Like That", "Future, Metro Boomin & Kendrick Lamar", 2024),
           song("Not Like Us", "Kendrick Lamar", 2024),
@@ -837,21 +809,20 @@ export const ERAS: Era[] = [
         id: "super-bowl-lix",
         when: "2025",
         title: "A solo headliner at the Super Bowl",
-        text: "'Not Like Us' won five Grammys in February, including Record and Song of the Year, and Doechii became the third woman to win Best Rap Album. A week later Lamar became the first solo hip-hop artist to headline the Super Bowl halftime show, watched by an average of 133.5 million people in the US, the most-watched halftime on record. Playboi Carti's 'MUSIC' had the biggest rap week of the spring, and in the summer Clipse returned with 'Let God Sort Em Out', their first album in 16 years, released independently. In October a federal judge dismissed Drake's defamation suit against Universal over 'Not Like Us'.",
+        text: "'Not Like Us' won five Grammys in February, including Record and Song of the Year, and Doechii became the third woman to win Best Rap Album. A week later Lamar became the first solo hip-hop artist to headline the Super Bowl halftime show, watched by an average of 133.5 million people in the US, the most-watched halftime on record. Playboi Carti's 'MUSIC' had the biggest rap week of the spring, and in the summer Clipse returned with 'Let God Sort Em Out', their first album in 16 years, released independently.",
         tags: ["first", "culture", "women"],
         stat: { value: 5, label: "Grammys for 'Not Like Us'" },
-        records: [album("MUSIC", "Playboi Carti", 2025), album("Let God Sort Em Out", "Clipse", 2025), album("God Does Like Ugly", "JID", 2025), album("Lotus", "Little Simz", 2025)],
+        records: [album("MUSIC", "Playboi Carti", 2025), album("Let God Sort Em Out", "Clipse", 2025), album("God Does Like Ugly", "JID", 2025)],
       },
       {
         id: "most-awarded",
         when: "2026",
         title: "The most-awarded rapper in Grammy history",
-        text: "In February 'GNX' won the Grammy for Best Rap Album and 'Luther' won Record of the Year, taking Lamar to 27 Grammys, more than any other rapper. Clipse's 'Chains & Whips' won Best Rap Performance, and Bad Bunny's 'Debí Tirar Más Fotos' became the first mainly Spanish-language Album of the Year. Big releases kept coming: A$AP Rocky's 'Don't Be Dumb', with a cover by Tim Burton, J. Cole's double album 'The Fall-Off', billed as his last, and Drake's 'Iceman', which gave him a 15th number one album, more than Jay-Z. Fifty-three years after a rec room party in the Bronx, the story keeps going.",
-        tags: ["first", "business"],
+        text: "In February 'GNX' won the Grammy for Best Rap Album and 'Luther' won Record of the Year, taking Lamar to 27 Grammys, more than any other rapper. Clipse's 'Chains & Whips' won Best Rap Performance. Big releases kept coming: A$AP Rocky's 'Don't Be Dumb', with a cover by Tim Burton, and J. Cole's double album 'The Fall-Off', billed as his last. Fifty-three years after a rec room party in the Bronx, the story keeps going.",
+        tags: ["business"],
         records: [
           { title: "Don't Be Dumb", artist: "A$AP Rocky", year: 2026, kind: "album" },
           { title: "The Fall-Off", artist: "J. Cole", year: 2026, kind: "album" },
-          { title: "Iceman", artist: "Drake", year: 2026, kind: "album" },
         ],
       },
     ],
@@ -871,7 +842,6 @@ export const SOURCES: { title: string; url: string }[] = [
   { title: "Ice Ice Baby, Wikipedia", url: "https://en.wikipedia.org/wiki/Ice_Ice_Baby" },
   { title: "Grand Upright Music v. Warner Bros. Records, Wikipedia", url: "https://en.wikipedia.org/wiki/Grand_Upright_Music,_Ltd._v._Warner_Bros._Records_Inc." },
   { title: "Doggystyle, Wikipedia", url: "https://en.wikipedia.org/wiki/Doggystyle" },
-  { title: "Sobrevivendo no Inferno, Wikipedia", url: "https://en.wikipedia.org/wiki/Sobrevivendo_no_Inferno" },
   { title: "Capital Punishment (Big Pun album), Wikipedia", url: "https://en.wikipedia.org/wiki/Capital_Punishment_(Big_Pun_album)" },
   { title: "Music: Hip-Hop Nation, Time (1999)", url: "https://tollbit.time.com/archive/6734548/music-hip-hop-nation/" },
   { title: "Hip-Hop Is Most Popular Genre for First Time in History, The Source", url: "https://thesource.com/2017/07/19/hip-hop-popular-first-time-history/" },

@@ -7,8 +7,8 @@ import type { CoverCard as Card } from "@/lib/types";
 import CoverCard, { cardMeta } from "./CoverCard";
 
 type Sort = "newest" | "added" | "oldest" | "az" | "saved";
-type Filters = { type: string; color: string; decade: string; country: string; q: string; sort: Sort };
-const EMPTY: Filters = { type: "", color: "", decade: "", country: "", q: "", sort: "newest" };
+type Filters = { type: string; color: string; decade: string; q: string; sort: Sort };
+const EMPTY: Filters = { type: "", color: "", decade: "", q: "", sort: "newest" };
 
 const SORTS: { value: Sort; label: string }[] = [
   { value: "newest", label: "Newest releases" },
@@ -20,7 +20,7 @@ const SORTS: { value: Sort; label: string }[] = [
 
 type Props = {
   covers: Card[];
-  /** Show search, sorting and the type, colour, decade and country filters. */
+  /** Show search, sorting and the type, colour and decade filters. */
   filters?: boolean;
   types?: { slug: string; title: string }[];
   emptyText?: string;
@@ -45,7 +45,6 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
       // "c" is the old Colours page's link format, which now redirects here.
       color: p.get("color") ?? p.get("c") ?? "",
       decade: p.get("decade") ?? "",
-      country: p.get("country") ?? "",
       q: p.get("q") ?? "",
       sort: sort && SORTS.some((s) => s.value === sort) ? sort : "newest",
     });
@@ -76,10 +75,6 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
   // Colours in the order of the colour wheel, only those some cover has.
   const colors = useMemo(() => FAMILIES.filter((fam) => covers.some((c) => c.family === fam.slug)), [covers]);
   const decades = useMemo(() => [...new Set(covers.map((c) => c.decade))].sort().reverse(), [covers]);
-  const countries = useMemo(
-    () => [...new Set(covers.map((c) => c.country).filter(Boolean) as string[])].sort((a, b) => a.localeCompare(b)),
-    [covers],
-  );
 
   const shown = useMemo(() => {
     const q = f.q.trim().toLowerCase();
@@ -88,7 +83,6 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
         (!f.type || c.type?.slug === f.type) &&
         (!f.color || c.family === f.color) &&
         (!f.decade || c.decade === f.decade) &&
-        (!f.country || c.country === f.country) &&
         (!q ||
           c.title.toLowerCase().includes(q) ||
           c.artist.toLowerCase().includes(q) ||
@@ -118,7 +112,7 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
     return inTitle ? undefined : `${cardMeta(c, showType)}. Mentioned in the story`;
   };
 
-  const activeCount = [f.type, f.color, f.decade, f.country].filter(Boolean).length;
+  const activeCount = [f.type, f.color, f.decade].filter(Boolean).length;
   const set = (k: keyof Filters) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setF({ ...f, [k]: e.target.value });
 
@@ -162,15 +156,6 @@ export default function CoverGrid({ covers, filters = false, types = [], emptyTe
           <option value="">All decades</option>
           {decades.map((d) => (
             <option key={d}>{d}</option>
-          ))}
-        </select>
-      </label>
-      <label className="field">
-        <span>Country</span>
-        <select value={f.country} onChange={set("country")}>
-          <option value="">All countries</option>
-          {countries.map((c) => (
-            <option key={c}>{c}</option>
           ))}
         </select>
       </label>
