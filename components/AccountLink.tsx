@@ -19,7 +19,7 @@ export default function AccountLink() {
     return () => data.subscription.unsubscribe();
   }, []);
 
-  if (state === "in") return <Link href="/me">Your covers</Link>;
+  if (state === "in") return <Link href="/me">Account</Link>;
   return (
     <Link href="/login" aria-busy={state === "loading"}>
       Sign in

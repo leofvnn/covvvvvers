@@ -9,7 +9,7 @@ import { loadLists } from "@/lib/lists";
 import { getServerClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Your covers", robots: { index: false } };
+export const metadata: Metadata = { title: "Account", robots: { index: false } };
 
 const STATUS: Record<string, string> = {
   pending: "Waiting for review",
@@ -41,7 +41,7 @@ export default async function MePage() {
   return (
     <>
       <header className="page-head">
-        <h1>Your covers</h1>
+        <h1>Account</h1>
         <p>Signed in as {user.email}.</p>
         <div className="intro-actions">
           {p.is_admin && (

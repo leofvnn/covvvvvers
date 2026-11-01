@@ -36,5 +36,5 @@ export async function submitCover(_prev: SubmitState, form: FormData): Promise<S
     note: clip(form.get("note"), 2000) || null,
   });
   if (error) return { ok: false, message: "The cover didn't send. Try again in a moment." };
-  return { ok: true, message: `Sent. ${album_title} is waiting for review, and you can follow it on Your covers.` };
+  return { ok: true, message: `Sent. ${album_title} is waiting for review, and you can follow it in your account.` };
 }
