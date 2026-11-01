@@ -22,16 +22,13 @@ export default async function AccountLayout({ children }: { children: React.Reac
           {name ? `${name} · ` : ""}
           {user.email}
         </p>
-        <div className="intro-actions">
-          {profile.is_admin && (
+        {profile.is_admin && (
+          <div className="intro-actions">
             <Link className="button solid" href="/admin">
               Admin
             </Link>
-          )}
-          <Link className="button" href="/submit">
-            Submit a cover
-          </Link>
-        </div>
+          </div>
+        )}
       </header>
       {/* Lists counts Bookmarked, the default list, too. */}
       <AccountTabs counts={{ lists: (lists.count ?? 0) + 1, submissions: subs.count ?? 0 }} />
