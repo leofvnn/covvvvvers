@@ -6,13 +6,11 @@ import CoverArt from "@/components/CoverArt";
 import CoverGrid from "@/components/CoverGrid";
 import FavoriteButton from "@/components/FavoriteButton";
 import Palette from "@/components/Palette";
-import Rating from "@/components/Rating";
 import ReadingProgress from "@/components/ReadingProgress";
 import ShareActions from "@/components/ShareActions";
 import SwipeNav from "@/components/SwipeNav";
 import { getCover, getCovers, getRelated, toCard } from "@/lib/data";
 import { fullImage, inkFor, squareImage } from "@/lib/img";
-import { pickPullQuote, readingMinutes } from "@/lib/text";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -48,13 +46,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-/** Puts the pull quote after the first paragraph of the essay. */
-function essayParts(html: string) {
-  const cut = html.indexOf("</p>");
-  if (cut < 0) return [html, ""];
-  return [html.slice(0, cut + 4), html.slice(cut + 4)];
-}
-
 export default async function CoverPage({ params }: Params) {
   const found = await getCover((await params).slug);
   if (!found) notFound();
@@ -62,9 +53,6 @@ export default async function CoverPage({ params }: Params) {
   const related = await getRelated(cover);
   const bg = pageColor(cover.color);
   const ink = inkFor(bg);
-  const minutes = readingMinutes(cover.description_html);
-  const quote = cover.pull_quote ?? pickPullQuote(cover.description_html);
-  const [firstPara, restParas] = essayParts(cover.description_html ?? "");
 
   // Saved links where we have them, otherwise a search for this exact album.
   const q = encodeURIComponent(`${cover.artist} ${cover.title}`);
@@ -80,6 +68,16 @@ export default async function CoverPage({ params }: Params) {
     ["Released", cover.release_year],
     ["Label", cover.label],
     ["Cover type", cover.type && <Link href={`/types/${cover.type.slug}`}>{cover.type.title}</Link>],
+    // The written credit, when the people aren't listed one by one.
+    ["Credits", cover.creators.length ? null : cover.credits_text],
+    [
+      "Image",
+      cover.image_source && (
+        <a href={cover.image_source.url} target="_blank" rel="noopener noreferrer">
+          {cover.image_source.name}
+        </a>
+      ),
+    ],
   ];
 
   return (
@@ -101,14 +99,6 @@ export default async function CoverPage({ params }: Params) {
             src={squareImage(cover.image_url, 120)}
             fallback={[cover.color, cover.accent_color].filter(Boolean) as string[]}
           />
-          {cover.image_source && (
-            <p className="image-source">
-              Image:{" "}
-              <a href={cover.image_source.url} target="_blank" rel="noopener noreferrer">
-                {cover.image_source.name}
-              </a>
-            </p>
-          )}
         </div>
 
         <div className="cover-body">
@@ -125,8 +115,6 @@ export default async function CoverPage({ params }: Params) {
             </p>
           </header>
 
-          {cover.credits_text && <p className="cover-credits">{cover.credits_text}</p>}
-
           <div className="cover-actions">
             <FavoriteButton coverId={cover.id} slug={cover.slug} />
             <AddToList coverId={cover.id} slug={cover.slug} />
@@ -135,23 +123,11 @@ export default async function CoverPage({ params }: Params) {
 
           {cover.description_html && (
             <div className="essay-wrap">
-              <p className="reading-time">{minutes} min read</p>
-              <div className="essay">
-                <div dangerouslySetInnerHTML={{ __html: firstPara }} />
-                {quote && (
-                  <blockquote className="pull-quote">
-                    <p>{quote}</p>
-                  </blockquote>
-                )}
-                {restParas && <div dangerouslySetInnerHTML={{ __html: restParas }} />}
-              </div>
+              <div className="essay" dangerouslySetInnerHTML={{ __html: cover.description_html }} />
             </div>
           )}
 
-          <Rating coverId={cover.id} slug={cover.slug} />
-
-          <section className="sleeve-back" aria-labelledby="credits-h">
-            <h2 id="credits-h">Credits</h2>
+          <section className="sleeve-back" aria-label="Credits">
             {cover.creators.length > 0 && (
               <dl className="sleeve-people">
                 {cover.creators.map((c) => (
@@ -187,7 +163,6 @@ export default async function CoverPage({ params }: Params) {
                 </div>
               )}
             </dl>
-            <p className="sleeve-mark">Covvvvvers</p>
           </section>
 
           <nav className="cover-nav" aria-label="More covers">
