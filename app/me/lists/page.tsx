@@ -12,10 +12,10 @@ export default async function ListsPage() {
     getCovers(),
   ]);
   const byId = new Map(covers.map((c) => [c.id, c]));
-  // Saved comes first: the default list every bookmark goes to unless another is chosen.
+  // Bookmarked comes first: the default list every bookmark goes to unless another is chosen.
   const saved = {
     id: "saved",
-    title: "Saved",
+    title: "Bookmarked",
     is_public: false,
     href: "/me/saved",
     note: "default list",
@@ -28,7 +28,7 @@ export default async function ListsPage() {
       <ListCards lists={cards} />
       {lists.length === 0 && (
         <p className="empty">
-          Bookmarks go to Saved. Make your own lists, like Best 90s covers, here or with Change list on any bookmarked cover.
+          Bookmarks go to Bookmarked. Make your own lists, like Best 90s covers, here or with Change list on any bookmarked cover.
         </p>
       )}
     </section>

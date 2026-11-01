@@ -3,7 +3,7 @@
 /**
  * Bookmarks, shared by every part of the page that shows them (the cover page's Bookmark
  * button, the mark on cover cards, the account). Each bookmarked cover lives in exactly one
- * place: the default list, "Saved" (the favorites table), or one of the member's own lists.
+ * place: the default list, "Bookmarked" (the favorites table), or one of the member's own lists.
  */
 import { useEffect, useState } from "react";
 import { getBrowserClient } from "./supabase/client";
@@ -18,7 +18,7 @@ export type BookmarkState = {
   lists: ListInfo[];
 };
 
-export const DEFAULT_LIST = "Saved";
+export const DEFAULT_LIST = "Bookmarked";
 
 let state: BookmarkState = { userId: null, ready: false, where: new Map(), lists: [] };
 let loading: Promise<void> | null = null;
@@ -86,7 +86,7 @@ async function clear(coverId: string) {
   ]);
 }
 
-/** Bookmarks a cover in a list (null: the default list, Saved), moving it if it was elsewhere. */
+/** Bookmarks a cover in a list (null: the default list, Bookmarked), moving it if it was elsewhere. */
 export async function bookmark(coverId: string, to: Where = null) {
   const db = getBrowserClient();
   if (!db || !state.userId) throw new Error("Sign in to bookmark covers.");

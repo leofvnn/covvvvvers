@@ -3,7 +3,7 @@ import CoverGrid from "@/components/CoverGrid";
 import { getAccount } from "@/lib/account";
 import { getCovers, getFeatured, getTypes, toCard } from "@/lib/data";
 
-/** Saved: the default list. Every bookmark lands here unless it's moved to another list. */
+/** Bookmarked: the default list. Every bookmark lands here unless it's moved to another list. */
 export default async function SavedPage() {
   const { db, user } = await getAccount("/me/saved");
   const [favs, covers, types, featured] = await Promise.all([
@@ -27,7 +27,7 @@ export default async function SavedPage() {
           <Link href="/me/lists">← Lists</Link>
         </p>
         <div className="account-welcome">
-          <h2 className="account-list-title">Saved</h2>
+          <h2 className="account-list-title">Bookmarked</h2>
           <h3>Start by bookmarking a cover</h3>
           <p>Tap Bookmark on any cover and it lands here. You can move it into your own lists later.</p>
         </div>
@@ -37,12 +37,12 @@ export default async function SavedPage() {
   }
 
   return (
-    <section className="account-section" aria-label="Saved covers">
+    <section className="account-section" aria-label="Bookmarked covers">
       <p className="account-back">
         <Link href="/me/lists">← Lists</Link>
       </p>
       <div className="account-welcome">
-        <h2 className="account-list-title">Saved</h2>
+        <h2 className="account-list-title">Bookmarked</h2>
         <p>Your default list. Everything you bookmark lands here unless you choose another list.</p>
       </div>
       <CoverGrid

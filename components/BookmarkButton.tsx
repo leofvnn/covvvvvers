@@ -19,7 +19,7 @@ export function BookmarkIcon({ filled }: { filled: boolean }) {
 }
 
 /**
- * The cover page's one save control. A tap bookmarks the cover in the default list, Saved;
+ * The cover page's one save control. A tap bookmarks the cover in the default list, Bookmarked;
  * "Change list" moves it to one of the member's own lists or a new one.
  */
 export default function BookmarkButton({ coverId, slug }: { coverId: string; slug: string }) {

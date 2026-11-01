@@ -37,7 +37,7 @@ export default function AccountLink() {
     };
   }, []);
 
-  if (state === "in") return <Link href="/me">{name ? `Account · ${name}` : "Account"}</Link>;
+  if (state === "in") return <Link href="/me">Account</Link>;
   const next = path && !path.startsWith("/login") && !path.startsWith("/me") ? `?next=${encodeURIComponent(path)}` : "";
   return (
     <Link href={`/login${next}`} aria-busy={state === "loading"}>

@@ -56,12 +56,30 @@ export default function AccountSettings({
     if (!db) return;
     setBusy("profile");
     setProfileMsg(null);
-    const { error } = await db
-      .from("profiles")
-      .update({ display_name: name.trim().slice(0, 60) || null, avatar_cover_id: avatar })
-      .eq("id", userId);
+    const display_name = name.trim().slice(0, 60) || null;
+    // The name first: it works on every account. Older accounts may have no profile row yet.
+    const named = await db.from("profiles").update({ display_name }).eq("id", userId).select("id");
+    let error = named.error;
+    if (!error && !named.data?.length) error = (await db.from("profiles").insert({ id: userId, display_name })).error;
+    if (error) {
+      setBusy("");
+      return setProfileMsg({ ok: false, text: `Your profile didn't save (${error.message}).` });
+    }
+    // Then the picture, only if it changed. It needs supabase/account.sql to have been run.
+    if (avatar !== initialAvatar) {
+      const pic = await db.from("profiles").update({ avatar_cover_id: avatar }).eq("id", userId);
+      if (pic.error) {
+        setBusy("");
+        const missing = /avatar_cover_id|schema cache|column/i.test(pic.error.message);
+        return setProfileMsg({
+          ok: false,
+          text: missing
+            ? "Your name is saved. Profile pictures turn on once account.sql has been run in Supabase."
+            : `Your name is saved, but the picture didn't (${pic.error.message}).`,
+        });
+      }
+    }
     setBusy("");
-    if (error) return setProfileMsg({ ok: false, text: "Your profile didn't save. Try again." });
     setProfileMsg({ ok: true, text: "Saved." });
     window.dispatchEvent(new Event("profilechange"));
     router.refresh();
@@ -146,7 +164,7 @@ export default function AccountSettings({
 
   return (
     <div className="account-section settings">
-      <Block title="Profile" note="Your name and picture show on your account. Pick the picture from your saved covers.">
+      <Block title="Profile" note="Your name and picture show on your account. Pick the picture from your bookmarked covers.">
         <form onSubmit={saveProfile} className="stack">
           <label>
             <span>Name</span>

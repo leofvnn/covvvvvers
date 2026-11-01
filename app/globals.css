@@ -1697,7 +1697,17 @@ kbd {
 .collection-card {
   display: grid;
   gap: 18px;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: clip;
   text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.collection-card:hover {
+  border-color: color-mix(in srgb, currentColor 40%, transparent);
 }
 
 .collection-stack {
