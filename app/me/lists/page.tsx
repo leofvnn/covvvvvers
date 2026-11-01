@@ -6,17 +6,29 @@ import { loadLists } from "@/lib/lists";
 
 export default async function ListsPage() {
   const { db, user } = await getAccount("/me/lists");
-  const [lists, covers] = await Promise.all([loadLists(db, { userId: user.id }), getCovers()]);
+  const [lists, favs, covers] = await Promise.all([
+    loadLists(db, { userId: user.id }),
+    db.from("favorites").select("cover_id").eq("user_id", user.id).order("created_at", { ascending: false }),
+    getCovers(),
+  ]);
   const byId = new Map(covers.map((c) => [c.id, c]));
-  const cards = lists.map((l) => ({ ...l, covers: l.coverIds.map((id) => byId.get(id)!).filter(Boolean) }));
+  // Saved comes first: the default list every bookmark goes to unless another is chosen.
+  const saved = {
+    id: "saved",
+    title: "Saved",
+    is_public: false,
+    href: "/me/saved",
+    note: "default list",
+    covers: (favs.data ?? []).map((f) => byId.get(f.cover_id)!).filter(Boolean),
+  };
+  const cards = [saved, ...lists.map((l) => ({ ...l, covers: l.coverIds.map((id) => byId.get(id)!).filter(Boolean) }))];
   return (
     <section className="account-section" aria-label="Your lists">
       <NewListForm userId={user.id} />
-      {cards.length > 0 ? (
-        <ListCards lists={cards} />
-      ) : (
+      <ListCards lists={cards} />
+      {lists.length === 0 && (
         <p className="empty">
-          Lists are your own collections, like Best 90s covers. Make one here, or bookmark a cover and choose Change list.
+          Bookmarks go to Saved. Make your own lists, like Best 90s covers, here or with Change list on any bookmarked cover.
         </p>
       )}
     </section>

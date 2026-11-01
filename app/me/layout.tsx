@@ -10,8 +10,7 @@ export const metadata: Metadata = { title: "Account", robots: { index: false } }
 
 export default async function AccountLayout({ children }: { children: React.ReactNode }) {
   const { db, user, profile } = await getAccount();
-  const [favs, lists, subs, covers] = await Promise.all([
-    db.from("favorites").select("cover_id", { count: "exact", head: true }).eq("user_id", user.id),
+  const [lists, subs, covers] = await Promise.all([
     db.from("lists").select("id", { count: "exact", head: true }).eq("user_id", user.id),
     db.from("submissions").select("id", { count: "exact", head: true }).eq("user_id", user.id),
     getCovers(),
@@ -49,7 +48,8 @@ export default async function AccountLayout({ children }: { children: React.Reac
           </Link>
         </div>
       </header>
-      <AccountTabs counts={{ saved: favs.count ?? 0, lists: lists.count ?? 0, submissions: subs.count ?? 0 }} />
+      {/* Lists counts Saved, the default list, too. */}
+      <AccountTabs counts={{ lists: (lists.count ?? 0) + 1, submissions: subs.count ?? 0 }} />
       {children}
     </>
   );

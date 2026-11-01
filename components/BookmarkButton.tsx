@@ -82,7 +82,7 @@ export default function BookmarkButton({ coverId, slug }: { coverId: string; slu
       </button>
       {saved && (
         <p className="bookmark-where">
-          In {listName(s, where)}.{" "}
+          In <Link href={where ? `/lists/${where}` : "/me/saved"}>{listName(s, where)}</Link>.{" "}
           <button type="button" className="text-button" onClick={() => dialog.current?.showModal()}>
             Change list
           </button>

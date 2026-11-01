@@ -4724,3 +4724,22 @@ button[aria-busy="true"]::after {
   color: var(--muted);
   font-weight: 600;
 }
+
+.account-back {
+  padding: 0 var(--gutter) 8px;
+  font-size: 0.9375rem;
+}
+
+.account-back a {
+  text-decoration: none;
+}
+
+.account-list-title {
+  margin-bottom: 8px;
+  font-size: 1.75rem;
+}
+
+.account-welcome h3 {
+  margin: 16px 0 6px;
+  font-size: 1.125rem;
+}

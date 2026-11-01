@@ -2,7 +2,7 @@ import Link from "next/link";
 import { squareImage } from "@/lib/img";
 import type { Cover } from "@/lib/types";
 
-type L = { id: string; title: string; is_public: boolean; covers: Cover[] };
+type L = { id: string; title: string; is_public: boolean; covers: Cover[]; href?: string; note?: string };
 
 /** Lists shown as small stacks of their first covers. */
 export default function ListCards({ lists, showPrivacy }: { lists: L[]; showPrivacy?: boolean }) {
@@ -10,7 +10,7 @@ export default function ListCards({ lists, showPrivacy }: { lists: L[]; showPriv
     <ul className="collection-list compact">
       {lists.map((l) => (
         <li key={l.id}>
-          <Link href={`/lists/${l.id}`} className="collection-card">
+          <Link href={l.href ?? `/lists/${l.id}`} className="collection-card">
             <span className="collection-stack" aria-hidden="true">
               {l.covers.slice(0, 4).map((c, i) => (
                 <img
@@ -30,6 +30,7 @@ export default function ListCards({ lists, showPrivacy }: { lists: L[]; showPriv
               <span className="collection-count">
                 {l.covers.length} {l.covers.length === 1 ? "cover" : "covers"}
                 {showPrivacy && !l.is_public && ", only you can see it"}
+                {l.note && `, ${l.note}`}
               </span>
             </span>
           </Link>
