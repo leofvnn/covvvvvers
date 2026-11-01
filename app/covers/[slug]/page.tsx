@@ -70,14 +70,6 @@ export default async function CoverPage({ params }: Params) {
     ["Cover type", cover.type && <Link href={`/types/${cover.type.slug}`}>{cover.type.title}</Link>],
     // The written credit, when the people aren't listed one by one.
     ["Credits", cover.creators.length ? null : cover.credits_text],
-    [
-      "Image",
-      cover.image_source && (
-        <a href={cover.image_source.url} target="_blank" rel="noopener noreferrer">
-          {cover.image_source.name}
-        </a>
-      ),
-    ],
   ];
 
   return (
