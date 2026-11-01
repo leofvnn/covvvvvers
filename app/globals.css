@@ -1699,7 +1699,7 @@ kbd {
   align-content: start;
   gap: 18px;
   height: 100%;
-  padding: 16px;
+  padding: 20px;
   border: 1px solid var(--line);
   border-radius: 16px;
   overflow: clip;
