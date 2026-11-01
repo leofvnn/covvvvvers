@@ -33,6 +33,9 @@ export default async function TypesPage() {
                     style={{ "--i": i, backgroundColor: c.color ?? undefined } as React.CSSProperties}
                   />
                 ))}
+                {Array.from({ length: Math.max(0, 4 - t.covers.length) }, (_, k) => (
+                  <span key={`empty-${k}`} className="stack-empty" style={{ "--i": t.covers.length + k } as React.CSSProperties} />
+                ))}
               </span>
               <span className="collection-text">
                 <span className="collection-title">{t.title}</span>

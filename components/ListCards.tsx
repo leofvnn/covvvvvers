@@ -23,7 +23,11 @@ export default function ListCards({ lists, showPrivacy }: { lists: L[]; showPriv
                   style={{ "--i": i } as React.CSSProperties}
                 />
               ))}
-              {l.covers.length === 0 && <span className="stack-empty" />}
+              {/* Always four in the stack: empty spaces until the list has four covers. */}
+              {Array.from({ length: Math.max(0, 4 - l.covers.length) }, (_, k) => {
+                const i = Math.min(l.covers.length, 4) + k;
+                return <span key={`empty-${i}`} className="stack-empty" style={{ "--i": i } as React.CSSProperties} />;
+              })}
             </span>
             <span className="collection-text">
               <span className="collection-title">{l.title}</span>
