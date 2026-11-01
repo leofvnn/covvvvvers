@@ -17,7 +17,7 @@ export default function NewListForm({ userId }: { userId: string }) {
     const name = title.trim();
     if (!db || !name) return;
     setBusy(true);
-    const { data, error } = await db.from("lists").insert({ user_id: userId, title: name.slice(0, 80) }).select("id").single();
+    const { data, error } = await db.from("lists").insert({ user_id: userId, title: name.slice(0, 80), is_public: false }).select("id").single();
     if (error || !data) {
       setError("The list wasn't created. Try again.");
       setBusy(false);

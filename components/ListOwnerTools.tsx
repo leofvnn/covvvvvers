@@ -65,7 +65,7 @@ export default function ListOwnerTools({ id, title, description, isPublic, cover
       return;
     }
     startProgress();
-    router.push("/me#lists");
+    router.push("/me/lists");
   };
 
   const share = async () => {

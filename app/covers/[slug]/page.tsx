@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import AddToList from "@/components/AddToList";
 import CoverArt from "@/components/CoverArt";
 import CoverGrid from "@/components/CoverGrid";
-import FavoriteButton from "@/components/FavoriteButton";
+import BookmarkButton from "@/components/BookmarkButton";
 import Palette from "@/components/Palette";
 import ReadingProgress from "@/components/ReadingProgress";
 import ShareActions from "@/components/ShareActions";
@@ -108,8 +107,7 @@ export default async function CoverPage({ params }: Params) {
           </header>
 
           <div className="cover-actions">
-            <FavoriteButton coverId={cover.id} slug={cover.slug} />
-            <AddToList coverId={cover.id} slug={cover.slug} />
+            <BookmarkButton coverId={cover.id} slug={cover.slug} />
           </div>
           <ShareActions title={cover.title} artist={cover.artist} slug={cover.slug} />
 

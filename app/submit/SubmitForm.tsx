@@ -45,7 +45,7 @@ export default function SubmitForm() {
       </button>
       {state.message && (
         <p className={state.ok ? "notice" : "form-error"} role={state.ok ? "status" : "alert"}>
-          {state.message} {state.ok && <Link href="/me">Account</Link>}
+          {state.message} {state.ok && <Link href="/me/submissions">See your submissions</Link>}
         </p>
       )}
     </form>

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { squareImage, squareSrcSet } from "@/lib/img";
 import type { CoverCard as Card } from "@/lib/types";
+import { useBookmarks } from "@/lib/bookmarks";
+import { BookmarkIcon } from "./BookmarkButton";
 import CoverLink from "./CoverLink";
 
 const SIZES = [360, 480, 600, 720];
@@ -15,10 +17,17 @@ export function cardMeta(c: Card, showType = true) {
 
 export default function CoverCard({ c, eager, meta, showType = true }: { c: Card; eager?: boolean; meta?: string; showType?: boolean }) {
   const [loaded, setLoaded] = useState(false);
+  const saved = useBookmarks().where.has(c.id);
   return (
     <CoverLink href={`/covers/${c.slug}`} className="card">
       <span className="card-sleeve" style={{ "--label": c.color ?? "#888" } as React.CSSProperties}>
         <span className="vinyl" aria-hidden="true" />
+        {saved && (
+          <span className="card-saved" title="Bookmarked">
+            <BookmarkIcon filled />
+            <span className="visually-hidden">Bookmarked</span>
+          </span>
+        )}
         <span className="card-art" data-art style={{ backgroundColor: c.color ?? "#eee" }}>
           <img
             src={squareImage(c.image_url, 600)}
